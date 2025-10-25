@@ -10,6 +10,7 @@ and Vul-RAG’s knowledge-level retrieval for enhanced vulnerability detection a
 - Provide interpretable vulnerability reasoning (attention maps + CWE context)
 
 ### Folder Structure
+```text
 hybrid-graph-rag/
 ├─ data/                      # datasets (Devign, DiverseVul, CWE/CVE KB)
 ├─ src/
@@ -23,6 +24,8 @@ hybrid-graph-rag/
 ├─ requirements.txt
 ├─ Dockerfile
 └─ README.md
+```
+
 
 
 
