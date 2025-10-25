@@ -11,17 +11,18 @@ and Vul-RAG’s knowledge-level retrieval for enhanced vulnerability detection a
 
 ### Folder Structure
 hybrid-graph-rag/
-├── data/                # dataset (Devign, DiverseVul, CWE/CVE KB)
-├── src/
-│   ├── devign_model/    # GNN encoder (GGNN / R-GCN)
-│   ├── rag_module/      # retriever (BM25 / Elasticsearch) + LLM reasoning
-│   ├── fusion_layer/    # MLP fusion zg + zl
-│   ├── utils/
-│   └── train.py
-├── notebooks/           # experiments, visualization
-├── docs/                # papers, design docs
-├── requirements.txt
-├── Dockerfile
-└── README.md
+├─ data/                      # datasets (Devign, DiverseVul, CWE/CVE KB)
+├─ src/
+│  ├─ devign_model/          # GNN encoder (GGNN / R-GCN)
+│  ├─ rag_module/            # retriever (BM25/Elasticsearch) + LLM reasoning
+│  ├─ fusion_layer/          # MLP fusion zg + zl
+│  ├─ utils/
+│  └─ train.py
+├─ notebooks/                # experiments, visualization
+├─ docs/                     # papers, design docs
+├─ requirements.txt
+├─ Dockerfile
+└─ README.md
+
 
 
