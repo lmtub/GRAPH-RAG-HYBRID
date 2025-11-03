@@ -7,18 +7,22 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# Cài gói hệ thống (có Java cho Joern; bỏ nếu chưa cần)
+# Gói hệ thống (có Java + unzip cho Joern)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates curl git build-essential \
-    openjdk-17-jre-headless \
+    openjdk-17-jre-headless unzip \
  && rm -rf /var/lib/apt/lists/*
 
- # --- Joern CLI (pin version) ---
-RUN curl -L -o /tmp/joern.zip https://github.com/joernio/joern/releases/download/v1.1.230/joern-cli.zip \
- && unzip /tmp/joern.zip -d /opt/joern && rm /tmp/joern.zip \
- && ln -s /opt/joern/joern-cli/joern /usr/local/bin/joern \
- && ln -s /opt/joern/joern-cli/bin/joern-parse /usr/local/bin/joern-parse \
- && ln -s /opt/joern/joern-cli/bin/joern-export /usr/local/bin/joern-export
+# --- Cài Joern 4.x bằng installer chính thức ---
+# Có thể pin version nếu muốn: thêm --version v4.0.440
+RUN curl -L https://github.com/joernio/joern/releases/latest/download/joern-install.sh \
+  | bash -s -- --install-dir /opt/joern
+
+# Đưa CLI vào PATH
+ENV PATH="/opt/joern/joern-cli:${PATH}"
+
+# (Optional) Kiểm tra nhanh giúp cache build fail sớm nếu lỗi
+RUN joern-parse --help >/dev/null && joern-export --help >/dev/null
 
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt

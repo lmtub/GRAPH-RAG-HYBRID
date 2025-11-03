@@ -1,58 +1,77 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ---- Defaults ----
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"/../../ && pwd)"
-IN_DIR="${ROOT_DIR}/data/raw/devign_c"
-OUT_DIR="${ROOT_DIR}/data/cpg"
-REPR="cpg14"
-JOBS=1
-LIMIT=0
+# ========= Config =========
+IN_DIR="${IN_DIR:-/app/data/raw/devign_c}"
+OUT_DIR="${OUT_DIR:-/app/data/cpg}"
 
-# ---- Args ----
-while getopts ":j:n:" opt; do
-  case "$opt" in
-    j) JOBS=${OPTARG} ;;
-    n) LIMIT=${OPTARG} ;;
-  esac
-done
+RESUME="${RESUME:-1}"       # 1: skip mẫu đã có JSON
+JOBS="${JOBS:-8}"           # số job song song
+OVERWRITE="${OVERWRITE:-0}" # 1: xóa thư mục .cpg14 cũ trước khi export
 
-mkdir -p "${OUT_DIR}" "${OUT_DIR}/logs"
+CONVERTER="${CONVERTER:-$(dirname "$0")/convert_dot_to_cpg14_json.py}"
+export JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:--Xms512m -Xmx6g}"
 
-echo "ROOT_DIR=${ROOT_DIR}"
-echo "IN_DIR=${IN_DIR}"
-echo "OUT_DIR=${OUT_DIR}"
-echo "REPR=${REPR}"
-echo "JOBS=${JOBS}"
-echo "LIMIT=${LIMIT}"
+# ========= Func =========
+parse_one() {
+  local sample="$1"
+  local src="${IN_DIR}/${sample}.c"
+  local bin="${OUT_DIR}/${sample}.bin"
+  local outd="${OUT_DIR}/${sample}.cpg14"
 
-count=0
-running=0
+  echo "==== ${sample} ===="
 
-# ❗ Dùng process substitution để while chạy trong **cùng shell** (không bị subshell)
-while IFS= read -r -d '' f; do
-  (( LIMIT>0 && count>=LIMIT )) && break
+  [[ -f "${src}" ]] || { echo "[SKIP] Không thấy source: ${src}"; return 0; }
 
-  base="$(basename "$f")"
-  stem="${base%.*}"
-  bin="${OUT_DIR}/${stem}.bin"
-  json="${OUT_DIR}/${stem}.json"
-  log="${OUT_DIR}/logs/${stem}.log"
-
-  # Nếu lỡ có THƯ MỤC trùng tên file json -> xoá để export ra file
-  [ -d "${json}" ] && rm -rf "${json}"
-
-  ( joern-parse "$f" --out "$bin" \
-    && joern-export "$bin" --repr "$REPR" --out "$json" ) >"$log" 2>&1 &
-
-  ((running++))
-  ((count++))
-  if (( running >= JOBS )); then
-    wait -n
-    ((running--))
+  if [[ "${RESUME}" == "1" && -s "${outd}/nodes.json" && -s "${outd}/edges.json" ]]; then
+    echo "[SKIP] ${sample} (đã có JSON)"; return 0
   fi
-done < <(find "${IN_DIR}" -type f \( -name '*.c' -o -name '*.cpp' \) -print0)
 
-# Đợi nốt job còn lại
-wait
-echo "✅ DONE: parsed ${count} files to ${OUT_DIR}"
+  # joern-export yêu cầu outd CHƯA tồn tại
+  if [[ "${OVERWRITE}" == "1" && -d "${outd}" ]]; then
+    rm -rf "${outd}"
+  fi
+  mkdir -p "${OUT_DIR}"
+  # KHÔNG tạo sẵn ${outd} trước export (để tránh “already exists”)
+  [[ -d "${outd}" ]] && rm -rf "${outd}"
+
+  echo "[parse] ${src} -> ${bin}"
+  set +o pipefail
+  joern-parse --language c "${src}" -o "${bin}" 2>&1 | tee "${OUT_DIR}/${sample}.parse.log"
+  local rc_parse=${PIPESTATUS[0]}
+  set -o pipefail
+  [[ ${rc_parse} -eq 0 && -s "${bin}" ]] || { echo "[ERR] Parse lỗi"; return 1; }
+
+  echo "[export:cpg14 DOT] ${bin} -> ${outd}"
+  set +o pipefail
+  joern-export --repr cpg14 --out "${outd}" "${bin}" 2>&1 | tee "${outd}.export.log"
+  local rc_export=${PIPESTATUS[0]}
+  set -o pipefail
+  [[ ${rc_export} -eq 0 ]] || { echo "[ERR] Export lỗi"; return 2; }
+
+  # Convert DOT -> JSON
+  [[ -f "${CONVERTER}" ]] || { echo "[ERR] Thiếu converter: ${CONVERTER}"; return 3; }
+  set +o pipefail
+  python3 "${CONVERTER}" "${outd}" 2>&1 | tee "${outd}.convert.log"
+  local rc_conv=${PIPESTATUS[0]}
+  set -o pipefail
+  [[ ${rc_conv} -eq 0 ]] || { echo "[ERR] Converter lỗi"; return 4; }
+
+  if [[ -s "${outd}/nodes.json" && -s "${outd}/edges.json" ]]; then
+    echo "[OK] ${sample}"
+  else
+    echo "[ERR] Thiếu nodes.json/edges.json trong ${outd}"; return 5
+  fi
+}
+
+export -f parse_one
+export IN_DIR OUT_DIR RESUME JOBS OVERWRITE JAVA_TOOL_OPTIONS CONVERTER
+
+# ========= Run =========
+if [[ $# -ge 1 ]]; then
+  printf "%s\n" "$@" | xargs -I{} -P "${JOBS}" bash -c 'parse_one "$@"' _ {}
+else
+  find "${IN_DIR}" -maxdepth 1 -type f -name "*.c" -printf "%f\n" \
+    | sed 's/\.c$//' \
+    | xargs -I{} -P "${JOBS}" bash -c 'parse_one "$@"' _ {}
+fi
