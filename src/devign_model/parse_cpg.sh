@@ -9,7 +9,9 @@ RESUME="${RESUME:-1}"       # 1: skip mẫu đã có JSON
 JOBS="${JOBS:-8}"           # số job song song
 OVERWRITE="${OVERWRITE:-0}" # 1: xóa thư mục .cpg14 cũ trước khi export
 
-CONVERTER="${CONVERTER:-$(dirname "$0")/convert_dot_to_cpg14_json.py}"
+CONVERTER="${CONVERTER:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/convert_dot_to_cpg14_json.py}"
+export CONVERTER
+
 export JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:--Xms512m -Xmx6g}"
 
 # ========= Func =========
