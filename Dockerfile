@@ -27,5 +27,15 @@ RUN joern-parse --help >/dev/null && joern-export --help >/dev/null
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
+# ✅ Cài đúng phiên bản PyTorch + CUDA + PyTorch Geometric
+RUN pip install --no-cache-dir --force-reinstall --upgrade \
+    torch==2.4.0+cu124 torchvision==0.19.0+cu124 torchaudio==2.4.0+cu124 \
+    --extra-index-url https://download.pytorch.org/whl/cu124
+
+RUN pip install --no-cache-dir \
+    pyg-lib torch-scatter torch-sparse torch-cluster torch-spline-conv \
+    -f https://data.pyg.org/whl/torch-2.4.0+cu124.html && \
+    pip install --no-cache-dir torch-geometric
+    
 COPY . .
 CMD ["python", "src/train.py"]
