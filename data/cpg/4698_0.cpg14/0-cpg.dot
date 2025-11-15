@@ -1,0 +1,18 @@
+digraph "sws_rgb2rgb_init" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>sws_rgb2rgb_init> ]
+"111669149696" [label = <PARAM, 1<BR/>int flags> ]
+"25769803776" [label = <BLOCK, 3<BR/>{ #if HAVE_SSE2 || HAVE_MMX2 || HAVE_AMD3DNOW ...> ]
+"30064771072" [label = <rgb2rgb_init_C, 27<BR/>rgb2rgb_init_C()> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>void> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "25769803776" -> "30064771072"  [ label = "AST: "] 
+  "30064771072" -> "124554051584"  [ label = "CFG: "] 
+  "107374182400" -> "30064771072"  [ label = "CFG: "] 
+  "111669149696" -> "124554051584"  [ label = "DDG: flags"] 
+  "30064771072" -> "124554051584"  [ label = "DDG: rgb2rgb_init_C()"] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "107374182400" -> "30064771072"  [ label = "DDG: "] 
+}

@@ -1,0 +1,19 @@
+digraph "qemu_input_event_send" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>qemu_input_event_send> ]
+"111669149696" [label = <PARAM, 1<BR/>QemuConsole *src> ]
+"111669149697" [label = <PARAM, 1<BR/>InputEvent *evt> ]
+"25769803776" [label = <BLOCK, 3<BR/>{ QemuInputHandlerState *s; if (!ru...> ]
+"94489280512" [label = <LOCAL, 5<BR/>QemuInputHandlerState *s: QemuInputHandlerState*> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>void> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "111669149697"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "25769803776" -> "94489280512"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "CFG: "] 
+  "111669149696" -> "124554051584"  [ label = "DDG: src"] 
+  "111669149697" -> "124554051584"  [ label = "DDG: evt"] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "107374182400" -> "111669149697"  [ label = "DDG: "] 
+}

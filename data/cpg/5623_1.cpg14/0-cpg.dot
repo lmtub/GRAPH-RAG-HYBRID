@@ -1,0 +1,19 @@
+digraph "qemu_thread_set_name" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>qemu_thread_set_name> ]
+"111669149696" [label = <PARAM, 1<BR/>QemuThread *thread> ]
+"111669149697" [label = <PARAM, 1<BR/>const char *name> ]
+"25769803776" [label = <BLOCK, 3<BR/>{ #ifdef CONFIG_PTHREAD_SETNAME_NP pthrea...> ]
+"128849018880" [label = <MODIFIER, 1<BR/>STATIC> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>void> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "111669149697"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "128849018880"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "CFG: "] 
+  "111669149696" -> "124554051584"  [ label = "DDG: thread"] 
+  "111669149697" -> "124554051584"  [ label = "DDG: name"] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "107374182400" -> "111669149697"  [ label = "DDG: "] 
+}
