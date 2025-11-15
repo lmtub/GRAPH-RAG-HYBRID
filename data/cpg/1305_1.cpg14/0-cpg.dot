@@ -1,0 +1,23 @@
+digraph "qmp_query_named_block_nodes" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>qmp_query_named_block_nodes> ]
+"111669149696" [label = <PARAM, 1<BR/>Error **errp> ]
+"25769803776" [label = <BLOCK, 3<BR/>{ return bdrv_named_nodes_list(); }> ]
+"141733920768" [label = <RETURN, 5<BR/>return bdrv_named_nodes_list();> ]
+"30064771072" [label = <bdrv_named_nodes_list, 5<BR/>bdrv_named_nodes_list()> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>BlockDeviceInfoList> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "25769803776" -> "141733920768"  [ label = "AST: "] 
+  "141733920768" -> "30064771072"  [ label = "AST: "] 
+  "141733920768" -> "124554051584"  [ label = "CFG: "] 
+  "30064771072" -> "141733920768"  [ label = "CFG: "] 
+  "107374182400" -> "30064771072"  [ label = "CFG: "] 
+  "141733920768" -> "124554051584"  [ label = "DDG: &lt;RET&gt;"] 
+  "111669149696" -> "124554051584"  [ label = "DDG: errp"] 
+  "30064771072" -> "124554051584"  [ label = "DDG: bdrv_named_nodes_list()"] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "30064771072" -> "141733920768"  [ label = "DDG: bdrv_named_nodes_list()"] 
+  "107374182400" -> "30064771072"  [ label = "DDG: "] 
+}

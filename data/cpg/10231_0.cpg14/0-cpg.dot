@@ -1,0 +1,22 @@
+digraph "qnull_destroy_obj" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>qnull_destroy_obj> ]
+"111669149696" [label = <PARAM, 1<BR/>QObject *obj> ]
+"25769803776" [label = <BLOCK, 3<BR/>{ assert(0); }> ]
+"30064771072" [label = <assert, 5<BR/>assert(0)> ]
+"90194313216" [label = <LITERAL, 5<BR/>0<BR/>assert(0)> ]
+"128849018880" [label = <MODIFIER, 1<BR/>STATIC> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>void> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "128849018880"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "25769803776" -> "30064771072"  [ label = "AST: "] 
+  "30064771072" -> "90194313216"  [ label = "AST: "] 
+  "30064771072" -> "124554051584"  [ label = "CFG: "] 
+  "107374182400" -> "30064771072"  [ label = "CFG: "] 
+  "111669149696" -> "124554051584"  [ label = "DDG: obj"] 
+  "30064771072" -> "124554051584"  [ label = "DDG: assert(0)"] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "107374182400" -> "30064771072"  [ label = "DDG: "] 
+}
