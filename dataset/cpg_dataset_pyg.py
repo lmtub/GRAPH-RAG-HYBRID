@@ -43,4 +43,6 @@ class CPGPyGDataset(Dataset):
             self.node_encoder,
             make_undirected=self.make_undirected
         )
+        # GẮN THÊM graph_id vào PyG Data để collate_fn lấy được
+        data.graph_id = graph_dir.name 
         return data
