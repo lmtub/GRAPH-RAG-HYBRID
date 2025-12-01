@@ -75,49 +75,6 @@ GRAPH-RAG-HYBRID/
 
 ```
 
----
-
-# 🔄 **Hybrid Graph-RAG Pipeline Diagram**
-
-```mermaid
-flowchart TD
-
-%% === 1. Code Parsing with Joern ===
-A[C/C++ Source Code]
-    --> B[Joern Parser<br/>AST + CFG + PDG]
-    --> C[Code Property Graph<br/>(CPG JSON)]
-
-%% === 2. Devign Encoder ===
-C --> D[Node Encoder<br/>(TYPE-only)]
-D --> E[GGNN Encoder<br/>(Devign)]
-E --> F[Graph Embedding<br/>(128-dim)]
-E --> G[Devign Score (zg)<br/>Vulnerability Probability]
-
-%% === 3. Vector Search (FAISS) ===
-F --> H[FAISS Index]
-H --> I[Top-k Nearest Graphs<br/>(Similarity zl)]
-
-%% === 4. Hybrid Fusion ===
-G --> J[Hybrid Fusion<br/>fusion = α·zg + β·zl]
-I --> J
-
-%% === 5. Graph-RAG Retrieval ===
-C --> K[Extract CPG Context<br/>Nodes + Edges]
-I --> L[Retrieve Similar Graph Context]
-J --> M[Rank Selected Graphs]
-
-K --> N[Graph-RAG Module]
-L --> N
-M --> N
-
-%% === 6. Prompt Builder ===
-N --> O[Structured Prompt Builder<br/>(target + similar graphs + scores)]
-
-%% === 7. LLM Reasoning ===
-O --> P[LLM Reasoning<br/>(GPT/Llama)]
-P --> Q[Vulnerability Analysis<br/>Explanation + Mitigation]
-
-```
 ### How to Run (End2end)
 **1. Export embeddings:** python -m src.train.export_embeddings
 **2. Build FAISS index:** python -m src.vector_db.build_faiss
@@ -127,6 +84,7 @@ P --> Q[Vulnerability Analysis<br/>Explanation + Mitigation]
   - Lưu prompt: python -m src.demo.end2end_demo --save runs/prompt.txt
   - Evaluation (Devign): python -m src.eval.eval_devign
       *expected: F1 ~0.64*
+
 
 
 
