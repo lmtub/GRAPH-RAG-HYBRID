@@ -5,7 +5,7 @@ and Vul-RAG’s knowledge-level retrieval for enhanced vulnerability detection a
 
 ## 👥 Team Members
 
-| 🧑‍💻 Name | 🎓 Student ID | 🪪 Role | 📌 Key Contributions |
+| Name | ID |  Role |  Key Contributions |
 |----------|---------------|---------|-----------------------|
 | **Lê Minh Tấn** | 23523198 | **Lead Engineer – Graph Pipeline** | CPG parsing, dataset creation, GGNN encoder, training, FAISS index, end-to-end pipeline |
 | **Đặng Gia Nghĩa** | 23521006 | **Dataset Engineer** | Data cleaning, loader, PyG dataset integration |
@@ -119,6 +119,7 @@ P --> Q[Vulnerability Analysis<br/>Explanation + Mitigation]
   - Lưu prompt: python -m src.demo.end2end_demo --save runs/prompt.txt
   - Evaluation (Devign): python -m src.eval.eval_devign
       *expected: F1 ~0.64*
+
 
 
 
