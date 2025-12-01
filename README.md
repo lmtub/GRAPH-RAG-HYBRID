@@ -11,20 +11,59 @@ and Vul-RAG’s knowledge-level retrieval for enhanced vulnerability detection a
 
 ### Folder Structure
 ```text
-hybrid-graph-rag/
-├─ data/                      # datasets (Devign, DiverseVul, CWE/CVE KB)
-├─ src/
-│  ├─ devign_model/          # GNN encoder (GGNN / R-GCN)
-│  ├─ rag_module/            # retriever (BM25/Elasticsearch) + LLM reasoning
-│  ├─ fusion_layer/          # MLP fusion zg + zl
-│  ├─ utils/
-│  └─ train.py
-├─ notebooks/                # experiments, visualization
-├─ docs/                     # papers, design docs
-├─ requirements.txt
-├─ Dockerfile
-└─ README.md
+GRAPH-RAG-HYBRID/
+│
+├── data/
+│   ├── cpg/                     # CPG graphs parsed by Joern
+│   ├── embeddings/             # devign_embeddings.pt
+│   ├── index/                  # FAISS index + meta.json
+│   ├── raw/                    # raw Devign dataset
+│
+├── dataset/
+│   ├── cpg_dataset_pyg.py      # PyG dataset loader
+│   ├── data_builder.py         # Build graph from JSON
+│   ├── node_encoder.py         # TypeOnlyEncoder
+│   ├── labels.json             # Devign labels
+│
+├── src/
+│   ├── devign_model/           # GGNN encoder + Devign model
+│   │   ├── encoder.py
+│   │   ├── model.py
+│   │
+│   ├── fusion_layer/           # Hybrid fusion score (zg + zl)
+│   │   └── fusion_layer.py
+│   │
+│   ├── rag_module/             # Retrieval + prompt generation
+│   │   ├── graph_rag.py
+│   │   ├── fusion_layer.py
+│   │   ├── llm_rag.py
+│   │   └── prompt_templates.py
+│   │
+│   ├── vector_db/              # FAISS search
+│   │   ├── build_faiss.py
+│   │   └── search_faiss.py
+│   │
+│   ├── train/
+│   │   ├── train_devign.py     # training pipeline
+│   │   ├── export_embeddings.py
+│   │   ├── collate_fn.py
+│   │   └── model.py
+│   │
+│   ├── eval/
+│   │   └── eval_devign.py      # evaluation script
+│   │
+│   └── demo/
+│       └── end2end_demo.py     # hybrid Graph-RAG demo
+│
+├── runs/                       # logs, saved prompts, experiment outputs
+├── checkpoints/                # best_encoder.pt
+│
+├── Dockerfile
+├── requirements.txt
+└── README.md
+
 ```
+
 
 
 
