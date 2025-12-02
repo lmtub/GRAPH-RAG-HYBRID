@@ -76,7 +76,7 @@ GRAPH-RAG-HYBRID/
 ```
 
 ### How to Run (End2end)
-**1. Export embeddings:** python -m src.train.export_embeddings
+**1. Export embeddings:** python -m src.train.export_embeddings /n
 **2. Build FAISS index:** python -m src.vector_db.build_faiss
 **3. Run demo:** 
   - Random: python -m src.demo.end2end_demo
@@ -84,6 +84,7 @@ GRAPH-RAG-HYBRID/
   - Lưu prompt: python -m src.demo.end2end_demo --save runs/prompt.txt
   - Evaluation (Devign): python -m src.eval.eval_devign
       *expected: F1 ~0.64*
+
 
 
 
