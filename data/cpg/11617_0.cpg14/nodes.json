@@ -1,1 +1,1196 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>check_ap>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>CPUARMState *env>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>ARMMMUIdx mmu_idx>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>int ap>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>int domain_prot>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM, 5<BR/>int access_type>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 7<BR/>{ int prot_ro; bool is_user = regime_...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>int prot_ro: int>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>bool is_user: bool>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 11<BR/>is_user = regime_is_user(env, mmu_idx)>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>is_user<BR/>is_user = regime_is_user(env, mmu_idx)>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<regime_is_user, 11<BR/>regime_is_user(env, mmu_idx)>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>env<BR/>regime_is_user(env, mmu_idx)>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>mmu_idx<BR/>regime_is_user(env, mmu_idx)>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 15<BR/>IF<BR/>if (domain_prot == 3) { return PAGE_RE...>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 15<BR/>domain_prot == 3>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>domain_prot<BR/>domain_prot == 3>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 15<BR/>3<BR/>domain_prot == 3>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 15<BR/>{ return PAGE_READ | PAGE_WRITE; }>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 17<BR/>return PAGE_READ | PAGE_WRITE;>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 17<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>&lt;unknown&gt; PAGE_READ<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>&lt;unknown&gt; PAGE_WRITE<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 23<BR/>IF<BR/>if (access_type == 1) { prot_ro = 0; ...>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 23<BR/>access_type == 1>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>access_type<BR/>access_type == 1>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 23<BR/>1<BR/>access_type == 1>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 23<BR/>{ prot_ro = 0; }>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 25<BR/>prot_ro = 0>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>prot_ro<BR/>prot_ro = 0>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 25<BR/>0<BR/>prot_ro = 0>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 27<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 27<BR/>{ prot_ro = PAGE_READ; }>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 29<BR/>prot_ro = PAGE_READ>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 29<BR/>prot_ro<BR/>prot_ro = PAGE_READ>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 29<BR/>&lt;unknown&gt; PAGE_READ<BR/>prot_ro = PAGE_READ>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 35<BR/>SWITCH<BR/>switch (ap) { case 0: if (arm_fea...>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>ap<BR/>switch (ap) { case 0: if (arm_fea...>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 35<BR/>{ case 0: if (arm_feature(env, AR...>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 37<BR/>case>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 37<BR/>0<BR/>{ case 0: if (arm_feature(env, AR...>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 39<BR/>IF<BR/>if (arm_feature(env, ARM_FEATURE_V7)) { ...>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<arm_feature, 39<BR/>arm_feature(env, ARM_FEATURE_V7)>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>env<BR/>arm_feature(env, ARM_FEATURE_V7)>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>&lt;unknown&gt; ARM_FEATURE_V7<BR/>arm_feature(env, ARM_FEATURE_V7)>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 39<BR/>{ return 0; }>"
+    }
+  },
+  {
+    "id": "141733920769",
+    "attrs": {
+      "label": "<RETURN, 41<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 41<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 45<BR/>IF<BR/>if (access_type == 1) { return 0; ...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 45<BR/>access_type == 1>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>access_type<BR/>access_type == 1>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 45<BR/>1<BR/>access_type == 1>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 45<BR/>{ return 0; }>"
+    }
+  },
+  {
+    "id": "141733920770",
+    "attrs": {
+      "label": "<RETURN, 47<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 47<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 51<BR/>SWITCH<BR/>switch (regime_sctlr(env, mmu_idx) &amp; (SCTLR_S |...>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 51<BR/>regime_sctlr(env, mmu_idx) &amp; (SCTLR_S | SCTLR_R)>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<regime_sctlr, 51<BR/>regime_sctlr(env, mmu_idx)>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>env<BR/>regime_sctlr(env, mmu_idx)>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>mmu_idx<BR/>regime_sctlr(env, mmu_idx)>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 51<BR/>SCTLR_S | SCTLR_R>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>&lt;unknown&gt; SCTLR_S<BR/>SCTLR_S | SCTLR_R>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>&lt;unknown&gt; SCTLR_R<BR/>SCTLR_S | SCTLR_R>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 51<BR/>{ case SCTLR_S: return is...>"
+    }
+  },
+  {
+    "id": "81604378625",
+    "attrs": {
+      "label": "<JUMP_TARGET, 53<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>&lt;unknown&gt; SCTLR_S<BR/>{ case SCTLR_S: return is...>"
+    }
+  },
+  {
+    "id": "141733920771",
+    "attrs": {
+      "label": "<RETURN, 55<BR/>return is_user ? 0 : PAGE_READ;>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.conditional, 55<BR/>is_user ? 0 : PAGE_READ>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 55<BR/>is_user<BR/>is_user ? 0 : PAGE_READ>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 55<BR/>0<BR/>is_user ? 0 : PAGE_READ>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 55<BR/>&lt;unknown&gt; PAGE_READ<BR/>is_user ? 0 : PAGE_READ>"
+    }
+  },
+  {
+    "id": "81604378626",
+    "attrs": {
+      "label": "<JUMP_TARGET, 57<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>&lt;unknown&gt; SCTLR_R<BR/>{ case SCTLR_S: return is...>"
+    }
+  },
+  {
+    "id": "141733920772",
+    "attrs": {
+      "label": "<RETURN, 59<BR/>return PAGE_READ;>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>&lt;unknown&gt; PAGE_READ<BR/>return PAGE_READ;>"
+    }
+  },
+  {
+    "id": "81604378627",
+    "attrs": {
+      "label": "<JUMP_TARGET, 61<BR/>default>"
+    }
+  },
+  {
+    "id": "141733920773",
+    "attrs": {
+      "label": "<RETURN, 63<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 63<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "81604378628",
+    "attrs": {
+      "label": "<JUMP_TARGET, 67<BR/>case>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 67<BR/>1<BR/>{ case 0: if (arm_feature(env, AR...>"
+    }
+  },
+  {
+    "id": "141733920774",
+    "attrs": {
+      "label": "<RETURN, 69<BR/>return is_user ? 0 : PAGE_READ | PAGE_WRITE;>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.conditional, 69<BR/>is_user ? 0 : PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>is_user<BR/>is_user ? 0 : PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 69<BR/>0<BR/>is_user ? 0 : PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 69<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>&lt;unknown&gt; PAGE_READ<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>&lt;unknown&gt; PAGE_WRITE<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "81604378629",
+    "attrs": {
+      "label": "<JUMP_TARGET, 71<BR/>case>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 71<BR/>2<BR/>{ case 0: if (arm_feature(env, AR...>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 73<BR/>IF<BR/>if (is_user) { return prot_ro; ...>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 73<BR/>is_user<BR/>if (is_user) { return prot_ro; ...>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 73<BR/>{ return prot_ro; }>"
+    }
+  },
+  {
+    "id": "141733920775",
+    "attrs": {
+      "label": "<RETURN, 75<BR/>return prot_ro;>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>prot_ro<BR/>return prot_ro;>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 77<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 77<BR/>{ return PAGE_READ | PAGE_WRITE; ...>"
+    }
+  },
+  {
+    "id": "141733920776",
+    "attrs": {
+      "label": "<RETURN, 79<BR/>return PAGE_READ | PAGE_WRITE;>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 79<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>&lt;unknown&gt; PAGE_READ<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>&lt;unknown&gt; PAGE_WRITE<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "81604378630",
+    "attrs": {
+      "label": "<JUMP_TARGET, 83<BR/>case>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 83<BR/>3<BR/>{ case 0: if (arm_feature(env, AR...>"
+    }
+  },
+  {
+    "id": "141733920777",
+    "attrs": {
+      "label": "<RETURN, 85<BR/>return PAGE_READ | PAGE_WRITE;>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 85<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>&lt;unknown&gt; PAGE_READ<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>&lt;unknown&gt; PAGE_WRITE<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "81604378631",
+    "attrs": {
+      "label": "<JUMP_TARGET, 87<BR/>case>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 87<BR/>4<BR/>{ case 0: if (arm_feature(env, AR...>"
+    }
+  },
+  {
+    "id": "141733920778",
+    "attrs": {
+      "label": "<RETURN, 89<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 89<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "81604378632",
+    "attrs": {
+      "label": "<JUMP_TARGET, 91<BR/>case>"
+    }
+  },
+  {
+    "id": "90194313231",
+    "attrs": {
+      "label": "<LITERAL, 91<BR/>5<BR/>{ case 0: if (arm_feature(env, AR...>"
+    }
+  },
+  {
+    "id": "141733920779",
+    "attrs": {
+      "label": "<RETURN, 93<BR/>return is_user ? 0 : prot_ro;>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.conditional, 93<BR/>is_user ? 0 : prot_ro>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>is_user<BR/>is_user ? 0 : prot_ro>"
+    }
+  },
+  {
+    "id": "90194313232",
+    "attrs": {
+      "label": "<LITERAL, 93<BR/>0<BR/>is_user ? 0 : prot_ro>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>prot_ro<BR/>is_user ? 0 : prot_ro>"
+    }
+  },
+  {
+    "id": "81604378633",
+    "attrs": {
+      "label": "<JUMP_TARGET, 95<BR/>case>"
+    }
+  },
+  {
+    "id": "90194313233",
+    "attrs": {
+      "label": "<LITERAL, 95<BR/>6<BR/>{ case 0: if (arm_feature(env, AR...>"
+    }
+  },
+  {
+    "id": "141733920780",
+    "attrs": {
+      "label": "<RETURN, 97<BR/>return prot_ro;>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>prot_ro<BR/>return prot_ro;>"
+    }
+  },
+  {
+    "id": "81604378634",
+    "attrs": {
+      "label": "<JUMP_TARGET, 99<BR/>case>"
+    }
+  },
+  {
+    "id": "90194313234",
+    "attrs": {
+      "label": "<LITERAL, 99<BR/>7<BR/>{ case 0: if (arm_feature(env, AR...>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 101<BR/>IF<BR/>if (!arm_feature(env, ARM_FEATURE_V6K)) { ...>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 101<BR/>!arm_feature(env, ARM_FEATURE_V6K)>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<arm_feature, 101<BR/>arm_feature(env, ARM_FEATURE_V6K)>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>env<BR/>arm_feature(env, ARM_FEATURE_V6K)>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>&lt;unknown&gt; ARM_FEATURE_V6K<BR/>arm_feature(env, ARM_FEATURE_V6K)>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 101<BR/>{ return 0; }>"
+    }
+  },
+  {
+    "id": "141733920781",
+    "attrs": {
+      "label": "<RETURN, 103<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313235",
+    "attrs": {
+      "label": "<LITERAL, 103<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "141733920782",
+    "attrs": {
+      "label": "<RETURN, 107<BR/>return prot_ro;>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>prot_ro<BR/>return prot_ro;>"
+    }
+  },
+  {
+    "id": "81604378635",
+    "attrs": {
+      "label": "<JUMP_TARGET, 109<BR/>default>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<abort, 111<BR/>abort()>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 101<BR/>&lt;unknown&gt; ARM_FEATURE_V6K: ANY>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>&lt;unknown&gt; PAGE_WRITE: ANY>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>&lt;unknown&gt; PAGE_READ: ANY>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 51<BR/>&lt;unknown&gt; SCTLR_R: ANY>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 51<BR/>&lt;unknown&gt; SCTLR_S: ANY>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 39<BR/>&lt;unknown&gt; ARM_FEATURE_V7: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>int>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>check_ap<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.conditional>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.or>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>regime_is_user>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>regime_sctlr>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>arm_feature>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.and>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>abort>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.equals>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

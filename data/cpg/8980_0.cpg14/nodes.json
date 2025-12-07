@@ -1,1 +1,3038 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>twinvq_read_bitstream>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>AVCodecContext *avctx>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>TwinVQContext *tctx>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>const uint8_t *buf>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>int buf_size>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 5<BR/>{ TwinVQFrameData *bits = &amp;tctx-&gt;bits;...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>TwinVQFrameData *bits: TwinVQFrameData*>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 7<BR/>*bits = &amp;tctx-&gt;bits>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 7<BR/>bits<BR/>*bits = &amp;tctx-&gt;bits>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 7<BR/>&amp;tctx-&gt;bits>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 7<BR/>tctx-&gt;bits>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 7<BR/>tctx<BR/>*bits = &amp;tctx-&gt;bits>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 7<BR/>bits>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>const TwinVQModeTab *mtab: TwinVQModeTab*>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 9<BR/>*mtab = tctx-&gt;mtab>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 9<BR/>mtab<BR/>*mtab = tctx-&gt;mtab>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 9<BR/>tctx-&gt;mtab>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 9<BR/>tctx<BR/>*mtab = tctx-&gt;mtab>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 9<BR/>mtab>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>int channels: int>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 11<BR/>channels = tctx-&gt;avctx-&gt;channels>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>channels<BR/>channels = tctx-&gt;avctx-&gt;channels>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 11<BR/>tctx-&gt;avctx-&gt;channels>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 11<BR/>tctx-&gt;avctx>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>tctx<BR/>channels = tctx-&gt;avctx-&gt;channels>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 11<BR/>avctx>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 11<BR/>channels>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>int sub: int>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>GetBitContext gb: GetBitContext>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>int i: int>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>int j: int>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>int k: int>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 21<BR/>IF<BR/>if (buf_size * 8 &lt; avctx-&gt;bit_rate * mtab-&gt;size...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 21<BR/>buf_size * 8 &lt; avctx-&gt;bit_rate * mtab-&gt;size / a...>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 21<BR/>buf_size * 8>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>buf_size<BR/>buf_size * 8>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 21<BR/>8<BR/>buf_size * 8>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 21<BR/>avctx-&gt;bit_rate * mtab-&gt;size / avctx-&gt;sample_ra...>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.division, 21<BR/>avctx-&gt;bit_rate * mtab-&gt;size / avctx-&gt;sample_rate>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 21<BR/>avctx-&gt;bit_rate * mtab-&gt;size>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 21<BR/>avctx-&gt;bit_rate>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>avctx<BR/>avctx-&gt;bit_rate * mtab-&gt;size>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 21<BR/>bit_rate>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 21<BR/>mtab-&gt;size>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>mtab<BR/>avctx-&gt;bit_rate * mtab-&gt;size>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 21<BR/>size>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 21<BR/>avctx-&gt;sample_rate>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>avctx<BR/>avctx-&gt;bit_rate * mtab-&gt;size / avctx-&gt;sample_rate>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 21<BR/>sample_rate>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 21<BR/>8<BR/>avctx-&gt;bit_rate * mtab-&gt;size / avctx-&gt;sample_ra...>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 21<BR/>{ av_log(avctx, AV_LOG_ERROR, ...>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<av_log, 23<BR/>av_log(avctx, AV_LOG_ERROR, &quot;Fr...>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>avctx<BR/>av_log(avctx, AV_LOG_ERROR, &quot;Fr...>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>&lt;unknown&gt; AV_LOG_ERROR<BR/>av_log(avctx, AV_LOG_ERROR, &quot;Fr...>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 25<BR/>&quot;Frame too small (%d bytes). Truncated file?\\n&quot;<BR/>av_log(avctx, AV_LOG_ERROR, &quot;Fr...>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>buf_size<BR/>av_log(avctx, AV_LOG_ERROR, &quot;Fr...>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 27<BR/>return AVERROR(EINVAL);>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<AVERROR, 27<BR/>AVERROR(EINVAL)>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>&lt;unknown&gt; EINVAL<BR/>AVERROR(EINVAL)>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<init_get_bits, 33<BR/>init_get_bits(&amp;gb, buf, buf_size * 8)>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 33<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>gb<BR/>init_get_bits(&amp;gb, buf, buf_size * 8)>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>buf<BR/>init_get_bits(&amp;gb, buf, buf_size * 8)>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 33<BR/>buf_size * 8>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>buf_size<BR/>buf_size * 8>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 33<BR/>8<BR/>buf_size * 8>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<skip_bits, 35<BR/>skip_bits(&amp;gb, get_bits(&amp;gb, 8))>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 35<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>gb<BR/>skip_bits(&amp;gb, get_bits(&amp;gb, 8))>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<get_bits, 35<BR/>get_bits(&amp;gb, 8)>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 35<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>gb<BR/>get_bits(&amp;gb, 8)>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 35<BR/>8<BR/>get_bits(&amp;gb, 8)>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 39<BR/>bits-&gt;window_type = get_bits(&amp;gb, TWINVQ_WINDOW...>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 39<BR/>bits-&gt;window_type>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>bits<BR/>bits-&gt;window_type = get_bits(&amp;gb, TWINVQ_WINDOW...>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 39<BR/>window_type>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<get_bits, 39<BR/>get_bits(&amp;gb, TWINVQ_WINDOW_TYPE_BITS)>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 39<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>gb<BR/>get_bits(&amp;gb, TWINVQ_WINDOW_TYPE_BITS)>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>&lt;unknown&gt; TWINVQ_WINDOW_TYPE_BITS<BR/>get_bits(&amp;gb, TWINVQ_WINDOW_TYPE_BITS)>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 43<BR/>IF<BR/>if (bits-&gt;window_type &gt; 8) { av_log(av...>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.greaterThan, 43<BR/>bits-&gt;window_type &gt; 8>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 43<BR/>bits-&gt;window_type>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>bits<BR/>bits-&gt;window_type &gt; 8>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 43<BR/>window_type>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 43<BR/>8<BR/>bits-&gt;window_type &gt; 8>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 43<BR/>{ av_log(avctx, AV_LOG_ERROR, &quot;Invalid...>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<av_log, 45<BR/>av_log(avctx, AV_LOG_ERROR, &quot;Invalid window typ...>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>avctx<BR/>av_log(avctx, AV_LOG_ERROR, &quot;Invalid window typ...>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>&lt;unknown&gt; AV_LOG_ERROR<BR/>av_log(avctx, AV_LOG_ERROR, &quot;Invalid window typ...>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 45<BR/>&quot;Invalid window type, broken sample?\\n&quot;<BR/>av_log(avctx, AV_LOG_ERROR, &quot;Invalid window typ...>"
+    }
+  },
+  {
+    "id": "141733920769",
+    "attrs": {
+      "label": "<RETURN, 47<BR/>return AVERROR_INVALIDDATA;>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>&lt;unknown&gt; AVERROR_INVALIDDATA<BR/>return AVERROR_INVALIDDATA;>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 53<BR/>bits-&gt;ftype = ff_twinvq_wtype_to_ftype_table[tc...>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 53<BR/>bits-&gt;ftype>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>bits<BR/>bits-&gt;ftype = ff_twinvq_wtype_to_ftype_table[tc...>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 53<BR/>ftype>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 53<BR/>ff_twinvq_wtype_to_ftype_table[tctx-&gt;bits.windo...>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>&lt;unknown&gt; ff_twinvq_wtype_to_ftype_table<BR/>bits-&gt;ftype = ff_twinvq_wtype_to_ftype_table[tc...>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 53<BR/>tctx-&gt;bits.window_type>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 53<BR/>tctx-&gt;bits>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>tctx<BR/>bits-&gt;ftype = ff_twinvq_wtype_to_ftype_table[tc...>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 53<BR/>bits>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 53<BR/>window_type>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 57<BR/>sub = mtab-&gt;fmode[bits-&gt;ftype].sub>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>sub<BR/>sub = mtab-&gt;fmode[bits-&gt;ftype].sub>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 57<BR/>mtab-&gt;fmode[bits-&gt;ftype].sub>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 57<BR/>mtab-&gt;fmode[bits-&gt;ftype]>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 57<BR/>mtab-&gt;fmode>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>mtab<BR/>sub = mtab-&gt;fmode[bits-&gt;ftype].sub>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 57<BR/>fmode>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 57<BR/>bits-&gt;ftype>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>bits<BR/>sub = mtab-&gt;fmode[bits-&gt;ftype].sub>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 57<BR/>ftype>"
+    }
+  },
+  {
+    "id": "55834574862",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 57<BR/>sub>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<read_cb_data, 61<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;main_coeffs, bits...>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>tctx<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;main_coeffs, bits...>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 61<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>gb<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;main_coeffs, bits...>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 61<BR/>bits-&gt;main_coeffs>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>bits<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;main_coeffs, bits...>"
+    }
+  },
+  {
+    "id": "55834574863",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 61<BR/>main_coeffs>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 61<BR/>bits-&gt;ftype>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>bits<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;main_coeffs, bits...>"
+    }
+  },
+  {
+    "id": "55834574864",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 61<BR/>ftype>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 65<BR/>FOR<BR/>for (i = 0;i &lt; channels;i++)>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 65<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 65<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 65<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>i<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>channels<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 65<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 67<BR/>FOR<BR/>for (j = 0;j &lt; sub;j++)>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 67<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>j<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 67<BR/>0<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 67<BR/>j &lt; sub>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>j<BR/>j &lt; sub>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>sub<BR/>j &lt; sub>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 67<BR/>j++>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>j<BR/>j++>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 69<BR/>FOR<BR/>for (k = 0;k &lt; mtab-&gt;fmode[bits-&gt;ftype].bark_n_...>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 69<BR/>k = 0>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>k<BR/>k = 0>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 69<BR/>0<BR/>k = 0>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 69<BR/>k &lt; mtab-&gt;fmode[bits-&gt;ftype].bark_n_coef>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>k<BR/>k &lt; mtab-&gt;fmode[bits-&gt;ftype].bark_n_coef>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 69<BR/>mtab-&gt;fmode[bits-&gt;ftype].bark_n_coef>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 69<BR/>mtab-&gt;fmode[bits-&gt;ftype]>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 69<BR/>mtab-&gt;fmode>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>mtab<BR/>k &lt; mtab-&gt;fmode[bits-&gt;ftype].bark_n_coef>"
+    }
+  },
+  {
+    "id": "55834574865",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 69<BR/>fmode>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 69<BR/>bits-&gt;ftype>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>bits<BR/>k &lt; mtab-&gt;fmode[bits-&gt;ftype].bark_n_coef>"
+    }
+  },
+  {
+    "id": "55834574866",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 69<BR/>ftype>"
+    }
+  },
+  {
+    "id": "55834574867",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 69<BR/>bark_n_coef>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 69<BR/>k++>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>k<BR/>k++>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 71<BR/>bits-&gt;bark1[i][j][k] = get...>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 71<BR/>bits-&gt;bark1[i][j][k]>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 71<BR/>bits-&gt;bark1[i][j]>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 71<BR/>bits-&gt;bark1[i]>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 71<BR/>bits-&gt;bark1>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>bits<BR/>bits-&gt;bark1[i][j][k] = get...>"
+    }
+  },
+  {
+    "id": "55834574868",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 71<BR/>bark1>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>i<BR/>bits-&gt;bark1[i][j][k] = get...>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>j<BR/>bits-&gt;bark1[i][j][k] = get...>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>k<BR/>bits-&gt;bark1[i][j][k] = get...>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<get_bits, 73<BR/>get_bits(&amp;gb, mtab-&gt;fmode[bits-&gt;ftype].bark_n_bit)>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 73<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 73<BR/>gb<BR/>get_bits(&amp;gb, mtab-&gt;fmode[bits-&gt;ftype].bark_n_bit)>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 73<BR/>mtab-&gt;fmode[bits-&gt;ftype].bark_n_bit>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 73<BR/>mtab-&gt;fmode[bits-&gt;ftype]>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 73<BR/>mtab-&gt;fmode>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 73<BR/>mtab<BR/>get_bits(&amp;gb, mtab-&gt;fmode[bits-&gt;ftype].bark_n_bit)>"
+    }
+  },
+  {
+    "id": "55834574869",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 73<BR/>fmode>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 73<BR/>bits-&gt;ftype>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 73<BR/>bits<BR/>get_bits(&amp;gb, mtab-&gt;fmode[bits-&gt;ftype].bark_n_bit)>"
+    }
+  },
+  {
+    "id": "55834574870",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 73<BR/>ftype>"
+    }
+  },
+  {
+    "id": "55834574871",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 73<BR/>bark_n_bit>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 77<BR/>FOR<BR/>for (i = 0;i &lt; channels;i++)>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 77<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 77<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 77<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>i<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>channels<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 77<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 79<BR/>FOR<BR/>for (j = 0;j &lt; sub;j++)>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 79<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>j<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 79<BR/>0<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 79<BR/>j &lt; sub>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>j<BR/>j &lt; sub>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>sub<BR/>j &lt; sub>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 79<BR/>j++>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>j<BR/>j++>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 81<BR/>bits-&gt;bark_use_hist[i][j] = get_bits1(&amp;gb)>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 81<BR/>bits-&gt;bark_use_hist[i][j]>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 81<BR/>bits-&gt;bark_use_hist[i]>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 81<BR/>bits-&gt;bark_use_hist>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>bits<BR/>bits-&gt;bark_use_hist[i][j] = get_bits1(&amp;gb)>"
+    }
+  },
+  {
+    "id": "55834574872",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 81<BR/>bark_use_hist>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>i<BR/>bits-&gt;bark_use_hist[i][j] = get_bits1(&amp;gb)>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>j<BR/>bits-&gt;bark_use_hist[i][j] = get_bits1(&amp;gb)>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<get_bits1, 81<BR/>get_bits1(&amp;gb)>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 81<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>gb<BR/>get_bits1(&amp;gb)>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 85<BR/>IF<BR/>if (bits-&gt;ftype == TWINVQ_FT_LONG) { f...>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 85<BR/>bits-&gt;ftype == TWINVQ_FT_LONG>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 85<BR/>bits-&gt;ftype>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>bits<BR/>bits-&gt;ftype == TWINVQ_FT_LONG>"
+    }
+  },
+  {
+    "id": "55834574873",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 85<BR/>ftype>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>&lt;unknown&gt; TWINVQ_FT_LONG<BR/>bits-&gt;ftype == TWINVQ_FT_LONG>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 85<BR/>{ for (i = 0; i &lt; channels; i++) ...>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 87<BR/>FOR<BR/>for (i = 0;i &lt; channels;i++)>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 87<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 87<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 87<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>i<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>channels<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 87<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771159",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 89<BR/>bits-&gt;gain_bits[i] = get_bits(&amp;gb, TWINVQ_GAIN_...>"
+    }
+  },
+  {
+    "id": "30064771160",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 89<BR/>bits-&gt;gain_bits[i]>"
+    }
+  },
+  {
+    "id": "30064771161",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 89<BR/>bits-&gt;gain_bits>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>bits<BR/>bits-&gt;gain_bits[i] = get_bits(&amp;gb, TWINVQ_GAIN_...>"
+    }
+  },
+  {
+    "id": "55834574874",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 89<BR/>gain_bits>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>i<BR/>bits-&gt;gain_bits[i] = get_bits(&amp;gb, TWINVQ_GAIN_...>"
+    }
+  },
+  {
+    "id": "30064771162",
+    "attrs": {
+      "label": "<get_bits, 89<BR/>get_bits(&amp;gb, TWINVQ_GAIN_BITS)>"
+    }
+  },
+  {
+    "id": "30064771163",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 89<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476812",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>gb<BR/>get_bits(&amp;gb, TWINVQ_GAIN_BITS)>"
+    }
+  },
+  {
+    "id": "68719476813",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>&lt;unknown&gt; TWINVQ_GAIN_BITS<BR/>get_bits(&amp;gb, TWINVQ_GAIN_BITS)>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 91<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 91<BR/>{ for (i = 0; i &lt; channels; i++) { ...>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 93<BR/>FOR<BR/>for (i = 0;i &lt; channels;i++)>"
+    }
+  },
+  {
+    "id": "30064771164",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 93<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476814",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 93<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771165",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 93<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476815",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>i<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476816",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>channels<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "30064771166",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 93<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476817",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 93<BR/>{ bits-&gt;gain_bits[i] = get_bits(&amp;g...>"
+    }
+  },
+  {
+    "id": "30064771167",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 95<BR/>bits-&gt;gain_bits[i] = get_bits(&amp;gb, TWINVQ_GAIN_...>"
+    }
+  },
+  {
+    "id": "30064771168",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 95<BR/>bits-&gt;gain_bits[i]>"
+    }
+  },
+  {
+    "id": "30064771169",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 95<BR/>bits-&gt;gain_bits>"
+    }
+  },
+  {
+    "id": "68719476818",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>bits<BR/>bits-&gt;gain_bits[i] = get_bits(&amp;gb, TWINVQ_GAIN_...>"
+    }
+  },
+  {
+    "id": "55834574875",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 95<BR/>gain_bits>"
+    }
+  },
+  {
+    "id": "68719476819",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>i<BR/>bits-&gt;gain_bits[i] = get_bits(&amp;gb, TWINVQ_GAIN_...>"
+    }
+  },
+  {
+    "id": "30064771170",
+    "attrs": {
+      "label": "<get_bits, 95<BR/>get_bits(&amp;gb, TWINVQ_GAIN_BITS)>"
+    }
+  },
+  {
+    "id": "30064771171",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 95<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476820",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>gb<BR/>get_bits(&amp;gb, TWINVQ_GAIN_BITS)>"
+    }
+  },
+  {
+    "id": "68719476821",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>&lt;unknown&gt; TWINVQ_GAIN_BITS<BR/>get_bits(&amp;gb, TWINVQ_GAIN_BITS)>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 97<BR/>FOR<BR/>for (j = 0;j &lt; sub;j++)>"
+    }
+  },
+  {
+    "id": "30064771172",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 97<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "68719476822",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>j<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 97<BR/>0<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "30064771173",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 97<BR/>j &lt; sub>"
+    }
+  },
+  {
+    "id": "68719476823",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>j<BR/>j &lt; sub>"
+    }
+  },
+  {
+    "id": "68719476824",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>sub<BR/>j &lt; sub>"
+    }
+  },
+  {
+    "id": "30064771174",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 97<BR/>j++>"
+    }
+  },
+  {
+    "id": "68719476825",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>j<BR/>j++>"
+    }
+  },
+  {
+    "id": "30064771175",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 99<BR/>bits-&gt;sub_gain_bits[i * sub + j] = get_bits(&amp;gb...>"
+    }
+  },
+  {
+    "id": "30064771176",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 99<BR/>bits-&gt;sub_gain_bits[i * sub + j]>"
+    }
+  },
+  {
+    "id": "30064771177",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 99<BR/>bits-&gt;sub_gain_bits>"
+    }
+  },
+  {
+    "id": "68719476826",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>bits<BR/>bits-&gt;sub_gain_bits[i * sub + j] = get_bits(&amp;gb...>"
+    }
+  },
+  {
+    "id": "55834574876",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 99<BR/>sub_gain_bits>"
+    }
+  },
+  {
+    "id": "30064771178",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 99<BR/>i * sub + j>"
+    }
+  },
+  {
+    "id": "30064771179",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 99<BR/>i * sub>"
+    }
+  },
+  {
+    "id": "68719476827",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>i<BR/>i * sub>"
+    }
+  },
+  {
+    "id": "68719476828",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>sub<BR/>i * sub>"
+    }
+  },
+  {
+    "id": "68719476829",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>j<BR/>i * sub + j>"
+    }
+  },
+  {
+    "id": "30064771180",
+    "attrs": {
+      "label": "<get_bits, 99<BR/>get_bits(&amp;gb, ...>"
+    }
+  },
+  {
+    "id": "30064771181",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 99<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476830",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>gb<BR/>get_bits(&amp;gb, ...>"
+    }
+  },
+  {
+    "id": "68719476831",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>&lt;unknown&gt; TWINVQ_SUB_GAIN_BITS<BR/>get_bits(&amp;gb, ...>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 109<BR/>FOR<BR/>for (i = 0;i &lt; channels;i++)>"
+    }
+  },
+  {
+    "id": "30064771182",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 109<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476832",
+    "attrs": {
+      "label": "<IDENTIFIER, 109<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313231",
+    "attrs": {
+      "label": "<LITERAL, 109<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771183",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 109<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476833",
+    "attrs": {
+      "label": "<IDENTIFIER, 109<BR/>i<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476834",
+    "attrs": {
+      "label": "<IDENTIFIER, 109<BR/>channels<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "30064771184",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 109<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476835",
+    "attrs": {
+      "label": "<IDENTIFIER, 109<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 109<BR/>{ bits-&gt;lpc_hist_idx[i] = get_bits(&amp;gb...>"
+    }
+  },
+  {
+    "id": "30064771185",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 111<BR/>bits-&gt;lpc_hist_idx[i] = get_bits(&amp;gb, mtab-&gt;lsp...>"
+    }
+  },
+  {
+    "id": "30064771186",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 111<BR/>bits-&gt;lpc_hist_idx[i]>"
+    }
+  },
+  {
+    "id": "30064771187",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 111<BR/>bits-&gt;lpc_hist_idx>"
+    }
+  },
+  {
+    "id": "68719476836",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>bits<BR/>bits-&gt;lpc_hist_idx[i] = get_bits(&amp;gb, mtab-&gt;lsp...>"
+    }
+  },
+  {
+    "id": "55834574877",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 111<BR/>lpc_hist_idx>"
+    }
+  },
+  {
+    "id": "68719476837",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>i<BR/>bits-&gt;lpc_hist_idx[i] = get_bits(&amp;gb, mtab-&gt;lsp...>"
+    }
+  },
+  {
+    "id": "30064771188",
+    "attrs": {
+      "label": "<get_bits, 111<BR/>get_bits(&amp;gb, mtab-&gt;lsp_bit0)>"
+    }
+  },
+  {
+    "id": "30064771189",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 111<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476838",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>gb<BR/>get_bits(&amp;gb, mtab-&gt;lsp_bit0)>"
+    }
+  },
+  {
+    "id": "30064771190",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 111<BR/>mtab-&gt;lsp_bit0>"
+    }
+  },
+  {
+    "id": "68719476839",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>mtab<BR/>get_bits(&amp;gb, mtab-&gt;lsp_bit0)>"
+    }
+  },
+  {
+    "id": "55834574878",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 111<BR/>lsp_bit0>"
+    }
+  },
+  {
+    "id": "30064771191",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 113<BR/>bits-&gt;lpc_idx1[i] = get_bits(&amp;gb, mtab-&gt;lsp...>"
+    }
+  },
+  {
+    "id": "30064771192",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 113<BR/>bits-&gt;lpc_idx1[i]>"
+    }
+  },
+  {
+    "id": "30064771193",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 113<BR/>bits-&gt;lpc_idx1>"
+    }
+  },
+  {
+    "id": "68719476840",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>bits<BR/>bits-&gt;lpc_idx1[i] = get_bits(&amp;gb, mtab-&gt;lsp...>"
+    }
+  },
+  {
+    "id": "55834574879",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 113<BR/>lpc_idx1>"
+    }
+  },
+  {
+    "id": "68719476841",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>i<BR/>bits-&gt;lpc_idx1[i] = get_bits(&amp;gb, mtab-&gt;lsp...>"
+    }
+  },
+  {
+    "id": "30064771194",
+    "attrs": {
+      "label": "<get_bits, 113<BR/>get_bits(&amp;gb, mtab-&gt;lsp_bit1)>"
+    }
+  },
+  {
+    "id": "30064771195",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 113<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476842",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>gb<BR/>get_bits(&amp;gb, mtab-&gt;lsp_bit1)>"
+    }
+  },
+  {
+    "id": "30064771196",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 113<BR/>mtab-&gt;lsp_bit1>"
+    }
+  },
+  {
+    "id": "68719476843",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>mtab<BR/>get_bits(&amp;gb, mtab-&gt;lsp_bit1)>"
+    }
+  },
+  {
+    "id": "55834574880",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 113<BR/>lsp_bit1>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 117<BR/>FOR<BR/>for (j = 0;j &lt; mtab-&gt;lsp_split;j++)>"
+    }
+  },
+  {
+    "id": "30064771197",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 117<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "68719476844",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>j<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "90194313232",
+    "attrs": {
+      "label": "<LITERAL, 117<BR/>0<BR/>j = 0>"
+    }
+  },
+  {
+    "id": "30064771198",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 117<BR/>j &lt; mtab-&gt;lsp_split>"
+    }
+  },
+  {
+    "id": "68719476845",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>j<BR/>j &lt; mtab-&gt;lsp_split>"
+    }
+  },
+  {
+    "id": "30064771199",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 117<BR/>mtab-&gt;lsp_split>"
+    }
+  },
+  {
+    "id": "68719476846",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>mtab<BR/>j &lt; mtab-&gt;lsp_split>"
+    }
+  },
+  {
+    "id": "55834574881",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 117<BR/>lsp_split>"
+    }
+  },
+  {
+    "id": "30064771200",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 117<BR/>j++>"
+    }
+  },
+  {
+    "id": "68719476847",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>j<BR/>j++>"
+    }
+  },
+  {
+    "id": "30064771201",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 119<BR/>bits-&gt;lpc_idx2[i][j] = get_bits(&amp;gb, mtab-&gt;lsp_...>"
+    }
+  },
+  {
+    "id": "30064771202",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 119<BR/>bits-&gt;lpc_idx2[i][j]>"
+    }
+  },
+  {
+    "id": "30064771203",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 119<BR/>bits-&gt;lpc_idx2[i]>"
+    }
+  },
+  {
+    "id": "30064771204",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 119<BR/>bits-&gt;lpc_idx2>"
+    }
+  },
+  {
+    "id": "68719476848",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>bits<BR/>bits-&gt;lpc_idx2[i][j] = get_bits(&amp;gb, mtab-&gt;lsp_...>"
+    }
+  },
+  {
+    "id": "55834574882",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 119<BR/>lpc_idx2>"
+    }
+  },
+  {
+    "id": "68719476849",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>i<BR/>bits-&gt;lpc_idx2[i][j] = get_bits(&amp;gb, mtab-&gt;lsp_...>"
+    }
+  },
+  {
+    "id": "68719476850",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>j<BR/>bits-&gt;lpc_idx2[i][j] = get_bits(&amp;gb, mtab-&gt;lsp_...>"
+    }
+  },
+  {
+    "id": "30064771205",
+    "attrs": {
+      "label": "<get_bits, 119<BR/>get_bits(&amp;gb, mtab-&gt;lsp_bit2)>"
+    }
+  },
+  {
+    "id": "30064771206",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 119<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476851",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>gb<BR/>get_bits(&amp;gb, mtab-&gt;lsp_bit2)>"
+    }
+  },
+  {
+    "id": "30064771207",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 119<BR/>mtab-&gt;lsp_bit2>"
+    }
+  },
+  {
+    "id": "68719476852",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>mtab<BR/>get_bits(&amp;gb, mtab-&gt;lsp_bit2)>"
+    }
+  },
+  {
+    "id": "55834574883",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 119<BR/>lsp_bit2>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 125<BR/>IF<BR/>if (bits-&gt;ftype == TWINVQ_FT_LONG) { r...>"
+    }
+  },
+  {
+    "id": "30064771208",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 125<BR/>bits-&gt;ftype == TWINVQ_FT_LONG>"
+    }
+  },
+  {
+    "id": "30064771209",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 125<BR/>bits-&gt;ftype>"
+    }
+  },
+  {
+    "id": "68719476853",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>bits<BR/>bits-&gt;ftype == TWINVQ_FT_LONG>"
+    }
+  },
+  {
+    "id": "55834574884",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 125<BR/>ftype>"
+    }
+  },
+  {
+    "id": "68719476854",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>&lt;unknown&gt; TWINVQ_FT_LONG<BR/>bits-&gt;ftype == TWINVQ_FT_LONG>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 125<BR/>{ read_cb_data(tctx, &amp;gb, bits-&gt;ppc_co...>"
+    }
+  },
+  {
+    "id": "30064771210",
+    "attrs": {
+      "label": "<read_cb_data, 127<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;ppc_coeffs, 3)>"
+    }
+  },
+  {
+    "id": "68719476855",
+    "attrs": {
+      "label": "<IDENTIFIER, 127<BR/>tctx<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;ppc_coeffs, 3)>"
+    }
+  },
+  {
+    "id": "30064771211",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 127<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476856",
+    "attrs": {
+      "label": "<IDENTIFIER, 127<BR/>gb<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;ppc_coeffs, 3)>"
+    }
+  },
+  {
+    "id": "30064771212",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 127<BR/>bits-&gt;ppc_coeffs>"
+    }
+  },
+  {
+    "id": "68719476857",
+    "attrs": {
+      "label": "<IDENTIFIER, 127<BR/>bits<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;ppc_coeffs, 3)>"
+    }
+  },
+  {
+    "id": "55834574885",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 127<BR/>ppc_coeffs>"
+    }
+  },
+  {
+    "id": "90194313233",
+    "attrs": {
+      "label": "<LITERAL, 127<BR/>3<BR/>read_cb_data(tctx, &amp;gb, bits-&gt;ppc_coeffs, 3)>"
+    }
+  },
+  {
+    "id": "47244640271",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 129<BR/>FOR<BR/>for (i = 0;i &lt; channels;i++)>"
+    }
+  },
+  {
+    "id": "30064771213",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 129<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476858",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313234",
+    "attrs": {
+      "label": "<LITERAL, 129<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771214",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 129<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476859",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>i<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "68719476860",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>channels<BR/>i &lt; channels>"
+    }
+  },
+  {
+    "id": "30064771215",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 129<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476861",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 129<BR/>{ bits-&gt;p_coef[i] = get_bits(&amp;gb, ...>"
+    }
+  },
+  {
+    "id": "30064771216",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 131<BR/>bits-&gt;p_coef[i] = get_bits(&amp;gb, mtab-&gt;ppc_perio...>"
+    }
+  },
+  {
+    "id": "30064771217",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 131<BR/>bits-&gt;p_coef[i]>"
+    }
+  },
+  {
+    "id": "30064771218",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 131<BR/>bits-&gt;p_coef>"
+    }
+  },
+  {
+    "id": "68719476862",
+    "attrs": {
+      "label": "<IDENTIFIER, 131<BR/>bits<BR/>bits-&gt;p_coef[i] = get_bits(&amp;gb, mtab-&gt;ppc_perio...>"
+    }
+  },
+  {
+    "id": "55834574886",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 131<BR/>p_coef>"
+    }
+  },
+  {
+    "id": "68719476863",
+    "attrs": {
+      "label": "<IDENTIFIER, 131<BR/>i<BR/>bits-&gt;p_coef[i] = get_bits(&amp;gb, mtab-&gt;ppc_perio...>"
+    }
+  },
+  {
+    "id": "30064771219",
+    "attrs": {
+      "label": "<get_bits, 131<BR/>get_bits(&amp;gb, mtab-&gt;ppc_period_bit)>"
+    }
+  },
+  {
+    "id": "30064771220",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 131<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476864",
+    "attrs": {
+      "label": "<IDENTIFIER, 131<BR/>gb<BR/>get_bits(&amp;gb, mtab-&gt;ppc_period_bit)>"
+    }
+  },
+  {
+    "id": "30064771221",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 131<BR/>mtab-&gt;ppc_period_bit>"
+    }
+  },
+  {
+    "id": "68719476865",
+    "attrs": {
+      "label": "<IDENTIFIER, 131<BR/>mtab<BR/>get_bits(&amp;gb, mtab-&gt;ppc_period_bit)>"
+    }
+  },
+  {
+    "id": "55834574887",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 131<BR/>ppc_period_bit>"
+    }
+  },
+  {
+    "id": "30064771222",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 133<BR/>bits-&gt;g_coef[i] = get_bits(&amp;gb, mtab-&gt;pgain_bit)>"
+    }
+  },
+  {
+    "id": "30064771223",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 133<BR/>bits-&gt;g_coef[i]>"
+    }
+  },
+  {
+    "id": "30064771224",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 133<BR/>bits-&gt;g_coef>"
+    }
+  },
+  {
+    "id": "68719476866",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>bits<BR/>bits-&gt;g_coef[i] = get_bits(&amp;gb, mtab-&gt;pgain_bit)>"
+    }
+  },
+  {
+    "id": "55834574888",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 133<BR/>g_coef>"
+    }
+  },
+  {
+    "id": "68719476867",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>i<BR/>bits-&gt;g_coef[i] = get_bits(&amp;gb, mtab-&gt;pgain_bit)>"
+    }
+  },
+  {
+    "id": "30064771225",
+    "attrs": {
+      "label": "<get_bits, 133<BR/>get_bits(&amp;gb, mtab-&gt;pgain_bit)>"
+    }
+  },
+  {
+    "id": "30064771226",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 133<BR/>&amp;gb>"
+    }
+  },
+  {
+    "id": "68719476868",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>gb<BR/>get_bits(&amp;gb, mtab-&gt;pgain_bit)>"
+    }
+  },
+  {
+    "id": "30064771227",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 133<BR/>mtab-&gt;pgain_bit>"
+    }
+  },
+  {
+    "id": "68719476869",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>mtab<BR/>get_bits(&amp;gb, mtab-&gt;pgain_bit)>"
+    }
+  },
+  {
+    "id": "55834574889",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 133<BR/>pgain_bit>"
+    }
+  },
+  {
+    "id": "141733920770",
+    "attrs": {
+      "label": "<RETURN, 141<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313235",
+    "attrs": {
+      "label": "<LITERAL, 141<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 85<BR/>&lt;unknown&gt; TWINVQ_FT_LONG: ANY>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 101<BR/>&lt;unknown&gt; TWINVQ_SUB_GAIN_BITS: ANY>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 89<BR/>&lt;unknown&gt; TWINVQ_GAIN_BITS: ANY>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 53<BR/>&lt;unknown&gt; ff_twinvq_wtype_to_ftype_table: ANY>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 47<BR/>&lt;unknown&gt; AVERROR_INVALIDDATA: ANY>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 23<BR/>&lt;unknown&gt; AV_LOG_ERROR: ANY>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 39<BR/>&lt;unknown&gt; TWINVQ_WINDOW_TYPE_BITS: ANY>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 27<BR/>&lt;unknown&gt; EINVAL: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>int>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>twinvq_read_bitstream<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>get_bits1>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectIndexAccess>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.fieldAccess>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>av_log>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>init_get_bits>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.multiplication>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addition>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.equals>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>skip_bits>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>AVERROR>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.postIncrement>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.division>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>read_cb_data>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.greaterThan>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>get_bits>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

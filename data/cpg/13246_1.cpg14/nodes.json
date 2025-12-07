@@ -1,1 +1,1346 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>qxl_track_command>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>PCIQXLDevice *qxl>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>struct QXLCommandExt *ext>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ switch (le32_to_cpu(ext-&gt;cmd.type)) { ...>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 5<BR/>{ case QXL_CMD_SURFACE: { QX...>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 7<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 7<BR/>&lt;unknown&gt; QXL_CMD_SURFACE<BR/>{ case QXL_CMD_SURFACE: { QX...>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 9<BR/>{ QXLSurfaceCmd *cmd = qxl_phys2virt(q...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>QXLSurfaceCmd *cmd: QXLSurfaceCmd*>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 11<BR/>*cmd = qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;g...>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>cmd<BR/>*cmd = qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;g...>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<qxl_phys2virt, 11<BR/>qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;group_id)>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>qxl<BR/>qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;group_id)>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 11<BR/>ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 11<BR/>ext-&gt;cmd>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>ext<BR/>qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;group_id)>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 11<BR/>cmd>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 11<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 11<BR/>ext-&gt;group_id>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>ext<BR/>qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;group_id)>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 11<BR/>group_id>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 15<BR/>{ uint32_t id = le32_to_cpu(cmd-&gt;sur...>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 19<BR/>uint32_t id: uint32_t>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 19<BR/>id = le32_to_cpu(cmd-&gt;surface_id)>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>id<BR/>id = le32_to_cpu(cmd-&gt;surface_id)>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<le32_to_cpu, 19<BR/>le32_to_cpu(cmd-&gt;surface_id)>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 19<BR/>cmd-&gt;surface_id>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>cmd<BR/>le32_to_cpu(cmd-&gt;surface_id)>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 19<BR/>surface_id>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 23<BR/>{ qxl_set_guest_bug(qxl, &quot;QXL_CMD_...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<qxl_set_guest_bug, 25<BR/>qxl_set_guest_bug(qxl, &quot;QXL_CMD_SURFACE id %d &gt;...>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>qxl<BR/>qxl_set_guest_bug(qxl, &quot;QXL_CMD_SURFACE id %d &gt;...>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 25<BR/>&quot;QXL_CMD_SURFACE id %d &gt;= %d&quot;<BR/>qxl_set_guest_bug(qxl, &quot;QXL_CMD_SURFACE id %d &gt;...>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>id<BR/>qxl_set_guest_bug(qxl, &quot;QXL_CMD_SURFACE id %d &gt;...>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 27<BR/>qxl-&gt;ssd.num_surfaces>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 27<BR/>qxl-&gt;ssd>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>qxl<BR/>qxl_set_guest_bug(qxl, &quot;QXL_CMD_SURFACE id %d &gt;...>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 27<BR/>ssd>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 27<BR/>num_surfaces>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<qemu_mutex_lock, 37<BR/>qemu_mutex_lock(&amp;qxl-&gt;track_lock)>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 37<BR/>&amp;qxl-&gt;track_lock>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 37<BR/>qxl-&gt;track_lock>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 37<BR/>qxl<BR/>qemu_mutex_lock(&amp;qxl-&gt;track_lock)>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 37<BR/>track_lock>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 39<BR/>{ qxl-&gt;guest_surfaces.cmds[id] = e...>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 41<BR/>qxl-&gt;guest_surfaces.cmds[id] = ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 41<BR/>qxl-&gt;guest_surfaces.cmds[id]>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 41<BR/>qxl-&gt;guest_surfaces.cmds>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 41<BR/>qxl-&gt;guest_surfaces>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>qxl<BR/>qxl-&gt;guest_surfaces.cmds[id] = ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 41<BR/>guest_surfaces>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 41<BR/>cmds>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>id<BR/>qxl-&gt;guest_surfaces.cmds[id] = ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 41<BR/>ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 41<BR/>ext-&gt;cmd>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>ext<BR/>qxl-&gt;guest_surfaces.cmds[id] = ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 41<BR/>cmd>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 41<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 43<BR/>qxl-&gt;guest_surfaces.count++>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 43<BR/>qxl-&gt;guest_surfaces.count>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 43<BR/>qxl-&gt;guest_surfaces>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>qxl<BR/>qxl-&gt;guest_surfaces.count++>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 43<BR/>guest_surfaces>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 43<BR/>count>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 45<BR/>IF<BR/>if (qxl-&gt;guest_surfaces.max &lt; qxl-&gt;guest_surfac...>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 45<BR/>qxl-&gt;guest_surfaces.max &lt; qxl-&gt;guest_surfaces.c...>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 45<BR/>qxl-&gt;guest_surfaces.max>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 45<BR/>qxl-&gt;guest_surfaces>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>qxl<BR/>qxl-&gt;guest_surfaces.max &lt; qxl-&gt;guest_surfaces.c...>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 45<BR/>guest_surfaces>"
+    }
+  },
+  {
+    "id": "55834574862",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 45<BR/>max>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 45<BR/>qxl-&gt;guest_surfaces.count>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 45<BR/>qxl-&gt;guest_surfaces>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>qxl<BR/>qxl-&gt;guest_surfaces.max &lt; qxl-&gt;guest_surfaces.c...>"
+    }
+  },
+  {
+    "id": "55834574863",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 45<BR/>guest_surfaces>"
+    }
+  },
+  {
+    "id": "55834574864",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 45<BR/>count>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 47<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 47<BR/>qxl-&gt;guest_surfaces.max = qxl-&gt;guest_surfaces.c...>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 47<BR/>qxl-&gt;guest_surfaces.max>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 47<BR/>qxl-&gt;guest_surfaces>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>qxl<BR/>qxl-&gt;guest_surfaces.max = qxl-&gt;guest_surfaces.c...>"
+    }
+  },
+  {
+    "id": "55834574865",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 47<BR/>guest_surfaces>"
+    }
+  },
+  {
+    "id": "55834574866",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 47<BR/>max>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 47<BR/>qxl-&gt;guest_surfaces.count>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 47<BR/>qxl-&gt;guest_surfaces>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>qxl<BR/>qxl-&gt;guest_surfaces.max = qxl-&gt;guest_surfaces.c...>"
+    }
+  },
+  {
+    "id": "55834574867",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 47<BR/>guest_surfaces>"
+    }
+  },
+  {
+    "id": "55834574868",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 47<BR/>count>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 50<BR/>{ qxl-&gt;guest_surfaces.cmds[id] = 0...>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 52<BR/>qxl-&gt;guest_surfaces.cmds[id] = 0>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 52<BR/>qxl-&gt;guest_surfaces.cmds[id]>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 52<BR/>qxl-&gt;guest_surfaces.cmds>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 52<BR/>qxl-&gt;guest_surfaces>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 52<BR/>qxl<BR/>qxl-&gt;guest_surfaces.cmds[id] = 0>"
+    }
+  },
+  {
+    "id": "55834574869",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 52<BR/>guest_surfaces>"
+    }
+  },
+  {
+    "id": "55834574870",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 52<BR/>cmds>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 52<BR/>id<BR/>qxl-&gt;guest_surfaces.cmds[id] = 0>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 52<BR/>0<BR/>qxl-&gt;guest_surfaces.cmds[id] = 0>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postDecrement, 54<BR/>qxl-&gt;guest_surfaces.count-->"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 54<BR/>qxl-&gt;guest_surfaces.count>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 54<BR/>qxl-&gt;guest_surfaces>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 54<BR/>qxl<BR/>qxl-&gt;guest_surfaces.count-->"
+    }
+  },
+  {
+    "id": "55834574871",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 54<BR/>guest_surfaces>"
+    }
+  },
+  {
+    "id": "55834574872",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 54<BR/>count>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<qemu_mutex_unlock, 57<BR/>qemu_mutex_unlock(&amp;qxl-&gt;track_lock)>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 57<BR/>&amp;qxl-&gt;track_lock>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 57<BR/>qxl-&gt;track_lock>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>qxl<BR/>qemu_mutex_unlock(&amp;qxl-&gt;track_lock)>"
+    }
+  },
+  {
+    "id": "55834574873",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 57<BR/>track_lock>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 59<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378625",
+    "attrs": {
+      "label": "<JUMP_TARGET, 62<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 62<BR/>&lt;unknown&gt; QXL_CMD_CURSOR<BR/>{ qxl-&gt;guest_surfaces.cmds[id] = 0...>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 64<BR/>{ QXLCursorCmd *cmd = qxl_phys2virt(qx...>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 66<BR/>QXLCursorCmd *cmd: QXLCursorCmd*>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 66<BR/>*cmd = qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;g...>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 66<BR/>cmd<BR/>*cmd = qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;g...>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<qxl_phys2virt, 66<BR/>qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;group_id)>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 66<BR/>qxl<BR/>qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;group_id)>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 66<BR/>ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 66<BR/>ext-&gt;cmd>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 66<BR/>ext<BR/>qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;group_id)>"
+    }
+  },
+  {
+    "id": "55834574874",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 66<BR/>cmd>"
+    }
+  },
+  {
+    "id": "55834574875",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 66<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 66<BR/>ext-&gt;group_id>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 66<BR/>ext<BR/>qxl_phys2virt(qxl, ext-&gt;cmd.data, ext-&gt;group_id)>"
+    }
+  },
+  {
+    "id": "55834574876",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 66<BR/>group_id>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 70<BR/>{ if (cmd-&gt;type == QXL_CURSOR_SET) {...>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 74<BR/>{ qemu_mutex_lock(&amp;qxl-&gt;track_lock...>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<qemu_mutex_lock, 76<BR/>qemu_mutex_lock(&amp;qxl-&gt;track_lock)>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 76<BR/>&amp;qxl-&gt;track_lock>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 76<BR/>qxl-&gt;track_lock>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 76<BR/>qxl<BR/>qemu_mutex_lock(&amp;qxl-&gt;track_lock)>"
+    }
+  },
+  {
+    "id": "55834574877",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 76<BR/>track_lock>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 78<BR/>qxl-&gt;guest_cursor = ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 78<BR/>qxl-&gt;guest_cursor>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 78<BR/>qxl<BR/>qxl-&gt;guest_cursor = ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "55834574878",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 78<BR/>guest_cursor>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 78<BR/>ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 78<BR/>ext-&gt;cmd>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 78<BR/>ext<BR/>qxl-&gt;guest_cursor = ext-&gt;cmd.data>"
+    }
+  },
+  {
+    "id": "55834574879",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 78<BR/>cmd>"
+    }
+  },
+  {
+    "id": "55834574880",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 78<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<qemu_mutex_unlock, 80<BR/>qemu_mutex_unlock(&amp;qxl-&gt;track_lock)>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 80<BR/>&amp;qxl-&gt;track_lock>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 80<BR/>qxl-&gt;track_lock>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 80<BR/>qxl<BR/>qemu_mutex_unlock(&amp;qxl-&gt;track_lock)>"
+    }
+  },
+  {
+    "id": "55834574881",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 80<BR/>track_lock>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 83<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 87<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 87<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 62<BR/>&lt;unknown&gt; QXL_CMD_CURSOR: ANY>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>&lt;unknown&gt; QXL_CMD_SURFACE: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>int>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>qxl_track_command<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "180388626432",
+    "attrs": {
+      "label": "<UNKNOWN<BR/>>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.fieldAccess>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>qxl_phys2virt>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>qxl_set_guest_bug>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>le32_to_cpu>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.postIncrement>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.postDecrement>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_mutex_lock>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_mutex_unlock>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectIndexAccess>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

@@ -1,0 +1,266 @@
+digraph "usb_test_hotplug" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>usb_test_hotplug> ]
+"111669149696" [label = <PARAM, 1<BR/>const char *hcd_id> ]
+"111669149697" [label = <PARAM, 1<BR/>const int port> ]
+"111669149698" [label = <PARAM, 3<BR/>void (*port_check)(void)> ]
+"25769803776" [label = <BLOCK, 5<BR/>{ QDict *response; char *cmd; ...> ]
+"94489280512" [label = <LOCAL, 7<BR/>QDict *response: QDict*> ]
+"94489280513" [label = <LOCAL, 9<BR/>char *cmd: char*> ]
+"30064771072" [label = <&lt;operator&gt;.assignment, 13<BR/>cmd = g_strdup_printf(&quot;{'execute': 'device_add'...> ]
+"68719476736" [label = <IDENTIFIER, 13<BR/>cmd<BR/>cmd = g_strdup_printf(&quot;{'execute': 'device_add'...> ]
+"30064771073" [label = <g_strdup_printf, 13<BR/>g_strdup_printf(&quot;{'execute': 'device_add',&quot; ...> ]
+"90194313216" [label = <LITERAL, 13<BR/>&quot;{'execute': 'device_add',&quot; ...<BR/>g_strdup_printf(&quot;{'execute': 'device_add',&quot; ...> ]
+"68719476737" [label = <IDENTIFIER, 25<BR/>port<BR/>g_strdup_printf(&quot;{'execute': 'device_add',&quot; ...> ]
+"68719476738" [label = <IDENTIFIER, 25<BR/>hcd_id<BR/>g_strdup_printf(&quot;{'execute': 'device_add',&quot; ...> ]
+"68719476739" [label = <IDENTIFIER, 25<BR/>port<BR/>g_strdup_printf(&quot;{'execute': 'device_add',&quot; ...> ]
+"30064771074" [label = <&lt;operator&gt;.assignment, 27<BR/>response = qmp(cmd)> ]
+"68719476740" [label = <IDENTIFIER, 27<BR/>response<BR/>response = qmp(cmd)> ]
+"30064771075" [label = <qmp, 27<BR/>qmp(cmd)> ]
+"68719476741" [label = <IDENTIFIER, 27<BR/>cmd<BR/>qmp(cmd)> ]
+"30064771076" [label = <g_free, 29<BR/>g_free(cmd)> ]
+"68719476742" [label = <IDENTIFIER, 29<BR/>cmd<BR/>g_free(cmd)> ]
+"30064771077" [label = <g_assert, 31<BR/>g_assert(response)> ]
+"68719476743" [label = <IDENTIFIER, 31<BR/>response<BR/>g_assert(response)> ]
+"30064771078" [label = <g_assert, 33<BR/>g_assert(!qdict_haskey(response, &quot;error&quot;))> ]
+"30064771079" [label = <&lt;operator&gt;.logicalNot, 33<BR/>!qdict_haskey(response, &quot;error&quot;)> ]
+"30064771080" [label = <qdict_haskey, 33<BR/>qdict_haskey(response, &quot;error&quot;)> ]
+"68719476744" [label = <IDENTIFIER, 33<BR/>response<BR/>qdict_haskey(response, &quot;error&quot;)> ]
+"90194313217" [label = <LITERAL, 33<BR/>&quot;error&quot;<BR/>qdict_haskey(response, &quot;error&quot;)> ]
+"47244640256" [label = <CONTROL_STRUCTURE, 38<BR/>IF<BR/>if (port_check) { port_check(); }> ]
+"68719476745" [label = <IDENTIFIER, 38<BR/>port_check<BR/>if (port_check) { port_check(); }> ]
+"25769803777" [label = <BLOCK, 38<BR/>{ port_check(); }> ]
+"30064771081" [label = <&lt;operator&gt;.pointerCall, 40<BR/>port_check()> ]
+"68719476746" [label = <IDENTIFIER, 40<BR/>port_check<BR/>port_check()> ]
+"30064771082" [label = <&lt;operator&gt;.assignment, 46<BR/>cmd = g_strdup_printf(&quot;{'execute': 'device_del'...> ]
+"68719476747" [label = <IDENTIFIER, 46<BR/>cmd<BR/>cmd = g_strdup_printf(&quot;{'execute': 'device_del'...> ]
+"30064771083" [label = <g_strdup_printf, 46<BR/>g_strdup_printf(&quot;{'execute': 'device_del',&quot; ...> ]
+"90194313218" [label = <LITERAL, 46<BR/>&quot;{'execute': 'device_del',&quot; ...<BR/>g_strdup_printf(&quot;{'execute': 'device_del',&quot; ...> ]
+"68719476748" [label = <IDENTIFIER, 52<BR/>port<BR/>g_strdup_printf(&quot;{'execute': 'device_del',&quot; ...> ]
+"30064771084" [label = <&lt;operator&gt;.assignment, 54<BR/>response = qmp(cmd)> ]
+"68719476749" [label = <IDENTIFIER, 54<BR/>response<BR/>response = qmp(cmd)> ]
+"30064771085" [label = <qmp, 54<BR/>qmp(cmd)> ]
+"68719476750" [label = <IDENTIFIER, 54<BR/>cmd<BR/>qmp(cmd)> ]
+"30064771086" [label = <g_free, 56<BR/>g_free(cmd)> ]
+"68719476751" [label = <IDENTIFIER, 56<BR/>cmd<BR/>g_free(cmd)> ]
+"30064771087" [label = <g_assert, 58<BR/>g_assert(response)> ]
+"68719476752" [label = <IDENTIFIER, 58<BR/>response<BR/>g_assert(response)> ]
+"30064771088" [label = <g_assert, 60<BR/>g_assert(qdict_haskey(response, &quot;event&quot;))> ]
+"30064771089" [label = <qdict_haskey, 60<BR/>qdict_haskey(response, &quot;event&quot;)> ]
+"68719476753" [label = <IDENTIFIER, 60<BR/>response<BR/>qdict_haskey(response, &quot;event&quot;)> ]
+"90194313219" [label = <LITERAL, 60<BR/>&quot;event&quot;<BR/>qdict_haskey(response, &quot;event&quot;)> ]
+"30064771090" [label = <g_assert, 62<BR/>g_assert(!strcmp(qdict_get_str(response, &quot;event...> ]
+"30064771091" [label = <&lt;operator&gt;.logicalNot, 62<BR/>!strcmp(qdict_get_str(response, &quot;event&quot;), &quot;DEVI...> ]
+"30064771092" [label = <strcmp, 62<BR/>strcmp(qdict_get_str(response, &quot;event&quot;), &quot;DEVIC...> ]
+"30064771093" [label = <qdict_get_str, 62<BR/>qdict_get_str(response, &quot;event&quot;)> ]
+"68719476754" [label = <IDENTIFIER, 62<BR/>response<BR/>qdict_get_str(response, &quot;event&quot;)> ]
+"90194313220" [label = <LITERAL, 62<BR/>&quot;event&quot;<BR/>qdict_get_str(response, &quot;event&quot;)> ]
+"90194313221" [label = <LITERAL, 62<BR/>&quot;DEVICE_DELETED&quot;<BR/>strcmp(qdict_get_str(response, &quot;event&quot;), &quot;DEVIC...> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>void> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "111669149697"  [ label = "AST: "] 
+  "107374182400" -> "111669149698"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "25769803776" -> "94489280512"  [ label = "AST: "] 
+  "25769803776" -> "94489280513"  [ label = "AST: "] 
+  "25769803776" -> "30064771072"  [ label = "AST: "] 
+  "25769803776" -> "30064771074"  [ label = "AST: "] 
+  "25769803776" -> "30064771076"  [ label = "AST: "] 
+  "25769803776" -> "30064771077"  [ label = "AST: "] 
+  "25769803776" -> "30064771078"  [ label = "AST: "] 
+  "25769803776" -> "47244640256"  [ label = "AST: "] 
+  "25769803776" -> "30064771082"  [ label = "AST: "] 
+  "25769803776" -> "30064771084"  [ label = "AST: "] 
+  "25769803776" -> "30064771086"  [ label = "AST: "] 
+  "25769803776" -> "30064771087"  [ label = "AST: "] 
+  "25769803776" -> "30064771088"  [ label = "AST: "] 
+  "25769803776" -> "30064771090"  [ label = "AST: "] 
+  "30064771072" -> "68719476736"  [ label = "AST: "] 
+  "30064771072" -> "30064771073"  [ label = "AST: "] 
+  "30064771073" -> "90194313216"  [ label = "AST: "] 
+  "30064771073" -> "68719476737"  [ label = "AST: "] 
+  "30064771073" -> "68719476738"  [ label = "AST: "] 
+  "30064771073" -> "68719476739"  [ label = "AST: "] 
+  "30064771074" -> "68719476740"  [ label = "AST: "] 
+  "30064771074" -> "30064771075"  [ label = "AST: "] 
+  "30064771075" -> "68719476741"  [ label = "AST: "] 
+  "30064771076" -> "68719476742"  [ label = "AST: "] 
+  "30064771077" -> "68719476743"  [ label = "AST: "] 
+  "30064771078" -> "30064771079"  [ label = "AST: "] 
+  "30064771079" -> "30064771080"  [ label = "AST: "] 
+  "30064771080" -> "68719476744"  [ label = "AST: "] 
+  "30064771080" -> "90194313217"  [ label = "AST: "] 
+  "47244640256" -> "68719476745"  [ label = "AST: "] 
+  "47244640256" -> "25769803777"  [ label = "AST: "] 
+  "25769803777" -> "30064771081"  [ label = "AST: "] 
+  "30064771081" -> "68719476746"  [ label = "AST: "] 
+  "30064771082" -> "68719476747"  [ label = "AST: "] 
+  "30064771082" -> "30064771083"  [ label = "AST: "] 
+  "30064771083" -> "90194313218"  [ label = "AST: "] 
+  "30064771083" -> "68719476748"  [ label = "AST: "] 
+  "30064771084" -> "68719476749"  [ label = "AST: "] 
+  "30064771084" -> "30064771085"  [ label = "AST: "] 
+  "30064771085" -> "68719476750"  [ label = "AST: "] 
+  "30064771086" -> "68719476751"  [ label = "AST: "] 
+  "30064771087" -> "68719476752"  [ label = "AST: "] 
+  "30064771088" -> "30064771089"  [ label = "AST: "] 
+  "30064771089" -> "68719476753"  [ label = "AST: "] 
+  "30064771089" -> "90194313219"  [ label = "AST: "] 
+  "30064771090" -> "30064771091"  [ label = "AST: "] 
+  "30064771091" -> "30064771092"  [ label = "AST: "] 
+  "30064771092" -> "30064771093"  [ label = "AST: "] 
+  "30064771092" -> "90194313221"  [ label = "AST: "] 
+  "30064771093" -> "68719476754"  [ label = "AST: "] 
+  "30064771093" -> "90194313220"  [ label = "AST: "] 
+  "30064771072" -> "30064771075"  [ label = "CFG: "] 
+  "30064771074" -> "30064771076"  [ label = "CFG: "] 
+  "30064771076" -> "30064771077"  [ label = "CFG: "] 
+  "30064771077" -> "30064771080"  [ label = "CFG: "] 
+  "30064771078" -> "68719476745"  [ label = "CFG: "] 
+  "30064771082" -> "30064771085"  [ label = "CFG: "] 
+  "30064771084" -> "30064771086"  [ label = "CFG: "] 
+  "30064771086" -> "30064771087"  [ label = "CFG: "] 
+  "30064771087" -> "30064771089"  [ label = "CFG: "] 
+  "30064771088" -> "30064771093"  [ label = "CFG: "] 
+  "30064771090" -> "124554051584"  [ label = "CFG: "] 
+  "30064771073" -> "30064771072"  [ label = "CFG: "] 
+  "30064771075" -> "30064771074"  [ label = "CFG: "] 
+  "30064771079" -> "30064771078"  [ label = "CFG: "] 
+  "68719476745" -> "30064771081"  [ label = "CFG: "] 
+  "68719476745" -> "30064771083"  [ label = "CFG: "] 
+  "30064771083" -> "30064771082"  [ label = "CFG: "] 
+  "30064771085" -> "30064771084"  [ label = "CFG: "] 
+  "30064771089" -> "30064771088"  [ label = "CFG: "] 
+  "30064771091" -> "30064771090"  [ label = "CFG: "] 
+  "30064771080" -> "30064771079"  [ label = "CFG: "] 
+  "30064771081" -> "30064771083"  [ label = "CFG: "] 
+  "30064771092" -> "30064771091"  [ label = "CFG: "] 
+  "30064771093" -> "30064771092"  [ label = "CFG: "] 
+  "107374182400" -> "30064771073"  [ label = "CFG: "] 
+  "111669149698" -> "124554051584"  [ label = "DDG: port_check"] 
+  "30064771073" -> "124554051584"  [ label = "DDG: hcd_id"] 
+  "30064771072" -> "124554051584"  [ label = "DDG: g_strdup_printf(&quot;{'execute': 'device_add',&quot;
+
+                          &quot; 'arguments': {&quot;
+
+                          &quot;   'driver': 'usb-tablet',&quot;
+
+                          &quot;   'port': '%d',&quot;
+
+                          &quot;   'bus': '%s.0',&quot;
+
+                          &quot;   'id': 'usbdev%d'&quot;
+
+                          &quot;}}&quot;, port, hcd_id, port)"] 
+  "30064771072" -> "124554051584"  [ label = "DDG: cmd = g_strdup_printf(&quot;{'execute': 'device_add',&quot;
+
+                          &quot; 'arguments': {&quot;
+
+                          &quot;   'driver': 'usb-tablet',&quot;
+
+                          &quot;   'port': '%d',&quot;
+
+                          &quot;   'bus': '%s.0',&quot;
+
+                          &quot;   'id': 'usbdev%d'&quot;
+
+                          &quot;}}&quot;, port, hcd_id, port)"] 
+  "30064771079" -> "124554051584"  [ label = "DDG: qdict_haskey(response, &quot;error&quot;)"] 
+  "30064771078" -> "124554051584"  [ label = "DDG: !qdict_haskey(response, &quot;error&quot;)"] 
+  "30064771078" -> "124554051584"  [ label = "DDG: g_assert(!qdict_haskey(response, &quot;error&quot;))"] 
+  "30064771081" -> "124554051584"  [ label = "DDG: port_check()"] 
+  "30064771083" -> "124554051584"  [ label = "DDG: port"] 
+  "30064771082" -> "124554051584"  [ label = "DDG: g_strdup_printf(&quot;{'execute': 'device_del',&quot;
+
+                           &quot; 'arguments': {&quot;
+
+                           &quot;   'id': 'usbdev%d'&quot;
+
+                           &quot;}}&quot;, port)"] 
+  "30064771082" -> "124554051584"  [ label = "DDG: cmd = g_strdup_printf(&quot;{'execute': 'device_del',&quot;
+
+                           &quot; 'arguments': {&quot;
+
+                           &quot;   'id': 'usbdev%d'&quot;
+
+                           &quot;}}&quot;, port)"] 
+  "30064771084" -> "124554051584"  [ label = "DDG: qmp(cmd)"] 
+  "30064771084" -> "124554051584"  [ label = "DDG: response = qmp(cmd)"] 
+  "30064771086" -> "124554051584"  [ label = "DDG: cmd"] 
+  "30064771086" -> "124554051584"  [ label = "DDG: g_free(cmd)"] 
+  "30064771087" -> "124554051584"  [ label = "DDG: g_assert(response)"] 
+  "30064771088" -> "124554051584"  [ label = "DDG: qdict_haskey(response, &quot;event&quot;)"] 
+  "30064771088" -> "124554051584"  [ label = "DDG: g_assert(qdict_haskey(response, &quot;event&quot;))"] 
+  "30064771093" -> "124554051584"  [ label = "DDG: response"] 
+  "30064771092" -> "124554051584"  [ label = "DDG: qdict_get_str(response, &quot;event&quot;)"] 
+  "30064771091" -> "124554051584"  [ label = "DDG: strcmp(qdict_get_str(response, &quot;event&quot;), &quot;DEVICE_DELETED&quot;)"] 
+  "30064771090" -> "124554051584"  [ label = "DDG: !strcmp(qdict_get_str(response, &quot;event&quot;), &quot;DEVICE_DELETED&quot;)"] 
+  "30064771090" -> "124554051584"  [ label = "DDG: g_assert(!strcmp(qdict_get_str(response, &quot;event&quot;), &quot;DEVICE_DELETED&quot;))"] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "107374182400" -> "111669149697"  [ label = "DDG: "] 
+  "107374182400" -> "111669149698"  [ label = "DDG: "] 
+  "30064771073" -> "30064771072"  [ label = "DDG: &quot;{'execute': 'device_add',&quot;
+
+                          &quot; 'arguments': {&quot;
+
+                          &quot;   'driver': 'usb-tablet',&quot;
+
+                          &quot;   'port': '%d',&quot;
+
+                          &quot;   'bus': '%s.0',&quot;
+
+                          &quot;   'id': 'usbdev%d'&quot;
+
+                          &quot;}}&quot;"] 
+  "30064771073" -> "30064771072"  [ label = "DDG: port"] 
+  "30064771073" -> "30064771072"  [ label = "DDG: hcd_id"] 
+  "30064771075" -> "30064771074"  [ label = "DDG: cmd"] 
+  "30064771083" -> "30064771082"  [ label = "DDG: &quot;{'execute': 'device_del',&quot;
+
+                           &quot; 'arguments': {&quot;
+
+                           &quot;   'id': 'usbdev%d'&quot;
+
+                           &quot;}}&quot;"] 
+  "30064771083" -> "30064771082"  [ label = "DDG: port"] 
+  "30064771085" -> "30064771084"  [ label = "DDG: cmd"] 
+  "30064771075" -> "30064771076"  [ label = "DDG: cmd"] 
+  "107374182400" -> "30064771076"  [ label = "DDG: "] 
+  "30064771074" -> "30064771077"  [ label = "DDG: response"] 
+  "107374182400" -> "30064771077"  [ label = "DDG: "] 
+  "30064771079" -> "30064771078"  [ label = "DDG: qdict_haskey(response, &quot;error&quot;)"] 
+  "107374182400" -> "68719476745"  [ label = "DDG: "] 
+  "30064771085" -> "30064771086"  [ label = "DDG: cmd"] 
+  "107374182400" -> "30064771086"  [ label = "DDG: "] 
+  "30064771084" -> "30064771087"  [ label = "DDG: response"] 
+  "107374182400" -> "30064771087"  [ label = "DDG: "] 
+  "30064771089" -> "30064771088"  [ label = "DDG: response"] 
+  "30064771089" -> "30064771088"  [ label = "DDG: &quot;event&quot;"] 
+  "30064771091" -> "30064771090"  [ label = "DDG: strcmp(qdict_get_str(response, &quot;event&quot;), &quot;DEVICE_DELETED&quot;)"] 
+  "107374182400" -> "30064771073"  [ label = "DDG: "] 
+  "111669149697" -> "30064771073"  [ label = "DDG: port"] 
+  "111669149696" -> "30064771073"  [ label = "DDG: hcd_id"] 
+  "30064771072" -> "30064771075"  [ label = "DDG: cmd"] 
+  "107374182400" -> "30064771075"  [ label = "DDG: "] 
+  "30064771080" -> "30064771079"  [ label = "DDG: response"] 
+  "30064771080" -> "30064771079"  [ label = "DDG: &quot;error&quot;"] 
+  "107374182400" -> "30064771081"  [ label = "DDG: "] 
+  "107374182400" -> "30064771083"  [ label = "DDG: "] 
+  "30064771073" -> "30064771083"  [ label = "DDG: port"] 
+  "30064771082" -> "30064771085"  [ label = "DDG: cmd"] 
+  "107374182400" -> "30064771085"  [ label = "DDG: "] 
+  "30064771087" -> "30064771089"  [ label = "DDG: response"] 
+  "107374182400" -> "30064771089"  [ label = "DDG: "] 
+  "30064771092" -> "30064771091"  [ label = "DDG: qdict_get_str(response, &quot;event&quot;)"] 
+  "30064771092" -> "30064771091"  [ label = "DDG: &quot;DEVICE_DELETED&quot;"] 
+  "30064771077" -> "30064771080"  [ label = "DDG: response"] 
+  "107374182400" -> "30064771080"  [ label = "DDG: "] 
+  "107374182400" -> "68719476746"  [ label = "DDG: "] 
+  "30064771093" -> "30064771092"  [ label = "DDG: response"] 
+  "30064771093" -> "30064771092"  [ label = "DDG: &quot;event&quot;"] 
+  "107374182400" -> "30064771092"  [ label = "DDG: "] 
+  "30064771089" -> "30064771093"  [ label = "DDG: response"] 
+  "107374182400" -> "30064771093"  [ label = "DDG: "] 
+  "68719476745" -> "30064771081"  [ label = "CDG: "] 
+}

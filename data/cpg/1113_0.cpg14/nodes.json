@@ -1,1 +1,2486 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>qemu_rbd_parse_filename>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>const char *filename>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>QDict *options>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>Error **errp>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 5<BR/>{ const char *start; char *p, *buf, *...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>const char *start: char*>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>char *p: char*>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>char *buf: char*>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>char *keypairs: char*>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>char *found_str: char*>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>size_t max_keypair_size: size_t>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>Error *local_err: Error*>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 15<BR/>*local_err = NULL>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>local_err<BR/>*local_err = NULL>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>&lt;unknown&gt; NULL<BR/>*local_err = NULL>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 19<BR/>IF<BR/>if (!strstart(filename, &quot;rbd:&quot;, &amp;start)) { ...>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 19<BR/>!strstart(filename, &quot;rbd:&quot;, &amp;start)>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<strstart, 19<BR/>strstart(filename, &quot;rbd:&quot;, &amp;start)>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>filename<BR/>strstart(filename, &quot;rbd:&quot;, &amp;start)>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 19<BR/>&quot;rbd:&quot;<BR/>strstart(filename, &quot;rbd:&quot;, &amp;start)>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 19<BR/>&amp;start>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>start<BR/>strstart(filename, &quot;rbd:&quot;, &amp;start)>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 19<BR/>{ error_setg(errp, &quot;File name must sta...>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<error_setg, 21<BR/>error_setg(errp, &quot;File name must start with 'rb...>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>errp<BR/>error_setg(errp, &quot;File name must start with 'rb...>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 21<BR/>&quot;File name must start with 'rbd:'&quot;<BR/>error_setg(errp, &quot;File name must start with 'rb...>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 23<BR/>return;>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 29<BR/>max_keypair_size = strlen(start) + 1>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 29<BR/>max_keypair_size<BR/>max_keypair_size = strlen(start) + 1>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 29<BR/>strlen(start) + 1>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<strlen, 29<BR/>strlen(start)>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 29<BR/>start<BR/>strlen(start)>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 29<BR/>1<BR/>strlen(start) + 1>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 31<BR/>buf = g_strdup(start)>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>buf<BR/>buf = g_strdup(start)>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<g_strdup, 31<BR/>g_strdup(start)>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>start<BR/>g_strdup(start)>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 33<BR/>keypairs = g_malloc0(max_keypair_size)>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>keypairs<BR/>keypairs = g_malloc0(max_keypair_size)>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<g_malloc0, 33<BR/>g_malloc0(max_keypair_size)>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>max_keypair_size<BR/>g_malloc0(max_keypair_size)>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 35<BR/>p = buf>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>p<BR/>p = buf>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>buf<BR/>p = buf>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 39<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_POOL_NAME...>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>found_str<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_POOL_NAME...>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<qemu_rbd_next_tok, 39<BR/>qemu_rbd_next_tok(RBD_MAX_POOL_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>&lt;unknown&gt; RBD_MAX_POOL_NAME_SIZE<BR/>qemu_rbd_next_tok(RBD_MAX_POOL_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_POOL_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 41<BR/>'/'<BR/>qemu_rbd_next_tok(RBD_MAX_POOL_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 41<BR/>&quot;pool name&quot;<BR/>qemu_rbd_next_tok(RBD_MAX_POOL_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 41<BR/>&amp;p>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_POOL_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 41<BR/>&amp;local_err>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>local_err<BR/>qemu_rbd_next_tok(RBD_MAX_POOL_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 43<BR/>IF<BR/>if (local_err) { goto done; }>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>local_err<BR/>if (local_err) { goto done; }>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 43<BR/>{ goto done; }>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 45<BR/>GOTO<BR/>goto done;>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 49<BR/>IF<BR/>if (!p) { error_setg(errp, &quot;Pool name ...>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 49<BR/>!p>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>p<BR/>!p>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 49<BR/>{ error_setg(errp, &quot;Pool name is requi...>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<error_setg, 51<BR/>error_setg(errp, &quot;Pool name is required&quot;)>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>errp<BR/>error_setg(errp, &quot;Pool name is required&quot;)>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 51<BR/>&quot;Pool name is required&quot;<BR/>error_setg(errp, &quot;Pool name is required&quot;)>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 53<BR/>GOTO<BR/>goto done;>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<qemu_rbd_unescape, 57<BR/>qemu_rbd_unescape(found_str)>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>found_str<BR/>qemu_rbd_unescape(found_str)>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<qdict_put, 59<BR/>qdict_put(options, &quot;pool&quot;, qstring_from_str(fou...>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>options<BR/>qdict_put(options, &quot;pool&quot;, qstring_from_str(fou...>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 59<BR/>&quot;pool&quot;<BR/>qdict_put(options, &quot;pool&quot;, qstring_from_str(fou...>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<qstring_from_str, 59<BR/>qstring_from_str(found_str)>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>found_str<BR/>qstring_from_str(found_str)>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 63<BR/>IF<BR/>if (strchr(p, '@')) { found_str = qemu...>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<strchr, 63<BR/>strchr(p, '@')>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 63<BR/>p<BR/>strchr(p, '@')>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 63<BR/>'@'<BR/>strchr(p, '@')>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 63<BR/>{ found_str = qemu_rbd_next_tok(RBD_MA...>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 65<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_IMAGE_NAM...>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>found_str<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_IMAGE_NAM...>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<qemu_rbd_next_tok, 65<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>&lt;unknown&gt; RBD_MAX_IMAGE_NAME_SIZE<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 67<BR/>'@'<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 67<BR/>&quot;object name&quot;<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 67<BR/>&amp;p>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 67<BR/>&amp;local_err>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>local_err<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 69<BR/>IF<BR/>if (local_err) { goto done; ...>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>local_err<BR/>if (local_err) { goto done; ...>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 69<BR/>{ goto done; }>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 71<BR/>GOTO<BR/>goto done;>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<qemu_rbd_unescape, 75<BR/>qemu_rbd_unescape(found_str)>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>found_str<BR/>qemu_rbd_unescape(found_str)>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<qdict_put, 77<BR/>qdict_put(options, &quot;image&quot;, qstring_from_str(fo...>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>options<BR/>qdict_put(options, &quot;image&quot;, qstring_from_str(fo...>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 77<BR/>&quot;image&quot;<BR/>qdict_put(options, &quot;image&quot;, qstring_from_str(fo...>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<qstring_from_str, 77<BR/>qstring_from_str(found_str)>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>found_str<BR/>qstring_from_str(found_str)>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 81<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_SNAP_NAME...>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>found_str<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_SNAP_NAME...>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<qemu_rbd_next_tok, 81<BR/>qemu_rbd_next_tok(RBD_MAX_SNAP_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>&lt;unknown&gt; RBD_MAX_SNAP_NAME_SIZE<BR/>qemu_rbd_next_tok(RBD_MAX_SNAP_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_SNAP_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 83<BR/>':'<BR/>qemu_rbd_next_tok(RBD_MAX_SNAP_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 83<BR/>&quot;snap name&quot;<BR/>qemu_rbd_next_tok(RBD_MAX_SNAP_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 83<BR/>&amp;p>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_SNAP_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 83<BR/>&amp;local_err>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>local_err<BR/>qemu_rbd_next_tok(RBD_MAX_SNAP_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 85<BR/>IF<BR/>if (local_err) { goto done; ...>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>local_err<BR/>if (local_err) { goto done; ...>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 85<BR/>{ goto done; }>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 87<BR/>GOTO<BR/>goto done;>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<qemu_rbd_unescape, 91<BR/>qemu_rbd_unescape(found_str)>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>found_str<BR/>qemu_rbd_unescape(found_str)>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<qdict_put, 93<BR/>qdict_put(options, &quot;snapshot&quot;, qstring_from_str...>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>options<BR/>qdict_put(options, &quot;snapshot&quot;, qstring_from_str...>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 93<BR/>&quot;snapshot&quot;<BR/>qdict_put(options, &quot;snapshot&quot;, qstring_from_str...>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<qstring_from_str, 93<BR/>qstring_from_str(found_str)>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>found_str<BR/>qstring_from_str(found_str)>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 95<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 95<BR/>{ found_str = qemu_rbd_next_tok(RBD_MA...>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 97<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_IMAGE_NAM...>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>found_str<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_IMAGE_NAM...>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<qemu_rbd_next_tok, 97<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>&lt;unknown&gt; RBD_MAX_IMAGE_NAME_SIZE<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 99<BR/>':'<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313231",
+    "attrs": {
+      "label": "<LITERAL, 99<BR/>&quot;object name&quot;<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 99<BR/>&amp;p>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 99<BR/>&amp;local_err>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>local_err<BR/>qemu_rbd_next_tok(RBD_MAX_IMAGE_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 101<BR/>IF<BR/>if (local_err) { goto done; ...>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>local_err<BR/>if (local_err) { goto done; ...>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 101<BR/>{ goto done; }>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 103<BR/>GOTO<BR/>goto done;>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<qemu_rbd_unescape, 107<BR/>qemu_rbd_unescape(found_str)>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>found_str<BR/>qemu_rbd_unescape(found_str)>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<qdict_put, 109<BR/>qdict_put(options, &quot;image&quot;, qstring_from_str(fo...>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 109<BR/>options<BR/>qdict_put(options, &quot;image&quot;, qstring_from_str(fo...>"
+    }
+  },
+  {
+    "id": "90194313232",
+    "attrs": {
+      "label": "<LITERAL, 109<BR/>&quot;image&quot;<BR/>qdict_put(options, &quot;image&quot;, qstring_from_str(fo...>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<qstring_from_str, 109<BR/>qstring_from_str(found_str)>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 109<BR/>found_str<BR/>qstring_from_str(found_str)>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 113<BR/>IF<BR/>if (!p) { goto done; }>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 113<BR/>!p>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>p<BR/>!p>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 113<BR/>{ goto done; }>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 115<BR/>GOTO<BR/>goto done;>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 121<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_CONF_NAME...>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>found_str<BR/>found_str = qemu_rbd_next_tok(RBD_MAX_CONF_NAME...>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<qemu_rbd_next_tok, 121<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>&lt;unknown&gt; RBD_MAX_CONF_NAME_SIZE<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313233",
+    "attrs": {
+      "label": "<LITERAL, 123<BR/>'\\0'<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313234",
+    "attrs": {
+      "label": "<LITERAL, 123<BR/>&quot;configuration&quot;<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 123<BR/>&amp;p>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 123<BR/>&amp;local_err>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>local_err<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "47244640271",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 125<BR/>IF<BR/>if (local_err) { goto done; }>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>local_err<BR/>if (local_err) { goto done; }>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 125<BR/>{ goto done; }>"
+    }
+  },
+  {
+    "id": "47244640272",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 127<BR/>GOTO<BR/>goto done;>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 133<BR/>p = found_str>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>p<BR/>p = found_str>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>found_str<BR/>p = found_str>"
+    }
+  },
+  {
+    "id": "47244640273",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 141<BR/>WHILE<BR/>while (p)>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>p<BR/>while (p)>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 141<BR/>{ char *name, *value; name = ...>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 143<BR/>char *name: char*>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 143<BR/>char *value: char*>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 145<BR/>name = qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE...>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>name<BR/>name = qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE...>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<qemu_rbd_next_tok, 145<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>&lt;unknown&gt; RBD_MAX_CONF_NAME_SIZE<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313235",
+    "attrs": {
+      "label": "<LITERAL, 147<BR/>'='<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313236",
+    "attrs": {
+      "label": "<LITERAL, 147<BR/>&quot;conf option name&quot;<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 147<BR/>&amp;p>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 147<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 147<BR/>&amp;local_err>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 147<BR/>local_err<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_NAME_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "47244640274",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 149<BR/>IF<BR/>if (local_err) { break; }>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 149<BR/>local_err<BR/>if (local_err) { break; }>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 149<BR/>{ break; }>"
+    }
+  },
+  {
+    "id": "47244640275",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 151<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "47244640276",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 157<BR/>IF<BR/>if (!p) { error_setg(errp, &quot;conf o...>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 157<BR/>!p>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 157<BR/>p<BR/>!p>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 157<BR/>{ error_setg(errp, &quot;conf option %s...>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<error_setg, 159<BR/>error_setg(errp, &quot;conf option %s has no value&quot;,...>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 159<BR/>errp<BR/>error_setg(errp, &quot;conf option %s has no value&quot;,...>"
+    }
+  },
+  {
+    "id": "90194313237",
+    "attrs": {
+      "label": "<LITERAL, 159<BR/>&quot;conf option %s has no value&quot;<BR/>error_setg(errp, &quot;conf option %s has no value&quot;,...>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 159<BR/>name<BR/>error_setg(errp, &quot;conf option %s has no value&quot;,...>"
+    }
+  },
+  {
+    "id": "47244640277",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 161<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<qemu_rbd_unescape, 167<BR/>qemu_rbd_unescape(name)>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 167<BR/>name<BR/>qemu_rbd_unescape(name)>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 171<BR/>value = qemu_rbd_next_tok(RBD_MAX_CONF_VAL_SIZE...>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>value<BR/>value = qemu_rbd_next_tok(RBD_MAX_CONF_VAL_SIZE...>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<qemu_rbd_next_tok, 171<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_VAL_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>&lt;unknown&gt; RBD_MAX_CONF_VAL_SIZE<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_VAL_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_VAL_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313238",
+    "attrs": {
+      "label": "<LITERAL, 173<BR/>':'<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_VAL_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "90194313239",
+    "attrs": {
+      "label": "<LITERAL, 173<BR/>&quot;conf option value&quot;<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_VAL_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 173<BR/>&amp;p>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>p<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_VAL_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 173<BR/>&amp;local_err>"
+    }
+  },
+  {
+    "id": "68719476812",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>local_err<BR/>qemu_rbd_next_tok(RBD_MAX_CONF_VAL_SIZE, p, ...>"
+    }
+  },
+  {
+    "id": "47244640278",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 175<BR/>IF<BR/>if (local_err) { break; }>"
+    }
+  },
+  {
+    "id": "68719476813",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>local_err<BR/>if (local_err) { break; }>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 175<BR/>{ break; }>"
+    }
+  },
+  {
+    "id": "47244640279",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 177<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<qemu_rbd_unescape, 181<BR/>qemu_rbd_unescape(value)>"
+    }
+  },
+  {
+    "id": "68719476814",
+    "attrs": {
+      "label": "<IDENTIFIER, 181<BR/>value<BR/>qemu_rbd_unescape(value)>"
+    }
+  },
+  {
+    "id": "47244640280",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 185<BR/>IF<BR/>if (!strcmp(name, &quot;conf&quot;)) { qdict...>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 185<BR/>!strcmp(name, &quot;conf&quot;)>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<strcmp, 185<BR/>strcmp(name, &quot;conf&quot;)>"
+    }
+  },
+  {
+    "id": "68719476815",
+    "attrs": {
+      "label": "<IDENTIFIER, 185<BR/>name<BR/>strcmp(name, &quot;conf&quot;)>"
+    }
+  },
+  {
+    "id": "90194313240",
+    "attrs": {
+      "label": "<LITERAL, 185<BR/>&quot;conf&quot;<BR/>strcmp(name, &quot;conf&quot;)>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 185<BR/>{ qdict_put(options, &quot;conf&quot;, qstri...>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<qdict_put, 187<BR/>qdict_put(options, &quot;conf&quot;, qstring_from_str(val...>"
+    }
+  },
+  {
+    "id": "68719476816",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>options<BR/>qdict_put(options, &quot;conf&quot;, qstring_from_str(val...>"
+    }
+  },
+  {
+    "id": "90194313241",
+    "attrs": {
+      "label": "<LITERAL, 187<BR/>&quot;conf&quot;<BR/>qdict_put(options, &quot;conf&quot;, qstring_from_str(val...>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<qstring_from_str, 187<BR/>qstring_from_str(value)>"
+    }
+  },
+  {
+    "id": "68719476817",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>value<BR/>qstring_from_str(value)>"
+    }
+  },
+  {
+    "id": "47244640281",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 189<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 189<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640282",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 189<BR/>IF<BR/>if (!strcmp(name, &quot;id&quot;)) { qdict_p...>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 189<BR/>!strcmp(name, &quot;id&quot;)>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<strcmp, 189<BR/>strcmp(name, &quot;id&quot;)>"
+    }
+  },
+  {
+    "id": "68719476818",
+    "attrs": {
+      "label": "<IDENTIFIER, 189<BR/>name<BR/>strcmp(name, &quot;id&quot;)>"
+    }
+  },
+  {
+    "id": "90194313242",
+    "attrs": {
+      "label": "<LITERAL, 189<BR/>&quot;id&quot;<BR/>strcmp(name, &quot;id&quot;)>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK, 189<BR/>{ qdict_put(options, &quot;user&quot; , qstr...>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<qdict_put, 191<BR/>qdict_put(options, &quot;user&quot; , qstring_from_str(va...>"
+    }
+  },
+  {
+    "id": "68719476819",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>options<BR/>qdict_put(options, &quot;user&quot; , qstring_from_str(va...>"
+    }
+  },
+  {
+    "id": "90194313243",
+    "attrs": {
+      "label": "<LITERAL, 191<BR/>&quot;user&quot;<BR/>qdict_put(options, &quot;user&quot; , qstring_from_str(va...>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<qstring_from_str, 191<BR/>qstring_from_str(value)>"
+    }
+  },
+  {
+    "id": "68719476820",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>value<BR/>qstring_from_str(value)>"
+    }
+  },
+  {
+    "id": "47244640283",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 193<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK, 193<BR/>{ /* FIXME: This is pretty ugly, a...>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 205<BR/>char *tmp: char*>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 205<BR/>*tmp = g_malloc0(max_keypair_size)>"
+    }
+  },
+  {
+    "id": "68719476821",
+    "attrs": {
+      "label": "<IDENTIFIER, 205<BR/>tmp<BR/>*tmp = g_malloc0(max_keypair_size)>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<g_malloc0, 205<BR/>g_malloc0(max_keypair_size)>"
+    }
+  },
+  {
+    "id": "68719476822",
+    "attrs": {
+      "label": "<IDENTIFIER, 205<BR/>max_keypair_size<BR/>g_malloc0(max_keypair_size)>"
+    }
+  },
+  {
+    "id": "47244640284",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 213<BR/>IF<BR/>if (keypairs[0]) { snprintf(tm...>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 213<BR/>keypairs[0]>"
+    }
+  },
+  {
+    "id": "68719476823",
+    "attrs": {
+      "label": "<IDENTIFIER, 213<BR/>keypairs<BR/>if (keypairs[0]) { snprintf(tm...>"
+    }
+  },
+  {
+    "id": "90194313244",
+    "attrs": {
+      "label": "<LITERAL, 213<BR/>0<BR/>if (keypairs[0]) { snprintf(tm...>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK, 213<BR/>{ snprintf(tmp, max_keypair_si...>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<snprintf, 215<BR/>snprintf(tmp, max_keypair_size, &quot;:%s=%s&quot;, name,...>"
+    }
+  },
+  {
+    "id": "68719476824",
+    "attrs": {
+      "label": "<IDENTIFIER, 215<BR/>tmp<BR/>snprintf(tmp, max_keypair_size, &quot;:%s=%s&quot;, name,...>"
+    }
+  },
+  {
+    "id": "68719476825",
+    "attrs": {
+      "label": "<IDENTIFIER, 215<BR/>max_keypair_size<BR/>snprintf(tmp, max_keypair_size, &quot;:%s=%s&quot;, name,...>"
+    }
+  },
+  {
+    "id": "90194313245",
+    "attrs": {
+      "label": "<LITERAL, 215<BR/>&quot;:%s=%s&quot;<BR/>snprintf(tmp, max_keypair_size, &quot;:%s=%s&quot;, name,...>"
+    }
+  },
+  {
+    "id": "68719476826",
+    "attrs": {
+      "label": "<IDENTIFIER, 215<BR/>name<BR/>snprintf(tmp, max_keypair_size, &quot;:%s=%s&quot;, name,...>"
+    }
+  },
+  {
+    "id": "68719476827",
+    "attrs": {
+      "label": "<IDENTIFIER, 215<BR/>value<BR/>snprintf(tmp, max_keypair_size, &quot;:%s=%s&quot;, name,...>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<pstrcat, 217<BR/>pstrcat(keypairs, max_keypair_size, tmp)>"
+    }
+  },
+  {
+    "id": "68719476828",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>keypairs<BR/>pstrcat(keypairs, max_keypair_size, tmp)>"
+    }
+  },
+  {
+    "id": "68719476829",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>max_keypair_size<BR/>pstrcat(keypairs, max_keypair_size, tmp)>"
+    }
+  },
+  {
+    "id": "68719476830",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>tmp<BR/>pstrcat(keypairs, max_keypair_size, tmp)>"
+    }
+  },
+  {
+    "id": "47244640285",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 219<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK, 219<BR/>{ snprintf(keypairs, max_keypa...>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<snprintf, 221<BR/>snprintf(keypairs, max_keypair_size, &quot;%s=%s&quot;, n...>"
+    }
+  },
+  {
+    "id": "68719476831",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>keypairs<BR/>snprintf(keypairs, max_keypair_size, &quot;%s=%s&quot;, n...>"
+    }
+  },
+  {
+    "id": "68719476832",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>max_keypair_size<BR/>snprintf(keypairs, max_keypair_size, &quot;%s=%s&quot;, n...>"
+    }
+  },
+  {
+    "id": "90194313246",
+    "attrs": {
+      "label": "<LITERAL, 221<BR/>&quot;%s=%s&quot;<BR/>snprintf(keypairs, max_keypair_size, &quot;%s=%s&quot;, n...>"
+    }
+  },
+  {
+    "id": "68719476833",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>name<BR/>snprintf(keypairs, max_keypair_size, &quot;%s=%s&quot;, n...>"
+    }
+  },
+  {
+    "id": "68719476834",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>value<BR/>snprintf(keypairs, max_keypair_size, &quot;%s=%s&quot;, n...>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<g_free, 225<BR/>g_free(tmp)>"
+    }
+  },
+  {
+    "id": "68719476835",
+    "attrs": {
+      "label": "<IDENTIFIER, 225<BR/>tmp<BR/>g_free(tmp)>"
+    }
+  },
+  {
+    "id": "47244640286",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 233<BR/>IF<BR/>if (keypairs[0]) { qdict_put(options, ...>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 233<BR/>keypairs[0]>"
+    }
+  },
+  {
+    "id": "68719476836",
+    "attrs": {
+      "label": "<IDENTIFIER, 233<BR/>keypairs<BR/>if (keypairs[0]) { qdict_put(options, ...>"
+    }
+  },
+  {
+    "id": "90194313247",
+    "attrs": {
+      "label": "<LITERAL, 233<BR/>0<BR/>if (keypairs[0]) { qdict_put(options, ...>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK, 233<BR/>{ qdict_put(options, &quot;keyvalue-pairs&quot;,...>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<qdict_put, 235<BR/>qdict_put(options, &quot;keyvalue-pairs&quot;, qstring_fr...>"
+    }
+  },
+  {
+    "id": "68719476837",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>options<BR/>qdict_put(options, &quot;keyvalue-pairs&quot;, qstring_fr...>"
+    }
+  },
+  {
+    "id": "90194313248",
+    "attrs": {
+      "label": "<LITERAL, 235<BR/>&quot;keyvalue-pairs&quot;<BR/>qdict_put(options, &quot;keyvalue-pairs&quot;, qstring_fr...>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<qstring_from_str, 235<BR/>qstring_from_str(keypairs)>"
+    }
+  },
+  {
+    "id": "68719476838",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>keypairs<BR/>qstring_from_str(keypairs)>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 243<BR/>done>"
+    }
+  },
+  {
+    "id": "47244640287",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 245<BR/>IF<BR/>if (local_err) { error_propagate(errp,...>"
+    }
+  },
+  {
+    "id": "68719476839",
+    "attrs": {
+      "label": "<IDENTIFIER, 245<BR/>local_err<BR/>if (local_err) { error_propagate(errp,...>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK, 245<BR/>{ error_propagate(errp, local_err); ...>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<error_propagate, 247<BR/>error_propagate(errp, local_err)>"
+    }
+  },
+  {
+    "id": "68719476840",
+    "attrs": {
+      "label": "<IDENTIFIER, 247<BR/>errp<BR/>error_propagate(errp, local_err)>"
+    }
+  },
+  {
+    "id": "68719476841",
+    "attrs": {
+      "label": "<IDENTIFIER, 247<BR/>local_err<BR/>error_propagate(errp, local_err)>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<g_free, 251<BR/>g_free(buf)>"
+    }
+  },
+  {
+    "id": "68719476842",
+    "attrs": {
+      "label": "<IDENTIFIER, 251<BR/>buf<BR/>g_free(buf)>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<g_free, 253<BR/>g_free(keypairs)>"
+    }
+  },
+  {
+    "id": "68719476843",
+    "attrs": {
+      "label": "<IDENTIFIER, 253<BR/>keypairs<BR/>g_free(keypairs)>"
+    }
+  },
+  {
+    "id": "141733920769",
+    "attrs": {
+      "label": "<RETURN, 255<BR/>return;>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 171<BR/>&lt;unknown&gt; RBD_MAX_CONF_VAL_SIZE: ANY>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 121<BR/>&lt;unknown&gt; RBD_MAX_CONF_NAME_SIZE: ANY>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 65<BR/>&lt;unknown&gt; RBD_MAX_IMAGE_NAME_SIZE: ANY>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 81<BR/>&lt;unknown&gt; RBD_MAX_SNAP_NAME_SIZE: ANY>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 39<BR/>&lt;unknown&gt; RBD_MAX_POOL_NAME_SIZE: ANY>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>void>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>qemu_rbd_parse_filename<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_rbd_next_tok>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p6>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>qstring_from_str>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addition>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>error_propagate>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>qdict_put>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>strlen>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>g_strdup>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>error_setg>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>pstrcat>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>g_malloc0>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803817",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803818",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>strstart>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803819",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>snprintf>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "25769803820",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>strcmp>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>g_free>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>strchr>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_rbd_unescape>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectIndexAccess>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

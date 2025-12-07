@@ -1,1 +1,572 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>get_ahci_device>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>uint32_t *fingerprint>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ QPCIDevice *ahci; uint32_t ahci_fin...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 5<BR/>QPCIDevice *ahci: QPCIDevice*>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>uint32_t ahci_fingerprint: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>QPCIBus *pcibus: QPCIBus*>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 13<BR/>pcibus = qpci_init_pc()>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>pcibus<BR/>pcibus = qpci_init_pc()>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<qpci_init_pc, 13<BR/>qpci_init_pc()>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 19<BR/>ahci = qpci_device_find(pcibus, QPCI_DEVFN(0x1F...>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>ahci<BR/>ahci = qpci_device_find(pcibus, QPCI_DEVFN(0x1F...>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<qpci_device_find, 19<BR/>qpci_device_find(pcibus, QPCI_DEVFN(0x1F, 0x02))>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>pcibus<BR/>qpci_device_find(pcibus, QPCI_DEVFN(0x1F, 0x02))>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<QPCI_DEVFN, 19<BR/>QPCI_DEVFN(0x1F, 0x02)>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 19<BR/>0x1F<BR/>QPCI_DEVFN(0x1F, 0x02)>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 19<BR/>0x02<BR/>QPCI_DEVFN(0x1F, 0x02)>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<g_assert, 21<BR/>g_assert(ahci != NULL)>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 21<BR/>ahci != NULL>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>ahci<BR/>ahci != NULL>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>&lt;unknown&gt; NULL<BR/>ahci != NULL>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 25<BR/>ahci_fingerprint = qpci_config_readl(ahci, PCI_...>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>ahci_fingerprint<BR/>ahci_fingerprint = qpci_config_readl(ahci, PCI_...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<qpci_config_readl, 25<BR/>qpci_config_readl(ahci, PCI_VENDOR_ID)>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>ahci<BR/>qpci_config_readl(ahci, PCI_VENDOR_ID)>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>&lt;unknown&gt; PCI_VENDOR_ID<BR/>qpci_config_readl(ahci, PCI_VENDOR_ID)>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 29<BR/>SWITCH<BR/>switch (ahci_fingerprint) { case AHCI_INTE...>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 29<BR/>ahci_fingerprint<BR/>switch (ahci_fingerprint) { case AHCI_INTE...>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 29<BR/>{ case AHCI_INTEL_ICH9: break; ...>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 31<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>&lt;unknown&gt; AHCI_INTEL_ICH9<BR/>{ case AHCI_INTEL_ICH9: break; ...>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 33<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378625",
+    "attrs": {
+      "label": "<JUMP_TARGET, 35<BR/>default>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<g_assert_not_reached, 39<BR/>g_assert_not_reached()>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 45<BR/>IF<BR/>if (fingerprint) { *fingerprint = ahci...>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>fingerprint<BR/>if (fingerprint) { *fingerprint = ahci...>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 45<BR/>{ *fingerprint = ahci_fingerprint; }>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 47<BR/>*fingerprint = ahci_fingerprint>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 47<BR/>*fingerprint>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>fingerprint<BR/>*fingerprint = ahci_fingerprint>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>ahci_fingerprint<BR/>*fingerprint = ahci_fingerprint>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 51<BR/>return ahci;>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>ahci<BR/>return ahci;>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 31<BR/>&lt;unknown&gt; AHCI_INTEL_ICH9: ANY>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 25<BR/>&lt;unknown&gt; PCI_VENDOR_ID: ANY>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 21<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>QPCIDevice>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>get_ahci_device<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirection>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>qpci_config_readl>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>g_assert_not_reached>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>QPCI_DEVFN>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>g_assert>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>qpci_init_pc>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>qpci_device_find>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.notEquals>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

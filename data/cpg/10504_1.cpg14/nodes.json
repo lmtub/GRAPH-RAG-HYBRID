@@ -1,1 +1,7532 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>decode_micromips_opc>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>CPUMIPSState *env>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>DisasContext *ctx>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>int *is_branch>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ uint32_t op; /* make sure instruc...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 5<BR/>uint32_t op: uint32_t>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 11<BR/>IF<BR/>if (ctx-&gt;pc &amp; 0x1) { env-&gt;CP0_BadVAddr...>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 11<BR/>ctx-&gt;pc &amp; 0x1>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 11<BR/>ctx-&gt;pc>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>ctx<BR/>ctx-&gt;pc &amp; 0x1>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 11<BR/>pc>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 11<BR/>0x1<BR/>ctx-&gt;pc &amp; 0x1>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 11<BR/>{ env-&gt;CP0_BadVAddr = ctx-&gt;pc; ...>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 13<BR/>env-&gt;CP0_BadVAddr = ctx-&gt;pc>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 13<BR/>env-&gt;CP0_BadVAddr>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>env<BR/>env-&gt;CP0_BadVAddr = ctx-&gt;pc>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 13<BR/>CP0_BadVAddr>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 13<BR/>ctx-&gt;pc>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>ctx<BR/>env-&gt;CP0_BadVAddr = ctx-&gt;pc>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 13<BR/>pc>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<generate_exception, 15<BR/>generate_exception(ctx, EXCP_AdEL)>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>ctx<BR/>generate_exception(ctx, EXCP_AdEL)>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>&lt;unknown&gt; EXCP_AdEL<BR/>generate_exception(ctx, EXCP_AdEL)>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 17<BR/>ctx-&gt;bstate = BS_STOP>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 17<BR/>ctx-&gt;bstate>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>ctx<BR/>ctx-&gt;bstate = BS_STOP>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 17<BR/>bstate>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>&lt;unknown&gt; BS_STOP<BR/>ctx-&gt;bstate = BS_STOP>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 19<BR/>return 2;>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 19<BR/>2<BR/>return 2;>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 25<BR/>op = (ctx-&gt;opcode &gt;&gt; 10) &amp; 0x3f>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>op<BR/>op = (ctx-&gt;opcode &gt;&gt; 10) &amp; 0x3f>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 25<BR/>(ctx-&gt;opcode &gt;&gt; 10) &amp; 0x3f>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 25<BR/>ctx-&gt;opcode &gt;&gt; 10>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 25<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>ctx<BR/>ctx-&gt;opcode &gt;&gt; 10>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 25<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 25<BR/>10<BR/>ctx-&gt;opcode &gt;&gt; 10>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 25<BR/>0x3f<BR/>(ctx-&gt;opcode &gt;&gt; 10) &amp; 0x3f>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 29<BR/>IF<BR/>if (ctx-&gt;hflags &amp; MIPS_HFLAG_BMASK) { ...>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 29<BR/>ctx-&gt;hflags &amp; MIPS_HFLAG_BMASK>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 29<BR/>ctx-&gt;hflags>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 29<BR/>ctx<BR/>ctx-&gt;hflags &amp; MIPS_HFLAG_BMASK>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 29<BR/>hflags>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 29<BR/>&lt;unknown&gt; MIPS_HFLAG_BMASK<BR/>ctx-&gt;hflags &amp; MIPS_HFLAG_BMASK>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 29<BR/>{ int bits = ctx-&gt;hflags &amp; MIPS_HFLAG_...>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 31<BR/>int bits: int>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 31<BR/>bits = ctx-&gt;hflags &amp; MIPS_HFLAG_BMASK_EXT>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>bits<BR/>bits = ctx-&gt;hflags &amp; MIPS_HFLAG_BMASK_EXT>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 31<BR/>ctx-&gt;hflags &amp; MIPS_HFLAG_BMASK_EXT>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 31<BR/>ctx-&gt;hflags>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>ctx<BR/>ctx-&gt;hflags &amp; MIPS_HFLAG_BMASK_EXT>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 31<BR/>hflags>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>&lt;unknown&gt; MIPS_HFLAG_BMASK_EXT<BR/>ctx-&gt;hflags &amp; MIPS_HFLAG_BMASK_EXT>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 35<BR/>SWITCH<BR/>switch (op) { case POOL32A: c...>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>op<BR/>switch (op) { case POOL32A: c...>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 35<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 37<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 37<BR/>&lt;unknown&gt; POOL32A<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378625",
+    "attrs": {
+      "label": "<JUMP_TARGET, 39<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>&lt;unknown&gt; POOL32B<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378626",
+    "attrs": {
+      "label": "<JUMP_TARGET, 41<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>&lt;unknown&gt; POOL32I<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378627",
+    "attrs": {
+      "label": "<JUMP_TARGET, 43<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>&lt;unknown&gt; POOL32C<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378628",
+    "attrs": {
+      "label": "<JUMP_TARGET, 45<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>&lt;unknown&gt; ADDI32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378629",
+    "attrs": {
+      "label": "<JUMP_TARGET, 47<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>&lt;unknown&gt; ADDIU32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378630",
+    "attrs": {
+      "label": "<JUMP_TARGET, 49<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>&lt;unknown&gt; ORI32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378631",
+    "attrs": {
+      "label": "<JUMP_TARGET, 51<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>&lt;unknown&gt; XORI32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378632",
+    "attrs": {
+      "label": "<JUMP_TARGET, 53<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>&lt;unknown&gt; SLTI32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378633",
+    "attrs": {
+      "label": "<JUMP_TARGET, 55<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 55<BR/>&lt;unknown&gt; SLTIU32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378634",
+    "attrs": {
+      "label": "<JUMP_TARGET, 57<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>&lt;unknown&gt; ANDI32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378635",
+    "attrs": {
+      "label": "<JUMP_TARGET, 59<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>&lt;unknown&gt; JALX32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378636",
+    "attrs": {
+      "label": "<JUMP_TARGET, 61<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>&lt;unknown&gt; LBU32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378637",
+    "attrs": {
+      "label": "<JUMP_TARGET, 63<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 63<BR/>&lt;unknown&gt; LHU32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378638",
+    "attrs": {
+      "label": "<JUMP_TARGET, 65<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>&lt;unknown&gt; POOL32F<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378639",
+    "attrs": {
+      "label": "<JUMP_TARGET, 67<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>&lt;unknown&gt; JALS32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378640",
+    "attrs": {
+      "label": "<JUMP_TARGET, 69<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>&lt;unknown&gt; BEQ32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378641",
+    "attrs": {
+      "label": "<JUMP_TARGET, 71<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>&lt;unknown&gt; BNE32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378642",
+    "attrs": {
+      "label": "<JUMP_TARGET, 73<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 73<BR/>&lt;unknown&gt; J32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378643",
+    "attrs": {
+      "label": "<JUMP_TARGET, 75<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>&lt;unknown&gt; JAL32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378644",
+    "attrs": {
+      "label": "<JUMP_TARGET, 77<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>&lt;unknown&gt; SB32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378645",
+    "attrs": {
+      "label": "<JUMP_TARGET, 79<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>&lt;unknown&gt; SH32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378646",
+    "attrs": {
+      "label": "<JUMP_TARGET, 81<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>&lt;unknown&gt; POOL32S<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378647",
+    "attrs": {
+      "label": "<JUMP_TARGET, 83<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>&lt;unknown&gt; ADDIUPC<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378648",
+    "attrs": {
+      "label": "<JUMP_TARGET, 85<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>&lt;unknown&gt; SWC132<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378649",
+    "attrs": {
+      "label": "<JUMP_TARGET, 87<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>&lt;unknown&gt; SDC132<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378650",
+    "attrs": {
+      "label": "<JUMP_TARGET, 89<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>&lt;unknown&gt; SD32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378651",
+    "attrs": {
+      "label": "<JUMP_TARGET, 91<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>&lt;unknown&gt; SW32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378652",
+    "attrs": {
+      "label": "<JUMP_TARGET, 93<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>&lt;unknown&gt; LB32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378653",
+    "attrs": {
+      "label": "<JUMP_TARGET, 95<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>&lt;unknown&gt; LH32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378654",
+    "attrs": {
+      "label": "<JUMP_TARGET, 97<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>&lt;unknown&gt; DADDIU32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378655",
+    "attrs": {
+      "label": "<JUMP_TARGET, 99<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>&lt;unknown&gt; LWC132<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378656",
+    "attrs": {
+      "label": "<JUMP_TARGET, 101<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>&lt;unknown&gt; LDC132<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378657",
+    "attrs": {
+      "label": "<JUMP_TARGET, 103<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 103<BR/>&lt;unknown&gt; LD32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378658",
+    "attrs": {
+      "label": "<JUMP_TARGET, 105<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>&lt;unknown&gt; LW32<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 107<BR/>IF<BR/>if (bits &amp; MIPS_HFLAG_BDS16) { ...>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 107<BR/>bits &amp; MIPS_HFLAG_BDS16>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>bits<BR/>bits &amp; MIPS_HFLAG_BDS16>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>&lt;unknown&gt; MIPS_HFLAG_BDS16<BR/>bits &amp; MIPS_HFLAG_BDS16>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 107<BR/>{ generate_exception(ctx, EXCP...>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<generate_exception, 109<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 109<BR/>ctx<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 109<BR/>&lt;unknown&gt; EXCP_RI<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 113<BR/>ctx-&gt;bstate = BS_STOP>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 113<BR/>ctx-&gt;bstate>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>ctx<BR/>ctx-&gt;bstate = BS_STOP>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 113<BR/>bstate>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>&lt;unknown&gt; BS_STOP<BR/>ctx-&gt;bstate = BS_STOP>"
+    }
+  },
+  {
+    "id": "141733920769",
+    "attrs": {
+      "label": "<RETURN, 115<BR/>return 2;>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 115<BR/>2<BR/>return 2;>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 119<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378659",
+    "attrs": {
+      "label": "<JUMP_TARGET, 121<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>&lt;unknown&gt; POOL16A<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378660",
+    "attrs": {
+      "label": "<JUMP_TARGET, 123<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>&lt;unknown&gt; POOL16B<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378661",
+    "attrs": {
+      "label": "<JUMP_TARGET, 125<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>&lt;unknown&gt; POOL16C<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378662",
+    "attrs": {
+      "label": "<JUMP_TARGET, 127<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 127<BR/>&lt;unknown&gt; LWGP16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378663",
+    "attrs": {
+      "label": "<JUMP_TARGET, 129<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>&lt;unknown&gt; POOL16F<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378664",
+    "attrs": {
+      "label": "<JUMP_TARGET, 131<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 131<BR/>&lt;unknown&gt; LBU16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378665",
+    "attrs": {
+      "label": "<JUMP_TARGET, 133<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>&lt;unknown&gt; LHU16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378666",
+    "attrs": {
+      "label": "<JUMP_TARGET, 135<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 135<BR/>&lt;unknown&gt; LWSP16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378667",
+    "attrs": {
+      "label": "<JUMP_TARGET, 137<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 137<BR/>&lt;unknown&gt; LW16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378668",
+    "attrs": {
+      "label": "<JUMP_TARGET, 139<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>&lt;unknown&gt; SB16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378669",
+    "attrs": {
+      "label": "<JUMP_TARGET, 141<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>&lt;unknown&gt; SH16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378670",
+    "attrs": {
+      "label": "<JUMP_TARGET, 143<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 143<BR/>&lt;unknown&gt; SWSP16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378671",
+    "attrs": {
+      "label": "<JUMP_TARGET, 145<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>&lt;unknown&gt; SW16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378672",
+    "attrs": {
+      "label": "<JUMP_TARGET, 147<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 147<BR/>&lt;unknown&gt; MOVE16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378673",
+    "attrs": {
+      "label": "<JUMP_TARGET, 149<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 149<BR/>&lt;unknown&gt; ANDI16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378674",
+    "attrs": {
+      "label": "<JUMP_TARGET, 151<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 151<BR/>&lt;unknown&gt; POOL16D<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378675",
+    "attrs": {
+      "label": "<JUMP_TARGET, 153<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 153<BR/>&lt;unknown&gt; POOL16E<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378676",
+    "attrs": {
+      "label": "<JUMP_TARGET, 155<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 155<BR/>&lt;unknown&gt; BEQZ16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378677",
+    "attrs": {
+      "label": "<JUMP_TARGET, 157<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 157<BR/>&lt;unknown&gt; BNEZ16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378678",
+    "attrs": {
+      "label": "<JUMP_TARGET, 159<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 159<BR/>&lt;unknown&gt; B16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "81604378679",
+    "attrs": {
+      "label": "<JUMP_TARGET, 161<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476812",
+    "attrs": {
+      "label": "<IDENTIFIER, 161<BR/>&lt;unknown&gt; LI16<BR/>{ case POOL32A: case POOL32B:...>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 163<BR/>IF<BR/>if (bits &amp; MIPS_HFLAG_BDS32) { ...>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 163<BR/>bits &amp; MIPS_HFLAG_BDS32>"
+    }
+  },
+  {
+    "id": "68719476813",
+    "attrs": {
+      "label": "<IDENTIFIER, 163<BR/>bits<BR/>bits &amp; MIPS_HFLAG_BDS32>"
+    }
+  },
+  {
+    "id": "68719476814",
+    "attrs": {
+      "label": "<IDENTIFIER, 163<BR/>&lt;unknown&gt; MIPS_HFLAG_BDS32<BR/>bits &amp; MIPS_HFLAG_BDS32>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 163<BR/>{ generate_exception(ctx, EXCP...>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<generate_exception, 165<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "68719476815",
+    "attrs": {
+      "label": "<IDENTIFIER, 165<BR/>ctx<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "68719476816",
+    "attrs": {
+      "label": "<IDENTIFIER, 165<BR/>&lt;unknown&gt; EXCP_RI<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 169<BR/>ctx-&gt;bstate = BS_STOP>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 169<BR/>ctx-&gt;bstate>"
+    }
+  },
+  {
+    "id": "68719476817",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>ctx<BR/>ctx-&gt;bstate = BS_STOP>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 169<BR/>bstate>"
+    }
+  },
+  {
+    "id": "68719476818",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>&lt;unknown&gt; BS_STOP<BR/>ctx-&gt;bstate = BS_STOP>"
+    }
+  },
+  {
+    "id": "141733920770",
+    "attrs": {
+      "label": "<RETURN, 171<BR/>return 2;>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 171<BR/>2<BR/>return 2;>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 175<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378680",
+    "attrs": {
+      "label": "<JUMP_TARGET, 177<BR/>default>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 179<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 185<BR/>SWITCH<BR/>switch (op) { case POOL16A: { ...>"
+    }
+  },
+  {
+    "id": "68719476819",
+    "attrs": {
+      "label": "<IDENTIFIER, 185<BR/>op<BR/>switch (op) { case POOL16A: { ...>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 185<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "81604378681",
+    "attrs": {
+      "label": "<JUMP_TARGET, 187<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476820",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>&lt;unknown&gt; POOL16A<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 189<BR/>{ int rd = mmreg(uMIPS_RD(ctx-&gt;opc...>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 191<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 191<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476821",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>rd<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<mmreg, 191<BR/>mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<uMIPS_RD, 191<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 191<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476822",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 191<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 193<BR/>int rs1: int>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 193<BR/>rs1 = mmreg(uMIPS_RS1(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476823",
+    "attrs": {
+      "label": "<IDENTIFIER, 193<BR/>rs1<BR/>rs1 = mmreg(uMIPS_RS1(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<mmreg, 193<BR/>mmreg(uMIPS_RS1(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<uMIPS_RS1, 193<BR/>uMIPS_RS1(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 193<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476824",
+    "attrs": {
+      "label": "<IDENTIFIER, 193<BR/>ctx<BR/>uMIPS_RS1(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 193<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 195<BR/>int rs2: int>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 195<BR/>rs2 = mmreg(uMIPS_RS2(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476825",
+    "attrs": {
+      "label": "<IDENTIFIER, 195<BR/>rs2<BR/>rs2 = mmreg(uMIPS_RS2(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<mmreg, 195<BR/>mmreg(uMIPS_RS2(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<uMIPS_RS2, 195<BR/>uMIPS_RS2(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 195<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476826",
+    "attrs": {
+      "label": "<IDENTIFIER, 195<BR/>ctx<BR/>uMIPS_RS2(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 195<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 197<BR/>uint32_t opc: uint32_t>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 197<BR/>opc = 0>"
+    }
+  },
+  {
+    "id": "68719476827",
+    "attrs": {
+      "label": "<IDENTIFIER, 197<BR/>opc<BR/>opc = 0>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 197<BR/>0<BR/>opc = 0>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 201<BR/>SWITCH<BR/>switch (ctx-&gt;opcode &amp; 0x1) { case ...>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 201<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 201<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476828",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>ctx<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 201<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 201<BR/>0x1<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 201<BR/>{ case ADDU16: op...>"
+    }
+  },
+  {
+    "id": "81604378682",
+    "attrs": {
+      "label": "<JUMP_TARGET, 203<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476829",
+    "attrs": {
+      "label": "<IDENTIFIER, 203<BR/>&lt;unknown&gt; ADDU16<BR/>{ case ADDU16: op...>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 205<BR/>opc = OPC_ADDU>"
+    }
+  },
+  {
+    "id": "68719476830",
+    "attrs": {
+      "label": "<IDENTIFIER, 205<BR/>opc<BR/>opc = OPC_ADDU>"
+    }
+  },
+  {
+    "id": "68719476831",
+    "attrs": {
+      "label": "<IDENTIFIER, 205<BR/>&lt;unknown&gt; OPC_ADDU<BR/>opc = OPC_ADDU>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 207<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378683",
+    "attrs": {
+      "label": "<JUMP_TARGET, 209<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476832",
+    "attrs": {
+      "label": "<IDENTIFIER, 209<BR/>&lt;unknown&gt; SUBU16<BR/>{ case ADDU16: op...>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 211<BR/>opc = OPC_SUBU>"
+    }
+  },
+  {
+    "id": "68719476833",
+    "attrs": {
+      "label": "<IDENTIFIER, 211<BR/>opc<BR/>opc = OPC_SUBU>"
+    }
+  },
+  {
+    "id": "68719476834",
+    "attrs": {
+      "label": "<IDENTIFIER, 211<BR/>&lt;unknown&gt; OPC_SUBU<BR/>opc = OPC_SUBU>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 213<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<gen_arith, 219<BR/>gen_arith(ctx, opc, rd, rs1, rs2)>"
+    }
+  },
+  {
+    "id": "68719476835",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>ctx<BR/>gen_arith(ctx, opc, rd, rs1, rs2)>"
+    }
+  },
+  {
+    "id": "68719476836",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>opc<BR/>gen_arith(ctx, opc, rd, rs1, rs2)>"
+    }
+  },
+  {
+    "id": "68719476837",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>rd<BR/>gen_arith(ctx, opc, rd, rs1, rs2)>"
+    }
+  },
+  {
+    "id": "68719476838",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>rs1<BR/>gen_arith(ctx, opc, rd, rs1, rs2)>"
+    }
+  },
+  {
+    "id": "68719476839",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>rs2<BR/>gen_arith(ctx, opc, rd, rs1, rs2)>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 223<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378684",
+    "attrs": {
+      "label": "<JUMP_TARGET, 225<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476840",
+    "attrs": {
+      "label": "<IDENTIFIER, 225<BR/>&lt;unknown&gt; POOL16B<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 227<BR/>{ int rd = mmreg(uMIPS_RD(ctx-&gt;opc...>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 229<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 229<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476841",
+    "attrs": {
+      "label": "<IDENTIFIER, 229<BR/>rd<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<mmreg, 229<BR/>mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<uMIPS_RD, 229<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 229<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476842",
+    "attrs": {
+      "label": "<IDENTIFIER, 229<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 229<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 231<BR/>int rs: int>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 231<BR/>rs = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476843",
+    "attrs": {
+      "label": "<IDENTIFIER, 231<BR/>rs<BR/>rs = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<mmreg, 231<BR/>mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<uMIPS_RS, 231<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 231<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476844",
+    "attrs": {
+      "label": "<IDENTIFIER, 231<BR/>ctx<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574862",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 231<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 233<BR/>int amount: int>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 233<BR/>amount = (ctx-&gt;opcode &gt;&gt; 1) &amp; 0x7>"
+    }
+  },
+  {
+    "id": "68719476845",
+    "attrs": {
+      "label": "<IDENTIFIER, 233<BR/>amount<BR/>amount = (ctx-&gt;opcode &gt;&gt; 1) &amp; 0x7>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 233<BR/>(ctx-&gt;opcode &gt;&gt; 1) &amp; 0x7>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 233<BR/>ctx-&gt;opcode &gt;&gt; 1>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 233<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476846",
+    "attrs": {
+      "label": "<IDENTIFIER, 233<BR/>ctx<BR/>ctx-&gt;opcode &gt;&gt; 1>"
+    }
+  },
+  {
+    "id": "55834574863",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 233<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 233<BR/>1<BR/>ctx-&gt;opcode &gt;&gt; 1>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 233<BR/>0x7<BR/>(ctx-&gt;opcode &gt;&gt; 1) &amp; 0x7>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 235<BR/>uint32_t opc: uint32_t>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 235<BR/>opc = 0>"
+    }
+  },
+  {
+    "id": "68719476847",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>opc<BR/>opc = 0>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 235<BR/>0<BR/>opc = 0>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 237<BR/>amount = amount == 0 ? 8 : amount>"
+    }
+  },
+  {
+    "id": "68719476848",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>amount<BR/>amount = amount == 0 ? 8 : amount>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.conditional, 237<BR/>amount == 0 ? 8 : amount>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 237<BR/>amount == 0>"
+    }
+  },
+  {
+    "id": "68719476849",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>amount<BR/>amount == 0>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 237<BR/>0<BR/>amount == 0>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 237<BR/>8<BR/>amount == 0 ? 8 : amount>"
+    }
+  },
+  {
+    "id": "68719476850",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>amount<BR/>amount == 0 ? 8 : amount>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 241<BR/>SWITCH<BR/>switch (ctx-&gt;opcode &amp; 0x1) { case ...>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 241<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 241<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476851",
+    "attrs": {
+      "label": "<IDENTIFIER, 241<BR/>ctx<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "55834574864",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 241<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 241<BR/>0x1<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 241<BR/>{ case SLL16: opc...>"
+    }
+  },
+  {
+    "id": "81604378685",
+    "attrs": {
+      "label": "<JUMP_TARGET, 243<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476852",
+    "attrs": {
+      "label": "<IDENTIFIER, 243<BR/>&lt;unknown&gt; SLL16<BR/>{ case SLL16: opc...>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 245<BR/>opc = OPC_SLL>"
+    }
+  },
+  {
+    "id": "68719476853",
+    "attrs": {
+      "label": "<IDENTIFIER, 245<BR/>opc<BR/>opc = OPC_SLL>"
+    }
+  },
+  {
+    "id": "68719476854",
+    "attrs": {
+      "label": "<IDENTIFIER, 245<BR/>&lt;unknown&gt; OPC_SLL<BR/>opc = OPC_SLL>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 247<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378686",
+    "attrs": {
+      "label": "<JUMP_TARGET, 249<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476855",
+    "attrs": {
+      "label": "<IDENTIFIER, 249<BR/>&lt;unknown&gt; SRL16<BR/>{ case SLL16: opc...>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 251<BR/>opc = OPC_SRL>"
+    }
+  },
+  {
+    "id": "68719476856",
+    "attrs": {
+      "label": "<IDENTIFIER, 251<BR/>opc<BR/>opc = OPC_SRL>"
+    }
+  },
+  {
+    "id": "68719476857",
+    "attrs": {
+      "label": "<IDENTIFIER, 251<BR/>&lt;unknown&gt; OPC_SRL<BR/>opc = OPC_SRL>"
+    }
+  },
+  {
+    "id": "47244640271",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 253<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<gen_shift_imm, 259<BR/>gen_shift_imm(ctx, opc, rd, rs, amount)>"
+    }
+  },
+  {
+    "id": "68719476858",
+    "attrs": {
+      "label": "<IDENTIFIER, 259<BR/>ctx<BR/>gen_shift_imm(ctx, opc, rd, rs, amount)>"
+    }
+  },
+  {
+    "id": "68719476859",
+    "attrs": {
+      "label": "<IDENTIFIER, 259<BR/>opc<BR/>gen_shift_imm(ctx, opc, rd, rs, amount)>"
+    }
+  },
+  {
+    "id": "68719476860",
+    "attrs": {
+      "label": "<IDENTIFIER, 259<BR/>rd<BR/>gen_shift_imm(ctx, opc, rd, rs, amount)>"
+    }
+  },
+  {
+    "id": "68719476861",
+    "attrs": {
+      "label": "<IDENTIFIER, 259<BR/>rs<BR/>gen_shift_imm(ctx, opc, rd, rs, amount)>"
+    }
+  },
+  {
+    "id": "68719476862",
+    "attrs": {
+      "label": "<IDENTIFIER, 259<BR/>amount<BR/>gen_shift_imm(ctx, opc, rd, rs, amount)>"
+    }
+  },
+  {
+    "id": "47244640272",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 263<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378687",
+    "attrs": {
+      "label": "<JUMP_TARGET, 265<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476863",
+    "attrs": {
+      "label": "<IDENTIFIER, 265<BR/>&lt;unknown&gt; POOL16C<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<gen_pool16c_insn, 267<BR/>gen_pool16c_insn(ctx, is_branch)>"
+    }
+  },
+  {
+    "id": "68719476864",
+    "attrs": {
+      "label": "<IDENTIFIER, 267<BR/>ctx<BR/>gen_pool16c_insn(ctx, is_branch)>"
+    }
+  },
+  {
+    "id": "68719476865",
+    "attrs": {
+      "label": "<IDENTIFIER, 267<BR/>is_branch<BR/>gen_pool16c_insn(ctx, is_branch)>"
+    }
+  },
+  {
+    "id": "47244640273",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 269<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378688",
+    "attrs": {
+      "label": "<JUMP_TARGET, 271<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476866",
+    "attrs": {
+      "label": "<IDENTIFIER, 271<BR/>&lt;unknown&gt; LWGP16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 273<BR/>{ int rd = mmreg(uMIPS_RD(ctx-&gt;opc...>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 275<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 275<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476867",
+    "attrs": {
+      "label": "<IDENTIFIER, 275<BR/>rd<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<mmreg, 275<BR/>mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<uMIPS_RD, 275<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 275<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476868",
+    "attrs": {
+      "label": "<IDENTIFIER, 275<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574865",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 275<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 277<BR/>int rb: int>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 277<BR/>rb = 28>"
+    }
+  },
+  {
+    "id": "68719476869",
+    "attrs": {
+      "label": "<IDENTIFIER, 277<BR/>rb<BR/>rb = 28>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 277<BR/>28<BR/>rb = 28>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 279<BR/>int16_t offset: int16_t>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 279<BR/>offset = SIMM(ctx-&gt;opcode, 0, 7) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "68719476870",
+    "attrs": {
+      "label": "<IDENTIFIER, 279<BR/>offset<BR/>offset = SIMM(ctx-&gt;opcode, 0, 7) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 279<BR/>SIMM(ctx-&gt;opcode, 0, 7) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<SIMM, 279<BR/>SIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 279<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476871",
+    "attrs": {
+      "label": "<IDENTIFIER, 279<BR/>ctx<BR/>SIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "55834574866",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 279<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313231",
+    "attrs": {
+      "label": "<LITERAL, 279<BR/>0<BR/>SIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "90194313232",
+    "attrs": {
+      "label": "<LITERAL, 279<BR/>7<BR/>SIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "90194313233",
+    "attrs": {
+      "label": "<LITERAL, 279<BR/>2<BR/>SIMM(ctx-&gt;opcode, 0, 7) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<gen_ld, 283<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476872",
+    "attrs": {
+      "label": "<IDENTIFIER, 283<BR/>ctx<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476873",
+    "attrs": {
+      "label": "<IDENTIFIER, 283<BR/>&lt;unknown&gt; OPC_LW<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476874",
+    "attrs": {
+      "label": "<IDENTIFIER, 283<BR/>rd<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476875",
+    "attrs": {
+      "label": "<IDENTIFIER, 283<BR/>rb<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476876",
+    "attrs": {
+      "label": "<IDENTIFIER, 283<BR/>offset<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "47244640274",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 287<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378689",
+    "attrs": {
+      "label": "<JUMP_TARGET, 289<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476877",
+    "attrs": {
+      "label": "<IDENTIFIER, 289<BR/>&lt;unknown&gt; POOL16F<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "47244640275",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 291<BR/>IF<BR/>if (ctx-&gt;opcode &amp; 1) { generate_ex...>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 291<BR/>ctx-&gt;opcode &amp; 1>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 291<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476878",
+    "attrs": {
+      "label": "<IDENTIFIER, 291<BR/>ctx<BR/>ctx-&gt;opcode &amp; 1>"
+    }
+  },
+  {
+    "id": "55834574867",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 291<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313234",
+    "attrs": {
+      "label": "<LITERAL, 291<BR/>1<BR/>ctx-&gt;opcode &amp; 1>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 291<BR/>{ generate_exception(ctx, EXCP_RI)...>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<generate_exception, 293<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "68719476879",
+    "attrs": {
+      "label": "<IDENTIFIER, 293<BR/>ctx<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "68719476880",
+    "attrs": {
+      "label": "<IDENTIFIER, 293<BR/>&lt;unknown&gt; EXCP_RI<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "47244640276",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 295<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 295<BR/>{ /* MOVEP */ int enc...>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 299<BR/>int enc_dest: int>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 299<BR/>enc_dest = uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "68719476881",
+    "attrs": {
+      "label": "<IDENTIFIER, 299<BR/>enc_dest<BR/>enc_dest = uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<uMIPS_RD, 299<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 299<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476882",
+    "attrs": {
+      "label": "<IDENTIFIER, 299<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574868",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 299<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 301<BR/>int enc_rt: int>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 301<BR/>enc_rt = uMIPS_RS2(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "68719476883",
+    "attrs": {
+      "label": "<IDENTIFIER, 301<BR/>enc_rt<BR/>enc_rt = uMIPS_RS2(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<uMIPS_RS2, 301<BR/>uMIPS_RS2(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 301<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476884",
+    "attrs": {
+      "label": "<IDENTIFIER, 301<BR/>ctx<BR/>uMIPS_RS2(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574869",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 301<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 303<BR/>int enc_rs: int>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 303<BR/>enc_rs = uMIPS_RS1(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "68719476885",
+    "attrs": {
+      "label": "<IDENTIFIER, 303<BR/>enc_rs<BR/>enc_rs = uMIPS_RS1(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<uMIPS_RS1, 303<BR/>uMIPS_RS1(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 303<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476886",
+    "attrs": {
+      "label": "<IDENTIFIER, 303<BR/>ctx<BR/>uMIPS_RS1(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574870",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 303<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280528",
+    "attrs": {
+      "label": "<LOCAL, 305<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "94489280529",
+    "attrs": {
+      "label": "<LOCAL, 305<BR/>int rs: int>"
+    }
+  },
+  {
+    "id": "94489280530",
+    "attrs": {
+      "label": "<LOCAL, 305<BR/>int re: int>"
+    }
+  },
+  {
+    "id": "94489280531",
+    "attrs": {
+      "label": "<LOCAL, 305<BR/>int rt: int>"
+    }
+  },
+  {
+    "id": "94489280532",
+    "attrs": {
+      "label": "<LOCAL, 307<BR/>static const int rd_enc[]: int[]>"
+    }
+  },
+  {
+    "id": "30064771159",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 307<BR/>rd_enc[] = { 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "68719476887",
+    "attrs": {
+      "label": "<IDENTIFIER, 307<BR/>rd_enc<BR/>rd_enc[] = { 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "30064771160",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arrayInitializer, 307<BR/>{ 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "90194313235",
+    "attrs": {
+      "label": "<LITERAL, 307<BR/>5<BR/>{ 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "90194313236",
+    "attrs": {
+      "label": "<LITERAL, 307<BR/>5<BR/>{ 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "90194313237",
+    "attrs": {
+      "label": "<LITERAL, 307<BR/>6<BR/>{ 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "90194313238",
+    "attrs": {
+      "label": "<LITERAL, 307<BR/>4<BR/>{ 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "90194313239",
+    "attrs": {
+      "label": "<LITERAL, 307<BR/>4<BR/>{ 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "90194313240",
+    "attrs": {
+      "label": "<LITERAL, 307<BR/>4<BR/>{ 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "90194313241",
+    "attrs": {
+      "label": "<LITERAL, 307<BR/>4<BR/>{ 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "90194313242",
+    "attrs": {
+      "label": "<LITERAL, 307<BR/>4<BR/>{ 5, 5, 6, 4, 4, 4, 4, 4 }>"
+    }
+  },
+  {
+    "id": "94489280533",
+    "attrs": {
+      "label": "<LOCAL, 309<BR/>static const int re_enc[]: int[]>"
+    }
+  },
+  {
+    "id": "30064771161",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 309<BR/>re_enc[] = { 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "68719476888",
+    "attrs": {
+      "label": "<IDENTIFIER, 309<BR/>re_enc<BR/>re_enc[] = { 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "30064771162",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arrayInitializer, 309<BR/>{ 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "90194313243",
+    "attrs": {
+      "label": "<LITERAL, 309<BR/>6<BR/>{ 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "90194313244",
+    "attrs": {
+      "label": "<LITERAL, 309<BR/>7<BR/>{ 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "90194313245",
+    "attrs": {
+      "label": "<LITERAL, 309<BR/>7<BR/>{ 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "90194313246",
+    "attrs": {
+      "label": "<LITERAL, 309<BR/>21<BR/>{ 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "90194313247",
+    "attrs": {
+      "label": "<LITERAL, 309<BR/>22<BR/>{ 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "90194313248",
+    "attrs": {
+      "label": "<LITERAL, 309<BR/>5<BR/>{ 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "90194313249",
+    "attrs": {
+      "label": "<LITERAL, 309<BR/>6<BR/>{ 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "90194313250",
+    "attrs": {
+      "label": "<LITERAL, 309<BR/>7<BR/>{ 6, 7, 7, 21, 22, 5, 6, 7 }>"
+    }
+  },
+  {
+    "id": "94489280534",
+    "attrs": {
+      "label": "<LOCAL, 311<BR/>static const int rs_rt_enc[]: int[]>"
+    }
+  },
+  {
+    "id": "30064771163",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 311<BR/>rs_rt_enc[] = { 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "68719476889",
+    "attrs": {
+      "label": "<IDENTIFIER, 311<BR/>rs_rt_enc<BR/>rs_rt_enc[] = { 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "30064771164",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arrayInitializer, 311<BR/>{ 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "90194313251",
+    "attrs": {
+      "label": "<LITERAL, 311<BR/>0<BR/>{ 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "90194313252",
+    "attrs": {
+      "label": "<LITERAL, 311<BR/>17<BR/>{ 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "90194313253",
+    "attrs": {
+      "label": "<LITERAL, 311<BR/>2<BR/>{ 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "90194313254",
+    "attrs": {
+      "label": "<LITERAL, 311<BR/>3<BR/>{ 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "90194313255",
+    "attrs": {
+      "label": "<LITERAL, 311<BR/>16<BR/>{ 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "90194313256",
+    "attrs": {
+      "label": "<LITERAL, 311<BR/>18<BR/>{ 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "90194313257",
+    "attrs": {
+      "label": "<LITERAL, 311<BR/>19<BR/>{ 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "90194313258",
+    "attrs": {
+      "label": "<LITERAL, 311<BR/>20<BR/>{ 0, 17, 2, 3, 16, 18, 19, 20 }>"
+    }
+  },
+  {
+    "id": "30064771165",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 315<BR/>rd = rd_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "68719476890",
+    "attrs": {
+      "label": "<IDENTIFIER, 315<BR/>rd<BR/>rd = rd_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "30064771166",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 315<BR/>rd_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "68719476891",
+    "attrs": {
+      "label": "<IDENTIFIER, 315<BR/>rd_enc<BR/>rd = rd_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "68719476892",
+    "attrs": {
+      "label": "<IDENTIFIER, 315<BR/>enc_dest<BR/>rd = rd_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "30064771167",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 317<BR/>re = re_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "68719476893",
+    "attrs": {
+      "label": "<IDENTIFIER, 317<BR/>re<BR/>re = re_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "30064771168",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 317<BR/>re_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "68719476894",
+    "attrs": {
+      "label": "<IDENTIFIER, 317<BR/>re_enc<BR/>re = re_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "68719476895",
+    "attrs": {
+      "label": "<IDENTIFIER, 317<BR/>enc_dest<BR/>re = re_enc[enc_dest]>"
+    }
+  },
+  {
+    "id": "30064771169",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 319<BR/>rs = rs_rt_enc[enc_rs]>"
+    }
+  },
+  {
+    "id": "68719476896",
+    "attrs": {
+      "label": "<IDENTIFIER, 319<BR/>rs<BR/>rs = rs_rt_enc[enc_rs]>"
+    }
+  },
+  {
+    "id": "30064771170",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 319<BR/>rs_rt_enc[enc_rs]>"
+    }
+  },
+  {
+    "id": "68719476897",
+    "attrs": {
+      "label": "<IDENTIFIER, 319<BR/>rs_rt_enc<BR/>rs = rs_rt_enc[enc_rs]>"
+    }
+  },
+  {
+    "id": "68719476898",
+    "attrs": {
+      "label": "<IDENTIFIER, 319<BR/>enc_rs<BR/>rs = rs_rt_enc[enc_rs]>"
+    }
+  },
+  {
+    "id": "30064771171",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 321<BR/>rt = rs_rt_enc[enc_rt]>"
+    }
+  },
+  {
+    "id": "68719476899",
+    "attrs": {
+      "label": "<IDENTIFIER, 321<BR/>rt<BR/>rt = rs_rt_enc[enc_rt]>"
+    }
+  },
+  {
+    "id": "30064771172",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 321<BR/>rs_rt_enc[enc_rt]>"
+    }
+  },
+  {
+    "id": "68719476900",
+    "attrs": {
+      "label": "<IDENTIFIER, 321<BR/>rs_rt_enc<BR/>rt = rs_rt_enc[enc_rt]>"
+    }
+  },
+  {
+    "id": "68719476901",
+    "attrs": {
+      "label": "<IDENTIFIER, 321<BR/>enc_rt<BR/>rt = rs_rt_enc[enc_rt]>"
+    }
+  },
+  {
+    "id": "30064771173",
+    "attrs": {
+      "label": "<gen_arith_imm, 325<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "68719476902",
+    "attrs": {
+      "label": "<IDENTIFIER, 325<BR/>ctx<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "68719476903",
+    "attrs": {
+      "label": "<IDENTIFIER, 325<BR/>&lt;unknown&gt; OPC_ADDIU<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "68719476904",
+    "attrs": {
+      "label": "<IDENTIFIER, 325<BR/>rd<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "68719476905",
+    "attrs": {
+      "label": "<IDENTIFIER, 325<BR/>rs<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "90194313259",
+    "attrs": {
+      "label": "<LITERAL, 325<BR/>0<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "30064771174",
+    "attrs": {
+      "label": "<gen_arith_imm, 327<BR/>gen_arith_imm(ctx, OPC_ADDIU, re, rt, 0)>"
+    }
+  },
+  {
+    "id": "68719476906",
+    "attrs": {
+      "label": "<IDENTIFIER, 327<BR/>ctx<BR/>gen_arith_imm(ctx, OPC_ADDIU, re, rt, 0)>"
+    }
+  },
+  {
+    "id": "68719476907",
+    "attrs": {
+      "label": "<IDENTIFIER, 327<BR/>&lt;unknown&gt; OPC_ADDIU<BR/>gen_arith_imm(ctx, OPC_ADDIU, re, rt, 0)>"
+    }
+  },
+  {
+    "id": "68719476908",
+    "attrs": {
+      "label": "<IDENTIFIER, 327<BR/>re<BR/>gen_arith_imm(ctx, OPC_ADDIU, re, rt, 0)>"
+    }
+  },
+  {
+    "id": "68719476909",
+    "attrs": {
+      "label": "<IDENTIFIER, 327<BR/>rt<BR/>gen_arith_imm(ctx, OPC_ADDIU, re, rt, 0)>"
+    }
+  },
+  {
+    "id": "90194313260",
+    "attrs": {
+      "label": "<LITERAL, 327<BR/>0<BR/>gen_arith_imm(ctx, OPC_ADDIU, re, rt, 0)>"
+    }
+  },
+  {
+    "id": "47244640277",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 331<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378690",
+    "attrs": {
+      "label": "<JUMP_TARGET, 333<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476910",
+    "attrs": {
+      "label": "<IDENTIFIER, 333<BR/>&lt;unknown&gt; LBU16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 335<BR/>{ int rd = mmreg(uMIPS_RD(ctx-&gt;opc...>"
+    }
+  },
+  {
+    "id": "94489280535",
+    "attrs": {
+      "label": "<LOCAL, 337<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771175",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 337<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476911",
+    "attrs": {
+      "label": "<IDENTIFIER, 337<BR/>rd<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771176",
+    "attrs": {
+      "label": "<mmreg, 337<BR/>mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771177",
+    "attrs": {
+      "label": "<uMIPS_RD, 337<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771178",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 337<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476912",
+    "attrs": {
+      "label": "<IDENTIFIER, 337<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574871",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 337<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280536",
+    "attrs": {
+      "label": "<LOCAL, 339<BR/>int rb: int>"
+    }
+  },
+  {
+    "id": "30064771179",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 339<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476913",
+    "attrs": {
+      "label": "<IDENTIFIER, 339<BR/>rb<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771180",
+    "attrs": {
+      "label": "<mmreg, 339<BR/>mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771181",
+    "attrs": {
+      "label": "<uMIPS_RS, 339<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771182",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 339<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476914",
+    "attrs": {
+      "label": "<IDENTIFIER, 339<BR/>ctx<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574872",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 339<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280537",
+    "attrs": {
+      "label": "<LOCAL, 341<BR/>int16_t offset: int16_t>"
+    }
+  },
+  {
+    "id": "30064771183",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 341<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "68719476915",
+    "attrs": {
+      "label": "<IDENTIFIER, 341<BR/>offset<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771184",
+    "attrs": {
+      "label": "<ZIMM, 341<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771185",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 341<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476916",
+    "attrs": {
+      "label": "<IDENTIFIER, 341<BR/>ctx<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "55834574873",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 341<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313261",
+    "attrs": {
+      "label": "<LITERAL, 341<BR/>0<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313262",
+    "attrs": {
+      "label": "<LITERAL, 341<BR/>4<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771186",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 343<BR/>offset = (offset == 0xf ? -1 : offset)>"
+    }
+  },
+  {
+    "id": "68719476917",
+    "attrs": {
+      "label": "<IDENTIFIER, 343<BR/>offset<BR/>offset = (offset == 0xf ? -1 : offset)>"
+    }
+  },
+  {
+    "id": "30064771187",
+    "attrs": {
+      "label": "<&lt;operator&gt;.conditional, 343<BR/>offset == 0xf ? -1 : offset>"
+    }
+  },
+  {
+    "id": "30064771188",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 343<BR/>offset == 0xf>"
+    }
+  },
+  {
+    "id": "68719476918",
+    "attrs": {
+      "label": "<IDENTIFIER, 343<BR/>offset<BR/>offset == 0xf>"
+    }
+  },
+  {
+    "id": "90194313263",
+    "attrs": {
+      "label": "<LITERAL, 343<BR/>0xf<BR/>offset == 0xf>"
+    }
+  },
+  {
+    "id": "30064771189",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 343<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313264",
+    "attrs": {
+      "label": "<LITERAL, 343<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "68719476919",
+    "attrs": {
+      "label": "<IDENTIFIER, 343<BR/>offset<BR/>offset == 0xf ? -1 : offset>"
+    }
+  },
+  {
+    "id": "30064771190",
+    "attrs": {
+      "label": "<gen_ld, 347<BR/>gen_ld(ctx, OPC_LBU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476920",
+    "attrs": {
+      "label": "<IDENTIFIER, 347<BR/>ctx<BR/>gen_ld(ctx, OPC_LBU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476921",
+    "attrs": {
+      "label": "<IDENTIFIER, 347<BR/>&lt;unknown&gt; OPC_LBU<BR/>gen_ld(ctx, OPC_LBU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476922",
+    "attrs": {
+      "label": "<IDENTIFIER, 347<BR/>rd<BR/>gen_ld(ctx, OPC_LBU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476923",
+    "attrs": {
+      "label": "<IDENTIFIER, 347<BR/>rb<BR/>gen_ld(ctx, OPC_LBU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476924",
+    "attrs": {
+      "label": "<IDENTIFIER, 347<BR/>offset<BR/>gen_ld(ctx, OPC_LBU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "47244640278",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 351<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378691",
+    "attrs": {
+      "label": "<JUMP_TARGET, 353<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476925",
+    "attrs": {
+      "label": "<IDENTIFIER, 353<BR/>&lt;unknown&gt; LHU16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 355<BR/>{ int rd = mmreg(uMIPS_RD(ctx-&gt;opc...>"
+    }
+  },
+  {
+    "id": "94489280538",
+    "attrs": {
+      "label": "<LOCAL, 357<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771191",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 357<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476926",
+    "attrs": {
+      "label": "<IDENTIFIER, 357<BR/>rd<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771192",
+    "attrs": {
+      "label": "<mmreg, 357<BR/>mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771193",
+    "attrs": {
+      "label": "<uMIPS_RD, 357<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771194",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 357<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476927",
+    "attrs": {
+      "label": "<IDENTIFIER, 357<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574874",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 357<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280539",
+    "attrs": {
+      "label": "<LOCAL, 359<BR/>int rb: int>"
+    }
+  },
+  {
+    "id": "30064771195",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 359<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476928",
+    "attrs": {
+      "label": "<IDENTIFIER, 359<BR/>rb<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771196",
+    "attrs": {
+      "label": "<mmreg, 359<BR/>mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771197",
+    "attrs": {
+      "label": "<uMIPS_RS, 359<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771198",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 359<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476929",
+    "attrs": {
+      "label": "<IDENTIFIER, 359<BR/>ctx<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574875",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 359<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280540",
+    "attrs": {
+      "label": "<LOCAL, 361<BR/>int16_t offset: int16_t>"
+    }
+  },
+  {
+    "id": "30064771199",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 361<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "68719476930",
+    "attrs": {
+      "label": "<IDENTIFIER, 361<BR/>offset<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771200",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 361<BR/>ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771201",
+    "attrs": {
+      "label": "<ZIMM, 361<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771202",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 361<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476931",
+    "attrs": {
+      "label": "<IDENTIFIER, 361<BR/>ctx<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "55834574876",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 361<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313265",
+    "attrs": {
+      "label": "<LITERAL, 361<BR/>0<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313266",
+    "attrs": {
+      "label": "<LITERAL, 361<BR/>4<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313267",
+    "attrs": {
+      "label": "<LITERAL, 361<BR/>1<BR/>ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771203",
+    "attrs": {
+      "label": "<gen_ld, 365<BR/>gen_ld(ctx, OPC_LHU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476932",
+    "attrs": {
+      "label": "<IDENTIFIER, 365<BR/>ctx<BR/>gen_ld(ctx, OPC_LHU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476933",
+    "attrs": {
+      "label": "<IDENTIFIER, 365<BR/>&lt;unknown&gt; OPC_LHU<BR/>gen_ld(ctx, OPC_LHU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476934",
+    "attrs": {
+      "label": "<IDENTIFIER, 365<BR/>rd<BR/>gen_ld(ctx, OPC_LHU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476935",
+    "attrs": {
+      "label": "<IDENTIFIER, 365<BR/>rb<BR/>gen_ld(ctx, OPC_LHU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476936",
+    "attrs": {
+      "label": "<IDENTIFIER, 365<BR/>offset<BR/>gen_ld(ctx, OPC_LHU, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "47244640279",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 369<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378692",
+    "attrs": {
+      "label": "<JUMP_TARGET, 371<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476937",
+    "attrs": {
+      "label": "<IDENTIFIER, 371<BR/>&lt;unknown&gt; LWSP16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 373<BR/>{ int rd = (ctx-&gt;opcode &gt;&gt; 5) &amp; 0x...>"
+    }
+  },
+  {
+    "id": "94489280541",
+    "attrs": {
+      "label": "<LOCAL, 375<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771204",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 375<BR/>rd = (ctx-&gt;opcode &gt;&gt; 5) &amp; 0x1f>"
+    }
+  },
+  {
+    "id": "68719476938",
+    "attrs": {
+      "label": "<IDENTIFIER, 375<BR/>rd<BR/>rd = (ctx-&gt;opcode &gt;&gt; 5) &amp; 0x1f>"
+    }
+  },
+  {
+    "id": "30064771205",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 375<BR/>(ctx-&gt;opcode &gt;&gt; 5) &amp; 0x1f>"
+    }
+  },
+  {
+    "id": "30064771206",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 375<BR/>ctx-&gt;opcode &gt;&gt; 5>"
+    }
+  },
+  {
+    "id": "30064771207",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 375<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476939",
+    "attrs": {
+      "label": "<IDENTIFIER, 375<BR/>ctx<BR/>ctx-&gt;opcode &gt;&gt; 5>"
+    }
+  },
+  {
+    "id": "55834574877",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 375<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313268",
+    "attrs": {
+      "label": "<LITERAL, 375<BR/>5<BR/>ctx-&gt;opcode &gt;&gt; 5>"
+    }
+  },
+  {
+    "id": "90194313269",
+    "attrs": {
+      "label": "<LITERAL, 375<BR/>0x1f<BR/>(ctx-&gt;opcode &gt;&gt; 5) &amp; 0x1f>"
+    }
+  },
+  {
+    "id": "94489280542",
+    "attrs": {
+      "label": "<LOCAL, 377<BR/>int rb: int>"
+    }
+  },
+  {
+    "id": "30064771208",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 377<BR/>rb = 29>"
+    }
+  },
+  {
+    "id": "68719476940",
+    "attrs": {
+      "label": "<IDENTIFIER, 377<BR/>rb<BR/>rb = 29>"
+    }
+  },
+  {
+    "id": "90194313270",
+    "attrs": {
+      "label": "<LITERAL, 377<BR/>29<BR/>rb = 29>"
+    }
+  },
+  {
+    "id": "94489280543",
+    "attrs": {
+      "label": "<LOCAL, 379<BR/>int16_t offset: int16_t>"
+    }
+  },
+  {
+    "id": "30064771209",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 379<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 5) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "68719476941",
+    "attrs": {
+      "label": "<IDENTIFIER, 379<BR/>offset<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 5) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771210",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 379<BR/>ZIMM(ctx-&gt;opcode, 0, 5) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771211",
+    "attrs": {
+      "label": "<ZIMM, 379<BR/>ZIMM(ctx-&gt;opcode, 0, 5)>"
+    }
+  },
+  {
+    "id": "30064771212",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 379<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476942",
+    "attrs": {
+      "label": "<IDENTIFIER, 379<BR/>ctx<BR/>ZIMM(ctx-&gt;opcode, 0, 5)>"
+    }
+  },
+  {
+    "id": "55834574878",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 379<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313271",
+    "attrs": {
+      "label": "<LITERAL, 379<BR/>0<BR/>ZIMM(ctx-&gt;opcode, 0, 5)>"
+    }
+  },
+  {
+    "id": "90194313272",
+    "attrs": {
+      "label": "<LITERAL, 379<BR/>5<BR/>ZIMM(ctx-&gt;opcode, 0, 5)>"
+    }
+  },
+  {
+    "id": "90194313273",
+    "attrs": {
+      "label": "<LITERAL, 379<BR/>2<BR/>ZIMM(ctx-&gt;opcode, 0, 5) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771213",
+    "attrs": {
+      "label": "<gen_ld, 383<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476943",
+    "attrs": {
+      "label": "<IDENTIFIER, 383<BR/>ctx<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476944",
+    "attrs": {
+      "label": "<IDENTIFIER, 383<BR/>&lt;unknown&gt; OPC_LW<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476945",
+    "attrs": {
+      "label": "<IDENTIFIER, 383<BR/>rd<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476946",
+    "attrs": {
+      "label": "<IDENTIFIER, 383<BR/>rb<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476947",
+    "attrs": {
+      "label": "<IDENTIFIER, 383<BR/>offset<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "47244640280",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 387<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378693",
+    "attrs": {
+      "label": "<JUMP_TARGET, 389<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476948",
+    "attrs": {
+      "label": "<IDENTIFIER, 389<BR/>&lt;unknown&gt; LW16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK, 391<BR/>{ int rd = mmreg(uMIPS_RD(ctx-&gt;opc...>"
+    }
+  },
+  {
+    "id": "94489280544",
+    "attrs": {
+      "label": "<LOCAL, 393<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771214",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 393<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476949",
+    "attrs": {
+      "label": "<IDENTIFIER, 393<BR/>rd<BR/>rd = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771215",
+    "attrs": {
+      "label": "<mmreg, 393<BR/>mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771216",
+    "attrs": {
+      "label": "<uMIPS_RD, 393<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771217",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 393<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476950",
+    "attrs": {
+      "label": "<IDENTIFIER, 393<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574879",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 393<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280545",
+    "attrs": {
+      "label": "<LOCAL, 395<BR/>int rb: int>"
+    }
+  },
+  {
+    "id": "30064771218",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 395<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476951",
+    "attrs": {
+      "label": "<IDENTIFIER, 395<BR/>rb<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771219",
+    "attrs": {
+      "label": "<mmreg, 395<BR/>mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771220",
+    "attrs": {
+      "label": "<uMIPS_RS, 395<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771221",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 395<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476952",
+    "attrs": {
+      "label": "<IDENTIFIER, 395<BR/>ctx<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574880",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 395<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280546",
+    "attrs": {
+      "label": "<LOCAL, 397<BR/>int16_t offset: int16_t>"
+    }
+  },
+  {
+    "id": "30064771222",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 397<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "68719476953",
+    "attrs": {
+      "label": "<IDENTIFIER, 397<BR/>offset<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771223",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 397<BR/>ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771224",
+    "attrs": {
+      "label": "<ZIMM, 397<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771225",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 397<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476954",
+    "attrs": {
+      "label": "<IDENTIFIER, 397<BR/>ctx<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "55834574881",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 397<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313274",
+    "attrs": {
+      "label": "<LITERAL, 397<BR/>0<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313275",
+    "attrs": {
+      "label": "<LITERAL, 397<BR/>4<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313276",
+    "attrs": {
+      "label": "<LITERAL, 397<BR/>2<BR/>ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771226",
+    "attrs": {
+      "label": "<gen_ld, 401<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476955",
+    "attrs": {
+      "label": "<IDENTIFIER, 401<BR/>ctx<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476956",
+    "attrs": {
+      "label": "<IDENTIFIER, 401<BR/>&lt;unknown&gt; OPC_LW<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476957",
+    "attrs": {
+      "label": "<IDENTIFIER, 401<BR/>rd<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476958",
+    "attrs": {
+      "label": "<IDENTIFIER, 401<BR/>rb<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476959",
+    "attrs": {
+      "label": "<IDENTIFIER, 401<BR/>offset<BR/>gen_ld(ctx, OPC_LW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "47244640281",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 405<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378694",
+    "attrs": {
+      "label": "<JUMP_TARGET, 407<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476960",
+    "attrs": {
+      "label": "<IDENTIFIER, 407<BR/>&lt;unknown&gt; SB16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK, 409<BR/>{ int rd = mmreg2(uMIPS_RD(ctx-&gt;op...>"
+    }
+  },
+  {
+    "id": "94489280547",
+    "attrs": {
+      "label": "<LOCAL, 411<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771227",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 411<BR/>rd = mmreg2(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476961",
+    "attrs": {
+      "label": "<IDENTIFIER, 411<BR/>rd<BR/>rd = mmreg2(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771228",
+    "attrs": {
+      "label": "<mmreg2, 411<BR/>mmreg2(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771229",
+    "attrs": {
+      "label": "<uMIPS_RD, 411<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771230",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 411<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476962",
+    "attrs": {
+      "label": "<IDENTIFIER, 411<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574882",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 411<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280548",
+    "attrs": {
+      "label": "<LOCAL, 413<BR/>int rb: int>"
+    }
+  },
+  {
+    "id": "30064771231",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 413<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476963",
+    "attrs": {
+      "label": "<IDENTIFIER, 413<BR/>rb<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771232",
+    "attrs": {
+      "label": "<mmreg, 413<BR/>mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771233",
+    "attrs": {
+      "label": "<uMIPS_RS, 413<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771234",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 413<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476964",
+    "attrs": {
+      "label": "<IDENTIFIER, 413<BR/>ctx<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574883",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 413<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280549",
+    "attrs": {
+      "label": "<LOCAL, 415<BR/>int16_t offset: int16_t>"
+    }
+  },
+  {
+    "id": "30064771235",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 415<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "68719476965",
+    "attrs": {
+      "label": "<IDENTIFIER, 415<BR/>offset<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771236",
+    "attrs": {
+      "label": "<ZIMM, 415<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771237",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 415<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476966",
+    "attrs": {
+      "label": "<IDENTIFIER, 415<BR/>ctx<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "55834574884",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 415<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313277",
+    "attrs": {
+      "label": "<LITERAL, 415<BR/>0<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313278",
+    "attrs": {
+      "label": "<LITERAL, 415<BR/>4<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771238",
+    "attrs": {
+      "label": "<gen_st, 419<BR/>gen_st(ctx, OPC_SB, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476967",
+    "attrs": {
+      "label": "<IDENTIFIER, 419<BR/>ctx<BR/>gen_st(ctx, OPC_SB, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476968",
+    "attrs": {
+      "label": "<IDENTIFIER, 419<BR/>&lt;unknown&gt; OPC_SB<BR/>gen_st(ctx, OPC_SB, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476969",
+    "attrs": {
+      "label": "<IDENTIFIER, 419<BR/>rd<BR/>gen_st(ctx, OPC_SB, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476970",
+    "attrs": {
+      "label": "<IDENTIFIER, 419<BR/>rb<BR/>gen_st(ctx, OPC_SB, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476971",
+    "attrs": {
+      "label": "<IDENTIFIER, 419<BR/>offset<BR/>gen_st(ctx, OPC_SB, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "47244640282",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 423<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378695",
+    "attrs": {
+      "label": "<JUMP_TARGET, 425<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476972",
+    "attrs": {
+      "label": "<IDENTIFIER, 425<BR/>&lt;unknown&gt; SH16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK, 427<BR/>{ int rd = mmreg2(uMIPS_RD(ctx-&gt;op...>"
+    }
+  },
+  {
+    "id": "94489280550",
+    "attrs": {
+      "label": "<LOCAL, 429<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771239",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 429<BR/>rd = mmreg2(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476973",
+    "attrs": {
+      "label": "<IDENTIFIER, 429<BR/>rd<BR/>rd = mmreg2(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771240",
+    "attrs": {
+      "label": "<mmreg2, 429<BR/>mmreg2(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771241",
+    "attrs": {
+      "label": "<uMIPS_RD, 429<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771242",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 429<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476974",
+    "attrs": {
+      "label": "<IDENTIFIER, 429<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574885",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 429<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280551",
+    "attrs": {
+      "label": "<LOCAL, 431<BR/>int rb: int>"
+    }
+  },
+  {
+    "id": "30064771243",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 431<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476975",
+    "attrs": {
+      "label": "<IDENTIFIER, 431<BR/>rb<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771244",
+    "attrs": {
+      "label": "<mmreg, 431<BR/>mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771245",
+    "attrs": {
+      "label": "<uMIPS_RS, 431<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771246",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 431<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476976",
+    "attrs": {
+      "label": "<IDENTIFIER, 431<BR/>ctx<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574886",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 431<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280552",
+    "attrs": {
+      "label": "<LOCAL, 433<BR/>int16_t offset: int16_t>"
+    }
+  },
+  {
+    "id": "30064771247",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 433<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "68719476977",
+    "attrs": {
+      "label": "<IDENTIFIER, 433<BR/>offset<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771248",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 433<BR/>ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771249",
+    "attrs": {
+      "label": "<ZIMM, 433<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771250",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 433<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476978",
+    "attrs": {
+      "label": "<IDENTIFIER, 433<BR/>ctx<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "55834574887",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 433<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313279",
+    "attrs": {
+      "label": "<LITERAL, 433<BR/>0<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313280",
+    "attrs": {
+      "label": "<LITERAL, 433<BR/>4<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313281",
+    "attrs": {
+      "label": "<LITERAL, 433<BR/>1<BR/>ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771251",
+    "attrs": {
+      "label": "<gen_st, 437<BR/>gen_st(ctx, OPC_SH, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476979",
+    "attrs": {
+      "label": "<IDENTIFIER, 437<BR/>ctx<BR/>gen_st(ctx, OPC_SH, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476980",
+    "attrs": {
+      "label": "<IDENTIFIER, 437<BR/>&lt;unknown&gt; OPC_SH<BR/>gen_st(ctx, OPC_SH, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476981",
+    "attrs": {
+      "label": "<IDENTIFIER, 437<BR/>rd<BR/>gen_st(ctx, OPC_SH, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476982",
+    "attrs": {
+      "label": "<IDENTIFIER, 437<BR/>rb<BR/>gen_st(ctx, OPC_SH, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476983",
+    "attrs": {
+      "label": "<IDENTIFIER, 437<BR/>offset<BR/>gen_st(ctx, OPC_SH, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "47244640283",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 441<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378696",
+    "attrs": {
+      "label": "<JUMP_TARGET, 443<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476984",
+    "attrs": {
+      "label": "<IDENTIFIER, 443<BR/>&lt;unknown&gt; SWSP16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK, 445<BR/>{ int rd = (ctx-&gt;opcode &gt;&gt; 5) &amp; 0x...>"
+    }
+  },
+  {
+    "id": "94489280553",
+    "attrs": {
+      "label": "<LOCAL, 447<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771252",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 447<BR/>rd = (ctx-&gt;opcode &gt;&gt; 5) &amp; 0x1f>"
+    }
+  },
+  {
+    "id": "68719476985",
+    "attrs": {
+      "label": "<IDENTIFIER, 447<BR/>rd<BR/>rd = (ctx-&gt;opcode &gt;&gt; 5) &amp; 0x1f>"
+    }
+  },
+  {
+    "id": "30064771253",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 447<BR/>(ctx-&gt;opcode &gt;&gt; 5) &amp; 0x1f>"
+    }
+  },
+  {
+    "id": "30064771254",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 447<BR/>ctx-&gt;opcode &gt;&gt; 5>"
+    }
+  },
+  {
+    "id": "30064771255",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 447<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476986",
+    "attrs": {
+      "label": "<IDENTIFIER, 447<BR/>ctx<BR/>ctx-&gt;opcode &gt;&gt; 5>"
+    }
+  },
+  {
+    "id": "55834574888",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 447<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313282",
+    "attrs": {
+      "label": "<LITERAL, 447<BR/>5<BR/>ctx-&gt;opcode &gt;&gt; 5>"
+    }
+  },
+  {
+    "id": "90194313283",
+    "attrs": {
+      "label": "<LITERAL, 447<BR/>0x1f<BR/>(ctx-&gt;opcode &gt;&gt; 5) &amp; 0x1f>"
+    }
+  },
+  {
+    "id": "94489280554",
+    "attrs": {
+      "label": "<LOCAL, 449<BR/>int rb: int>"
+    }
+  },
+  {
+    "id": "30064771256",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 449<BR/>rb = 29>"
+    }
+  },
+  {
+    "id": "68719476987",
+    "attrs": {
+      "label": "<IDENTIFIER, 449<BR/>rb<BR/>rb = 29>"
+    }
+  },
+  {
+    "id": "90194313284",
+    "attrs": {
+      "label": "<LITERAL, 449<BR/>29<BR/>rb = 29>"
+    }
+  },
+  {
+    "id": "94489280555",
+    "attrs": {
+      "label": "<LOCAL, 451<BR/>int16_t offset: int16_t>"
+    }
+  },
+  {
+    "id": "30064771257",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 451<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 5) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "68719476988",
+    "attrs": {
+      "label": "<IDENTIFIER, 451<BR/>offset<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 5) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771258",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 451<BR/>ZIMM(ctx-&gt;opcode, 0, 5) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771259",
+    "attrs": {
+      "label": "<ZIMM, 451<BR/>ZIMM(ctx-&gt;opcode, 0, 5)>"
+    }
+  },
+  {
+    "id": "30064771260",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 451<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476989",
+    "attrs": {
+      "label": "<IDENTIFIER, 451<BR/>ctx<BR/>ZIMM(ctx-&gt;opcode, 0, 5)>"
+    }
+  },
+  {
+    "id": "55834574889",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 451<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313285",
+    "attrs": {
+      "label": "<LITERAL, 451<BR/>0<BR/>ZIMM(ctx-&gt;opcode, 0, 5)>"
+    }
+  },
+  {
+    "id": "90194313286",
+    "attrs": {
+      "label": "<LITERAL, 451<BR/>5<BR/>ZIMM(ctx-&gt;opcode, 0, 5)>"
+    }
+  },
+  {
+    "id": "90194313287",
+    "attrs": {
+      "label": "<LITERAL, 451<BR/>2<BR/>ZIMM(ctx-&gt;opcode, 0, 5) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771261",
+    "attrs": {
+      "label": "<gen_st, 455<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476990",
+    "attrs": {
+      "label": "<IDENTIFIER, 455<BR/>ctx<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476991",
+    "attrs": {
+      "label": "<IDENTIFIER, 455<BR/>&lt;unknown&gt; OPC_SW<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476992",
+    "attrs": {
+      "label": "<IDENTIFIER, 455<BR/>rd<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476993",
+    "attrs": {
+      "label": "<IDENTIFIER, 455<BR/>rb<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719476994",
+    "attrs": {
+      "label": "<IDENTIFIER, 455<BR/>offset<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "47244640284",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 459<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378697",
+    "attrs": {
+      "label": "<JUMP_TARGET, 461<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476995",
+    "attrs": {
+      "label": "<IDENTIFIER, 461<BR/>&lt;unknown&gt; SW16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK, 463<BR/>{ int rd = mmreg2(uMIPS_RD(ctx-&gt;op...>"
+    }
+  },
+  {
+    "id": "94489280556",
+    "attrs": {
+      "label": "<LOCAL, 465<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771262",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 465<BR/>rd = mmreg2(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476996",
+    "attrs": {
+      "label": "<IDENTIFIER, 465<BR/>rd<BR/>rd = mmreg2(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771263",
+    "attrs": {
+      "label": "<mmreg2, 465<BR/>mmreg2(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771264",
+    "attrs": {
+      "label": "<uMIPS_RD, 465<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771265",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 465<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476997",
+    "attrs": {
+      "label": "<IDENTIFIER, 465<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574890",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 465<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280557",
+    "attrs": {
+      "label": "<LOCAL, 467<BR/>int rb: int>"
+    }
+  },
+  {
+    "id": "30064771266",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 467<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719476998",
+    "attrs": {
+      "label": "<IDENTIFIER, 467<BR/>rb<BR/>rb = mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771267",
+    "attrs": {
+      "label": "<mmreg, 467<BR/>mmreg(uMIPS_RS(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771268",
+    "attrs": {
+      "label": "<uMIPS_RS, 467<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771269",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 467<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719476999",
+    "attrs": {
+      "label": "<IDENTIFIER, 467<BR/>ctx<BR/>uMIPS_RS(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574891",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 467<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280558",
+    "attrs": {
+      "label": "<LOCAL, 469<BR/>int16_t offset: int16_t>"
+    }
+  },
+  {
+    "id": "30064771270",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 469<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "68719477000",
+    "attrs": {
+      "label": "<IDENTIFIER, 469<BR/>offset<BR/>offset = ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771271",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 469<BR/>ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771272",
+    "attrs": {
+      "label": "<ZIMM, 469<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "30064771273",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 469<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477001",
+    "attrs": {
+      "label": "<IDENTIFIER, 469<BR/>ctx<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "55834574892",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 469<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313288",
+    "attrs": {
+      "label": "<LITERAL, 469<BR/>0<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313289",
+    "attrs": {
+      "label": "<LITERAL, 469<BR/>4<BR/>ZIMM(ctx-&gt;opcode, 0, 4)>"
+    }
+  },
+  {
+    "id": "90194313290",
+    "attrs": {
+      "label": "<LITERAL, 469<BR/>2<BR/>ZIMM(ctx-&gt;opcode, 0, 4) &lt;&lt; 2>"
+    }
+  },
+  {
+    "id": "30064771274",
+    "attrs": {
+      "label": "<gen_st, 473<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719477002",
+    "attrs": {
+      "label": "<IDENTIFIER, 473<BR/>ctx<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719477003",
+    "attrs": {
+      "label": "<IDENTIFIER, 473<BR/>&lt;unknown&gt; OPC_SW<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719477004",
+    "attrs": {
+      "label": "<IDENTIFIER, 473<BR/>rd<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719477005",
+    "attrs": {
+      "label": "<IDENTIFIER, 473<BR/>rb<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "68719477006",
+    "attrs": {
+      "label": "<IDENTIFIER, 473<BR/>offset<BR/>gen_st(ctx, OPC_SW, rd, rb, offset)>"
+    }
+  },
+  {
+    "id": "47244640285",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 477<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378698",
+    "attrs": {
+      "label": "<JUMP_TARGET, 479<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477007",
+    "attrs": {
+      "label": "<IDENTIFIER, 479<BR/>&lt;unknown&gt; MOVE16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK, 481<BR/>{ int rd = uMIPS_RD5(ctx-&gt;opcode);...>"
+    }
+  },
+  {
+    "id": "94489280559",
+    "attrs": {
+      "label": "<LOCAL, 483<BR/>int rd: int>"
+    }
+  },
+  {
+    "id": "30064771275",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 483<BR/>rd = uMIPS_RD5(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "68719477008",
+    "attrs": {
+      "label": "<IDENTIFIER, 483<BR/>rd<BR/>rd = uMIPS_RD5(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771276",
+    "attrs": {
+      "label": "<uMIPS_RD5, 483<BR/>uMIPS_RD5(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771277",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 483<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477009",
+    "attrs": {
+      "label": "<IDENTIFIER, 483<BR/>ctx<BR/>uMIPS_RD5(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574893",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 483<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280560",
+    "attrs": {
+      "label": "<LOCAL, 485<BR/>int rs: int>"
+    }
+  },
+  {
+    "id": "30064771278",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 485<BR/>rs = uMIPS_RS5(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "68719477010",
+    "attrs": {
+      "label": "<IDENTIFIER, 485<BR/>rs<BR/>rs = uMIPS_RS5(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771279",
+    "attrs": {
+      "label": "<uMIPS_RS5, 485<BR/>uMIPS_RS5(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771280",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 485<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477011",
+    "attrs": {
+      "label": "<IDENTIFIER, 485<BR/>ctx<BR/>uMIPS_RS5(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574894",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 485<BR/>opcode>"
+    }
+  },
+  {
+    "id": "30064771281",
+    "attrs": {
+      "label": "<gen_arith_imm, 489<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "68719477012",
+    "attrs": {
+      "label": "<IDENTIFIER, 489<BR/>ctx<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "68719477013",
+    "attrs": {
+      "label": "<IDENTIFIER, 489<BR/>&lt;unknown&gt; OPC_ADDIU<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "68719477014",
+    "attrs": {
+      "label": "<IDENTIFIER, 489<BR/>rd<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "68719477015",
+    "attrs": {
+      "label": "<IDENTIFIER, 489<BR/>rs<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "90194313291",
+    "attrs": {
+      "label": "<LITERAL, 489<BR/>0<BR/>gen_arith_imm(ctx, OPC_ADDIU, rd, rs, 0)>"
+    }
+  },
+  {
+    "id": "47244640286",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 493<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378699",
+    "attrs": {
+      "label": "<JUMP_TARGET, 495<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477016",
+    "attrs": {
+      "label": "<IDENTIFIER, 495<BR/>&lt;unknown&gt; ANDI16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "30064771282",
+    "attrs": {
+      "label": "<gen_andi16, 497<BR/>gen_andi16(ctx)>"
+    }
+  },
+  {
+    "id": "68719477017",
+    "attrs": {
+      "label": "<IDENTIFIER, 497<BR/>ctx<BR/>gen_andi16(ctx)>"
+    }
+  },
+  {
+    "id": "47244640287",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 499<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378700",
+    "attrs": {
+      "label": "<JUMP_TARGET, 501<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477018",
+    "attrs": {
+      "label": "<IDENTIFIER, 501<BR/>&lt;unknown&gt; POOL16D<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "47244640288",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 503<BR/>SWITCH<BR/>switch (ctx-&gt;opcode &amp; 0x1) { case ADDI...>"
+    }
+  },
+  {
+    "id": "30064771283",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 503<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "30064771284",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 503<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477019",
+    "attrs": {
+      "label": "<IDENTIFIER, 503<BR/>ctx<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "55834574895",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 503<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313292",
+    "attrs": {
+      "label": "<LITERAL, 503<BR/>0x1<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK, 503<BR/>{ case ADDIUS5: gen_addiu...>"
+    }
+  },
+  {
+    "id": "81604378701",
+    "attrs": {
+      "label": "<JUMP_TARGET, 505<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477020",
+    "attrs": {
+      "label": "<IDENTIFIER, 505<BR/>&lt;unknown&gt; ADDIUS5<BR/>{ case ADDIUS5: gen_addiu...>"
+    }
+  },
+  {
+    "id": "30064771285",
+    "attrs": {
+      "label": "<gen_addius5, 507<BR/>gen_addius5(ctx)>"
+    }
+  },
+  {
+    "id": "68719477021",
+    "attrs": {
+      "label": "<IDENTIFIER, 507<BR/>ctx<BR/>gen_addius5(ctx)>"
+    }
+  },
+  {
+    "id": "47244640289",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 509<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378702",
+    "attrs": {
+      "label": "<JUMP_TARGET, 511<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477022",
+    "attrs": {
+      "label": "<IDENTIFIER, 511<BR/>&lt;unknown&gt; ADDIUSP<BR/>{ case ADDIUS5: gen_addiu...>"
+    }
+  },
+  {
+    "id": "30064771286",
+    "attrs": {
+      "label": "<gen_addiusp, 513<BR/>gen_addiusp(ctx)>"
+    }
+  },
+  {
+    "id": "68719477023",
+    "attrs": {
+      "label": "<IDENTIFIER, 513<BR/>ctx<BR/>gen_addiusp(ctx)>"
+    }
+  },
+  {
+    "id": "47244640290",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 515<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "47244640291",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 519<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378703",
+    "attrs": {
+      "label": "<JUMP_TARGET, 521<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477024",
+    "attrs": {
+      "label": "<IDENTIFIER, 521<BR/>&lt;unknown&gt; POOL16E<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "47244640292",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 523<BR/>SWITCH<BR/>switch (ctx-&gt;opcode &amp; 0x1) { case ADDI...>"
+    }
+  },
+  {
+    "id": "30064771287",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 523<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "30064771288",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 523<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477025",
+    "attrs": {
+      "label": "<IDENTIFIER, 523<BR/>ctx<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "55834574896",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 523<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313293",
+    "attrs": {
+      "label": "<LITERAL, 523<BR/>0x1<BR/>ctx-&gt;opcode &amp; 0x1>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK, 523<BR/>{ case ADDIUR2: gen_addiu...>"
+    }
+  },
+  {
+    "id": "81604378704",
+    "attrs": {
+      "label": "<JUMP_TARGET, 525<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477026",
+    "attrs": {
+      "label": "<IDENTIFIER, 525<BR/>&lt;unknown&gt; ADDIUR2<BR/>{ case ADDIUR2: gen_addiu...>"
+    }
+  },
+  {
+    "id": "30064771289",
+    "attrs": {
+      "label": "<gen_addiur2, 527<BR/>gen_addiur2(ctx)>"
+    }
+  },
+  {
+    "id": "68719477027",
+    "attrs": {
+      "label": "<IDENTIFIER, 527<BR/>ctx<BR/>gen_addiur2(ctx)>"
+    }
+  },
+  {
+    "id": "47244640293",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 529<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378705",
+    "attrs": {
+      "label": "<JUMP_TARGET, 531<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477028",
+    "attrs": {
+      "label": "<IDENTIFIER, 531<BR/>&lt;unknown&gt; ADDIUR1SP<BR/>{ case ADDIUR2: gen_addiu...>"
+    }
+  },
+  {
+    "id": "30064771290",
+    "attrs": {
+      "label": "<gen_addiur1sp, 533<BR/>gen_addiur1sp(ctx)>"
+    }
+  },
+  {
+    "id": "68719477029",
+    "attrs": {
+      "label": "<IDENTIFIER, 533<BR/>ctx<BR/>gen_addiur1sp(ctx)>"
+    }
+  },
+  {
+    "id": "47244640294",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 535<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "47244640295",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 539<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378706",
+    "attrs": {
+      "label": "<JUMP_TARGET, 541<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477030",
+    "attrs": {
+      "label": "<IDENTIFIER, 541<BR/>&lt;unknown&gt; B16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "30064771291",
+    "attrs": {
+      "label": "<gen_compute_branch, 543<BR/>gen_compute_branch(ctx, OPC_BEQ, 2, 0, 0, ...>"
+    }
+  },
+  {
+    "id": "68719477031",
+    "attrs": {
+      "label": "<IDENTIFIER, 543<BR/>ctx<BR/>gen_compute_branch(ctx, OPC_BEQ, 2, 0, 0, ...>"
+    }
+  },
+  {
+    "id": "68719477032",
+    "attrs": {
+      "label": "<IDENTIFIER, 543<BR/>&lt;unknown&gt; OPC_BEQ<BR/>gen_compute_branch(ctx, OPC_BEQ, 2, 0, 0, ...>"
+    }
+  },
+  {
+    "id": "90194313294",
+    "attrs": {
+      "label": "<LITERAL, 543<BR/>2<BR/>gen_compute_branch(ctx, OPC_BEQ, 2, 0, 0, ...>"
+    }
+  },
+  {
+    "id": "90194313295",
+    "attrs": {
+      "label": "<LITERAL, 543<BR/>0<BR/>gen_compute_branch(ctx, OPC_BEQ, 2, 0, 0, ...>"
+    }
+  },
+  {
+    "id": "90194313296",
+    "attrs": {
+      "label": "<LITERAL, 543<BR/>0<BR/>gen_compute_branch(ctx, OPC_BEQ, 2, 0, 0, ...>"
+    }
+  },
+  {
+    "id": "30064771292",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 545<BR/>SIMM(ctx-&gt;opcode, 0, 10) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771293",
+    "attrs": {
+      "label": "<SIMM, 545<BR/>SIMM(ctx-&gt;opcode, 0, 10)>"
+    }
+  },
+  {
+    "id": "30064771294",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 545<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477033",
+    "attrs": {
+      "label": "<IDENTIFIER, 545<BR/>ctx<BR/>SIMM(ctx-&gt;opcode, 0, 10)>"
+    }
+  },
+  {
+    "id": "55834574897",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 545<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313297",
+    "attrs": {
+      "label": "<LITERAL, 545<BR/>0<BR/>SIMM(ctx-&gt;opcode, 0, 10)>"
+    }
+  },
+  {
+    "id": "90194313298",
+    "attrs": {
+      "label": "<LITERAL, 545<BR/>10<BR/>SIMM(ctx-&gt;opcode, 0, 10)>"
+    }
+  },
+  {
+    "id": "90194313299",
+    "attrs": {
+      "label": "<LITERAL, 545<BR/>1<BR/>SIMM(ctx-&gt;opcode, 0, 10) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771295",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 547<BR/>*is_branch = 1>"
+    }
+  },
+  {
+    "id": "30064771296",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 547<BR/>*is_branch>"
+    }
+  },
+  {
+    "id": "68719477034",
+    "attrs": {
+      "label": "<IDENTIFIER, 547<BR/>is_branch<BR/>*is_branch = 1>"
+    }
+  },
+  {
+    "id": "90194313300",
+    "attrs": {
+      "label": "<LITERAL, 547<BR/>1<BR/>*is_branch = 1>"
+    }
+  },
+  {
+    "id": "47244640296",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 549<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378707",
+    "attrs": {
+      "label": "<JUMP_TARGET, 551<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477035",
+    "attrs": {
+      "label": "<IDENTIFIER, 551<BR/>&lt;unknown&gt; BNEZ16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "81604378708",
+    "attrs": {
+      "label": "<JUMP_TARGET, 553<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477036",
+    "attrs": {
+      "label": "<IDENTIFIER, 553<BR/>&lt;unknown&gt; BEQZ16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "30064771297",
+    "attrs": {
+      "label": "<gen_compute_branch, 555<BR/>gen_compute_branch(ctx, op == BNEZ16 ? OPC_BNE ...>"
+    }
+  },
+  {
+    "id": "68719477037",
+    "attrs": {
+      "label": "<IDENTIFIER, 555<BR/>ctx<BR/>gen_compute_branch(ctx, op == BNEZ16 ? OPC_BNE ...>"
+    }
+  },
+  {
+    "id": "30064771298",
+    "attrs": {
+      "label": "<&lt;operator&gt;.conditional, 555<BR/>op == BNEZ16 ? OPC_BNE : OPC_BEQ>"
+    }
+  },
+  {
+    "id": "30064771299",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 555<BR/>op == BNEZ16>"
+    }
+  },
+  {
+    "id": "68719477038",
+    "attrs": {
+      "label": "<IDENTIFIER, 555<BR/>op<BR/>op == BNEZ16>"
+    }
+  },
+  {
+    "id": "68719477039",
+    "attrs": {
+      "label": "<IDENTIFIER, 555<BR/>&lt;unknown&gt; BNEZ16<BR/>op == BNEZ16>"
+    }
+  },
+  {
+    "id": "68719477040",
+    "attrs": {
+      "label": "<IDENTIFIER, 555<BR/>&lt;unknown&gt; OPC_BNE<BR/>op == BNEZ16 ? OPC_BNE : OPC_BEQ>"
+    }
+  },
+  {
+    "id": "68719477041",
+    "attrs": {
+      "label": "<IDENTIFIER, 555<BR/>&lt;unknown&gt; OPC_BEQ<BR/>op == BNEZ16 ? OPC_BNE : OPC_BEQ>"
+    }
+  },
+  {
+    "id": "90194313301",
+    "attrs": {
+      "label": "<LITERAL, 555<BR/>2<BR/>gen_compute_branch(ctx, op == BNEZ16 ? OPC_BNE ...>"
+    }
+  },
+  {
+    "id": "30064771300",
+    "attrs": {
+      "label": "<mmreg, 557<BR/>mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771301",
+    "attrs": {
+      "label": "<uMIPS_RD, 557<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771302",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 557<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477042",
+    "attrs": {
+      "label": "<IDENTIFIER, 557<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574898",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 557<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313302",
+    "attrs": {
+      "label": "<LITERAL, 559<BR/>0<BR/>gen_compute_branch(ctx, op == BNEZ16 ? OPC_BNE ...>"
+    }
+  },
+  {
+    "id": "30064771303",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 559<BR/>SIMM(ctx-&gt;opcode, 0, 7) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771304",
+    "attrs": {
+      "label": "<SIMM, 559<BR/>SIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "30064771305",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 559<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477043",
+    "attrs": {
+      "label": "<IDENTIFIER, 559<BR/>ctx<BR/>SIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "55834574899",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 559<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313303",
+    "attrs": {
+      "label": "<LITERAL, 559<BR/>0<BR/>SIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "90194313304",
+    "attrs": {
+      "label": "<LITERAL, 559<BR/>7<BR/>SIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "90194313305",
+    "attrs": {
+      "label": "<LITERAL, 559<BR/>1<BR/>SIMM(ctx-&gt;opcode, 0, 7) &lt;&lt; 1>"
+    }
+  },
+  {
+    "id": "30064771306",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 561<BR/>*is_branch = 1>"
+    }
+  },
+  {
+    "id": "30064771307",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 561<BR/>*is_branch>"
+    }
+  },
+  {
+    "id": "68719477044",
+    "attrs": {
+      "label": "<IDENTIFIER, 561<BR/>is_branch<BR/>*is_branch = 1>"
+    }
+  },
+  {
+    "id": "90194313306",
+    "attrs": {
+      "label": "<LITERAL, 561<BR/>1<BR/>*is_branch = 1>"
+    }
+  },
+  {
+    "id": "47244640297",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 563<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378709",
+    "attrs": {
+      "label": "<JUMP_TARGET, 565<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477045",
+    "attrs": {
+      "label": "<IDENTIFIER, 565<BR/>&lt;unknown&gt; LI16<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK, 567<BR/>{ int reg = mmreg(uMIPS_RD(ctx-&gt;op...>"
+    }
+  },
+  {
+    "id": "94489280561",
+    "attrs": {
+      "label": "<LOCAL, 569<BR/>int reg: int>"
+    }
+  },
+  {
+    "id": "30064771308",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 569<BR/>reg = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "68719477046",
+    "attrs": {
+      "label": "<IDENTIFIER, 569<BR/>reg<BR/>reg = mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771309",
+    "attrs": {
+      "label": "<mmreg, 569<BR/>mmreg(uMIPS_RD(ctx-&gt;opcode))>"
+    }
+  },
+  {
+    "id": "30064771310",
+    "attrs": {
+      "label": "<uMIPS_RD, 569<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "30064771311",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 569<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477047",
+    "attrs": {
+      "label": "<IDENTIFIER, 569<BR/>ctx<BR/>uMIPS_RD(ctx-&gt;opcode)>"
+    }
+  },
+  {
+    "id": "55834574900",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 569<BR/>opcode>"
+    }
+  },
+  {
+    "id": "94489280562",
+    "attrs": {
+      "label": "<LOCAL, 571<BR/>int imm: int>"
+    }
+  },
+  {
+    "id": "30064771312",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 571<BR/>imm = ZIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "68719477048",
+    "attrs": {
+      "label": "<IDENTIFIER, 571<BR/>imm<BR/>imm = ZIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "30064771313",
+    "attrs": {
+      "label": "<ZIMM, 571<BR/>ZIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "30064771314",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 571<BR/>ctx-&gt;opcode>"
+    }
+  },
+  {
+    "id": "68719477049",
+    "attrs": {
+      "label": "<IDENTIFIER, 571<BR/>ctx<BR/>ZIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "55834574901",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 571<BR/>opcode>"
+    }
+  },
+  {
+    "id": "90194313307",
+    "attrs": {
+      "label": "<LITERAL, 571<BR/>0<BR/>ZIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "90194313308",
+    "attrs": {
+      "label": "<LITERAL, 571<BR/>7<BR/>ZIMM(ctx-&gt;opcode, 0, 7)>"
+    }
+  },
+  {
+    "id": "30064771315",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 575<BR/>imm = (imm == 0x7f ? -1 : imm)>"
+    }
+  },
+  {
+    "id": "68719477050",
+    "attrs": {
+      "label": "<IDENTIFIER, 575<BR/>imm<BR/>imm = (imm == 0x7f ? -1 : imm)>"
+    }
+  },
+  {
+    "id": "30064771316",
+    "attrs": {
+      "label": "<&lt;operator&gt;.conditional, 575<BR/>imm == 0x7f ? -1 : imm>"
+    }
+  },
+  {
+    "id": "30064771317",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 575<BR/>imm == 0x7f>"
+    }
+  },
+  {
+    "id": "68719477051",
+    "attrs": {
+      "label": "<IDENTIFIER, 575<BR/>imm<BR/>imm == 0x7f>"
+    }
+  },
+  {
+    "id": "90194313309",
+    "attrs": {
+      "label": "<LITERAL, 575<BR/>0x7f<BR/>imm == 0x7f>"
+    }
+  },
+  {
+    "id": "30064771318",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 575<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313310",
+    "attrs": {
+      "label": "<LITERAL, 575<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "68719477052",
+    "attrs": {
+      "label": "<IDENTIFIER, 575<BR/>imm<BR/>imm == 0x7f ? -1 : imm>"
+    }
+  },
+  {
+    "id": "30064771319",
+    "attrs": {
+      "label": "<tcg_gen_movi_tl, 577<BR/>tcg_gen_movi_tl(cpu_gpr[reg], imm)>"
+    }
+  },
+  {
+    "id": "30064771320",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 577<BR/>cpu_gpr[reg]>"
+    }
+  },
+  {
+    "id": "68719477053",
+    "attrs": {
+      "label": "<IDENTIFIER, 577<BR/>&lt;unknown&gt; cpu_gpr<BR/>tcg_gen_movi_tl(cpu_gpr[reg], imm)>"
+    }
+  },
+  {
+    "id": "68719477054",
+    "attrs": {
+      "label": "<IDENTIFIER, 577<BR/>reg<BR/>tcg_gen_movi_tl(cpu_gpr[reg], imm)>"
+    }
+  },
+  {
+    "id": "68719477055",
+    "attrs": {
+      "label": "<IDENTIFIER, 577<BR/>imm<BR/>tcg_gen_movi_tl(cpu_gpr[reg], imm)>"
+    }
+  },
+  {
+    "id": "47244640298",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 581<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378710",
+    "attrs": {
+      "label": "<JUMP_TARGET, 583<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477056",
+    "attrs": {
+      "label": "<IDENTIFIER, 583<BR/>&lt;unknown&gt; RES_20<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "81604378711",
+    "attrs": {
+      "label": "<JUMP_TARGET, 585<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477057",
+    "attrs": {
+      "label": "<IDENTIFIER, 585<BR/>&lt;unknown&gt; RES_28<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "81604378712",
+    "attrs": {
+      "label": "<JUMP_TARGET, 587<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477058",
+    "attrs": {
+      "label": "<IDENTIFIER, 587<BR/>&lt;unknown&gt; RES_29<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "81604378713",
+    "attrs": {
+      "label": "<JUMP_TARGET, 589<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477059",
+    "attrs": {
+      "label": "<IDENTIFIER, 589<BR/>&lt;unknown&gt; RES_30<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "81604378714",
+    "attrs": {
+      "label": "<JUMP_TARGET, 591<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477060",
+    "attrs": {
+      "label": "<IDENTIFIER, 591<BR/>&lt;unknown&gt; RES_31<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "81604378715",
+    "attrs": {
+      "label": "<JUMP_TARGET, 593<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477061",
+    "attrs": {
+      "label": "<IDENTIFIER, 593<BR/>&lt;unknown&gt; RES_38<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "81604378716",
+    "attrs": {
+      "label": "<JUMP_TARGET, 595<BR/>case>"
+    }
+  },
+  {
+    "id": "68719477062",
+    "attrs": {
+      "label": "<IDENTIFIER, 595<BR/>&lt;unknown&gt; RES_39<BR/>{ case POOL16A: { in...>"
+    }
+  },
+  {
+    "id": "30064771321",
+    "attrs": {
+      "label": "<generate_exception, 597<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "68719477063",
+    "attrs": {
+      "label": "<IDENTIFIER, 597<BR/>ctx<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "68719477064",
+    "attrs": {
+      "label": "<IDENTIFIER, 597<BR/>&lt;unknown&gt; EXCP_RI<BR/>generate_exception(ctx, EXCP_RI)>"
+    }
+  },
+  {
+    "id": "47244640299",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 599<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378717",
+    "attrs": {
+      "label": "<JUMP_TARGET, 601<BR/>default>"
+    }
+  },
+  {
+    "id": "30064771322",
+    "attrs": {
+      "label": "<decode_micromips32_opc, 603<BR/>decode_micromips32_opc (env, ctx, op, is_branch)>"
+    }
+  },
+  {
+    "id": "68719477065",
+    "attrs": {
+      "label": "<IDENTIFIER, 603<BR/>env<BR/>decode_micromips32_opc (env, ctx, op, is_branch)>"
+    }
+  },
+  {
+    "id": "68719477066",
+    "attrs": {
+      "label": "<IDENTIFIER, 603<BR/>ctx<BR/>decode_micromips32_opc (env, ctx, op, is_branch)>"
+    }
+  },
+  {
+    "id": "68719477067",
+    "attrs": {
+      "label": "<IDENTIFIER, 603<BR/>op<BR/>decode_micromips32_opc (env, ctx, op, is_branch)>"
+    }
+  },
+  {
+    "id": "68719477068",
+    "attrs": {
+      "label": "<IDENTIFIER, 603<BR/>is_branch<BR/>decode_micromips32_opc (env, ctx, op, is_branch)>"
+    }
+  },
+  {
+    "id": "141733920771",
+    "attrs": {
+      "label": "<RETURN, 605<BR/>return 4;>"
+    }
+  },
+  {
+    "id": "90194313311",
+    "attrs": {
+      "label": "<LITERAL, 605<BR/>4<BR/>return 4;>"
+    }
+  },
+  {
+    "id": "141733920772",
+    "attrs": {
+      "label": "<RETURN, 611<BR/>return 2;>"
+    }
+  },
+  {
+    "id": "90194313312",
+    "attrs": {
+      "label": "<LITERAL, 611<BR/>2<BR/>return 2;>"
+    }
+  },
+  {
+    "id": "94489280563",
+    "attrs": {
+      "label": "<LOCAL, 109<BR/>&lt;unknown&gt; EXCP_RI: ANY>"
+    }
+  },
+  {
+    "id": "94489280564",
+    "attrs": {
+      "label": "<LOCAL, 595<BR/>&lt;unknown&gt; RES_39: ANY>"
+    }
+  },
+  {
+    "id": "94489280565",
+    "attrs": {
+      "label": "<LOCAL, 593<BR/>&lt;unknown&gt; RES_38: ANY>"
+    }
+  },
+  {
+    "id": "94489280566",
+    "attrs": {
+      "label": "<LOCAL, 591<BR/>&lt;unknown&gt; RES_31: ANY>"
+    }
+  },
+  {
+    "id": "94489280567",
+    "attrs": {
+      "label": "<LOCAL, 589<BR/>&lt;unknown&gt; RES_30: ANY>"
+    }
+  },
+  {
+    "id": "94489280568",
+    "attrs": {
+      "label": "<LOCAL, 587<BR/>&lt;unknown&gt; RES_29: ANY>"
+    }
+  },
+  {
+    "id": "94489280569",
+    "attrs": {
+      "label": "<LOCAL, 585<BR/>&lt;unknown&gt; RES_28: ANY>"
+    }
+  },
+  {
+    "id": "94489280570",
+    "attrs": {
+      "label": "<LOCAL, 583<BR/>&lt;unknown&gt; RES_20: ANY>"
+    }
+  },
+  {
+    "id": "94489280571",
+    "attrs": {
+      "label": "<LOCAL, 577<BR/>&lt;unknown&gt; cpu_gpr: ANY>"
+    }
+  },
+  {
+    "id": "94489280572",
+    "attrs": {
+      "label": "<LOCAL, 161<BR/>&lt;unknown&gt; LI16: ANY>"
+    }
+  },
+  {
+    "id": "94489280573",
+    "attrs": {
+      "label": "<LOCAL, 543<BR/>&lt;unknown&gt; OPC_BEQ: ANY>"
+    }
+  },
+  {
+    "id": "94489280574",
+    "attrs": {
+      "label": "<LOCAL, 555<BR/>&lt;unknown&gt; OPC_BNE: ANY>"
+    }
+  },
+  {
+    "id": "94489280575",
+    "attrs": {
+      "label": "<LOCAL, 157<BR/>&lt;unknown&gt; BNEZ16: ANY>"
+    }
+  },
+  {
+    "id": "94489280576",
+    "attrs": {
+      "label": "<LOCAL, 155<BR/>&lt;unknown&gt; BEQZ16: ANY>"
+    }
+  },
+  {
+    "id": "94489280577",
+    "attrs": {
+      "label": "<LOCAL, 159<BR/>&lt;unknown&gt; B16: ANY>"
+    }
+  },
+  {
+    "id": "94489280578",
+    "attrs": {
+      "label": "<LOCAL, 531<BR/>&lt;unknown&gt; ADDIUR1SP: ANY>"
+    }
+  },
+  {
+    "id": "94489280579",
+    "attrs": {
+      "label": "<LOCAL, 525<BR/>&lt;unknown&gt; ADDIUR2: ANY>"
+    }
+  },
+  {
+    "id": "94489280580",
+    "attrs": {
+      "label": "<LOCAL, 153<BR/>&lt;unknown&gt; POOL16E: ANY>"
+    }
+  },
+  {
+    "id": "94489280581",
+    "attrs": {
+      "label": "<LOCAL, 511<BR/>&lt;unknown&gt; ADDIUSP: ANY>"
+    }
+  },
+  {
+    "id": "94489280582",
+    "attrs": {
+      "label": "<LOCAL, 505<BR/>&lt;unknown&gt; ADDIUS5: ANY>"
+    }
+  },
+  {
+    "id": "94489280583",
+    "attrs": {
+      "label": "<LOCAL, 151<BR/>&lt;unknown&gt; POOL16D: ANY>"
+    }
+  },
+  {
+    "id": "94489280584",
+    "attrs": {
+      "label": "<LOCAL, 149<BR/>&lt;unknown&gt; ANDI16: ANY>"
+    }
+  },
+  {
+    "id": "94489280585",
+    "attrs": {
+      "label": "<LOCAL, 325<BR/>&lt;unknown&gt; OPC_ADDIU: ANY>"
+    }
+  },
+  {
+    "id": "94489280586",
+    "attrs": {
+      "label": "<LOCAL, 147<BR/>&lt;unknown&gt; MOVE16: ANY>"
+    }
+  },
+  {
+    "id": "94489280587",
+    "attrs": {
+      "label": "<LOCAL, 455<BR/>&lt;unknown&gt; OPC_SW: ANY>"
+    }
+  },
+  {
+    "id": "94489280588",
+    "attrs": {
+      "label": "<LOCAL, 145<BR/>&lt;unknown&gt; SW16: ANY>"
+    }
+  },
+  {
+    "id": "94489280589",
+    "attrs": {
+      "label": "<LOCAL, 143<BR/>&lt;unknown&gt; SWSP16: ANY>"
+    }
+  },
+  {
+    "id": "94489280590",
+    "attrs": {
+      "label": "<LOCAL, 437<BR/>&lt;unknown&gt; OPC_SH: ANY>"
+    }
+  },
+  {
+    "id": "94489280591",
+    "attrs": {
+      "label": "<LOCAL, 141<BR/>&lt;unknown&gt; SH16: ANY>"
+    }
+  },
+  {
+    "id": "94489280592",
+    "attrs": {
+      "label": "<LOCAL, 419<BR/>&lt;unknown&gt; OPC_SB: ANY>"
+    }
+  },
+  {
+    "id": "94489280593",
+    "attrs": {
+      "label": "<LOCAL, 139<BR/>&lt;unknown&gt; SB16: ANY>"
+    }
+  },
+  {
+    "id": "94489280594",
+    "attrs": {
+      "label": "<LOCAL, 283<BR/>&lt;unknown&gt; OPC_LW: ANY>"
+    }
+  },
+  {
+    "id": "94489280595",
+    "attrs": {
+      "label": "<LOCAL, 137<BR/>&lt;unknown&gt; LW16: ANY>"
+    }
+  },
+  {
+    "id": "94489280596",
+    "attrs": {
+      "label": "<LOCAL, 135<BR/>&lt;unknown&gt; LWSP16: ANY>"
+    }
+  },
+  {
+    "id": "94489280597",
+    "attrs": {
+      "label": "<LOCAL, 365<BR/>&lt;unknown&gt; OPC_LHU: ANY>"
+    }
+  },
+  {
+    "id": "94489280598",
+    "attrs": {
+      "label": "<LOCAL, 133<BR/>&lt;unknown&gt; LHU16: ANY>"
+    }
+  },
+  {
+    "id": "94489280599",
+    "attrs": {
+      "label": "<LOCAL, 347<BR/>&lt;unknown&gt; OPC_LBU: ANY>"
+    }
+  },
+  {
+    "id": "94489280600",
+    "attrs": {
+      "label": "<LOCAL, 131<BR/>&lt;unknown&gt; LBU16: ANY>"
+    }
+  },
+  {
+    "id": "94489280601",
+    "attrs": {
+      "label": "<LOCAL, 129<BR/>&lt;unknown&gt; POOL16F: ANY>"
+    }
+  },
+  {
+    "id": "94489280602",
+    "attrs": {
+      "label": "<LOCAL, 127<BR/>&lt;unknown&gt; LWGP16: ANY>"
+    }
+  },
+  {
+    "id": "94489280603",
+    "attrs": {
+      "label": "<LOCAL, 125<BR/>&lt;unknown&gt; POOL16C: ANY>"
+    }
+  },
+  {
+    "id": "94489280604",
+    "attrs": {
+      "label": "<LOCAL, 251<BR/>&lt;unknown&gt; OPC_SRL: ANY>"
+    }
+  },
+  {
+    "id": "94489280605",
+    "attrs": {
+      "label": "<LOCAL, 249<BR/>&lt;unknown&gt; SRL16: ANY>"
+    }
+  },
+  {
+    "id": "94489280606",
+    "attrs": {
+      "label": "<LOCAL, 245<BR/>&lt;unknown&gt; OPC_SLL: ANY>"
+    }
+  },
+  {
+    "id": "94489280607",
+    "attrs": {
+      "label": "<LOCAL, 243<BR/>&lt;unknown&gt; SLL16: ANY>"
+    }
+  },
+  {
+    "id": "94489280608",
+    "attrs": {
+      "label": "<LOCAL, 123<BR/>&lt;unknown&gt; POOL16B: ANY>"
+    }
+  },
+  {
+    "id": "94489280609",
+    "attrs": {
+      "label": "<LOCAL, 211<BR/>&lt;unknown&gt; OPC_SUBU: ANY>"
+    }
+  },
+  {
+    "id": "94489280610",
+    "attrs": {
+      "label": "<LOCAL, 209<BR/>&lt;unknown&gt; SUBU16: ANY>"
+    }
+  },
+  {
+    "id": "94489280611",
+    "attrs": {
+      "label": "<LOCAL, 205<BR/>&lt;unknown&gt; OPC_ADDU: ANY>"
+    }
+  },
+  {
+    "id": "94489280612",
+    "attrs": {
+      "label": "<LOCAL, 203<BR/>&lt;unknown&gt; ADDU16: ANY>"
+    }
+  },
+  {
+    "id": "94489280613",
+    "attrs": {
+      "label": "<LOCAL, 121<BR/>&lt;unknown&gt; POOL16A: ANY>"
+    }
+  },
+  {
+    "id": "94489280614",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>&lt;unknown&gt; BS_STOP: ANY>"
+    }
+  },
+  {
+    "id": "94489280615",
+    "attrs": {
+      "label": "<LOCAL, 163<BR/>&lt;unknown&gt; MIPS_HFLAG_BDS32: ANY>"
+    }
+  },
+  {
+    "id": "94489280616",
+    "attrs": {
+      "label": "<LOCAL, 107<BR/>&lt;unknown&gt; MIPS_HFLAG_BDS16: ANY>"
+    }
+  },
+  {
+    "id": "94489280617",
+    "attrs": {
+      "label": "<LOCAL, 105<BR/>&lt;unknown&gt; LW32: ANY>"
+    }
+  },
+  {
+    "id": "94489280618",
+    "attrs": {
+      "label": "<LOCAL, 103<BR/>&lt;unknown&gt; LD32: ANY>"
+    }
+  },
+  {
+    "id": "94489280619",
+    "attrs": {
+      "label": "<LOCAL, 101<BR/>&lt;unknown&gt; LDC132: ANY>"
+    }
+  },
+  {
+    "id": "94489280620",
+    "attrs": {
+      "label": "<LOCAL, 99<BR/>&lt;unknown&gt; LWC132: ANY>"
+    }
+  },
+  {
+    "id": "94489280621",
+    "attrs": {
+      "label": "<LOCAL, 97<BR/>&lt;unknown&gt; DADDIU32: ANY>"
+    }
+  },
+  {
+    "id": "94489280622",
+    "attrs": {
+      "label": "<LOCAL, 95<BR/>&lt;unknown&gt; LH32: ANY>"
+    }
+  },
+  {
+    "id": "94489280623",
+    "attrs": {
+      "label": "<LOCAL, 93<BR/>&lt;unknown&gt; LB32: ANY>"
+    }
+  },
+  {
+    "id": "94489280624",
+    "attrs": {
+      "label": "<LOCAL, 91<BR/>&lt;unknown&gt; SW32: ANY>"
+    }
+  },
+  {
+    "id": "94489280625",
+    "attrs": {
+      "label": "<LOCAL, 89<BR/>&lt;unknown&gt; SD32: ANY>"
+    }
+  },
+  {
+    "id": "94489280626",
+    "attrs": {
+      "label": "<LOCAL, 87<BR/>&lt;unknown&gt; SDC132: ANY>"
+    }
+  },
+  {
+    "id": "94489280627",
+    "attrs": {
+      "label": "<LOCAL, 85<BR/>&lt;unknown&gt; SWC132: ANY>"
+    }
+  },
+  {
+    "id": "94489280628",
+    "attrs": {
+      "label": "<LOCAL, 83<BR/>&lt;unknown&gt; ADDIUPC: ANY>"
+    }
+  },
+  {
+    "id": "94489280629",
+    "attrs": {
+      "label": "<LOCAL, 81<BR/>&lt;unknown&gt; POOL32S: ANY>"
+    }
+  },
+  {
+    "id": "94489280630",
+    "attrs": {
+      "label": "<LOCAL, 79<BR/>&lt;unknown&gt; SH32: ANY>"
+    }
+  },
+  {
+    "id": "94489280631",
+    "attrs": {
+      "label": "<LOCAL, 77<BR/>&lt;unknown&gt; SB32: ANY>"
+    }
+  },
+  {
+    "id": "94489280632",
+    "attrs": {
+      "label": "<LOCAL, 75<BR/>&lt;unknown&gt; JAL32: ANY>"
+    }
+  },
+  {
+    "id": "94489280633",
+    "attrs": {
+      "label": "<LOCAL, 73<BR/>&lt;unknown&gt; J32: ANY>"
+    }
+  },
+  {
+    "id": "94489280634",
+    "attrs": {
+      "label": "<LOCAL, 71<BR/>&lt;unknown&gt; BNE32: ANY>"
+    }
+  },
+  {
+    "id": "94489280635",
+    "attrs": {
+      "label": "<LOCAL, 69<BR/>&lt;unknown&gt; BEQ32: ANY>"
+    }
+  },
+  {
+    "id": "94489280636",
+    "attrs": {
+      "label": "<LOCAL, 67<BR/>&lt;unknown&gt; JALS32: ANY>"
+    }
+  },
+  {
+    "id": "94489280637",
+    "attrs": {
+      "label": "<LOCAL, 65<BR/>&lt;unknown&gt; POOL32F: ANY>"
+    }
+  },
+  {
+    "id": "94489280638",
+    "attrs": {
+      "label": "<LOCAL, 63<BR/>&lt;unknown&gt; LHU32: ANY>"
+    }
+  },
+  {
+    "id": "94489280639",
+    "attrs": {
+      "label": "<LOCAL, 61<BR/>&lt;unknown&gt; LBU32: ANY>"
+    }
+  },
+  {
+    "id": "94489280640",
+    "attrs": {
+      "label": "<LOCAL, 59<BR/>&lt;unknown&gt; JALX32: ANY>"
+    }
+  },
+  {
+    "id": "94489280641",
+    "attrs": {
+      "label": "<LOCAL, 57<BR/>&lt;unknown&gt; ANDI32: ANY>"
+    }
+  },
+  {
+    "id": "94489280642",
+    "attrs": {
+      "label": "<LOCAL, 55<BR/>&lt;unknown&gt; SLTIU32: ANY>"
+    }
+  },
+  {
+    "id": "94489280643",
+    "attrs": {
+      "label": "<LOCAL, 53<BR/>&lt;unknown&gt; SLTI32: ANY>"
+    }
+  },
+  {
+    "id": "94489280644",
+    "attrs": {
+      "label": "<LOCAL, 51<BR/>&lt;unknown&gt; XORI32: ANY>"
+    }
+  },
+  {
+    "id": "94489280645",
+    "attrs": {
+      "label": "<LOCAL, 49<BR/>&lt;unknown&gt; ORI32: ANY>"
+    }
+  },
+  {
+    "id": "94489280646",
+    "attrs": {
+      "label": "<LOCAL, 47<BR/>&lt;unknown&gt; ADDIU32: ANY>"
+    }
+  },
+  {
+    "id": "94489280647",
+    "attrs": {
+      "label": "<LOCAL, 45<BR/>&lt;unknown&gt; ADDI32: ANY>"
+    }
+  },
+  {
+    "id": "94489280648",
+    "attrs": {
+      "label": "<LOCAL, 43<BR/>&lt;unknown&gt; POOL32C: ANY>"
+    }
+  },
+  {
+    "id": "94489280649",
+    "attrs": {
+      "label": "<LOCAL, 41<BR/>&lt;unknown&gt; POOL32I: ANY>"
+    }
+  },
+  {
+    "id": "94489280650",
+    "attrs": {
+      "label": "<LOCAL, 39<BR/>&lt;unknown&gt; POOL32B: ANY>"
+    }
+  },
+  {
+    "id": "94489280651",
+    "attrs": {
+      "label": "<LOCAL, 37<BR/>&lt;unknown&gt; POOL32A: ANY>"
+    }
+  },
+  {
+    "id": "94489280652",
+    "attrs": {
+      "label": "<LOCAL, 31<BR/>&lt;unknown&gt; MIPS_HFLAG_BMASK_EXT: ANY>"
+    }
+  },
+  {
+    "id": "94489280653",
+    "attrs": {
+      "label": "<LOCAL, 29<BR/>&lt;unknown&gt; MIPS_HFLAG_BMASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280654",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>&lt;unknown&gt; EXCP_AdEL: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>int>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>decode_micromips_opc<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_addius5>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_shift_imm>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>mmreg2>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>uMIPS_RS1>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirection>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>uMIPS_RS2>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>SIMM>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803817",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.arithmeticShiftRight>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803818",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.equals>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803819",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_addiur2>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803820",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.arrayInitializer>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p6>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p7>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p8>"
+    }
+  },
+  {
+    "id": "25769803821",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.conditional>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803822",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.minus>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803823",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803824",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.shiftLeft>"
+    }
+  },
+  {
+    "id": "111669149744",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149745",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803825",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>ZIMM>"
+    }
+  },
+  {
+    "id": "111669149746",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149747",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149748",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803826",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_andi16>"
+    }
+  },
+  {
+    "id": "111669149749",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803827",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_compute_branch>"
+    }
+  },
+  {
+    "id": "111669149750",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149751",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149752",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149753",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149754",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "111669149755",
+    "attrs": {
+      "label": "<PARAM<BR/>p6>"
+    }
+  },
+  {
+    "id": "25769803828",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182428",
+    "attrs": {
+      "label": "<METHOD<BR/>tcg_gen_movi_tl>"
+    }
+  },
+  {
+    "id": "111669149756",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149757",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803829",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051612",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182429",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_pool16c_insn>"
+    }
+  },
+  {
+    "id": "111669149758",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149759",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803830",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051613",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>uMIPS_RS5>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182430",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_arith>"
+    }
+  },
+  {
+    "id": "111669149760",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149761",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149762",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149763",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149764",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "25769803831",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051614",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182431",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_arith_imm>"
+    }
+  },
+  {
+    "id": "111669149765",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149766",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149767",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149768",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149769",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "25769803832",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051615",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182432",
+    "attrs": {
+      "label": "<METHOD<BR/>decode_micromips32_opc>"
+    }
+  },
+  {
+    "id": "111669149770",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149771",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149772",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149773",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803833",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051616",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182433",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectIndexAccess>"
+    }
+  },
+  {
+    "id": "111669149774",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149775",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803834",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051617",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182434",
+    "attrs": {
+      "label": "<METHOD<BR/>generate_exception>"
+    }
+  },
+  {
+    "id": "111669149776",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149777",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803835",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051618",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182435",
+    "attrs": {
+      "label": "<METHOD<BR/>uMIPS_RD5>"
+    }
+  },
+  {
+    "id": "111669149778",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803836",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051619",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182436",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_addiusp>"
+    }
+  },
+  {
+    "id": "111669149779",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803837",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051620",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182437",
+    "attrs": {
+      "label": "<METHOD<BR/>uMIPS_RD>"
+    }
+  },
+  {
+    "id": "111669149780",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803838",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051621",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182438",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_st>"
+    }
+  },
+  {
+    "id": "111669149781",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149782",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149783",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149784",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149785",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "25769803839",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051622",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_ld>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>gen_addiur1sp>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.and>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>uMIPS_RS>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>mmreg>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

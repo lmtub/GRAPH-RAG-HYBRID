@@ -1,1 +1,722 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>qht_reset_size>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>struct qht *ht>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>size_t n_elems>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ struct qht_map *new; struct qht_map...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 5<BR/>struct qht_map *new: qht_map*>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>struct qht_map *map: qht_map*>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>size_t n_buckets: size_t>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>bool resize: bool>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 11<BR/>resize = false>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>resize<BR/>resize = false>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>&lt;unknown&gt; false<BR/>resize = false>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 15<BR/>n_buckets = qht_elems_to_buckets(n_elems)>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>n_buckets<BR/>n_buckets = qht_elems_to_buckets(n_elems)>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<qht_elems_to_buckets, 15<BR/>qht_elems_to_buckets(n_elems)>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>n_elems<BR/>qht_elems_to_buckets(n_elems)>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<qemu_mutex_lock, 19<BR/>qemu_mutex_lock(&amp;ht-&gt;lock)>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 19<BR/>&amp;ht-&gt;lock>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 19<BR/>ht-&gt;lock>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>ht<BR/>qemu_mutex_lock(&amp;ht-&gt;lock)>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 19<BR/>lock>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 21<BR/>map = ht-&gt;map>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>map<BR/>map = ht-&gt;map>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 21<BR/>ht-&gt;map>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>ht<BR/>map = ht-&gt;map>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 21<BR/>map>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 23<BR/>IF<BR/>if (n_buckets != map-&gt;n_buckets) { new...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 23<BR/>n_buckets != map-&gt;n_buckets>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>n_buckets<BR/>n_buckets != map-&gt;n_buckets>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 23<BR/>map-&gt;n_buckets>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>map<BR/>n_buckets != map-&gt;n_buckets>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 23<BR/>n_buckets>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 23<BR/>{ new = qht_map_create(n_buckets); ...>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 25<BR/>new = qht_map_create(n_buckets)>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>new<BR/>new = qht_map_create(n_buckets)>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<qht_map_create, 25<BR/>qht_map_create(n_buckets)>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>n_buckets<BR/>qht_map_create(n_buckets)>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 27<BR/>resize = true>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>resize<BR/>resize = true>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>&lt;unknown&gt; true<BR/>resize = true>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<qht_map_lock_buckets, 33<BR/>qht_map_lock_buckets(map)>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>map<BR/>qht_map_lock_buckets(map)>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<qht_map_reset__all_locked, 35<BR/>qht_map_reset__all_locked(map)>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>map<BR/>qht_map_reset__all_locked(map)>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 37<BR/>IF<BR/>if (resize) { qht_do_resize(ht, new); ...>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 37<BR/>resize<BR/>if (resize) { qht_do_resize(ht, new); ...>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 37<BR/>{ qht_do_resize(ht, new); }>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<qht_do_resize, 39<BR/>qht_do_resize(ht, new)>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>ht<BR/>qht_do_resize(ht, new)>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>new<BR/>qht_do_resize(ht, new)>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<qht_map_unlock_buckets, 43<BR/>qht_map_unlock_buckets(map)>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>map<BR/>qht_map_unlock_buckets(map)>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<qemu_mutex_unlock, 45<BR/>qemu_mutex_unlock(&amp;ht-&gt;lock)>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 45<BR/>&amp;ht-&gt;lock>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 45<BR/>ht-&gt;lock>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>ht<BR/>qemu_mutex_unlock(&amp;ht-&gt;lock)>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 45<BR/>lock>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 49<BR/>return resize;>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>resize<BR/>return resize;>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 27<BR/>&lt;unknown&gt; true: ANY>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>&lt;unknown&gt; false: ANY>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>bool>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>qht_reset_size<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>qht_map_create>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>qht_elems_to_buckets>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>qht_map_lock_buckets>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>qht_do_resize>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>qht_map_reset__all_locked>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_mutex_lock>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_mutex_unlock>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>qht_map_unlock_buckets>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.notEquals>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

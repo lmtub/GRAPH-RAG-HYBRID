@@ -1,1 +1,2138 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>handle_qmp_command>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>JSONMessageParser *parser>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>QList *tokens>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ int err; QObject *obj; QDict *...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 5<BR/>int err: int>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>QObject *obj: QObject*>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>QDict *input: QDict*>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>QDict *args: QDict*>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>const mon_cmd_t *cmd: mon_cmd_t*>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>Monitor *mon: Monitor*>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 13<BR/>*mon = cur_mon>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>mon<BR/>*mon = cur_mon>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>&lt;unknown&gt; cur_mon<BR/>*mon = cur_mon>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>const char *cmd_name: char*>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>const char *info_item: char*>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 19<BR/>args = NULL>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>args<BR/>args = NULL>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>&lt;unknown&gt; NULL<BR/>args = NULL>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 23<BR/>obj = json_parser_parse(tokens, NULL)>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>obj<BR/>obj = json_parser_parse(tokens, NULL)>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<json_parser_parse, 23<BR/>json_parser_parse(tokens, NULL)>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>tokens<BR/>json_parser_parse(tokens, NULL)>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>&lt;unknown&gt; NULL<BR/>json_parser_parse(tokens, NULL)>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 25<BR/>IF<BR/>if (!obj) { // FIXME: should be trigge...>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 25<BR/>!obj>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>obj<BR/>!obj>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 25<BR/>{ // FIXME: should be triggered in jso...>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<qerror_report, 29<BR/>qerror_report(QERR_JSON_PARSING)>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 29<BR/>&lt;unknown&gt; QERR_JSON_PARSING<BR/>qerror_report(QERR_JSON_PARSING)>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 31<BR/>GOTO<BR/>goto err_out;>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<qerror_report, 34<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT, &quot;object&quot;)>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 34<BR/>&lt;unknown&gt; QERR_QMP_BAD_INPUT_OBJECT<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT, &quot;object&quot;)>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 34<BR/>&quot;object&quot;<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT, &quot;object&quot;)>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<qobject_decref, 36<BR/>qobject_decref(obj)>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 36<BR/>obj<BR/>qobject_decref(obj)>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 38<BR/>GOTO<BR/>goto err_out;>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 44<BR/>input = qobject_to_qdict(obj)>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 44<BR/>input<BR/>input = qobject_to_qdict(obj)>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<qobject_to_qdict, 44<BR/>qobject_to_qdict(obj)>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 44<BR/>obj<BR/>qobject_to_qdict(obj)>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 48<BR/>mon-&gt;mc-&gt;id = qdict_get(input, &quot;id&quot;)>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 48<BR/>mon-&gt;mc-&gt;id>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 48<BR/>mon-&gt;mc>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 48<BR/>mon<BR/>mon-&gt;mc-&gt;id = qdict_get(input, &quot;id&quot;)>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 48<BR/>mc>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 48<BR/>id>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<qdict_get, 48<BR/>qdict_get(input, &quot;id&quot;)>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 48<BR/>input<BR/>qdict_get(input, &quot;id&quot;)>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 48<BR/>&quot;id&quot;<BR/>qdict_get(input, &quot;id&quot;)>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<qobject_incref, 50<BR/>qobject_incref(mon-&gt;mc-&gt;id)>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 50<BR/>mon-&gt;mc-&gt;id>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 50<BR/>mon-&gt;mc>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 50<BR/>mon<BR/>qobject_incref(mon-&gt;mc-&gt;id)>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 50<BR/>mc>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 50<BR/>id>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 54<BR/>obj = qdict_get(input, &quot;execute&quot;)>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 54<BR/>obj<BR/>obj = qdict_get(input, &quot;execute&quot;)>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<qdict_get, 54<BR/>qdict_get(input, &quot;execute&quot;)>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 54<BR/>input<BR/>qdict_get(input, &quot;execute&quot;)>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 54<BR/>&quot;execute&quot;<BR/>qdict_get(input, &quot;execute&quot;)>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 56<BR/>IF<BR/>if (!obj) { qerror_report(QERR_QMP_BAD...>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 56<BR/>!obj>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 56<BR/>obj<BR/>!obj>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 56<BR/>{ qerror_report(QERR_QMP_BAD_INPUT_OBJ...>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<qerror_report, 58<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT, &quot;execu...>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 58<BR/>&lt;unknown&gt; QERR_QMP_BAD_INPUT_OBJECT<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT, &quot;execu...>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 58<BR/>&quot;execute&quot;<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT, &quot;execu...>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 61<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 61<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 61<BR/>IF<BR/>if (qobject_type(obj) != QTYPE_QSTRING) { ...>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 61<BR/>qobject_type(obj) != QTYPE_QSTRING>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<qobject_type, 61<BR/>qobject_type(obj)>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>obj<BR/>qobject_type(obj)>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>&lt;unknown&gt; QTYPE_QSTRING<BR/>qobject_type(obj) != QTYPE_QSTRING>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 61<BR/>{ qerror_report(QERR_QMP_BAD_INPUT_OBJ...>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<qerror_report, 63<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT_MEMBER,...>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 63<BR/>&lt;unknown&gt; QERR_QMP_BAD_INPUT_OBJECT_MEMBER<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT_MEMBER,...>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 63<BR/>&quot;execute&quot;<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT_MEMBER,...>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 63<BR/>&quot;string&quot;<BR/>qerror_report(QERR_QMP_BAD_INPUT_OBJECT_MEMBER,...>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 70<BR/>cmd_name = qstring_get_str(qobject_to_qstring(o...>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 70<BR/>cmd_name<BR/>cmd_name = qstring_get_str(qobject_to_qstring(o...>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<qstring_get_str, 70<BR/>qstring_get_str(qobject_to_qstring(obj))>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<qobject_to_qstring, 70<BR/>qobject_to_qstring(obj)>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 70<BR/>obj<BR/>qobject_to_qstring(obj)>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 74<BR/>IF<BR/>if (invalid_qmp_mode(mon, cmd_name)) { ...>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<invalid_qmp_mode, 74<BR/>invalid_qmp_mode(mon, cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 74<BR/>mon<BR/>invalid_qmp_mode(mon, cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 74<BR/>cmd_name<BR/>invalid_qmp_mode(mon, cmd_name)>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 74<BR/>{ qerror_report(QERR_COMMAND_NOT_FOUND...>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<qerror_report, 76<BR/>qerror_report(QERR_COMMAND_NOT_FOUND, cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 76<BR/>&lt;unknown&gt; QERR_COMMAND_NOT_FOUND<BR/>qerror_report(QERR_COMMAND_NOT_FOUND, cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 76<BR/>cmd_name<BR/>qerror_report(QERR_COMMAND_NOT_FOUND, cmd_name)>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 91<BR/>IF<BR/>if (compare_cmd(cmd_name, &quot;info&quot;)) { q...>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<compare_cmd, 91<BR/>compare_cmd(cmd_name, &quot;info&quot;)>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>cmd_name<BR/>compare_cmd(cmd_name, &quot;info&quot;)>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 91<BR/>&quot;info&quot;<BR/>compare_cmd(cmd_name, &quot;info&quot;)>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 91<BR/>{ qerror_report(QERR_COMMAND_NOT_FOUND...>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<qerror_report, 93<BR/>qerror_report(QERR_COMMAND_NOT_FOUND, cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>&lt;unknown&gt; QERR_COMMAND_NOT_FOUND<BR/>qerror_report(QERR_COMMAND_NOT_FOUND, cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>cmd_name<BR/>qerror_report(QERR_COMMAND_NOT_FOUND, cmd_name)>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 96<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 96<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 96<BR/>IF<BR/>if (strstart(cmd_name, &quot;query-&quot;, &amp;info_item)) {...>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<strstart, 96<BR/>strstart(cmd_name, &quot;query-&quot;, &amp;info_item)>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 96<BR/>cmd_name<BR/>strstart(cmd_name, &quot;query-&quot;, &amp;info_item)>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 96<BR/>&quot;query-&quot;<BR/>strstart(cmd_name, &quot;query-&quot;, &amp;info_item)>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 96<BR/>&amp;info_item>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 96<BR/>info_item<BR/>strstart(cmd_name, &quot;query-&quot;, &amp;info_item)>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 96<BR/>{ cmd = monitor_find_command(&quot;info&quot;); ...>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 98<BR/>cmd = monitor_find_command(&quot;info&quot;)>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 98<BR/>cmd<BR/>cmd = monitor_find_command(&quot;info&quot;)>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<monitor_find_command, 98<BR/>monitor_find_command(&quot;info&quot;)>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 98<BR/>&quot;info&quot;<BR/>monitor_find_command(&quot;info&quot;)>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<qdict_put_obj, 100<BR/>qdict_put_obj(input, &quot;arguments&quot;, ...>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 100<BR/>input<BR/>qdict_put_obj(input, &quot;arguments&quot;, ...>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 100<BR/>&quot;arguments&quot;<BR/>qdict_put_obj(input, &quot;arguments&quot;, ...>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<qobject_from_jsonf, 102<BR/>qobject_from_jsonf(&quot;{ 'item': %s }&quot;, info_item)>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 102<BR/>&quot;{ 'item': %s }&quot;<BR/>qobject_from_jsonf(&quot;{ 'item': %s }&quot;, info_item)>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 102<BR/>info_item<BR/>qobject_from_jsonf(&quot;{ 'item': %s }&quot;, info_item)>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 104<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 104<BR/>{ cmd = monitor_find_command(cmd_name)...>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 106<BR/>cmd = monitor_find_command(cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 106<BR/>cmd<BR/>cmd = monitor_find_command(cmd_name)>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<monitor_find_command, 106<BR/>monitor_find_command(cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 106<BR/>cmd_name<BR/>monitor_find_command(cmd_name)>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 108<BR/>IF<BR/>if (!cmd || !monitor_handler_ported(cmd)) { ...>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalOr, 108<BR/>!cmd || !monitor_handler_ported(cmd)>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 108<BR/>!cmd>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 108<BR/>cmd<BR/>!cmd>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 108<BR/>!monitor_handler_ported(cmd)>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<monitor_handler_ported, 108<BR/>monitor_handler_ported(cmd)>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 108<BR/>cmd<BR/>monitor_handler_ported(cmd)>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 108<BR/>{ qerror_report(QERR_COMMAND_NOT_F...>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<qerror_report, 110<BR/>qerror_report(QERR_COMMAND_NOT_FOUND, cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 110<BR/>&lt;unknown&gt; QERR_COMMAND_NOT_FOUND<BR/>qerror_report(QERR_COMMAND_NOT_FOUND, cmd_name)>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 110<BR/>cmd_name<BR/>qerror_report(QERR_COMMAND_NOT_FOUND, cmd_name)>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 119<BR/>obj = qdict_get(input, &quot;arguments&quot;)>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>obj<BR/>obj = qdict_get(input, &quot;arguments&quot;)>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<qdict_get, 119<BR/>qdict_get(input, &quot;arguments&quot;)>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>input<BR/>qdict_get(input, &quot;arguments&quot;)>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 119<BR/>&quot;arguments&quot;<BR/>qdict_get(input, &quot;arguments&quot;)>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 121<BR/>IF<BR/>if (!obj) { args = qdict_new(); ...>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 121<BR/>!obj>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>obj<BR/>!obj>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 121<BR/>{ args = qdict_new(); }>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 123<BR/>args = qdict_new()>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>args<BR/>args = qdict_new()>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<qdict_new, 123<BR/>qdict_new()>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 128<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 128<BR/>{ args = qobject_to_qdict(obj); ...>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 130<BR/>args = qobject_to_qdict(obj)>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 130<BR/>args<BR/>args = qobject_to_qdict(obj)>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<qobject_to_qdict, 130<BR/>qobject_to_qdict(obj)>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 130<BR/>obj<BR/>qobject_to_qdict(obj)>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<QINCREF, 132<BR/>QINCREF(args)>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 132<BR/>args<BR/>QINCREF(args)>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<QDECREF, 138<BR/>QDECREF(input)>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 138<BR/>input<BR/>QDECREF(input)>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 142<BR/>err = monitor_check_qmp_args(cmd, args)>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 142<BR/>err<BR/>err = monitor_check_qmp_args(cmd, args)>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<monitor_check_qmp_args, 142<BR/>monitor_check_qmp_args(cmd, args)>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 142<BR/>cmd<BR/>monitor_check_qmp_args(cmd, args)>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 142<BR/>args<BR/>monitor_check_qmp_args(cmd, args)>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 144<BR/>IF<BR/>if (err &lt; 0) { goto err_out; }>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 144<BR/>err &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 144<BR/>err<BR/>err &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 144<BR/>0<BR/>err &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 144<BR/>{ goto err_out; }>"
+    }
+  },
+  {
+    "id": "47244640271",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 146<BR/>GOTO<BR/>goto err_out;>"
+    }
+  },
+  {
+    "id": "47244640272",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 152<BR/>IF<BR/>if (monitor_handler_is_async(cmd)) { q...>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<monitor_handler_is_async, 152<BR/>monitor_handler_is_async(cmd)>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 152<BR/>cmd<BR/>monitor_handler_is_async(cmd)>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 152<BR/>{ qmp_async_cmd_handler(mon, cmd, args...>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<qmp_async_cmd_handler, 154<BR/>qmp_async_cmd_handler(mon, cmd, args)>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 154<BR/>mon<BR/>qmp_async_cmd_handler(mon, cmd, args)>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 154<BR/>cmd<BR/>qmp_async_cmd_handler(mon, cmd, args)>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 154<BR/>args<BR/>qmp_async_cmd_handler(mon, cmd, args)>"
+    }
+  },
+  {
+    "id": "47244640273",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 156<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 156<BR/>{ monitor_call_handler(mon, cmd, args)...>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<monitor_call_handler, 158<BR/>monitor_call_handler(mon, cmd, args)>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 158<BR/>mon<BR/>monitor_call_handler(mon, cmd, args)>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 158<BR/>cmd<BR/>monitor_call_handler(mon, cmd, args)>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 158<BR/>args<BR/>monitor_call_handler(mon, cmd, args)>"
+    }
+  },
+  {
+    "id": "47244640274",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 162<BR/>GOTO<BR/>goto out;>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 166<BR/>err_input>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<QDECREF, 168<BR/>QDECREF(input)>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 168<BR/>input<BR/>QDECREF(input)>"
+    }
+  },
+  {
+    "id": "81604378625",
+    "attrs": {
+      "label": "<JUMP_TARGET, 170<BR/>err_out>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<monitor_protocol_emitter, 172<BR/>monitor_protocol_emitter(mon, NULL)>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 172<BR/>mon<BR/>monitor_protocol_emitter(mon, NULL)>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 172<BR/>&lt;unknown&gt; NULL<BR/>monitor_protocol_emitter(mon, NULL)>"
+    }
+  },
+  {
+    "id": "81604378626",
+    "attrs": {
+      "label": "<JUMP_TARGET, 174<BR/>out>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<QDECREF, 176<BR/>QDECREF(args)>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 176<BR/>args<BR/>QDECREF(args)>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 19<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 76<BR/>&lt;unknown&gt; QERR_COMMAND_NOT_FOUND: ANY>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 63<BR/>&lt;unknown&gt; QERR_QMP_BAD_INPUT_OBJECT_MEMBER: ANY>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 61<BR/>&lt;unknown&gt; QTYPE_QSTRING: ANY>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 34<BR/>&lt;unknown&gt; QERR_QMP_BAD_INPUT_OBJECT: ANY>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 29<BR/>&lt;unknown&gt; QERR_JSON_PARSING: ANY>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>&lt;unknown&gt; cur_mon: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>void>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>handle_qmp_command<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalOr>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>qobject_to_qdict>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>qobject_to_qstring>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>QINCREF>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>qerror_report>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>strstart>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>monitor_find_command>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>qdict_put_obj>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>qobject_incref>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>qobject_type>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>monitor_handler_ported>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>monitor_check_qmp_args>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>qdict_get>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>monitor_handler_is_async>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.notEquals>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803817",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>QDECREF>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803818",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182428",
+    "attrs": {
+      "label": "<METHOD<BR/>qmp_async_cmd_handler>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803819",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051612",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182429",
+    "attrs": {
+      "label": "<METHOD<BR/>qobject_decref>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803820",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051613",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182430",
+    "attrs": {
+      "label": "<METHOD<BR/>monitor_protocol_emitter>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149744",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803821",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051614",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182431",
+    "attrs": {
+      "label": "<METHOD<BR/>monitor_call_handler>"
+    }
+  },
+  {
+    "id": "111669149745",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149746",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149747",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803822",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051615",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182432",
+    "attrs": {
+      "label": "<METHOD<BR/>qstring_get_str>"
+    }
+  },
+  {
+    "id": "111669149748",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803823",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051616",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182433",
+    "attrs": {
+      "label": "<METHOD<BR/>invalid_qmp_mode>"
+    }
+  },
+  {
+    "id": "111669149749",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149750",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803824",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051617",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>json_parser_parse>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>qobject_from_jsonf>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>compare_cmd>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>qdict_new>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

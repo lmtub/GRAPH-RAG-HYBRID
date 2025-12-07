@@ -1,1 +1,2276 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "180388626432",
+    "attrs": {
+      "label": "<UNKNOWN, 1<BR/>)>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 4<BR/>BDRVQcowState *s: BDRVQcowState*>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 4<BR/>*s = bs-&gt;opaque>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 4<BR/>s<BR/>*s = bs-&gt;opaque>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 4<BR/>bs-&gt;opaque>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 4<BR/>&lt;unknown&gt; bs<BR/>*s = bs-&gt;opaque>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 4<BR/>opaque>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 6<BR/>QCowHeader *header: QCowHeader*>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 8<BR/>char *buf: char*>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 10<BR/>size_t buflen: size_t>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 10<BR/>buflen = s-&gt;cluster_size>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 10<BR/>buflen<BR/>buflen = s-&gt;cluster_size>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 10<BR/>s-&gt;cluster_size>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 10<BR/>&lt;global&gt; s<BR/>buflen = s-&gt;cluster_size>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 10<BR/>cluster_size>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 12<BR/>int ret: int>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 14<BR/>uint64_t total_size: uint64_t>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 16<BR/>uint32_t refcount_table_clusters: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 18<BR/>size_t header_length: size_t>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 20<BR/>Qcow2UnknownHeaderExtension *uext: Qcow2UnknownHeaderExtension*>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 24<BR/>buf = qemu_blockalign(bs, buflen)>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 24<BR/>buf<BR/>buf = qemu_blockalign(bs, buflen)>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<qemu_blockalign, 24<BR/>qemu_blockalign(bs, buflen)>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 24<BR/>&lt;unknown&gt; bs<BR/>qemu_blockalign(bs, buflen)>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 24<BR/>&lt;global&gt; buflen<BR/>qemu_blockalign(bs, buflen)>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 30<BR/>header = (QCowHeader*) buf>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 30<BR/>header<BR/>header = (QCowHeader*) buf>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 30<BR/>(QCowHeader*) buf>"
+    }
+  },
+  {
+    "id": "176093659136",
+    "attrs": {
+      "label": "<TYPE_REF, 30<BR/>QCowHeader*>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 30<BR/>&lt;global&gt; buf<BR/>(QCowHeader*) buf>"
+    }
+  },
+  {
+    "id": "180388626433",
+    "attrs": {
+      "label": "<UNKNOWN, 34<BR/>if (buflen &lt; sizeof(*header)) { ret = ...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 44<BR/>header_length = sizeof(*header) + s-&gt;unknown_he...>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 44<BR/>header_length<BR/>header_length = sizeof(*header) + s-&gt;unknown_he...>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 44<BR/>sizeof(*header) + s-&gt;unknown_header_fields_size>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.sizeOf, 44<BR/>sizeof(*header)>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 44<BR/>*header>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 44<BR/>&lt;global&gt; header<BR/>sizeof(*header)>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 44<BR/>s-&gt;unknown_header_fields_size>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 44<BR/>&lt;global&gt; s<BR/>sizeof(*header) + s-&gt;unknown_header_fields_size>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 44<BR/>unknown_header_fields_size>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 46<BR/>total_size = bs-&gt;total_sectors * BDRV_SECTOR_SIZE>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 46<BR/>total_size<BR/>total_size = bs-&gt;total_sectors * BDRV_SECTOR_SIZE>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 46<BR/>bs-&gt;total_sectors * BDRV_SECTOR_SIZE>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 46<BR/>bs-&gt;total_sectors>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 46<BR/>&lt;unknown&gt; bs<BR/>bs-&gt;total_sectors * BDRV_SECTOR_SIZE>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 46<BR/>total_sectors>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 46<BR/>&lt;unknown&gt; BDRV_SECTOR_SIZE<BR/>bs-&gt;total_sectors * BDRV_SECTOR_SIZE>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 48<BR/>refcount_table_clusters = s-&gt;refcount_table_siz...>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 48<BR/>refcount_table_clusters<BR/>refcount_table_clusters = s-&gt;refcount_table_siz...>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 48<BR/>s-&gt;refcount_table_size &gt;&gt; (s-&gt;cluster_bits - 3)>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 48<BR/>s-&gt;refcount_table_size>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 48<BR/>&lt;global&gt; s<BR/>s-&gt;refcount_table_size &gt;&gt; (s-&gt;cluster_bits - 3)>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 48<BR/>refcount_table_size>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 48<BR/>s-&gt;cluster_bits - 3>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 48<BR/>s-&gt;cluster_bits>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 48<BR/>&lt;global&gt; s<BR/>s-&gt;cluster_bits - 3>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 48<BR/>cluster_bits>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 48<BR/>3<BR/>s-&gt;cluster_bits - 3>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 52<BR/>*header = (QCowHeader) { /* Version 2 ...>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 52<BR/>header<BR/>*header = (QCowHeader) { /* Version 2 ...>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 52<BR/>(QCowHeader) { /* Version 2 fields */ ...>"
+    }
+  },
+  {
+    "id": "176093659137",
+    "attrs": {
+      "label": "<TYPE_REF, 52<BR/>QCowHeader>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arrayInitializer, 52<BR/>{ /* Version 2 fields */ .mag...>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 56<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 56<BR/>.magic = cpu_to_be32(QCOW_MAGIC)>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 56<BR/>magic<BR/>.magic = cpu_to_be32(QCOW_MAGIC)>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<cpu_to_be32, 56<BR/>cpu_to_be32(QCOW_MAGIC)>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 56<BR/>&lt;unknown&gt; QCOW_MAGIC<BR/>cpu_to_be32(QCOW_MAGIC)>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 58<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 58<BR/>.version = cpu_to_be32(s-&gt;qcow_v...>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 58<BR/>version<BR/>.version = cpu_to_be32(s-&gt;qcow_v...>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<cpu_to_be32, 58<BR/>cpu_to_be32(s-&gt;qcow_version)>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 58<BR/>s-&gt;qcow_version>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 58<BR/>&lt;global&gt; s<BR/>cpu_to_be32(s-&gt;qcow_version)>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 58<BR/>qcow_version>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 60<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 60<BR/>.backing_file_offset = 0>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 60<BR/>backing_file_offset<BR/>.backing_file_offset = 0>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 60<BR/>0<BR/>.backing_file_offset = 0>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 62<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 62<BR/>.backing_file_size = 0>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 62<BR/>backing_file_size<BR/>.backing_file_size = 0>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 62<BR/>0<BR/>.backing_file_size = 0>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 64<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 64<BR/>.cluster_bits = cpu_to_be32(s-&gt;cluste...>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 64<BR/>cluster_bits<BR/>.cluster_bits = cpu_to_be32(s-&gt;cluste...>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<cpu_to_be32, 64<BR/>cpu_to_be32(s-&gt;cluster_bits)>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 64<BR/>s-&gt;cluster_bits>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 64<BR/>&lt;global&gt; s<BR/>cpu_to_be32(s-&gt;cluster_bits)>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 64<BR/>cluster_bits>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 66<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 66<BR/>.size = cpu_to_be64(total_size)>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 66<BR/>size<BR/>.size = cpu_to_be64(total_size)>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<cpu_to_be64, 66<BR/>cpu_to_be64(total_size)>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 66<BR/>&lt;global&gt; total_size<BR/>cpu_to_be64(total_size)>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 68<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 68<BR/>.crypt_method = cpu_to_be32(s-&gt;crypt_...>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 68<BR/>crypt_method<BR/>.crypt_method = cpu_to_be32(s-&gt;crypt_...>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<cpu_to_be32, 68<BR/>cpu_to_be32(s-&gt;crypt_method_header)>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 68<BR/>s-&gt;crypt_method_header>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 68<BR/>&lt;global&gt; s<BR/>cpu_to_be32(s-&gt;crypt_method_header)>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 68<BR/>crypt_method_header>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 70<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 70<BR/>.l1_size = cpu_to_be32(s-&gt;l1_size)>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 70<BR/>l1_size<BR/>.l1_size = cpu_to_be32(s-&gt;l1_size)>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<cpu_to_be32, 70<BR/>cpu_to_be32(s-&gt;l1_size)>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 70<BR/>s-&gt;l1_size>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 70<BR/>&lt;global&gt; s<BR/>cpu_to_be32(s-&gt;l1_size)>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 70<BR/>l1_size>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 72<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 72<BR/>.l1_table_offset = cpu_to_be64(s-&gt;l1_tab...>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 72<BR/>l1_table_offset<BR/>.l1_table_offset = cpu_to_be64(s-&gt;l1_tab...>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<cpu_to_be64, 72<BR/>cpu_to_be64(s-&gt;l1_table_offset)>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 72<BR/>s-&gt;l1_table_offset>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 72<BR/>&lt;global&gt; s<BR/>cpu_to_be64(s-&gt;l1_table_offset)>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 72<BR/>l1_table_offset>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 74<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 74<BR/>.refcount_table_offset = cpu_to_be64(s-&gt;refcou...>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 74<BR/>refcount_table_offset<BR/>.refcount_table_offset = cpu_to_be64(s-&gt;refcou...>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<cpu_to_be64, 74<BR/>cpu_to_be64(s-&gt;refcount_table_offset)>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 74<BR/>s-&gt;refcount_table_offset>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 74<BR/>&lt;global&gt; s<BR/>cpu_to_be64(s-&gt;refcount_table_offset)>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 74<BR/>refcount_table_offset>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 76<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 76<BR/>.refcount_table_clusters = cpu_to_be32(refcount...>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 76<BR/>refcount_table_clusters<BR/>.refcount_table_clusters = cpu_to_be32(refcount...>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<cpu_to_be32, 76<BR/>cpu_to_be32(refcount_table_clusters)>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 76<BR/>&lt;global&gt; refcount_table_clusters<BR/>cpu_to_be32(refcount_table_clusters)>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 78<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 78<BR/>.nb_snapshots = cpu_to_be32(s-&gt;nb_sna...>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 78<BR/>nb_snapshots<BR/>.nb_snapshots = cpu_to_be32(s-&gt;nb_sna...>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<cpu_to_be32, 78<BR/>cpu_to_be32(s-&gt;nb_snapshots)>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 78<BR/>s-&gt;nb_snapshots>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 78<BR/>&lt;global&gt; s<BR/>cpu_to_be32(s-&gt;nb_snapshots)>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 78<BR/>nb_snapshots>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 80<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 80<BR/>.snapshots_offset = cpu_to_be64(s-&gt;snapsh...>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 80<BR/>snapshots_offset<BR/>.snapshots_offset = cpu_to_be64(s-&gt;snapsh...>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<cpu_to_be64, 80<BR/>cpu_to_be64(s-&gt;snapshots_offset)>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 80<BR/>s-&gt;snapshots_offset>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 80<BR/>&lt;global&gt; s<BR/>cpu_to_be64(s-&gt;snapshots_offset)>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 80<BR/>snapshots_offset>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 86<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 86<BR/>.incompatible_features = cpu_to_be64(s-&gt;incomp...>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 86<BR/>incompatible_features<BR/>.incompatible_features = cpu_to_be64(s-&gt;incomp...>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<cpu_to_be64, 86<BR/>cpu_to_be64(s-&gt;incompatible_features)>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 86<BR/>s-&gt;incompatible_features>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 86<BR/>&lt;global&gt; s<BR/>cpu_to_be64(s-&gt;incompatible_features)>"
+    }
+  },
+  {
+    "id": "55834574862",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 86<BR/>incompatible_features>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 88<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 88<BR/>.compatible_features = cpu_to_be64(s-&gt;compat...>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 88<BR/>compatible_features<BR/>.compatible_features = cpu_to_be64(s-&gt;compat...>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<cpu_to_be64, 88<BR/>cpu_to_be64(s-&gt;compatible_features)>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 88<BR/>s-&gt;compatible_features>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 88<BR/>&lt;global&gt; s<BR/>cpu_to_be64(s-&gt;compatible_features)>"
+    }
+  },
+  {
+    "id": "55834574863",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 88<BR/>compatible_features>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 90<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 90<BR/>.autoclear_features = cpu_to_be64(s-&gt;autocl...>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 90<BR/>autoclear_features<BR/>.autoclear_features = cpu_to_be64(s-&gt;autocl...>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<cpu_to_be64, 90<BR/>cpu_to_be64(s-&gt;autoclear_features)>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 90<BR/>s-&gt;autoclear_features>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 90<BR/>&lt;global&gt; s<BR/>cpu_to_be64(s-&gt;autoclear_features)>"
+    }
+  },
+  {
+    "id": "55834574864",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 90<BR/>autoclear_features>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK, 92<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 92<BR/>.refcount_order = cpu_to_be32(3 + REFCO...>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 92<BR/>refcount_order<BR/>.refcount_order = cpu_to_be32(3 + REFCO...>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<cpu_to_be32, 92<BR/>cpu_to_be32(3 + REFCOUNT_SHIFT)>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 92<BR/>3 + REFCOUNT_SHIFT>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 92<BR/>3<BR/>3 + REFCOUNT_SHIFT>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 92<BR/>&lt;unknown&gt; REFCOUNT_SHIFT<BR/>3 + REFCOUNT_SHIFT>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK, 94<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 94<BR/>.header_length = cpu_to_be32(header_le...>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 94<BR/>header_length<BR/>.header_length = cpu_to_be32(header_le...>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<cpu_to_be32, 94<BR/>cpu_to_be32(header_length)>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 94<BR/>&lt;global&gt; header_length<BR/>cpu_to_be32(header_length)>"
+    }
+  },
+  {
+    "id": "180388626434",
+    "attrs": {
+      "label": "<UNKNOWN, 102<BR/>switch (s-&gt;qcow_version) { case 2: ...>"
+    }
+  },
+  {
+    "id": "180388626435",
+    "attrs": {
+      "label": "<UNKNOWN, 126<BR/>buf += ret;>"
+    }
+  },
+  {
+    "id": "180388626436",
+    "attrs": {
+      "label": "<UNKNOWN, 128<BR/>buflen -= ret;>"
+    }
+  },
+  {
+    "id": "180388626437",
+    "attrs": {
+      "label": "<UNKNOWN, 130<BR/>memset(buf, 0, buflen);>"
+    }
+  },
+  {
+    "id": "180388626438",
+    "attrs": {
+      "label": "<UNKNOWN, 136<BR/>if (s-&gt;unknown_header_fields_size) { i...>"
+    }
+  },
+  {
+    "id": "180388626439",
+    "attrs": {
+      "label": "<UNKNOWN, 160<BR/>if (*bs-&gt;backing_format) { ret = heade...>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 186<BR/>Qcow2Feature features[]: Qcow2Feature[]>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 186<BR/>features[] = { .bit = QCOW2_INC...>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 186<BR/>features<BR/>features[] = { .bit = QCOW2_INC...>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arrayInitializer, 186<BR/>{ .bit = QCOW2_INCOMPAT_DIRTY_B...>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK, 190<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 190<BR/>.bit = QCOW2_INCOMPAT_DIRTY_BITNR>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 190<BR/>bit<BR/>.bit = QCOW2_INCOMPAT_DIRTY_BITNR>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 190<BR/>&lt;unknown&gt; QCOW2_INCOMPAT_DIRTY_BITNR<BR/>.bit = QCOW2_INCOMPAT_DIRTY_BITNR>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK, 192<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 192<BR/>.name = &quot;dirty bit&quot;>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 192<BR/>name<BR/>.name = &quot;dirty bit&quot;>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 192<BR/>&quot;dirty bit&quot;<BR/>.name = &quot;dirty bit&quot;>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK, 201<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 201<BR/>.type = QCOW2_FEAT_TYPE_COMPATIBLE>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>type<BR/>.type = QCOW2_FEAT_TYPE_COMPATIBLE>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>&lt;unknown&gt; QCOW2_FEAT_TYPE_COMPATIBLE<BR/>.type = QCOW2_FEAT_TYPE_COMPATIBLE>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK, 203<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 203<BR/>.bit = QCOW2_COMPAT_LAZY_REFCOUNTS_BITNR>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 203<BR/>bit<BR/>.bit = QCOW2_COMPAT_LAZY_REFCOUNTS_BITNR>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 203<BR/>&lt;unknown&gt; QCOW2_COMPAT_LAZY_REFCOUNTS_BITNR<BR/>.bit = QCOW2_COMPAT_LAZY_REFCOUNTS_BITNR>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK, 205<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 205<BR/>.name = &quot;lazy refcounts&quot;>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 205<BR/>name<BR/>.name = &quot;lazy refcounts&quot;>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 205<BR/>&quot;lazy refcounts&quot;<BR/>.name = &quot;lazy refcounts&quot;>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 212<BR/>ret = header_ext_add(buf, QCOW2_EXT_MAGIC_FEATU...>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 212<BR/>ret<BR/>ret = header_ext_add(buf, QCOW2_EXT_MAGIC_FEATU...>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<header_ext_add, 212<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_FEATURE_TAB...>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 212<BR/>&lt;global&gt; buf<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_FEATURE_TAB...>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 212<BR/>&lt;unknown&gt; QCOW2_EXT_MAGIC_FEATURE_TABLE<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_FEATURE_TAB...>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 214<BR/>&lt;global&gt; features<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_FEATURE_TAB...>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<&lt;operator&gt;.sizeOf, 214<BR/>sizeof(features)>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 214<BR/>&lt;global&gt; features<BR/>sizeof(features)>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 214<BR/>&lt;global&gt; buflen<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_FEATURE_TAB...>"
+    }
+  },
+  {
+    "id": "180388626440",
+    "attrs": {
+      "label": "<UNKNOWN, 216<BR/>if (ret &lt; 0) { goto fail; }>"
+    }
+  },
+  {
+    "id": "180388626441",
+    "attrs": {
+      "label": "<UNKNOWN, 222<BR/>buf += ret;>"
+    }
+  },
+  {
+    "id": "180388626442",
+    "attrs": {
+      "label": "<UNKNOWN, 224<BR/>buflen -= ret;>"
+    }
+  },
+  {
+    "id": "180388626443",
+    "attrs": {
+      "label": "<UNKNOWN, 230<BR/>QLIST_FOREACH(uext, &amp;s-&gt;unknown_header_ext, nex...>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 252<BR/>ret = header_ext_add(buf, QCOW2_EXT_MAGIC_END, ...>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 252<BR/>ret<BR/>ret = header_ext_add(buf, QCOW2_EXT_MAGIC_END, ...>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<header_ext_add, 252<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_END, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 252<BR/>&lt;global&gt; buf<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_END, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 252<BR/>&lt;unknown&gt; QCOW2_EXT_MAGIC_END<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_END, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 252<BR/>&lt;unknown&gt; NULL<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_END, NULL, ...>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 252<BR/>0<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_END, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 252<BR/>&lt;global&gt; buflen<BR/>header_ext_add(buf, QCOW2_EXT_MAGIC_END, NULL, ...>"
+    }
+  },
+  {
+    "id": "180388626444",
+    "attrs": {
+      "label": "<UNKNOWN, 254<BR/>if (ret &lt; 0) { goto fail; }>"
+    }
+  },
+  {
+    "id": "180388626445",
+    "attrs": {
+      "label": "<UNKNOWN, 262<BR/>buf += ret;>"
+    }
+  },
+  {
+    "id": "180388626446",
+    "attrs": {
+      "label": "<UNKNOWN, 264<BR/>buflen -= ret;>"
+    }
+  },
+  {
+    "id": "180388626447",
+    "attrs": {
+      "label": "<UNKNOWN, 270<BR/>if (*bs-&gt;backing_file) { size_t backin...>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 302<BR/>ret = bdrv_pwrite(bs-&gt;file, 0, header, s-&gt;clust...>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 302<BR/>ret<BR/>ret = bdrv_pwrite(bs-&gt;file, 0, header, s-&gt;clust...>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<bdrv_pwrite, 302<BR/>bdrv_pwrite(bs-&gt;file, 0, header, s-&gt;cluster_size)>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 302<BR/>bs-&gt;file>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 302<BR/>&lt;unknown&gt; bs<BR/>bdrv_pwrite(bs-&gt;file, 0, header, s-&gt;cluster_size)>"
+    }
+  },
+  {
+    "id": "55834574865",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 302<BR/>file>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 302<BR/>0<BR/>bdrv_pwrite(bs-&gt;file, 0, header, s-&gt;cluster_size)>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 302<BR/>&lt;global&gt; header<BR/>bdrv_pwrite(bs-&gt;file, 0, header, s-&gt;cluster_size)>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 302<BR/>s-&gt;cluster_size>"
+    }
+  },
+  {
+    "id": "68719476812",
+    "attrs": {
+      "label": "<IDENTIFIER, 302<BR/>&lt;global&gt; s<BR/>bdrv_pwrite(bs-&gt;file, 0, header, s-&gt;cluster_size)>"
+    }
+  },
+  {
+    "id": "55834574866",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 302<BR/>cluster_size>"
+    }
+  },
+  {
+    "id": "180388626448",
+    "attrs": {
+      "label": "<UNKNOWN, 304<BR/>if (ret &lt; 0) { goto fail; }>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 312<BR/>ret = 0>"
+    }
+  },
+  {
+    "id": "68719476813",
+    "attrs": {
+      "label": "<IDENTIFIER, 312<BR/>ret<BR/>ret = 0>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 312<BR/>0<BR/>ret = 0>"
+    }
+  },
+  {
+    "id": "180388626449",
+    "attrs": {
+      "label": "<UNKNOWN, 314<BR/>fail: qemu_vfree(header);>"
+    }
+  },
+  {
+    "id": "180388626450",
+    "attrs": {
+      "label": "<UNKNOWN, 318<BR/>return ret;>"
+    }
+  },
+  {
+    "id": "180388626451",
+    "attrs": {
+      "label": "<UNKNOWN, 320<BR/>}>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 4<BR/>&lt;unknown&gt; bs: ANY>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 252<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 252<BR/>&lt;unknown&gt; QCOW2_EXT_MAGIC_END: ANY>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 212<BR/>&lt;unknown&gt; QCOW2_EXT_MAGIC_FEATURE_TABLE: ANY>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 192<BR/>name: ANY>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 203<BR/>&lt;unknown&gt; QCOW2_COMPAT_LAZY_REFCOUNTS_BITNR: ANY>"
+    }
+  },
+  {
+    "id": "94489280528",
+    "attrs": {
+      "label": "<LOCAL, 190<BR/>bit: ANY>"
+    }
+  },
+  {
+    "id": "94489280529",
+    "attrs": {
+      "label": "<LOCAL, 201<BR/>&lt;unknown&gt; QCOW2_FEAT_TYPE_COMPATIBLE: ANY>"
+    }
+  },
+  {
+    "id": "94489280530",
+    "attrs": {
+      "label": "<LOCAL, 201<BR/>type: ANY>"
+    }
+  },
+  {
+    "id": "94489280531",
+    "attrs": {
+      "label": "<LOCAL, 190<BR/>&lt;unknown&gt; QCOW2_INCOMPAT_DIRTY_BITNR: ANY>"
+    }
+  },
+  {
+    "id": "94489280532",
+    "attrs": {
+      "label": "<LOCAL, 92<BR/>&lt;unknown&gt; REFCOUNT_SHIFT: ANY>"
+    }
+  },
+  {
+    "id": "94489280533",
+    "attrs": {
+      "label": "<LOCAL, 92<BR/>refcount_order: ANY>"
+    }
+  },
+  {
+    "id": "94489280534",
+    "attrs": {
+      "label": "<LOCAL, 90<BR/>autoclear_features: ANY>"
+    }
+  },
+  {
+    "id": "94489280535",
+    "attrs": {
+      "label": "<LOCAL, 88<BR/>compatible_features: ANY>"
+    }
+  },
+  {
+    "id": "94489280536",
+    "attrs": {
+      "label": "<LOCAL, 86<BR/>incompatible_features: ANY>"
+    }
+  },
+  {
+    "id": "94489280537",
+    "attrs": {
+      "label": "<LOCAL, 80<BR/>snapshots_offset: ANY>"
+    }
+  },
+  {
+    "id": "94489280538",
+    "attrs": {
+      "label": "<LOCAL, 78<BR/>nb_snapshots: ANY>"
+    }
+  },
+  {
+    "id": "94489280539",
+    "attrs": {
+      "label": "<LOCAL, 74<BR/>refcount_table_offset: ANY>"
+    }
+  },
+  {
+    "id": "94489280540",
+    "attrs": {
+      "label": "<LOCAL, 72<BR/>l1_table_offset: ANY>"
+    }
+  },
+  {
+    "id": "94489280541",
+    "attrs": {
+      "label": "<LOCAL, 70<BR/>l1_size: ANY>"
+    }
+  },
+  {
+    "id": "94489280542",
+    "attrs": {
+      "label": "<LOCAL, 68<BR/>crypt_method: ANY>"
+    }
+  },
+  {
+    "id": "94489280543",
+    "attrs": {
+      "label": "<LOCAL, 66<BR/>size: ANY>"
+    }
+  },
+  {
+    "id": "94489280544",
+    "attrs": {
+      "label": "<LOCAL, 64<BR/>cluster_bits: ANY>"
+    }
+  },
+  {
+    "id": "94489280545",
+    "attrs": {
+      "label": "<LOCAL, 62<BR/>backing_file_size: ANY>"
+    }
+  },
+  {
+    "id": "94489280546",
+    "attrs": {
+      "label": "<LOCAL, 60<BR/>backing_file_offset: ANY>"
+    }
+  },
+  {
+    "id": "94489280547",
+    "attrs": {
+      "label": "<LOCAL, 58<BR/>version: ANY>"
+    }
+  },
+  {
+    "id": "94489280548",
+    "attrs": {
+      "label": "<LOCAL, 56<BR/>&lt;unknown&gt; QCOW_MAGIC: ANY>"
+    }
+  },
+  {
+    "id": "94489280549",
+    "attrs": {
+      "label": "<LOCAL, 56<BR/>magic: ANY>"
+    }
+  },
+  {
+    "id": "94489280550",
+    "attrs": {
+      "label": "<LOCAL, 46<BR/>&lt;unknown&gt; BDRV_SECTOR_SIZE: ANY>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.subtraction>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirection>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addition>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.arithmeticShiftRight>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.cast>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>bdrv_pwrite>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.arrayInitializer>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p6>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p7>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p8>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p9>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p10>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p11>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p12>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p13>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p14>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p15>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p16>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p17>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p18>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>qcow2_update_header>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>BlockDriverState *bs>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>int>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>cpu_to_be64>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_blockalign>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>cpu_to_be32>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.sizeOf>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.multiplication>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>header_ext_add>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

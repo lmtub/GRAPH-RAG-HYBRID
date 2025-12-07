@@ -1,1 +1,2942 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>qcrypto_tls_session_check_certificate>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>QCryptoTLSSession *session>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>Error **errp>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 5<BR/>{ int ret; unsigned int status; ...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>int ret: int>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>unsigned int status: unsigned int>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>const gnutls_datum_t *certs: gnutls_datum_t*>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>unsigned int nCerts: unsigned int>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>unsigned int i: unsigned int>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>time_t now: time_t>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>gnutls_x509_crt_t cert: gnutls_x509_crt_t>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 17<BR/>cert = NULL>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>cert<BR/>cert = NULL>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>&lt;unknown&gt; NULL<BR/>cert = NULL>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 21<BR/>now = time(NULL)>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>now<BR/>now = time(NULL)>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<time, 21<BR/>time(NULL)>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>&lt;unknown&gt; NULL<BR/>time(NULL)>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 23<BR/>IF<BR/>if (now == ((time_t)-1)) { error_setg_...>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 23<BR/>now == ((time_t)-1)>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>now<BR/>now == ((time_t)-1)>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 23<BR/>(time_t)-1>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>&lt;unknown&gt; time_t<BR/>(time_t)-1>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 23<BR/>1<BR/>(time_t)-1>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 23<BR/>{ error_setg_errno(errp, errno, &quot;Canno...>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<error_setg_errno, 25<BR/>error_setg_errno(errp, errno, &quot;Cannot get curre...>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>errp<BR/>error_setg_errno(errp, errno, &quot;Cannot get curre...>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>&lt;unknown&gt; errno<BR/>error_setg_errno(errp, errno, &quot;Cannot get curre...>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 25<BR/>&quot;Cannot get current time&quot;<BR/>error_setg_errno(errp, errno, &quot;Cannot get curre...>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 27<BR/>return -1;>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 27<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 27<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 33<BR/>ret = gnutls_certificate_verify_peers2(session-...>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>ret<BR/>ret = gnutls_certificate_verify_peers2(session-...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<gnutls_certificate_verify_peers2, 33<BR/>gnutls_certificate_verify_peers2(session-&gt;handl...>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 33<BR/>session-&gt;handle>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>session<BR/>gnutls_certificate_verify_peers2(session-&gt;handl...>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 33<BR/>handle>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 33<BR/>&amp;status>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>status<BR/>gnutls_certificate_verify_peers2(session-&gt;handl...>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 35<BR/>IF<BR/>if (ret &lt; 0) { error_setg(errp, &quot;Verif...>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 35<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 35<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 35<BR/>{ error_setg(errp, &quot;Verify failed: %s&quot;...>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<error_setg, 37<BR/>error_setg(errp, &quot;Verify failed: %s&quot;, gnutls_st...>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 37<BR/>errp<BR/>error_setg(errp, &quot;Verify failed: %s&quot;, gnutls_st...>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 37<BR/>&quot;Verify failed: %s&quot;<BR/>error_setg(errp, &quot;Verify failed: %s&quot;, gnutls_st...>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<gnutls_strerror, 37<BR/>gnutls_strerror(ret)>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 37<BR/>ret<BR/>gnutls_strerror(ret)>"
+    }
+  },
+  {
+    "id": "141733920769",
+    "attrs": {
+      "label": "<RETURN, 39<BR/>return -1;>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 39<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 39<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 45<BR/>IF<BR/>if (status != 0) { const char *reason ...>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 45<BR/>status != 0>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>status<BR/>status != 0>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 45<BR/>0<BR/>status != 0>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 45<BR/>{ const char *reason = &quot;Invalid certif...>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 47<BR/>const char *reason: char*>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 47<BR/>*reason = &quot;Invalid certificate&quot;>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>reason<BR/>*reason = &quot;Invalid certificate&quot;>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 47<BR/>&quot;Invalid certificate&quot;<BR/>*reason = &quot;Invalid certificate&quot;>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 51<BR/>IF<BR/>if (status &amp; GNUTLS_CERT_INVALID) { ...>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 51<BR/>status &amp; GNUTLS_CERT_INVALID>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>status<BR/>status &amp; GNUTLS_CERT_INVALID>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>&lt;unknown&gt; GNUTLS_CERT_INVALID<BR/>status &amp; GNUTLS_CERT_INVALID>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 51<BR/>{ reason = &quot;The certificate is not...>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 53<BR/>reason = &quot;The certificate is not trusted&quot;>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>reason<BR/>reason = &quot;The certificate is not trusted&quot;>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 53<BR/>&quot;The certificate is not trusted&quot;<BR/>reason = &quot;The certificate is not trusted&quot;>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 59<BR/>IF<BR/>if (status &amp; GNUTLS_CERT_SIGNER_NOT_FOUND) { ...>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 59<BR/>status &amp; GNUTLS_CERT_SIGNER_NOT_FOUND>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>status<BR/>status &amp; GNUTLS_CERT_SIGNER_NOT_FOUND>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>&lt;unknown&gt; GNUTLS_CERT_SIGNER_NOT_FOUND<BR/>status &amp; GNUTLS_CERT_SIGNER_NOT_FOUND>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 59<BR/>{ reason = &quot;The certificate hasn't...>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 61<BR/>reason = &quot;The certificate hasn't got a known is...>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>reason<BR/>reason = &quot;The certificate hasn't got a known is...>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 61<BR/>&quot;The certificate hasn't got a known issuer&quot;<BR/>reason = &quot;The certificate hasn't got a known is...>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 67<BR/>IF<BR/>if (status &amp; GNUTLS_CERT_REVOKED) { ...>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 67<BR/>status &amp; GNUTLS_CERT_REVOKED>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>status<BR/>status &amp; GNUTLS_CERT_REVOKED>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>&lt;unknown&gt; GNUTLS_CERT_REVOKED<BR/>status &amp; GNUTLS_CERT_REVOKED>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 67<BR/>{ reason = &quot;The certificate has be...>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 69<BR/>reason = &quot;The certificate has been revoked&quot;>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>reason<BR/>reason = &quot;The certificate has been revoked&quot;>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 69<BR/>&quot;The certificate has been revoked&quot;<BR/>reason = &quot;The certificate has been revoked&quot;>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 75<BR/>IF<BR/>if (status &amp; GNUTLS_CERT_INSECURE_ALGORITHM) { ...>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 75<BR/>status &amp; GNUTLS_CERT_INSECURE_ALGORITHM>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>status<BR/>status &amp; GNUTLS_CERT_INSECURE_ALGORITHM>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>&lt;unknown&gt; GNUTLS_CERT_INSECURE_ALGORITHM<BR/>status &amp; GNUTLS_CERT_INSECURE_ALGORITHM>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 75<BR/>{ reason = &quot;The certificate uses a...>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 77<BR/>reason = &quot;The certificate uses an insecure algo...>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>reason<BR/>reason = &quot;The certificate uses an insecure algo...>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 77<BR/>&quot;The certificate uses an insecure algorithm&quot;<BR/>reason = &quot;The certificate uses an insecure algo...>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<error_setg, 83<BR/>error_setg(errp, &quot;%s&quot;, reason)>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>errp<BR/>error_setg(errp, &quot;%s&quot;, reason)>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 83<BR/>&quot;%s&quot;<BR/>error_setg(errp, &quot;%s&quot;, reason)>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>reason<BR/>error_setg(errp, &quot;%s&quot;, reason)>"
+    }
+  },
+  {
+    "id": "141733920770",
+    "attrs": {
+      "label": "<RETURN, 85<BR/>return -1;>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 85<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 85<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 91<BR/>certs = gnutls_certificate_get_peers(session-&gt;h...>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>certs<BR/>certs = gnutls_certificate_get_peers(session-&gt;h...>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<gnutls_certificate_get_peers, 91<BR/>gnutls_certificate_get_peers(session-&gt;handle, &amp;...>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 91<BR/>session-&gt;handle>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>session<BR/>gnutls_certificate_get_peers(session-&gt;handle, &amp;...>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 91<BR/>handle>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 91<BR/>&amp;nCerts>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>nCerts<BR/>gnutls_certificate_get_peers(session-&gt;handle, &amp;...>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 93<BR/>IF<BR/>if (!certs) { error_setg(errp, &quot;No cer...>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 93<BR/>!certs>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>certs<BR/>!certs>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 93<BR/>{ error_setg(errp, &quot;No certificate pee...>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<error_setg, 95<BR/>error_setg(errp, &quot;No certificate peers&quot;)>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>errp<BR/>error_setg(errp, &quot;No certificate peers&quot;)>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 95<BR/>&quot;No certificate peers&quot;<BR/>error_setg(errp, &quot;No certificate peers&quot;)>"
+    }
+  },
+  {
+    "id": "141733920771",
+    "attrs": {
+      "label": "<RETURN, 97<BR/>return -1;>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 97<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313231",
+    "attrs": {
+      "label": "<LITERAL, 97<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 103<BR/>FOR<BR/>for (i = 0;i &lt; nCerts;i++)>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 103<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 103<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313232",
+    "attrs": {
+      "label": "<LITERAL, 103<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 103<BR/>i &lt; nCerts>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 103<BR/>i<BR/>i &lt; nCerts>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 103<BR/>nCerts<BR/>i &lt; nCerts>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 103<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 103<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 103<BR/>{ ret = gnutls_x509_crt_init(&amp;cert); ...>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 105<BR/>ret = gnutls_x509_crt_init(&amp;cert)>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>ret<BR/>ret = gnutls_x509_crt_init(&amp;cert)>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<gnutls_x509_crt_init, 105<BR/>gnutls_x509_crt_init(&amp;cert)>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 105<BR/>&amp;cert>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>cert<BR/>gnutls_x509_crt_init(&amp;cert)>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 107<BR/>IF<BR/>if (ret &lt; 0) { error_setg(errp, &quot;C...>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 107<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313233",
+    "attrs": {
+      "label": "<LITERAL, 107<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 107<BR/>{ error_setg(errp, &quot;Cannot initial...>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<error_setg, 109<BR/>error_setg(errp, &quot;Cannot initialize certificate...>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 109<BR/>errp<BR/>error_setg(errp, &quot;Cannot initialize certificate...>"
+    }
+  },
+  {
+    "id": "90194313234",
+    "attrs": {
+      "label": "<LITERAL, 109<BR/>&quot;Cannot initialize certificate: %s&quot;<BR/>error_setg(errp, &quot;Cannot initialize certificate...>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<gnutls_strerror, 111<BR/>gnutls_strerror(ret)>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>ret<BR/>gnutls_strerror(ret)>"
+    }
+  },
+  {
+    "id": "141733920772",
+    "attrs": {
+      "label": "<RETURN, 113<BR/>return -1;>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 113<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313235",
+    "attrs": {
+      "label": "<LITERAL, 113<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 119<BR/>ret = gnutls_x509_crt_import(cert, &amp;certs[i], G...>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>ret<BR/>ret = gnutls_x509_crt_import(cert, &amp;certs[i], G...>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<gnutls_x509_crt_import, 119<BR/>gnutls_x509_crt_import(cert, &amp;certs[i], GNUTLS_...>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>cert<BR/>gnutls_x509_crt_import(cert, &amp;certs[i], GNUTLS_...>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 119<BR/>&amp;certs[i]>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 119<BR/>certs[i]>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>certs<BR/>gnutls_x509_crt_import(cert, &amp;certs[i], GNUTLS_...>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>i<BR/>gnutls_x509_crt_import(cert, &amp;certs[i], GNUTLS_...>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>&lt;unknown&gt; GNUTLS_X509_FMT_DER<BR/>gnutls_x509_crt_import(cert, &amp;certs[i], GNUTLS_...>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 121<BR/>IF<BR/>if (ret &lt; 0) { error_setg(errp, &quot;C...>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 121<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313236",
+    "attrs": {
+      "label": "<LITERAL, 121<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 121<BR/>{ error_setg(errp, &quot;Cannot import ...>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<error_setg, 123<BR/>error_setg(errp, &quot;Cannot import certificate: %s...>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>errp<BR/>error_setg(errp, &quot;Cannot import certificate: %s...>"
+    }
+  },
+  {
+    "id": "90194313237",
+    "attrs": {
+      "label": "<LITERAL, 123<BR/>&quot;Cannot import certificate: %s&quot;<BR/>error_setg(errp, &quot;Cannot import certificate: %s...>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<gnutls_strerror, 125<BR/>gnutls_strerror(ret)>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>ret<BR/>gnutls_strerror(ret)>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 127<BR/>GOTO<BR/>goto error;>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 133<BR/>IF<BR/>if (gnutls_x509_crt_get_expiration_time(cert) &lt;...>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 133<BR/>gnutls_x509_crt_get_expiration_time(cert) &lt; now>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<gnutls_x509_crt_get_expiration_time, 133<BR/>gnutls_x509_crt_get_expiration_time(cert)>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>cert<BR/>gnutls_x509_crt_get_expiration_time(cert)>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>now<BR/>gnutls_x509_crt_get_expiration_time(cert) &lt; now>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 133<BR/>{ error_setg(errp, &quot;The certificat...>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<error_setg, 135<BR/>error_setg(errp, &quot;The certificate has expired&quot;)>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 135<BR/>errp<BR/>error_setg(errp, &quot;The certificate has expired&quot;)>"
+    }
+  },
+  {
+    "id": "90194313238",
+    "attrs": {
+      "label": "<LITERAL, 135<BR/>&quot;The certificate has expired&quot;<BR/>error_setg(errp, &quot;The certificate has expired&quot;)>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 137<BR/>GOTO<BR/>goto error;>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 143<BR/>IF<BR/>if (gnutls_x509_crt_get_activation_time(cert) &gt;...>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.greaterThan, 143<BR/>gnutls_x509_crt_get_activation_time(cert) &gt; now>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<gnutls_x509_crt_get_activation_time, 143<BR/>gnutls_x509_crt_get_activation_time(cert)>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 143<BR/>cert<BR/>gnutls_x509_crt_get_activation_time(cert)>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 143<BR/>now<BR/>gnutls_x509_crt_get_activation_time(cert) &gt; now>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 143<BR/>{ error_setg(errp, &quot;The certificat...>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<error_setg, 145<BR/>error_setg(errp, &quot;The certificate is not yet ac...>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>errp<BR/>error_setg(errp, &quot;The certificate is not yet ac...>"
+    }
+  },
+  {
+    "id": "90194313239",
+    "attrs": {
+      "label": "<LITERAL, 145<BR/>&quot;The certificate is not yet activated&quot;<BR/>error_setg(errp, &quot;The certificate is not yet ac...>"
+    }
+  },
+  {
+    "id": "47244640271",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 147<BR/>GOTO<BR/>goto error;>"
+    }
+  },
+  {
+    "id": "47244640272",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 153<BR/>IF<BR/>if (gnutls_x509_crt_get_activation_time(cert) &gt;...>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.greaterThan, 153<BR/>gnutls_x509_crt_get_activation_time(cert) &gt; now>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<gnutls_x509_crt_get_activation_time, 153<BR/>gnutls_x509_crt_get_activation_time(cert)>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 153<BR/>cert<BR/>gnutls_x509_crt_get_activation_time(cert)>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 153<BR/>now<BR/>gnutls_x509_crt_get_activation_time(cert) &gt; now>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 153<BR/>{ error_setg(errp, &quot;The certificat...>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<error_setg, 155<BR/>error_setg(errp, &quot;The certificate is not yet ac...>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 155<BR/>errp<BR/>error_setg(errp, &quot;The certificate is not yet ac...>"
+    }
+  },
+  {
+    "id": "90194313240",
+    "attrs": {
+      "label": "<LITERAL, 155<BR/>&quot;The certificate is not yet activated&quot;<BR/>error_setg(errp, &quot;The certificate is not yet ac...>"
+    }
+  },
+  {
+    "id": "47244640273",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 157<BR/>GOTO<BR/>goto error;>"
+    }
+  },
+  {
+    "id": "47244640274",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 163<BR/>IF<BR/>if (i == 0) { size_t dnameSize = 1...>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 163<BR/>i == 0>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 163<BR/>i<BR/>i == 0>"
+    }
+  },
+  {
+    "id": "90194313241",
+    "attrs": {
+      "label": "<LITERAL, 163<BR/>0<BR/>i == 0>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 163<BR/>{ size_t dnameSize = 1024; ...>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 165<BR/>size_t dnameSize: size_t>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 165<BR/>dnameSize = 1024>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 165<BR/>dnameSize<BR/>dnameSize = 1024>"
+    }
+  },
+  {
+    "id": "90194313242",
+    "attrs": {
+      "label": "<LITERAL, 165<BR/>1024<BR/>dnameSize = 1024>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 167<BR/>session-&gt;peername = g_malloc(dnameSize)>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 167<BR/>session-&gt;peername>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 167<BR/>session<BR/>session-&gt;peername = g_malloc(dnameSize)>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 167<BR/>peername>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<g_malloc, 167<BR/>g_malloc(dnameSize)>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 167<BR/>dnameSize<BR/>g_malloc(dnameSize)>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 169<BR/>requery>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 171<BR/>ret = gnutls_x509_crt_get_dn(cert, session-&gt;pee...>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>ret<BR/>ret = gnutls_x509_crt_get_dn(cert, session-&gt;pee...>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<gnutls_x509_crt_get_dn, 171<BR/>gnutls_x509_crt_get_dn(cert, session-&gt;peername,...>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>cert<BR/>gnutls_x509_crt_get_dn(cert, session-&gt;peername,...>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 171<BR/>session-&gt;peername>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>session<BR/>gnutls_x509_crt_get_dn(cert, session-&gt;peername,...>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 171<BR/>peername>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 171<BR/>&amp;dnameSize>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>dnameSize<BR/>gnutls_x509_crt_get_dn(cert, session-&gt;peername,...>"
+    }
+  },
+  {
+    "id": "47244640275",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 173<BR/>IF<BR/>if (ret &lt; 0) { if (ret == GNUT...>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 173<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313243",
+    "attrs": {
+      "label": "<LITERAL, 173<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 173<BR/>{ if (ret == GNUTLS_E_SHORT_ME...>"
+    }
+  },
+  {
+    "id": "47244640276",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 175<BR/>IF<BR/>if (ret == GNUTLS_E_SHORT_MEMORY_BUFFER) { ...>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 175<BR/>ret == GNUTLS_E_SHORT_MEMORY_BUFFER>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>ret<BR/>ret == GNUTLS_E_SHORT_MEMORY_BUFFER>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>&lt;unknown&gt; GNUTLS_E_SHORT_MEMORY_BUFFER<BR/>ret == GNUTLS_E_SHORT_MEMORY_BUFFER>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK, 175<BR/>{ session-&gt;peername = g_re...>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 177<BR/>session-&gt;peername = g_realloc(session-&gt;peername...>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 177<BR/>session-&gt;peername>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 177<BR/>session<BR/>session-&gt;peername = g_realloc(session-&gt;peername...>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 177<BR/>peername>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<g_realloc, 177<BR/>g_realloc(session-&gt;peername, ...>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 177<BR/>session-&gt;peername>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 177<BR/>session<BR/>g_realloc(session-&gt;peername, ...>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 177<BR/>peername>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 179<BR/>dnameSize<BR/>g_realloc(session-&gt;peername, ...>"
+    }
+  },
+  {
+    "id": "47244640277",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 181<BR/>GOTO<BR/>goto requery;>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<error_setg, 185<BR/>error_setg(errp, &quot;Cannot get client distinguish...>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 185<BR/>errp<BR/>error_setg(errp, &quot;Cannot get client distinguish...>"
+    }
+  },
+  {
+    "id": "90194313244",
+    "attrs": {
+      "label": "<LITERAL, 185<BR/>&quot;Cannot get client distinguished name: %s&quot;<BR/>error_setg(errp, &quot;Cannot get client distinguish...>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<gnutls_strerror, 187<BR/>gnutls_strerror(ret)>"
+    }
+  },
+  {
+    "id": "68719476812",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>ret<BR/>gnutls_strerror(ret)>"
+    }
+  },
+  {
+    "id": "47244640278",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 189<BR/>GOTO<BR/>goto error;>"
+    }
+  },
+  {
+    "id": "47244640279",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 193<BR/>IF<BR/>if (session-&gt;aclname) { qemu_a...>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 193<BR/>session-&gt;aclname>"
+    }
+  },
+  {
+    "id": "68719476813",
+    "attrs": {
+      "label": "<IDENTIFIER, 193<BR/>session<BR/>if (session-&gt;aclname) { qemu_a...>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 193<BR/>aclname>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK, 193<BR/>{ qemu_acl *acl = qemu_acl_fin...>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 195<BR/>qemu_acl *acl: qemu_acl*>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 195<BR/>*acl = qemu_acl_find(session-&gt;aclname)>"
+    }
+  },
+  {
+    "id": "68719476814",
+    "attrs": {
+      "label": "<IDENTIFIER, 195<BR/>acl<BR/>*acl = qemu_acl_find(session-&gt;aclname)>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<qemu_acl_find, 195<BR/>qemu_acl_find(session-&gt;aclname)>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 195<BR/>session-&gt;aclname>"
+    }
+  },
+  {
+    "id": "68719476815",
+    "attrs": {
+      "label": "<IDENTIFIER, 195<BR/>session<BR/>qemu_acl_find(session-&gt;aclname)>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 195<BR/>aclname>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 197<BR/>int allow: int>"
+    }
+  },
+  {
+    "id": "47244640280",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 199<BR/>IF<BR/>if (!acl) { error_setg(err...>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 199<BR/>!acl>"
+    }
+  },
+  {
+    "id": "68719476816",
+    "attrs": {
+      "label": "<IDENTIFIER, 199<BR/>acl<BR/>!acl>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK, 199<BR/>{ error_setg(errp, &quot;Cannot...>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<error_setg, 201<BR/>error_setg(errp, &quot;Cannot find ACL %s&quot;, ...>"
+    }
+  },
+  {
+    "id": "68719476817",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>errp<BR/>error_setg(errp, &quot;Cannot find ACL %s&quot;, ...>"
+    }
+  },
+  {
+    "id": "90194313245",
+    "attrs": {
+      "label": "<LITERAL, 201<BR/>&quot;Cannot find ACL %s&quot;<BR/>error_setg(errp, &quot;Cannot find ACL %s&quot;, ...>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 203<BR/>session-&gt;aclname>"
+    }
+  },
+  {
+    "id": "68719476818",
+    "attrs": {
+      "label": "<IDENTIFIER, 203<BR/>session<BR/>error_setg(errp, &quot;Cannot find ACL %s&quot;, ...>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 203<BR/>aclname>"
+    }
+  },
+  {
+    "id": "47244640281",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 205<BR/>GOTO<BR/>goto error;>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 211<BR/>allow = qemu_acl_party_is_allowed(acl, session-...>"
+    }
+  },
+  {
+    "id": "68719476819",
+    "attrs": {
+      "label": "<IDENTIFIER, 211<BR/>allow<BR/>allow = qemu_acl_party_is_allowed(acl, session-...>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<qemu_acl_party_is_allowed, 211<BR/>qemu_acl_party_is_allowed(acl, session-&gt;peername)>"
+    }
+  },
+  {
+    "id": "68719476820",
+    "attrs": {
+      "label": "<IDENTIFIER, 211<BR/>acl<BR/>qemu_acl_party_is_allowed(acl, session-&gt;peername)>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 211<BR/>session-&gt;peername>"
+    }
+  },
+  {
+    "id": "68719476821",
+    "attrs": {
+      "label": "<IDENTIFIER, 211<BR/>session<BR/>qemu_acl_party_is_allowed(acl, session-&gt;peername)>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 211<BR/>peername>"
+    }
+  },
+  {
+    "id": "30064771159",
+    "attrs": {
+      "label": "<error_setg, 215<BR/>error_setg(errp, &quot;TLS x509 ACL check for %s is ...>"
+    }
+  },
+  {
+    "id": "68719476822",
+    "attrs": {
+      "label": "<IDENTIFIER, 215<BR/>errp<BR/>error_setg(errp, &quot;TLS x509 ACL check for %s is ...>"
+    }
+  },
+  {
+    "id": "90194313246",
+    "attrs": {
+      "label": "<LITERAL, 215<BR/>&quot;TLS x509 ACL check for %s is %s&quot;<BR/>error_setg(errp, &quot;TLS x509 ACL check for %s is ...>"
+    }
+  },
+  {
+    "id": "30064771160",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 217<BR/>session-&gt;peername>"
+    }
+  },
+  {
+    "id": "68719476823",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>session<BR/>error_setg(errp, &quot;TLS x509 ACL check for %s is ...>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 217<BR/>peername>"
+    }
+  },
+  {
+    "id": "30064771161",
+    "attrs": {
+      "label": "<&lt;operator&gt;.conditional, 217<BR/>allow ? &quot;allowed&quot; : &quot;denied&quot;>"
+    }
+  },
+  {
+    "id": "68719476824",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>allow<BR/>allow ? &quot;allowed&quot; : &quot;denied&quot;>"
+    }
+  },
+  {
+    "id": "90194313247",
+    "attrs": {
+      "label": "<LITERAL, 217<BR/>&quot;allowed&quot;<BR/>allow ? &quot;allowed&quot; : &quot;denied&quot;>"
+    }
+  },
+  {
+    "id": "90194313248",
+    "attrs": {
+      "label": "<LITERAL, 217<BR/>&quot;denied&quot;<BR/>allow ? &quot;allowed&quot; : &quot;denied&quot;>"
+    }
+  },
+  {
+    "id": "47244640282",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 219<BR/>IF<BR/>if (!allow) { goto error; ...>"
+    }
+  },
+  {
+    "id": "30064771162",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 219<BR/>!allow>"
+    }
+  },
+  {
+    "id": "68719476825",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>allow<BR/>!allow>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK, 219<BR/>{ goto error; ...>"
+    }
+  },
+  {
+    "id": "47244640283",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 221<BR/>GOTO<BR/>goto error;>"
+    }
+  },
+  {
+    "id": "47244640284",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 227<BR/>IF<BR/>if (session-&gt;hostname) { if (!...>"
+    }
+  },
+  {
+    "id": "30064771163",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 227<BR/>session-&gt;hostname>"
+    }
+  },
+  {
+    "id": "68719476826",
+    "attrs": {
+      "label": "<IDENTIFIER, 227<BR/>session<BR/>if (session-&gt;hostname) { if (!...>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 227<BR/>hostname>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK, 227<BR/>{ if (!gnutls_x509_crt_check_h...>"
+    }
+  },
+  {
+    "id": "47244640285",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 229<BR/>IF<BR/>if (!gnutls_x509_crt_check_hostname(cert, sessi...>"
+    }
+  },
+  {
+    "id": "30064771164",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 229<BR/>!gnutls_x509_crt_check_hostname(cert, session-&gt;...>"
+    }
+  },
+  {
+    "id": "30064771165",
+    "attrs": {
+      "label": "<gnutls_x509_crt_check_hostname, 229<BR/>gnutls_x509_crt_check_hostname(cert, session-&gt;h...>"
+    }
+  },
+  {
+    "id": "68719476827",
+    "attrs": {
+      "label": "<IDENTIFIER, 229<BR/>cert<BR/>gnutls_x509_crt_check_hostname(cert, session-&gt;h...>"
+    }
+  },
+  {
+    "id": "30064771166",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 229<BR/>session-&gt;hostname>"
+    }
+  },
+  {
+    "id": "68719476828",
+    "attrs": {
+      "label": "<IDENTIFIER, 229<BR/>session<BR/>gnutls_x509_crt_check_hostname(cert, session-&gt;h...>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 229<BR/>hostname>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK, 229<BR/>{ error_setg(errp, ...>"
+    }
+  },
+  {
+    "id": "30064771167",
+    "attrs": {
+      "label": "<error_setg, 231<BR/>error_setg(errp, ...>"
+    }
+  },
+  {
+    "id": "68719476829",
+    "attrs": {
+      "label": "<IDENTIFIER, 231<BR/>errp<BR/>error_setg(errp, ...>"
+    }
+  },
+  {
+    "id": "90194313249",
+    "attrs": {
+      "label": "<LITERAL, 233<BR/>&quot;Certificate does not match the hostname %s&quot;<BR/>error_setg(errp, ...>"
+    }
+  },
+  {
+    "id": "30064771168",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 235<BR/>session-&gt;hostname>"
+    }
+  },
+  {
+    "id": "68719476830",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>session<BR/>error_setg(errp, ...>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 235<BR/>hostname>"
+    }
+  },
+  {
+    "id": "47244640286",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 237<BR/>GOTO<BR/>goto error;>"
+    }
+  },
+  {
+    "id": "30064771169",
+    "attrs": {
+      "label": "<gnutls_x509_crt_deinit, 247<BR/>gnutls_x509_crt_deinit(cert)>"
+    }
+  },
+  {
+    "id": "68719476831",
+    "attrs": {
+      "label": "<IDENTIFIER, 247<BR/>cert<BR/>gnutls_x509_crt_deinit(cert)>"
+    }
+  },
+  {
+    "id": "141733920773",
+    "attrs": {
+      "label": "<RETURN, 253<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313250",
+    "attrs": {
+      "label": "<LITERAL, 253<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "81604378625",
+    "attrs": {
+      "label": "<JUMP_TARGET, 257<BR/>error>"
+    }
+  },
+  {
+    "id": "30064771170",
+    "attrs": {
+      "label": "<gnutls_x509_crt_deinit, 259<BR/>gnutls_x509_crt_deinit(cert)>"
+    }
+  },
+  {
+    "id": "68719476832",
+    "attrs": {
+      "label": "<IDENTIFIER, 259<BR/>cert<BR/>gnutls_x509_crt_deinit(cert)>"
+    }
+  },
+  {
+    "id": "141733920774",
+    "attrs": {
+      "label": "<RETURN, 261<BR/>return -1;>"
+    }
+  },
+  {
+    "id": "30064771171",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 261<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313251",
+    "attrs": {
+      "label": "<LITERAL, 261<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 175<BR/>&lt;unknown&gt; GNUTLS_E_SHORT_MEMORY_BUFFER: ANY>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 119<BR/>&lt;unknown&gt; GNUTLS_X509_FMT_DER: ANY>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 75<BR/>&lt;unknown&gt; GNUTLS_CERT_INSECURE_ALGORITHM: ANY>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 67<BR/>&lt;unknown&gt; GNUTLS_CERT_REVOKED: ANY>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 59<BR/>&lt;unknown&gt; GNUTLS_CERT_SIGNER_NOT_FOUND: ANY>"
+    }
+  },
+  {
+    "id": "94489280528",
+    "attrs": {
+      "label": "<LOCAL, 51<BR/>&lt;unknown&gt; GNUTLS_CERT_INVALID: ANY>"
+    }
+  },
+  {
+    "id": "94489280529",
+    "attrs": {
+      "label": "<LOCAL, 25<BR/>&lt;unknown&gt; errno: ANY>"
+    }
+  },
+  {
+    "id": "94489280530",
+    "attrs": {
+      "label": "<LOCAL, 23<BR/>&lt;unknown&gt; time_t: ANY>"
+    }
+  },
+  {
+    "id": "94489280531",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>qcrypto_tls_session_check_certificate<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>g_realloc>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_x509_crt_import>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.subtraction>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_x509_crt_get_expiration_time>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_x509_crt_get_activation_time>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>g_malloc>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.equals>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>error_setg>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.conditional>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>error_setg_errno>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803817",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.postIncrement>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803818",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.minus>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803819",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803820",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_acl_find>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803821",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.greaterThan>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803822",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803823",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectIndexAccess>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803824",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.notEquals>"
+    }
+  },
+  {
+    "id": "111669149744",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149745",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803825",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182428",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_x509_crt_check_hostname>"
+    }
+  },
+  {
+    "id": "111669149746",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149747",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803826",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051612",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182429",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_strerror>"
+    }
+  },
+  {
+    "id": "111669149748",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803827",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051613",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.and>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182430",
+    "attrs": {
+      "label": "<METHOD<BR/>time>"
+    }
+  },
+  {
+    "id": "111669149749",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803828",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051614",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182431",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_x509_crt_deinit>"
+    }
+  },
+  {
+    "id": "111669149750",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803829",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051615",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182432",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_x509_crt_init>"
+    }
+  },
+  {
+    "id": "111669149751",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803830",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051616",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182433",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_certificate_verify_peers2>"
+    }
+  },
+  {
+    "id": "111669149752",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149753",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803831",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051617",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_x509_crt_get_dn>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_acl_party_is_allowed>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>gnutls_certificate_get_peers>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

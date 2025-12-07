@@ -1,0 +1,17 @@
+digraph "memory_region_set_readonly" {  
+node [shape="rect"];  
+"107374182456" [label = <METHOD<BR/>memory_region_set_readonly> ]
+"111669149825" [label = <PARAM<BR/>p1> ]
+"111669149826" [label = <PARAM<BR/>p2> ]
+"25769803846" [label = <BLOCK<BR/>&lt;empty&gt;> ]
+"124554051640" [label = <METHOD_RETURN<BR/>ANY> ]
+  "107374182456" -> "111669149825"  [ label = "AST: "] 
+  "107374182456" -> "25769803846"  [ label = "AST: "] 
+  "107374182456" -> "111669149826"  [ label = "AST: "] 
+  "107374182456" -> "124554051640"  [ label = "AST: "] 
+  "107374182456" -> "124554051640"  [ label = "CFG: "] 
+  "111669149825" -> "124554051640"  [ label = "DDG: p1"] 
+  "111669149826" -> "124554051640"  [ label = "DDG: p2"] 
+  "107374182456" -> "111669149825"  [ label = "DDG: "] 
+  "107374182456" -> "111669149826"  [ label = "DDG: "] 
+}

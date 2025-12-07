@@ -1,1 +1,7364 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>switch_tss>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>int tss_selector>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>uint32_t e1>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>uint32_t e2>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>int source>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 5<BR/>{ int tss_limit, tss_limit_max, type, old_...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>int tss_limit: int>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>int tss_limit_max: int>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>int type: int>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>int old_tss_limit_max: int>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>int old_type: int>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>int v1: int>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>int v2: int>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>int i: int>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>uint8_t *tss_base: uint8_t*>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>uint32_t new_regs[8]: uint32_t[8]>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>uint32_t new_segs[6]: uint32_t[6]>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 11<BR/>new_regs[8]>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>new_regs<BR/>new_regs[8]>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.alloc, 11<BR/>new_regs[8]>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>uint32_t[8]<BR/>new_regs[8]>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 11<BR/>8<BR/>new_regs[8]>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 11<BR/>new_segs[6]>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>new_segs<BR/>new_segs[6]>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.alloc, 11<BR/>new_segs[6]>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>uint32_t[6]<BR/>new_segs[6]>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 11<BR/>6<BR/>new_segs[6]>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>uint32_t new_eflags: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>uint32_t new_eip: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>uint32_t new_cr3: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>uint32_t new_ldt: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>uint32_t new_trap: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280528",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>uint32_t old_eflags: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280529",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>uint32_t eflags_mask: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280530",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>SegmentCache *dt: SegmentCache*>"
+    }
+  },
+  {
+    "id": "94489280531",
+    "attrs": {
+      "label": "<LOCAL, 19<BR/>int index: int>"
+    }
+  },
+  {
+    "id": "94489280532",
+    "attrs": {
+      "label": "<LOCAL, 21<BR/>uint8_t *ptr: uint8_t*>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 25<BR/>type = (e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>type<BR/>type = (e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 25<BR/>(e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 25<BR/>e2 &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>e2<BR/>e2 &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>&lt;unknown&gt; DESC_TYPE_SHIFT<BR/>e2 &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 25<BR/>0xf<BR/>(e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 39<BR/>IF<BR/>if (type == 5) { if (!(e2 &amp; DESC_P_MAS...>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 39<BR/>type == 5>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>type<BR/>type == 5>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 39<BR/>5<BR/>type == 5>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 39<BR/>{ if (!(e2 &amp; DESC_P_MASK)) ...>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 41<BR/>IF<BR/>if (!(e2 &amp; DESC_P_MASK)) raise_exc...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 41<BR/>!(e2 &amp; DESC_P_MASK)>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 41<BR/>e2 &amp; DESC_P_MASK>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>e2<BR/>e2 &amp; DESC_P_MASK>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>&lt;unknown&gt; DESC_P_MASK<BR/>e2 &amp; DESC_P_MASK>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 43<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<raise_exception_err, 43<BR/>raise_exception_err(EXCP0B_NOSEG, tss_selector ...>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>&lt;unknown&gt; EXCP0B_NOSEG<BR/>raise_exception_err(EXCP0B_NOSEG, tss_selector ...>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 43<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>tss_selector<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 43<BR/>0xfffc<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 45<BR/>tss_selector = e1 &gt;&gt; 16>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>tss_selector<BR/>tss_selector = e1 &gt;&gt; 16>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 45<BR/>e1 &gt;&gt; 16>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>e1<BR/>e1 &gt;&gt; 16>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 45<BR/>16<BR/>e1 &gt;&gt; 16>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 47<BR/>IF<BR/>if (tss_selector &amp; 4) raise_except...>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 47<BR/>tss_selector &amp; 4>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>tss_selector<BR/>tss_selector &amp; 4>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 47<BR/>4<BR/>tss_selector &amp; 4>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 49<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<raise_exception_err, 49<BR/>raise_exception_err(EXCP0A_TSS, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>&lt;unknown&gt; EXCP0A_TSS<BR/>raise_exception_err(EXCP0A_TSS, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 49<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>tss_selector<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 49<BR/>0xfffc<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 51<BR/>IF<BR/>if (load_segment(&amp;e1, &amp;e2, tss_selector) != 0) ...>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 51<BR/>load_segment(&amp;e1, &amp;e2, tss_selector) != 0>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<load_segment, 51<BR/>load_segment(&amp;e1, &amp;e2, tss_selector)>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 51<BR/>&amp;e1>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>e1<BR/>load_segment(&amp;e1, &amp;e2, tss_selector)>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 51<BR/>&amp;e2>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>e2<BR/>load_segment(&amp;e1, &amp;e2, tss_selector)>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>tss_selector<BR/>load_segment(&amp;e1, &amp;e2, tss_selector)>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 51<BR/>0<BR/>load_segment(&amp;e1, &amp;e2, tss_selector) != 0>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 53<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<raise_exception_err, 53<BR/>raise_exception_err(EXCP0D_GPF, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>&lt;unknown&gt; EXCP0D_GPF<BR/>raise_exception_err(EXCP0D_GPF, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 53<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>tss_selector<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 53<BR/>0xfffc<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 55<BR/>IF<BR/>if (e2 &amp; DESC_S_MASK) raise_except...>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 55<BR/>e2 &amp; DESC_S_MASK>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 55<BR/>e2<BR/>e2 &amp; DESC_S_MASK>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 55<BR/>&lt;unknown&gt; DESC_S_MASK<BR/>e2 &amp; DESC_S_MASK>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 57<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<raise_exception_err, 57<BR/>raise_exception_err(EXCP0D_GPF, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>&lt;unknown&gt; EXCP0D_GPF<BR/>raise_exception_err(EXCP0D_GPF, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 57<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>tss_selector<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 57<BR/>0xfffc<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 59<BR/>type = (e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>type<BR/>type = (e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 59<BR/>(e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 59<BR/>e2 &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>e2<BR/>e2 &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>&lt;unknown&gt; DESC_TYPE_SHIFT<BR/>e2 &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 59<BR/>0xf<BR/>(e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 61<BR/>IF<BR/>if ((type &amp; 7) != 1) raise_excepti...>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 61<BR/>(type &amp; 7) != 1>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 61<BR/>type &amp; 7>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>type<BR/>type &amp; 7>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 61<BR/>7<BR/>type &amp; 7>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 61<BR/>1<BR/>(type &amp; 7) != 1>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 63<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<raise_exception_err, 63<BR/>raise_exception_err(EXCP0D_GPF, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 63<BR/>&lt;unknown&gt; EXCP0D_GPF<BR/>raise_exception_err(EXCP0D_GPF, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 63<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 63<BR/>tss_selector<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 63<BR/>0xfffc<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 69<BR/>IF<BR/>if (!(e2 &amp; DESC_P_MASK)) raise_excepti...>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 69<BR/>!(e2 &amp; DESC_P_MASK)>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 69<BR/>e2 &amp; DESC_P_MASK>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>e2<BR/>e2 &amp; DESC_P_MASK>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>&lt;unknown&gt; DESC_P_MASK<BR/>e2 &amp; DESC_P_MASK>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 71<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<raise_exception_err, 71<BR/>raise_exception_err(EXCP0B_NOSEG, tss_selector ...>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>&lt;unknown&gt; EXCP0B_NOSEG<BR/>raise_exception_err(EXCP0B_NOSEG, tss_selector ...>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 71<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>tss_selector<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313231",
+    "attrs": {
+      "label": "<LITERAL, 71<BR/>0xfffc<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 75<BR/>IF<BR/>if (type &amp; 8) tss_limit_max = 103; ...>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 75<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>type<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "90194313232",
+    "attrs": {
+      "label": "<LITERAL, 75<BR/>8<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 77<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 77<BR/>tss_limit_max = 103>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>tss_limit_max<BR/>tss_limit_max = 103>"
+    }
+  },
+  {
+    "id": "90194313233",
+    "attrs": {
+      "label": "<LITERAL, 77<BR/>103<BR/>tss_limit_max = 103>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 81<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 81<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 81<BR/>tss_limit_max = 43>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>tss_limit_max<BR/>tss_limit_max = 43>"
+    }
+  },
+  {
+    "id": "90194313234",
+    "attrs": {
+      "label": "<LITERAL, 81<BR/>43<BR/>tss_limit_max = 43>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 83<BR/>tss_limit = get_seg_limit(e1, e2)>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>tss_limit<BR/>tss_limit = get_seg_limit(e1, e2)>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<get_seg_limit, 83<BR/>get_seg_limit(e1, e2)>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>e1<BR/>get_seg_limit(e1, e2)>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>e2<BR/>get_seg_limit(e1, e2)>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 85<BR/>tss_base = get_seg_base(e1, e2)>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>tss_base<BR/>tss_base = get_seg_base(e1, e2)>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<get_seg_base, 85<BR/>get_seg_base(e1, e2)>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>e1<BR/>get_seg_base(e1, e2)>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>e2<BR/>get_seg_base(e1, e2)>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 87<BR/>IF<BR/>if ((tss_selector &amp; 4) != 0 || tss_li...>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalOr, 87<BR/>(tss_selector &amp; 4) != 0 || tss_limit ...>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 87<BR/>(tss_selector &amp; 4) != 0>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 87<BR/>tss_selector &amp; 4>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>tss_selector<BR/>tss_selector &amp; 4>"
+    }
+  },
+  {
+    "id": "90194313235",
+    "attrs": {
+      "label": "<LITERAL, 87<BR/>4<BR/>tss_selector &amp; 4>"
+    }
+  },
+  {
+    "id": "90194313236",
+    "attrs": {
+      "label": "<LITERAL, 87<BR/>0<BR/>(tss_selector &amp; 4) != 0>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 89<BR/>tss_limit &lt; tss_limit_max>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>tss_limit<BR/>tss_limit &lt; tss_limit_max>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>tss_limit_max<BR/>tss_limit &lt; tss_limit_max>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 91<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<raise_exception_err, 91<BR/>raise_exception_err(EXCP0A_TSS, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>&lt;unknown&gt; EXCP0A_TSS<BR/>raise_exception_err(EXCP0A_TSS, tss_selector &amp; ...>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 91<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>tss_selector<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313237",
+    "attrs": {
+      "label": "<LITERAL, 91<BR/>0xfffc<BR/>tss_selector &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 93<BR/>old_type = (env-&gt;tr.flags &gt;&gt; DESC_TYPE_SHIFT) &amp;...>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>old_type<BR/>old_type = (env-&gt;tr.flags &gt;&gt; DESC_TYPE_SHIFT) &amp;...>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 93<BR/>(env-&gt;tr.flags &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 93<BR/>env-&gt;tr.flags &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 93<BR/>env-&gt;tr.flags>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 93<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.flags &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 93<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 93<BR/>flags>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>&lt;unknown&gt; DESC_TYPE_SHIFT<BR/>env-&gt;tr.flags &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "90194313238",
+    "attrs": {
+      "label": "<LITERAL, 93<BR/>0xf<BR/>(env-&gt;tr.flags &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 95<BR/>IF<BR/>if (old_type &amp; 8) old_tss_limit_max = ...>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 95<BR/>old_type &amp; 8>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>old_type<BR/>old_type &amp; 8>"
+    }
+  },
+  {
+    "id": "90194313239",
+    "attrs": {
+      "label": "<LITERAL, 95<BR/>8<BR/>old_type &amp; 8>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 97<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 97<BR/>old_tss_limit_max = 103>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>old_tss_limit_max<BR/>old_tss_limit_max = 103>"
+    }
+  },
+  {
+    "id": "90194313240",
+    "attrs": {
+      "label": "<LITERAL, 97<BR/>103<BR/>old_tss_limit_max = 103>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 101<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 101<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 101<BR/>old_tss_limit_max = 43>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>old_tss_limit_max<BR/>old_tss_limit_max = 43>"
+    }
+  },
+  {
+    "id": "90194313241",
+    "attrs": {
+      "label": "<LITERAL, 101<BR/>43<BR/>old_tss_limit_max = 43>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 107<BR/>IF<BR/>if (type &amp; 8) { /* 32 bit */ ...>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 107<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>type<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "90194313242",
+    "attrs": {
+      "label": "<LITERAL, 107<BR/>8<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 107<BR/>{ /* 32 bit */ new_cr3 = ldl_...>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 111<BR/>new_cr3 = ldl_kernel(tss_base + 0x1c)>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>new_cr3<BR/>new_cr3 = ldl_kernel(tss_base + 0x1c)>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<ldl_kernel, 111<BR/>ldl_kernel(tss_base + 0x1c)>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 111<BR/>tss_base + 0x1c>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>tss_base<BR/>tss_base + 0x1c>"
+    }
+  },
+  {
+    "id": "90194313243",
+    "attrs": {
+      "label": "<LITERAL, 111<BR/>0x1c<BR/>tss_base + 0x1c>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 113<BR/>new_eip = ldl_kernel(tss_base + 0x20)>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>new_eip<BR/>new_eip = ldl_kernel(tss_base + 0x20)>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<ldl_kernel, 113<BR/>ldl_kernel(tss_base + 0x20)>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 113<BR/>tss_base + 0x20>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>tss_base<BR/>tss_base + 0x20>"
+    }
+  },
+  {
+    "id": "90194313244",
+    "attrs": {
+      "label": "<LITERAL, 113<BR/>0x20<BR/>tss_base + 0x20>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 115<BR/>new_eflags = ldl_kernel(tss_base + 0x24)>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 115<BR/>new_eflags<BR/>new_eflags = ldl_kernel(tss_base + 0x24)>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<ldl_kernel, 115<BR/>ldl_kernel(tss_base + 0x24)>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 115<BR/>tss_base + 0x24>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 115<BR/>tss_base<BR/>tss_base + 0x24>"
+    }
+  },
+  {
+    "id": "90194313245",
+    "attrs": {
+      "label": "<LITERAL, 115<BR/>0x24<BR/>tss_base + 0x24>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 117<BR/>FOR<BR/>for (i = 0;i &lt; 8;i++)>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 117<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313246",
+    "attrs": {
+      "label": "<LITERAL, 117<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 117<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>i<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "90194313247",
+    "attrs": {
+      "label": "<LITERAL, 117<BR/>8<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 117<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 119<BR/>new_regs[i] = ldl_kernel(tss_base + (0x28 + i *...>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 119<BR/>new_regs[i]>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>new_regs<BR/>new_regs[i] = ldl_kernel(tss_base + (0x28 + i *...>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>i<BR/>new_regs[i] = ldl_kernel(tss_base + (0x28 + i *...>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<ldl_kernel, 119<BR/>ldl_kernel(tss_base + (0x28 + i * 4))>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 119<BR/>tss_base + (0x28 + i * 4)>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>tss_base<BR/>tss_base + (0x28 + i * 4)>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 119<BR/>0x28 + i * 4>"
+    }
+  },
+  {
+    "id": "90194313248",
+    "attrs": {
+      "label": "<LITERAL, 119<BR/>0x28<BR/>0x28 + i * 4>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 119<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>i<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "90194313249",
+    "attrs": {
+      "label": "<LITERAL, 119<BR/>4<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 121<BR/>FOR<BR/>for (i = 0;i &lt; 6;i++)>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 121<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313250",
+    "attrs": {
+      "label": "<LITERAL, 121<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 121<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>i<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "90194313251",
+    "attrs": {
+      "label": "<LITERAL, 121<BR/>6<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 121<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 123<BR/>new_segs[i] = lduw_kernel(tss_base + (0x48 + i ...>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 123<BR/>new_segs[i]>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>new_segs<BR/>new_segs[i] = lduw_kernel(tss_base + (0x48 + i ...>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>i<BR/>new_segs[i] = lduw_kernel(tss_base + (0x48 + i ...>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<lduw_kernel, 123<BR/>lduw_kernel(tss_base + (0x48 + i * 4))>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 123<BR/>tss_base + (0x48 + i * 4)>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>tss_base<BR/>tss_base + (0x48 + i * 4)>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 123<BR/>0x48 + i * 4>"
+    }
+  },
+  {
+    "id": "90194313252",
+    "attrs": {
+      "label": "<LITERAL, 123<BR/>0x48<BR/>0x48 + i * 4>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 123<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "68719476812",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>i<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "90194313253",
+    "attrs": {
+      "label": "<LITERAL, 123<BR/>4<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 125<BR/>new_ldt = lduw_kernel(tss_base + 0x60)>"
+    }
+  },
+  {
+    "id": "68719476813",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>new_ldt<BR/>new_ldt = lduw_kernel(tss_base + 0x60)>"
+    }
+  },
+  {
+    "id": "30064771159",
+    "attrs": {
+      "label": "<lduw_kernel, 125<BR/>lduw_kernel(tss_base + 0x60)>"
+    }
+  },
+  {
+    "id": "30064771160",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 125<BR/>tss_base + 0x60>"
+    }
+  },
+  {
+    "id": "68719476814",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>tss_base<BR/>tss_base + 0x60>"
+    }
+  },
+  {
+    "id": "90194313254",
+    "attrs": {
+      "label": "<LITERAL, 125<BR/>0x60<BR/>tss_base + 0x60>"
+    }
+  },
+  {
+    "id": "30064771161",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 127<BR/>new_trap = ldl_kernel(tss_base + 0x64)>"
+    }
+  },
+  {
+    "id": "68719476815",
+    "attrs": {
+      "label": "<IDENTIFIER, 127<BR/>new_trap<BR/>new_trap = ldl_kernel(tss_base + 0x64)>"
+    }
+  },
+  {
+    "id": "30064771162",
+    "attrs": {
+      "label": "<ldl_kernel, 127<BR/>ldl_kernel(tss_base + 0x64)>"
+    }
+  },
+  {
+    "id": "30064771163",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 127<BR/>tss_base + 0x64>"
+    }
+  },
+  {
+    "id": "68719476816",
+    "attrs": {
+      "label": "<IDENTIFIER, 127<BR/>tss_base<BR/>tss_base + 0x64>"
+    }
+  },
+  {
+    "id": "90194313255",
+    "attrs": {
+      "label": "<LITERAL, 127<BR/>0x64<BR/>tss_base + 0x64>"
+    }
+  },
+  {
+    "id": "47244640271",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 129<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 129<BR/>{ /* 16 bit */ new_cr3 = 0; ...>"
+    }
+  },
+  {
+    "id": "30064771164",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 133<BR/>new_cr3 = 0>"
+    }
+  },
+  {
+    "id": "68719476817",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>new_cr3<BR/>new_cr3 = 0>"
+    }
+  },
+  {
+    "id": "90194313256",
+    "attrs": {
+      "label": "<LITERAL, 133<BR/>0<BR/>new_cr3 = 0>"
+    }
+  },
+  {
+    "id": "30064771165",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 135<BR/>new_eip = lduw_kernel(tss_base + 0x0e)>"
+    }
+  },
+  {
+    "id": "68719476818",
+    "attrs": {
+      "label": "<IDENTIFIER, 135<BR/>new_eip<BR/>new_eip = lduw_kernel(tss_base + 0x0e)>"
+    }
+  },
+  {
+    "id": "30064771166",
+    "attrs": {
+      "label": "<lduw_kernel, 135<BR/>lduw_kernel(tss_base + 0x0e)>"
+    }
+  },
+  {
+    "id": "30064771167",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 135<BR/>tss_base + 0x0e>"
+    }
+  },
+  {
+    "id": "68719476819",
+    "attrs": {
+      "label": "<IDENTIFIER, 135<BR/>tss_base<BR/>tss_base + 0x0e>"
+    }
+  },
+  {
+    "id": "90194313257",
+    "attrs": {
+      "label": "<LITERAL, 135<BR/>0x0e<BR/>tss_base + 0x0e>"
+    }
+  },
+  {
+    "id": "30064771168",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 137<BR/>new_eflags = lduw_kernel(tss_base + 0x10)>"
+    }
+  },
+  {
+    "id": "68719476820",
+    "attrs": {
+      "label": "<IDENTIFIER, 137<BR/>new_eflags<BR/>new_eflags = lduw_kernel(tss_base + 0x10)>"
+    }
+  },
+  {
+    "id": "30064771169",
+    "attrs": {
+      "label": "<lduw_kernel, 137<BR/>lduw_kernel(tss_base + 0x10)>"
+    }
+  },
+  {
+    "id": "30064771170",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 137<BR/>tss_base + 0x10>"
+    }
+  },
+  {
+    "id": "68719476821",
+    "attrs": {
+      "label": "<IDENTIFIER, 137<BR/>tss_base<BR/>tss_base + 0x10>"
+    }
+  },
+  {
+    "id": "90194313258",
+    "attrs": {
+      "label": "<LITERAL, 137<BR/>0x10<BR/>tss_base + 0x10>"
+    }
+  },
+  {
+    "id": "47244640272",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 139<BR/>FOR<BR/>for (i = 0;i &lt; 8;i++)>"
+    }
+  },
+  {
+    "id": "30064771171",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 139<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476822",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313259",
+    "attrs": {
+      "label": "<LITERAL, 139<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771172",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 139<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "68719476823",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>i<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "90194313260",
+    "attrs": {
+      "label": "<LITERAL, 139<BR/>8<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "30064771173",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 139<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476824",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771174",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 141<BR/>new_regs[i] = lduw_kernel(tss_base + (0x12 + i ...>"
+    }
+  },
+  {
+    "id": "30064771175",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 141<BR/>new_regs[i]>"
+    }
+  },
+  {
+    "id": "68719476825",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>new_regs<BR/>new_regs[i] = lduw_kernel(tss_base + (0x12 + i ...>"
+    }
+  },
+  {
+    "id": "68719476826",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>i<BR/>new_regs[i] = lduw_kernel(tss_base + (0x12 + i ...>"
+    }
+  },
+  {
+    "id": "30064771176",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 141<BR/>lduw_kernel(tss_base + (0x12 + i * 2)) | 0xffff...>"
+    }
+  },
+  {
+    "id": "30064771177",
+    "attrs": {
+      "label": "<lduw_kernel, 141<BR/>lduw_kernel(tss_base + (0x12 + i * 2))>"
+    }
+  },
+  {
+    "id": "30064771178",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 141<BR/>tss_base + (0x12 + i * 2)>"
+    }
+  },
+  {
+    "id": "68719476827",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>tss_base<BR/>tss_base + (0x12 + i * 2)>"
+    }
+  },
+  {
+    "id": "30064771179",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 141<BR/>0x12 + i * 2>"
+    }
+  },
+  {
+    "id": "90194313261",
+    "attrs": {
+      "label": "<LITERAL, 141<BR/>0x12<BR/>0x12 + i * 2>"
+    }
+  },
+  {
+    "id": "30064771180",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 141<BR/>i * 2>"
+    }
+  },
+  {
+    "id": "68719476828",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>i<BR/>i * 2>"
+    }
+  },
+  {
+    "id": "90194313262",
+    "attrs": {
+      "label": "<LITERAL, 141<BR/>2<BR/>i * 2>"
+    }
+  },
+  {
+    "id": "90194313263",
+    "attrs": {
+      "label": "<LITERAL, 141<BR/>0xffff0000<BR/>lduw_kernel(tss_base + (0x12 + i * 2)) | 0xffff...>"
+    }
+  },
+  {
+    "id": "47244640273",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 143<BR/>FOR<BR/>for (i = 0;i &lt; 4;i++)>"
+    }
+  },
+  {
+    "id": "30064771181",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 143<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476829",
+    "attrs": {
+      "label": "<IDENTIFIER, 143<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313264",
+    "attrs": {
+      "label": "<LITERAL, 143<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771182",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 143<BR/>i &lt; 4>"
+    }
+  },
+  {
+    "id": "68719476830",
+    "attrs": {
+      "label": "<IDENTIFIER, 143<BR/>i<BR/>i &lt; 4>"
+    }
+  },
+  {
+    "id": "90194313265",
+    "attrs": {
+      "label": "<LITERAL, 143<BR/>4<BR/>i &lt; 4>"
+    }
+  },
+  {
+    "id": "30064771183",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 143<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476831",
+    "attrs": {
+      "label": "<IDENTIFIER, 143<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771184",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 145<BR/>new_segs[i] = lduw_kernel(tss_base + (0x22 + i ...>"
+    }
+  },
+  {
+    "id": "30064771185",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 145<BR/>new_segs[i]>"
+    }
+  },
+  {
+    "id": "68719476832",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>new_segs<BR/>new_segs[i] = lduw_kernel(tss_base + (0x22 + i ...>"
+    }
+  },
+  {
+    "id": "68719476833",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>i<BR/>new_segs[i] = lduw_kernel(tss_base + (0x22 + i ...>"
+    }
+  },
+  {
+    "id": "30064771186",
+    "attrs": {
+      "label": "<lduw_kernel, 145<BR/>lduw_kernel(tss_base + (0x22 + i * 4))>"
+    }
+  },
+  {
+    "id": "30064771187",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 145<BR/>tss_base + (0x22 + i * 4)>"
+    }
+  },
+  {
+    "id": "68719476834",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>tss_base<BR/>tss_base + (0x22 + i * 4)>"
+    }
+  },
+  {
+    "id": "30064771188",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 145<BR/>0x22 + i * 4>"
+    }
+  },
+  {
+    "id": "90194313266",
+    "attrs": {
+      "label": "<LITERAL, 145<BR/>0x22<BR/>0x22 + i * 4>"
+    }
+  },
+  {
+    "id": "30064771189",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 145<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "68719476835",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>i<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "90194313267",
+    "attrs": {
+      "label": "<LITERAL, 145<BR/>4<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "30064771190",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 147<BR/>new_ldt = lduw_kernel(tss_base + 0x2a)>"
+    }
+  },
+  {
+    "id": "68719476836",
+    "attrs": {
+      "label": "<IDENTIFIER, 147<BR/>new_ldt<BR/>new_ldt = lduw_kernel(tss_base + 0x2a)>"
+    }
+  },
+  {
+    "id": "30064771191",
+    "attrs": {
+      "label": "<lduw_kernel, 147<BR/>lduw_kernel(tss_base + 0x2a)>"
+    }
+  },
+  {
+    "id": "30064771192",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 147<BR/>tss_base + 0x2a>"
+    }
+  },
+  {
+    "id": "68719476837",
+    "attrs": {
+      "label": "<IDENTIFIER, 147<BR/>tss_base<BR/>tss_base + 0x2a>"
+    }
+  },
+  {
+    "id": "90194313268",
+    "attrs": {
+      "label": "<LITERAL, 147<BR/>0x2a<BR/>tss_base + 0x2a>"
+    }
+  },
+  {
+    "id": "30064771193",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 149<BR/>new_segs[R_FS] = 0>"
+    }
+  },
+  {
+    "id": "30064771194",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 149<BR/>new_segs[R_FS]>"
+    }
+  },
+  {
+    "id": "68719476838",
+    "attrs": {
+      "label": "<IDENTIFIER, 149<BR/>new_segs<BR/>new_segs[R_FS] = 0>"
+    }
+  },
+  {
+    "id": "68719476839",
+    "attrs": {
+      "label": "<IDENTIFIER, 149<BR/>&lt;unknown&gt; R_FS<BR/>new_segs[R_FS] = 0>"
+    }
+  },
+  {
+    "id": "90194313269",
+    "attrs": {
+      "label": "<LITERAL, 149<BR/>0<BR/>new_segs[R_FS] = 0>"
+    }
+  },
+  {
+    "id": "30064771195",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 151<BR/>new_segs[R_GS] = 0>"
+    }
+  },
+  {
+    "id": "30064771196",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 151<BR/>new_segs[R_GS]>"
+    }
+  },
+  {
+    "id": "68719476840",
+    "attrs": {
+      "label": "<IDENTIFIER, 151<BR/>new_segs<BR/>new_segs[R_GS] = 0>"
+    }
+  },
+  {
+    "id": "68719476841",
+    "attrs": {
+      "label": "<IDENTIFIER, 151<BR/>&lt;unknown&gt; R_GS<BR/>new_segs[R_GS] = 0>"
+    }
+  },
+  {
+    "id": "90194313270",
+    "attrs": {
+      "label": "<LITERAL, 151<BR/>0<BR/>new_segs[R_GS] = 0>"
+    }
+  },
+  {
+    "id": "30064771197",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 153<BR/>new_trap = 0>"
+    }
+  },
+  {
+    "id": "68719476842",
+    "attrs": {
+      "label": "<IDENTIFIER, 153<BR/>new_trap<BR/>new_trap = 0>"
+    }
+  },
+  {
+    "id": "90194313271",
+    "attrs": {
+      "label": "<LITERAL, 153<BR/>0<BR/>new_trap = 0>"
+    }
+  },
+  {
+    "id": "30064771198",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 169<BR/>v1 = ldub_kernel(env-&gt;tr.base)>"
+    }
+  },
+  {
+    "id": "68719476843",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>v1<BR/>v1 = ldub_kernel(env-&gt;tr.base)>"
+    }
+  },
+  {
+    "id": "30064771199",
+    "attrs": {
+      "label": "<ldub_kernel, 169<BR/>ldub_kernel(env-&gt;tr.base)>"
+    }
+  },
+  {
+    "id": "30064771200",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 169<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771201",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 169<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476844",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>&lt;unknown&gt; env<BR/>ldub_kernel(env-&gt;tr.base)>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 169<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 169<BR/>base>"
+    }
+  },
+  {
+    "id": "30064771202",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 171<BR/>v2 = ldub(env-&gt;tr.base + old_tss_limit_max)>"
+    }
+  },
+  {
+    "id": "68719476845",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>v2<BR/>v2 = ldub(env-&gt;tr.base + old_tss_limit_max)>"
+    }
+  },
+  {
+    "id": "30064771203",
+    "attrs": {
+      "label": "<ldub, 171<BR/>ldub(env-&gt;tr.base + old_tss_limit_max)>"
+    }
+  },
+  {
+    "id": "30064771204",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 171<BR/>env-&gt;tr.base + old_tss_limit_max>"
+    }
+  },
+  {
+    "id": "30064771205",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 171<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771206",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 171<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476846",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + old_tss_limit_max>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 171<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 171<BR/>base>"
+    }
+  },
+  {
+    "id": "68719476847",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>old_tss_limit_max<BR/>env-&gt;tr.base + old_tss_limit_max>"
+    }
+  },
+  {
+    "id": "30064771207",
+    "attrs": {
+      "label": "<stb_kernel, 173<BR/>stb_kernel(env-&gt;tr.base, v1)>"
+    }
+  },
+  {
+    "id": "30064771208",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 173<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771209",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 173<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476848",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>&lt;unknown&gt; env<BR/>stb_kernel(env-&gt;tr.base, v1)>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 173<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 173<BR/>base>"
+    }
+  },
+  {
+    "id": "68719476849",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>v1<BR/>stb_kernel(env-&gt;tr.base, v1)>"
+    }
+  },
+  {
+    "id": "30064771210",
+    "attrs": {
+      "label": "<stb_kernel, 175<BR/>stb_kernel(env-&gt;tr.base + old_tss_limit_max, v2)>"
+    }
+  },
+  {
+    "id": "30064771211",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 175<BR/>env-&gt;tr.base + old_tss_limit_max>"
+    }
+  },
+  {
+    "id": "30064771212",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 175<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771213",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 175<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476850",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + old_tss_limit_max>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 175<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 175<BR/>base>"
+    }
+  },
+  {
+    "id": "68719476851",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>old_tss_limit_max<BR/>env-&gt;tr.base + old_tss_limit_max>"
+    }
+  },
+  {
+    "id": "68719476852",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>v2<BR/>stb_kernel(env-&gt;tr.base + old_tss_limit_max, v2)>"
+    }
+  },
+  {
+    "id": "47244640274",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 181<BR/>IF<BR/>if (source == SWITCH_TSS_JMP || source == SWITC...>"
+    }
+  },
+  {
+    "id": "30064771214",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalOr, 181<BR/>source == SWITCH_TSS_JMP || source == SWITCH_TS...>"
+    }
+  },
+  {
+    "id": "30064771215",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 181<BR/>source == SWITCH_TSS_JMP>"
+    }
+  },
+  {
+    "id": "68719476853",
+    "attrs": {
+      "label": "<IDENTIFIER, 181<BR/>source<BR/>source == SWITCH_TSS_JMP>"
+    }
+  },
+  {
+    "id": "68719476854",
+    "attrs": {
+      "label": "<IDENTIFIER, 181<BR/>&lt;unknown&gt; SWITCH_TSS_JMP<BR/>source == SWITCH_TSS_JMP>"
+    }
+  },
+  {
+    "id": "30064771216",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 181<BR/>source == SWITCH_TSS_IRET>"
+    }
+  },
+  {
+    "id": "68719476855",
+    "attrs": {
+      "label": "<IDENTIFIER, 181<BR/>source<BR/>source == SWITCH_TSS_IRET>"
+    }
+  },
+  {
+    "id": "68719476856",
+    "attrs": {
+      "label": "<IDENTIFIER, 181<BR/>&lt;unknown&gt; SWITCH_TSS_IRET<BR/>source == SWITCH_TSS_IRET>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 181<BR/>{ uint8_t *ptr; uint32_t e2; ...>"
+    }
+  },
+  {
+    "id": "30064771217",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 183<BR/>uint8_t *ptr>"
+    }
+  },
+  {
+    "id": "68719476857",
+    "attrs": {
+      "label": "<IDENTIFIER, 183<BR/>&lt;unknown&gt; uint8_t<BR/>uint8_t *ptr>"
+    }
+  },
+  {
+    "id": "68719476858",
+    "attrs": {
+      "label": "<IDENTIFIER, 183<BR/>ptr<BR/>uint8_t *ptr>"
+    }
+  },
+  {
+    "id": "94489280533",
+    "attrs": {
+      "label": "<LOCAL, 185<BR/>uint32_t e2: uint32_t>"
+    }
+  },
+  {
+    "id": "30064771218",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 187<BR/>ptr = env-&gt;gdt.base + (env-&gt;tr.selector &lt;&lt; 3)>"
+    }
+  },
+  {
+    "id": "68719476859",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>ptr<BR/>ptr = env-&gt;gdt.base + (env-&gt;tr.selector &lt;&lt; 3)>"
+    }
+  },
+  {
+    "id": "30064771219",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 187<BR/>env-&gt;gdt.base + (env-&gt;tr.selector &lt;&lt; 3)>"
+    }
+  },
+  {
+    "id": "30064771220",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 187<BR/>env-&gt;gdt.base>"
+    }
+  },
+  {
+    "id": "30064771221",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 187<BR/>env-&gt;gdt>"
+    }
+  },
+  {
+    "id": "68719476860",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>&lt;unknown&gt; env<BR/>env-&gt;gdt.base + (env-&gt;tr.selector &lt;&lt; 3)>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 187<BR/>gdt>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 187<BR/>base>"
+    }
+  },
+  {
+    "id": "30064771222",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 187<BR/>env-&gt;tr.selector &lt;&lt; 3>"
+    }
+  },
+  {
+    "id": "30064771223",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 187<BR/>env-&gt;tr.selector>"
+    }
+  },
+  {
+    "id": "30064771224",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 187<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476861",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.selector &lt;&lt; 3>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 187<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 187<BR/>selector>"
+    }
+  },
+  {
+    "id": "90194313272",
+    "attrs": {
+      "label": "<LITERAL, 187<BR/>3<BR/>env-&gt;tr.selector &lt;&lt; 3>"
+    }
+  },
+  {
+    "id": "30064771225",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 189<BR/>e2 = ldl_kernel(ptr + 4)>"
+    }
+  },
+  {
+    "id": "68719476862",
+    "attrs": {
+      "label": "<IDENTIFIER, 189<BR/>e2<BR/>e2 = ldl_kernel(ptr + 4)>"
+    }
+  },
+  {
+    "id": "30064771226",
+    "attrs": {
+      "label": "<ldl_kernel, 189<BR/>ldl_kernel(ptr + 4)>"
+    }
+  },
+  {
+    "id": "30064771227",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 189<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "68719476863",
+    "attrs": {
+      "label": "<IDENTIFIER, 189<BR/>ptr<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "90194313273",
+    "attrs": {
+      "label": "<LITERAL, 189<BR/>4<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "30064771228",
+    "attrs": {
+      "label": "<&lt;operators&gt;.assignmentAnd, 191<BR/>e2 &amp;= ~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "68719476864",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>e2<BR/>e2 &amp;= ~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "30064771229",
+    "attrs": {
+      "label": "<&lt;operator&gt;.not, 191<BR/>~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "68719476865",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>&lt;unknown&gt; DESC_TSS_BUSY_MASK<BR/>~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "30064771230",
+    "attrs": {
+      "label": "<stl_kernel, 193<BR/>stl_kernel(ptr + 4, e2)>"
+    }
+  },
+  {
+    "id": "30064771231",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 193<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "68719476866",
+    "attrs": {
+      "label": "<IDENTIFIER, 193<BR/>ptr<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "90194313274",
+    "attrs": {
+      "label": "<LITERAL, 193<BR/>4<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "68719476867",
+    "attrs": {
+      "label": "<IDENTIFIER, 193<BR/>e2<BR/>stl_kernel(ptr + 4, e2)>"
+    }
+  },
+  {
+    "id": "30064771232",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 197<BR/>old_eflags = compute_eflags()>"
+    }
+  },
+  {
+    "id": "68719476868",
+    "attrs": {
+      "label": "<IDENTIFIER, 197<BR/>old_eflags<BR/>old_eflags = compute_eflags()>"
+    }
+  },
+  {
+    "id": "30064771233",
+    "attrs": {
+      "label": "<compute_eflags, 197<BR/>compute_eflags()>"
+    }
+  },
+  {
+    "id": "47244640275",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 199<BR/>IF<BR/>if (source == SWITCH_TSS_IRET) old_efl...>"
+    }
+  },
+  {
+    "id": "30064771234",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 199<BR/>source == SWITCH_TSS_IRET>"
+    }
+  },
+  {
+    "id": "68719476869",
+    "attrs": {
+      "label": "<IDENTIFIER, 199<BR/>source<BR/>source == SWITCH_TSS_IRET>"
+    }
+  },
+  {
+    "id": "68719476870",
+    "attrs": {
+      "label": "<IDENTIFIER, 199<BR/>&lt;unknown&gt; SWITCH_TSS_IRET<BR/>source == SWITCH_TSS_IRET>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 201<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771235",
+    "attrs": {
+      "label": "<&lt;operators&gt;.assignmentAnd, 201<BR/>old_eflags &amp;= ~NT_MASK>"
+    }
+  },
+  {
+    "id": "68719476871",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>old_eflags<BR/>old_eflags &amp;= ~NT_MASK>"
+    }
+  },
+  {
+    "id": "30064771236",
+    "attrs": {
+      "label": "<&lt;operator&gt;.not, 201<BR/>~NT_MASK>"
+    }
+  },
+  {
+    "id": "68719476872",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>&lt;unknown&gt; NT_MASK<BR/>~NT_MASK>"
+    }
+  },
+  {
+    "id": "47244640276",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 207<BR/>IF<BR/>if (type &amp; 8) { /* 32 bit */ ...>"
+    }
+  },
+  {
+    "id": "30064771237",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 207<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "68719476873",
+    "attrs": {
+      "label": "<IDENTIFIER, 207<BR/>type<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "90194313275",
+    "attrs": {
+      "label": "<LITERAL, 207<BR/>8<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK, 207<BR/>{ /* 32 bit */ stl_kernel(env...>"
+    }
+  },
+  {
+    "id": "30064771238",
+    "attrs": {
+      "label": "<stl_kernel, 211<BR/>stl_kernel(env-&gt;tr.base + 0x20, env-&gt;eip)>"
+    }
+  },
+  {
+    "id": "30064771239",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 211<BR/>env-&gt;tr.base + 0x20>"
+    }
+  },
+  {
+    "id": "30064771240",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 211<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771241",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 211<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476874",
+    "attrs": {
+      "label": "<IDENTIFIER, 211<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + 0x20>"
+    }
+  },
+  {
+    "id": "55834574862",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 211<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574863",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 211<BR/>base>"
+    }
+  },
+  {
+    "id": "90194313276",
+    "attrs": {
+      "label": "<LITERAL, 211<BR/>0x20<BR/>env-&gt;tr.base + 0x20>"
+    }
+  },
+  {
+    "id": "30064771242",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 211<BR/>env-&gt;eip>"
+    }
+  },
+  {
+    "id": "68719476875",
+    "attrs": {
+      "label": "<IDENTIFIER, 211<BR/>&lt;unknown&gt; env<BR/>stl_kernel(env-&gt;tr.base + 0x20, env-&gt;eip)>"
+    }
+  },
+  {
+    "id": "55834574864",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 211<BR/>eip>"
+    }
+  },
+  {
+    "id": "30064771243",
+    "attrs": {
+      "label": "<stl_kernel, 213<BR/>stl_kernel(env-&gt;tr.base + 0x24, old_eflags)>"
+    }
+  },
+  {
+    "id": "30064771244",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 213<BR/>env-&gt;tr.base + 0x24>"
+    }
+  },
+  {
+    "id": "30064771245",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 213<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771246",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 213<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476876",
+    "attrs": {
+      "label": "<IDENTIFIER, 213<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + 0x24>"
+    }
+  },
+  {
+    "id": "55834574865",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 213<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574866",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 213<BR/>base>"
+    }
+  },
+  {
+    "id": "90194313277",
+    "attrs": {
+      "label": "<LITERAL, 213<BR/>0x24<BR/>env-&gt;tr.base + 0x24>"
+    }
+  },
+  {
+    "id": "68719476877",
+    "attrs": {
+      "label": "<IDENTIFIER, 213<BR/>old_eflags<BR/>stl_kernel(env-&gt;tr.base + 0x24, old_eflags)>"
+    }
+  },
+  {
+    "id": "47244640277",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 215<BR/>FOR<BR/>for (i = 0;i &lt; 8;i++)>"
+    }
+  },
+  {
+    "id": "30064771247",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 215<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476878",
+    "attrs": {
+      "label": "<IDENTIFIER, 215<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313278",
+    "attrs": {
+      "label": "<LITERAL, 215<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771248",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 215<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "68719476879",
+    "attrs": {
+      "label": "<IDENTIFIER, 215<BR/>i<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "90194313279",
+    "attrs": {
+      "label": "<LITERAL, 215<BR/>8<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "30064771249",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 215<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476880",
+    "attrs": {
+      "label": "<IDENTIFIER, 215<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771250",
+    "attrs": {
+      "label": "<stl_kernel, 217<BR/>stl_kernel(env-&gt;tr.base + (0x28 + i * 4), env-&gt;...>"
+    }
+  },
+  {
+    "id": "30064771251",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 217<BR/>env-&gt;tr.base + (0x28 + i * 4)>"
+    }
+  },
+  {
+    "id": "30064771252",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 217<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771253",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 217<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476881",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + (0x28 + i * 4)>"
+    }
+  },
+  {
+    "id": "55834574867",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 217<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574868",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 217<BR/>base>"
+    }
+  },
+  {
+    "id": "30064771254",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 217<BR/>0x28 + i * 4>"
+    }
+  },
+  {
+    "id": "90194313280",
+    "attrs": {
+      "label": "<LITERAL, 217<BR/>0x28<BR/>0x28 + i * 4>"
+    }
+  },
+  {
+    "id": "30064771255",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 217<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "68719476882",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>i<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "90194313281",
+    "attrs": {
+      "label": "<LITERAL, 217<BR/>4<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "30064771256",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 217<BR/>env-&gt;regs[i]>"
+    }
+  },
+  {
+    "id": "30064771257",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 217<BR/>env-&gt;regs>"
+    }
+  },
+  {
+    "id": "68719476883",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>&lt;unknown&gt; env<BR/>stl_kernel(env-&gt;tr.base + (0x28 + i * 4), env-&gt;...>"
+    }
+  },
+  {
+    "id": "55834574869",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 217<BR/>regs>"
+    }
+  },
+  {
+    "id": "68719476884",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>i<BR/>stl_kernel(env-&gt;tr.base + (0x28 + i * 4), env-&gt;...>"
+    }
+  },
+  {
+    "id": "47244640278",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 219<BR/>FOR<BR/>for (i = 0;i &lt; 6;i++)>"
+    }
+  },
+  {
+    "id": "30064771258",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 219<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476885",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313282",
+    "attrs": {
+      "label": "<LITERAL, 219<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771259",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 219<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "68719476886",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>i<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "90194313283",
+    "attrs": {
+      "label": "<LITERAL, 219<BR/>6<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "30064771260",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 219<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476887",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771261",
+    "attrs": {
+      "label": "<stw_kernel, 221<BR/>stw_kernel(env-&gt;tr.base + (0x48 + i * 4), env-&gt;...>"
+    }
+  },
+  {
+    "id": "30064771262",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 221<BR/>env-&gt;tr.base + (0x48 + i * 4)>"
+    }
+  },
+  {
+    "id": "30064771263",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 221<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771264",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 221<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476888",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + (0x48 + i * 4)>"
+    }
+  },
+  {
+    "id": "55834574870",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 221<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574871",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 221<BR/>base>"
+    }
+  },
+  {
+    "id": "30064771265",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 221<BR/>0x48 + i * 4>"
+    }
+  },
+  {
+    "id": "90194313284",
+    "attrs": {
+      "label": "<LITERAL, 221<BR/>0x48<BR/>0x48 + i * 4>"
+    }
+  },
+  {
+    "id": "30064771266",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 221<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "68719476889",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>i<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "90194313285",
+    "attrs": {
+      "label": "<LITERAL, 221<BR/>4<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "30064771267",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 221<BR/>env-&gt;segs[i].selector>"
+    }
+  },
+  {
+    "id": "30064771268",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 221<BR/>env-&gt;segs[i]>"
+    }
+  },
+  {
+    "id": "30064771269",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 221<BR/>env-&gt;segs>"
+    }
+  },
+  {
+    "id": "68719476890",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>&lt;unknown&gt; env<BR/>stw_kernel(env-&gt;tr.base + (0x48 + i * 4), env-&gt;...>"
+    }
+  },
+  {
+    "id": "55834574872",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 221<BR/>segs>"
+    }
+  },
+  {
+    "id": "68719476891",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>i<BR/>stw_kernel(env-&gt;tr.base + (0x48 + i * 4), env-&gt;...>"
+    }
+  },
+  {
+    "id": "55834574873",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 221<BR/>selector>"
+    }
+  },
+  {
+    "id": "47244640279",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 223<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK, 223<BR/>{ /* 16 bit */ stw_kernel(env...>"
+    }
+  },
+  {
+    "id": "30064771270",
+    "attrs": {
+      "label": "<stw_kernel, 227<BR/>stw_kernel(env-&gt;tr.base + 0x0e, new_eip)>"
+    }
+  },
+  {
+    "id": "30064771271",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 227<BR/>env-&gt;tr.base + 0x0e>"
+    }
+  },
+  {
+    "id": "30064771272",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 227<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771273",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 227<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476892",
+    "attrs": {
+      "label": "<IDENTIFIER, 227<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + 0x0e>"
+    }
+  },
+  {
+    "id": "55834574874",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 227<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574875",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 227<BR/>base>"
+    }
+  },
+  {
+    "id": "90194313286",
+    "attrs": {
+      "label": "<LITERAL, 227<BR/>0x0e<BR/>env-&gt;tr.base + 0x0e>"
+    }
+  },
+  {
+    "id": "68719476893",
+    "attrs": {
+      "label": "<IDENTIFIER, 227<BR/>new_eip<BR/>stw_kernel(env-&gt;tr.base + 0x0e, new_eip)>"
+    }
+  },
+  {
+    "id": "30064771274",
+    "attrs": {
+      "label": "<stw_kernel, 229<BR/>stw_kernel(env-&gt;tr.base + 0x10, old_eflags)>"
+    }
+  },
+  {
+    "id": "30064771275",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 229<BR/>env-&gt;tr.base + 0x10>"
+    }
+  },
+  {
+    "id": "30064771276",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 229<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771277",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 229<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476894",
+    "attrs": {
+      "label": "<IDENTIFIER, 229<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + 0x10>"
+    }
+  },
+  {
+    "id": "55834574876",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 229<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574877",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 229<BR/>base>"
+    }
+  },
+  {
+    "id": "90194313287",
+    "attrs": {
+      "label": "<LITERAL, 229<BR/>0x10<BR/>env-&gt;tr.base + 0x10>"
+    }
+  },
+  {
+    "id": "68719476895",
+    "attrs": {
+      "label": "<IDENTIFIER, 229<BR/>old_eflags<BR/>stw_kernel(env-&gt;tr.base + 0x10, old_eflags)>"
+    }
+  },
+  {
+    "id": "47244640280",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 231<BR/>FOR<BR/>for (i = 0;i &lt; 8;i++)>"
+    }
+  },
+  {
+    "id": "30064771278",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 231<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476896",
+    "attrs": {
+      "label": "<IDENTIFIER, 231<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313288",
+    "attrs": {
+      "label": "<LITERAL, 231<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771279",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 231<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "68719476897",
+    "attrs": {
+      "label": "<IDENTIFIER, 231<BR/>i<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "90194313289",
+    "attrs": {
+      "label": "<LITERAL, 231<BR/>8<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "30064771280",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 231<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476898",
+    "attrs": {
+      "label": "<IDENTIFIER, 231<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771281",
+    "attrs": {
+      "label": "<stw_kernel, 233<BR/>stw_kernel(env-&gt;tr.base + (0x12 + i * 2), env-&gt;...>"
+    }
+  },
+  {
+    "id": "30064771282",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 233<BR/>env-&gt;tr.base + (0x12 + i * 2)>"
+    }
+  },
+  {
+    "id": "30064771283",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 233<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771284",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 233<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476899",
+    "attrs": {
+      "label": "<IDENTIFIER, 233<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + (0x12 + i * 2)>"
+    }
+  },
+  {
+    "id": "55834574878",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 233<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574879",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 233<BR/>base>"
+    }
+  },
+  {
+    "id": "30064771285",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 233<BR/>0x12 + i * 2>"
+    }
+  },
+  {
+    "id": "90194313290",
+    "attrs": {
+      "label": "<LITERAL, 233<BR/>0x12<BR/>0x12 + i * 2>"
+    }
+  },
+  {
+    "id": "30064771286",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 233<BR/>i * 2>"
+    }
+  },
+  {
+    "id": "68719476900",
+    "attrs": {
+      "label": "<IDENTIFIER, 233<BR/>i<BR/>i * 2>"
+    }
+  },
+  {
+    "id": "90194313291",
+    "attrs": {
+      "label": "<LITERAL, 233<BR/>2<BR/>i * 2>"
+    }
+  },
+  {
+    "id": "30064771287",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 233<BR/>env-&gt;regs[i]>"
+    }
+  },
+  {
+    "id": "30064771288",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 233<BR/>env-&gt;regs>"
+    }
+  },
+  {
+    "id": "68719476901",
+    "attrs": {
+      "label": "<IDENTIFIER, 233<BR/>&lt;unknown&gt; env<BR/>stw_kernel(env-&gt;tr.base + (0x12 + i * 2), env-&gt;...>"
+    }
+  },
+  {
+    "id": "55834574880",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 233<BR/>regs>"
+    }
+  },
+  {
+    "id": "68719476902",
+    "attrs": {
+      "label": "<IDENTIFIER, 233<BR/>i<BR/>stw_kernel(env-&gt;tr.base + (0x12 + i * 2), env-&gt;...>"
+    }
+  },
+  {
+    "id": "47244640281",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 235<BR/>FOR<BR/>for (i = 0;i &lt; 4;i++)>"
+    }
+  },
+  {
+    "id": "30064771289",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 235<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476903",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313292",
+    "attrs": {
+      "label": "<LITERAL, 235<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771290",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 235<BR/>i &lt; 4>"
+    }
+  },
+  {
+    "id": "68719476904",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>i<BR/>i &lt; 4>"
+    }
+  },
+  {
+    "id": "90194313293",
+    "attrs": {
+      "label": "<LITERAL, 235<BR/>4<BR/>i &lt; 4>"
+    }
+  },
+  {
+    "id": "30064771291",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 235<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476905",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771292",
+    "attrs": {
+      "label": "<stw_kernel, 237<BR/>stw_kernel(env-&gt;tr.base + (0x22 + i * 4), env-&gt;...>"
+    }
+  },
+  {
+    "id": "30064771293",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 237<BR/>env-&gt;tr.base + (0x22 + i * 4)>"
+    }
+  },
+  {
+    "id": "30064771294",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 237<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771295",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 237<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476906",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base + (0x22 + i * 4)>"
+    }
+  },
+  {
+    "id": "55834574881",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 237<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574882",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 237<BR/>base>"
+    }
+  },
+  {
+    "id": "30064771296",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 237<BR/>0x22 + i * 4>"
+    }
+  },
+  {
+    "id": "90194313294",
+    "attrs": {
+      "label": "<LITERAL, 237<BR/>0x22<BR/>0x22 + i * 4>"
+    }
+  },
+  {
+    "id": "30064771297",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 237<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "68719476907",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>i<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "90194313295",
+    "attrs": {
+      "label": "<LITERAL, 237<BR/>4<BR/>i * 4>"
+    }
+  },
+  {
+    "id": "30064771298",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 237<BR/>env-&gt;segs[i].selector>"
+    }
+  },
+  {
+    "id": "30064771299",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 237<BR/>env-&gt;segs[i]>"
+    }
+  },
+  {
+    "id": "30064771300",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 237<BR/>env-&gt;segs>"
+    }
+  },
+  {
+    "id": "68719476908",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>&lt;unknown&gt; env<BR/>stw_kernel(env-&gt;tr.base + (0x22 + i * 4), env-&gt;...>"
+    }
+  },
+  {
+    "id": "55834574883",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 237<BR/>segs>"
+    }
+  },
+  {
+    "id": "68719476909",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>i<BR/>stw_kernel(env-&gt;tr.base + (0x22 + i * 4), env-&gt;...>"
+    }
+  },
+  {
+    "id": "55834574884",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 237<BR/>selector>"
+    }
+  },
+  {
+    "id": "47244640282",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 249<BR/>IF<BR/>if (source == SWITCH_TSS_CALL) { stw_k...>"
+    }
+  },
+  {
+    "id": "30064771301",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 249<BR/>source == SWITCH_TSS_CALL>"
+    }
+  },
+  {
+    "id": "68719476910",
+    "attrs": {
+      "label": "<IDENTIFIER, 249<BR/>source<BR/>source == SWITCH_TSS_CALL>"
+    }
+  },
+  {
+    "id": "68719476911",
+    "attrs": {
+      "label": "<IDENTIFIER, 249<BR/>&lt;unknown&gt; SWITCH_TSS_CALL<BR/>source == SWITCH_TSS_CALL>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK, 249<BR/>{ stw_kernel(tss_base, env-&gt;tr.selecto...>"
+    }
+  },
+  {
+    "id": "30064771302",
+    "attrs": {
+      "label": "<stw_kernel, 251<BR/>stw_kernel(tss_base, env-&gt;tr.selector)>"
+    }
+  },
+  {
+    "id": "68719476912",
+    "attrs": {
+      "label": "<IDENTIFIER, 251<BR/>tss_base<BR/>stw_kernel(tss_base, env-&gt;tr.selector)>"
+    }
+  },
+  {
+    "id": "30064771303",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 251<BR/>env-&gt;tr.selector>"
+    }
+  },
+  {
+    "id": "30064771304",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 251<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476913",
+    "attrs": {
+      "label": "<IDENTIFIER, 251<BR/>&lt;unknown&gt; env<BR/>stw_kernel(tss_base, env-&gt;tr.selector)>"
+    }
+  },
+  {
+    "id": "55834574885",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 251<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574886",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 251<BR/>selector>"
+    }
+  },
+  {
+    "id": "30064771305",
+    "attrs": {
+      "label": "<&lt;operators&gt;.assignmentOr, 253<BR/>new_eflags |= NT_MASK>"
+    }
+  },
+  {
+    "id": "68719476914",
+    "attrs": {
+      "label": "<IDENTIFIER, 253<BR/>new_eflags<BR/>new_eflags |= NT_MASK>"
+    }
+  },
+  {
+    "id": "68719476915",
+    "attrs": {
+      "label": "<IDENTIFIER, 253<BR/>&lt;unknown&gt; NT_MASK<BR/>new_eflags |= NT_MASK>"
+    }
+  },
+  {
+    "id": "47244640283",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 261<BR/>IF<BR/>if (source == SWITCH_TSS_JMP || source == SWITC...>"
+    }
+  },
+  {
+    "id": "30064771306",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalOr, 261<BR/>source == SWITCH_TSS_JMP || source == SWITCH_TS...>"
+    }
+  },
+  {
+    "id": "30064771307",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 261<BR/>source == SWITCH_TSS_JMP>"
+    }
+  },
+  {
+    "id": "68719476916",
+    "attrs": {
+      "label": "<IDENTIFIER, 261<BR/>source<BR/>source == SWITCH_TSS_JMP>"
+    }
+  },
+  {
+    "id": "68719476917",
+    "attrs": {
+      "label": "<IDENTIFIER, 261<BR/>&lt;unknown&gt; SWITCH_TSS_JMP<BR/>source == SWITCH_TSS_JMP>"
+    }
+  },
+  {
+    "id": "30064771308",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 261<BR/>source == SWITCH_TSS_CALL>"
+    }
+  },
+  {
+    "id": "68719476918",
+    "attrs": {
+      "label": "<IDENTIFIER, 261<BR/>source<BR/>source == SWITCH_TSS_CALL>"
+    }
+  },
+  {
+    "id": "68719476919",
+    "attrs": {
+      "label": "<IDENTIFIER, 261<BR/>&lt;unknown&gt; SWITCH_TSS_CALL<BR/>source == SWITCH_TSS_CALL>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK, 261<BR/>{ uint8_t *ptr; uint32_t e2; ...>"
+    }
+  },
+  {
+    "id": "30064771309",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 263<BR/>uint8_t *ptr>"
+    }
+  },
+  {
+    "id": "68719476920",
+    "attrs": {
+      "label": "<IDENTIFIER, 263<BR/>&lt;unknown&gt; uint8_t<BR/>uint8_t *ptr>"
+    }
+  },
+  {
+    "id": "68719476921",
+    "attrs": {
+      "label": "<IDENTIFIER, 263<BR/>ptr<BR/>uint8_t *ptr>"
+    }
+  },
+  {
+    "id": "94489280534",
+    "attrs": {
+      "label": "<LOCAL, 265<BR/>uint32_t e2: uint32_t>"
+    }
+  },
+  {
+    "id": "30064771310",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 267<BR/>ptr = env-&gt;gdt.base + (tss_selector &lt;&lt; 3)>"
+    }
+  },
+  {
+    "id": "68719476922",
+    "attrs": {
+      "label": "<IDENTIFIER, 267<BR/>ptr<BR/>ptr = env-&gt;gdt.base + (tss_selector &lt;&lt; 3)>"
+    }
+  },
+  {
+    "id": "30064771311",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 267<BR/>env-&gt;gdt.base + (tss_selector &lt;&lt; 3)>"
+    }
+  },
+  {
+    "id": "30064771312",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 267<BR/>env-&gt;gdt.base>"
+    }
+  },
+  {
+    "id": "30064771313",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 267<BR/>env-&gt;gdt>"
+    }
+  },
+  {
+    "id": "68719476923",
+    "attrs": {
+      "label": "<IDENTIFIER, 267<BR/>&lt;unknown&gt; env<BR/>env-&gt;gdt.base + (tss_selector &lt;&lt; 3)>"
+    }
+  },
+  {
+    "id": "55834574887",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 267<BR/>gdt>"
+    }
+  },
+  {
+    "id": "55834574888",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 267<BR/>base>"
+    }
+  },
+  {
+    "id": "30064771314",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 267<BR/>tss_selector &lt;&lt; 3>"
+    }
+  },
+  {
+    "id": "68719476924",
+    "attrs": {
+      "label": "<IDENTIFIER, 267<BR/>tss_selector<BR/>tss_selector &lt;&lt; 3>"
+    }
+  },
+  {
+    "id": "90194313296",
+    "attrs": {
+      "label": "<LITERAL, 267<BR/>3<BR/>tss_selector &lt;&lt; 3>"
+    }
+  },
+  {
+    "id": "30064771315",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 269<BR/>e2 = ldl_kernel(ptr + 4)>"
+    }
+  },
+  {
+    "id": "68719476925",
+    "attrs": {
+      "label": "<IDENTIFIER, 269<BR/>e2<BR/>e2 = ldl_kernel(ptr + 4)>"
+    }
+  },
+  {
+    "id": "30064771316",
+    "attrs": {
+      "label": "<ldl_kernel, 269<BR/>ldl_kernel(ptr + 4)>"
+    }
+  },
+  {
+    "id": "30064771317",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 269<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "68719476926",
+    "attrs": {
+      "label": "<IDENTIFIER, 269<BR/>ptr<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "90194313297",
+    "attrs": {
+      "label": "<LITERAL, 269<BR/>4<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "30064771318",
+    "attrs": {
+      "label": "<&lt;operators&gt;.assignmentOr, 271<BR/>e2 |= DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "68719476927",
+    "attrs": {
+      "label": "<IDENTIFIER, 271<BR/>e2<BR/>e2 |= DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "68719476928",
+    "attrs": {
+      "label": "<IDENTIFIER, 271<BR/>&lt;unknown&gt; DESC_TSS_BUSY_MASK<BR/>e2 |= DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "30064771319",
+    "attrs": {
+      "label": "<stl_kernel, 273<BR/>stl_kernel(ptr + 4, e2)>"
+    }
+  },
+  {
+    "id": "30064771320",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 273<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "68719476929",
+    "attrs": {
+      "label": "<IDENTIFIER, 273<BR/>ptr<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "90194313298",
+    "attrs": {
+      "label": "<LITERAL, 273<BR/>4<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "68719476930",
+    "attrs": {
+      "label": "<IDENTIFIER, 273<BR/>e2<BR/>stl_kernel(ptr + 4, e2)>"
+    }
+  },
+  {
+    "id": "30064771321",
+    "attrs": {
+      "label": "<&lt;operators&gt;.assignmentOr, 283<BR/>env-&gt;cr[0] |= CR0_TS_MASK>"
+    }
+  },
+  {
+    "id": "30064771322",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 283<BR/>env-&gt;cr[0]>"
+    }
+  },
+  {
+    "id": "30064771323",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 283<BR/>env-&gt;cr>"
+    }
+  },
+  {
+    "id": "68719476931",
+    "attrs": {
+      "label": "<IDENTIFIER, 283<BR/>&lt;unknown&gt; env<BR/>env-&gt;cr[0] |= CR0_TS_MASK>"
+    }
+  },
+  {
+    "id": "55834574889",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 283<BR/>cr>"
+    }
+  },
+  {
+    "id": "90194313299",
+    "attrs": {
+      "label": "<LITERAL, 283<BR/>0<BR/>env-&gt;cr[0] |= CR0_TS_MASK>"
+    }
+  },
+  {
+    "id": "68719476932",
+    "attrs": {
+      "label": "<IDENTIFIER, 283<BR/>&lt;unknown&gt; CR0_TS_MASK<BR/>env-&gt;cr[0] |= CR0_TS_MASK>"
+    }
+  },
+  {
+    "id": "30064771324",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 285<BR/>env-&gt;tr.selector = tss_selector>"
+    }
+  },
+  {
+    "id": "30064771325",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 285<BR/>env-&gt;tr.selector>"
+    }
+  },
+  {
+    "id": "30064771326",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 285<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476933",
+    "attrs": {
+      "label": "<IDENTIFIER, 285<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.selector = tss_selector>"
+    }
+  },
+  {
+    "id": "55834574890",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 285<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574891",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 285<BR/>selector>"
+    }
+  },
+  {
+    "id": "68719476934",
+    "attrs": {
+      "label": "<IDENTIFIER, 285<BR/>tss_selector<BR/>env-&gt;tr.selector = tss_selector>"
+    }
+  },
+  {
+    "id": "30064771327",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 287<BR/>env-&gt;tr.base = tss_base>"
+    }
+  },
+  {
+    "id": "30064771328",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 287<BR/>env-&gt;tr.base>"
+    }
+  },
+  {
+    "id": "30064771329",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 287<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476935",
+    "attrs": {
+      "label": "<IDENTIFIER, 287<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.base = tss_base>"
+    }
+  },
+  {
+    "id": "55834574892",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 287<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574893",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 287<BR/>base>"
+    }
+  },
+  {
+    "id": "68719476936",
+    "attrs": {
+      "label": "<IDENTIFIER, 287<BR/>tss_base<BR/>env-&gt;tr.base = tss_base>"
+    }
+  },
+  {
+    "id": "30064771330",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 289<BR/>env-&gt;tr.limit = tss_limit>"
+    }
+  },
+  {
+    "id": "30064771331",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 289<BR/>env-&gt;tr.limit>"
+    }
+  },
+  {
+    "id": "30064771332",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 289<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476937",
+    "attrs": {
+      "label": "<IDENTIFIER, 289<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.limit = tss_limit>"
+    }
+  },
+  {
+    "id": "55834574894",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 289<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574895",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 289<BR/>limit>"
+    }
+  },
+  {
+    "id": "68719476938",
+    "attrs": {
+      "label": "<IDENTIFIER, 289<BR/>tss_limit<BR/>env-&gt;tr.limit = tss_limit>"
+    }
+  },
+  {
+    "id": "30064771333",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 291<BR/>env-&gt;tr.flags = e2 &amp; ~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "30064771334",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 291<BR/>env-&gt;tr.flags>"
+    }
+  },
+  {
+    "id": "30064771335",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 291<BR/>env-&gt;tr>"
+    }
+  },
+  {
+    "id": "68719476939",
+    "attrs": {
+      "label": "<IDENTIFIER, 291<BR/>&lt;unknown&gt; env<BR/>env-&gt;tr.flags = e2 &amp; ~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "55834574896",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 291<BR/>tr>"
+    }
+  },
+  {
+    "id": "55834574897",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 291<BR/>flags>"
+    }
+  },
+  {
+    "id": "30064771336",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 291<BR/>e2 &amp; ~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "68719476940",
+    "attrs": {
+      "label": "<IDENTIFIER, 291<BR/>e2<BR/>e2 &amp; ~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "30064771337",
+    "attrs": {
+      "label": "<&lt;operator&gt;.not, 291<BR/>~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "68719476941",
+    "attrs": {
+      "label": "<IDENTIFIER, 291<BR/>&lt;unknown&gt; DESC_TSS_BUSY_MASK<BR/>~DESC_TSS_BUSY_MASK>"
+    }
+  },
+  {
+    "id": "47244640284",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 295<BR/>IF<BR/>if ((type &amp; 8) &amp;&amp; (env-&gt;cr[0] &amp; CR0_PG_MASK)) {...>"
+    }
+  },
+  {
+    "id": "30064771338",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalAnd, 295<BR/>(type &amp; 8) &amp;&amp; (env-&gt;cr[0] &amp; CR0_PG_MASK)>"
+    }
+  },
+  {
+    "id": "30064771339",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 295<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "68719476942",
+    "attrs": {
+      "label": "<IDENTIFIER, 295<BR/>type<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "90194313300",
+    "attrs": {
+      "label": "<LITERAL, 295<BR/>8<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "30064771340",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 295<BR/>env-&gt;cr[0] &amp; CR0_PG_MASK>"
+    }
+  },
+  {
+    "id": "30064771341",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 295<BR/>env-&gt;cr[0]>"
+    }
+  },
+  {
+    "id": "30064771342",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 295<BR/>env-&gt;cr>"
+    }
+  },
+  {
+    "id": "68719476943",
+    "attrs": {
+      "label": "<IDENTIFIER, 295<BR/>&lt;unknown&gt; env<BR/>env-&gt;cr[0] &amp; CR0_PG_MASK>"
+    }
+  },
+  {
+    "id": "55834574898",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 295<BR/>cr>"
+    }
+  },
+  {
+    "id": "90194313301",
+    "attrs": {
+      "label": "<LITERAL, 295<BR/>0<BR/>env-&gt;cr[0] &amp; CR0_PG_MASK>"
+    }
+  },
+  {
+    "id": "68719476944",
+    "attrs": {
+      "label": "<IDENTIFIER, 295<BR/>&lt;unknown&gt; CR0_PG_MASK<BR/>env-&gt;cr[0] &amp; CR0_PG_MASK>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK, 295<BR/>{ env-&gt;cr[3] = new_cr3; cpu_x...>"
+    }
+  },
+  {
+    "id": "30064771343",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 297<BR/>env-&gt;cr[3] = new_cr3>"
+    }
+  },
+  {
+    "id": "30064771344",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 297<BR/>env-&gt;cr[3]>"
+    }
+  },
+  {
+    "id": "30064771345",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 297<BR/>env-&gt;cr>"
+    }
+  },
+  {
+    "id": "68719476945",
+    "attrs": {
+      "label": "<IDENTIFIER, 297<BR/>&lt;unknown&gt; env<BR/>env-&gt;cr[3] = new_cr3>"
+    }
+  },
+  {
+    "id": "55834574899",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 297<BR/>cr>"
+    }
+  },
+  {
+    "id": "90194313302",
+    "attrs": {
+      "label": "<LITERAL, 297<BR/>3<BR/>env-&gt;cr[3] = new_cr3>"
+    }
+  },
+  {
+    "id": "68719476946",
+    "attrs": {
+      "label": "<IDENTIFIER, 297<BR/>new_cr3<BR/>env-&gt;cr[3] = new_cr3>"
+    }
+  },
+  {
+    "id": "30064771346",
+    "attrs": {
+      "label": "<cpu_x86_update_cr3, 299<BR/>cpu_x86_update_cr3(env)>"
+    }
+  },
+  {
+    "id": "68719476947",
+    "attrs": {
+      "label": "<IDENTIFIER, 299<BR/>&lt;unknown&gt; env<BR/>cpu_x86_update_cr3(env)>"
+    }
+  },
+  {
+    "id": "30064771347",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 309<BR/>env-&gt;eip = new_eip>"
+    }
+  },
+  {
+    "id": "30064771348",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 309<BR/>env-&gt;eip>"
+    }
+  },
+  {
+    "id": "68719476948",
+    "attrs": {
+      "label": "<IDENTIFIER, 309<BR/>&lt;unknown&gt; env<BR/>env-&gt;eip = new_eip>"
+    }
+  },
+  {
+    "id": "55834574900",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 309<BR/>eip>"
+    }
+  },
+  {
+    "id": "68719476949",
+    "attrs": {
+      "label": "<IDENTIFIER, 309<BR/>new_eip<BR/>env-&gt;eip = new_eip>"
+    }
+  },
+  {
+    "id": "30064771349",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 311<BR/>eflags_mask = TF_MASK | AC_MASK | ID_MASK | ...>"
+    }
+  },
+  {
+    "id": "68719476950",
+    "attrs": {
+      "label": "<IDENTIFIER, 311<BR/>eflags_mask<BR/>eflags_mask = TF_MASK | AC_MASK | ID_MASK | ...>"
+    }
+  },
+  {
+    "id": "30064771350",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 311<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK...>"
+    }
+  },
+  {
+    "id": "30064771351",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 311<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK...>"
+    }
+  },
+  {
+    "id": "30064771352",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 311<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK...>"
+    }
+  },
+  {
+    "id": "30064771353",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 311<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK...>"
+    }
+  },
+  {
+    "id": "30064771354",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 311<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK>"
+    }
+  },
+  {
+    "id": "30064771355",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 311<BR/>TF_MASK | AC_MASK | ID_MASK>"
+    }
+  },
+  {
+    "id": "30064771356",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 311<BR/>TF_MASK | AC_MASK>"
+    }
+  },
+  {
+    "id": "68719476951",
+    "attrs": {
+      "label": "<IDENTIFIER, 311<BR/>&lt;unknown&gt; TF_MASK<BR/>TF_MASK | AC_MASK>"
+    }
+  },
+  {
+    "id": "68719476952",
+    "attrs": {
+      "label": "<IDENTIFIER, 311<BR/>&lt;unknown&gt; AC_MASK<BR/>TF_MASK | AC_MASK>"
+    }
+  },
+  {
+    "id": "68719476953",
+    "attrs": {
+      "label": "<IDENTIFIER, 311<BR/>&lt;unknown&gt; ID_MASK<BR/>TF_MASK | AC_MASK | ID_MASK>"
+    }
+  },
+  {
+    "id": "68719476954",
+    "attrs": {
+      "label": "<IDENTIFIER, 313<BR/>&lt;unknown&gt; IF_MASK<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK>"
+    }
+  },
+  {
+    "id": "68719476955",
+    "attrs": {
+      "label": "<IDENTIFIER, 313<BR/>&lt;unknown&gt; IOPL_MASK<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK...>"
+    }
+  },
+  {
+    "id": "68719476956",
+    "attrs": {
+      "label": "<IDENTIFIER, 313<BR/>&lt;unknown&gt; VM_MASK<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK...>"
+    }
+  },
+  {
+    "id": "68719476957",
+    "attrs": {
+      "label": "<IDENTIFIER, 313<BR/>&lt;unknown&gt; RF_MASK<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK...>"
+    }
+  },
+  {
+    "id": "68719476958",
+    "attrs": {
+      "label": "<IDENTIFIER, 313<BR/>&lt;unknown&gt; NT_MASK<BR/>TF_MASK | AC_MASK | ID_MASK | IF_MASK...>"
+    }
+  },
+  {
+    "id": "47244640285",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 315<BR/>IF<BR/>if (!(type &amp; 8)) eflags_mask &amp;= 0xffff;>"
+    }
+  },
+  {
+    "id": "30064771357",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 315<BR/>!(type &amp; 8)>"
+    }
+  },
+  {
+    "id": "30064771358",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 315<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "68719476959",
+    "attrs": {
+      "label": "<IDENTIFIER, 315<BR/>type<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "90194313303",
+    "attrs": {
+      "label": "<LITERAL, 315<BR/>8<BR/>type &amp; 8>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK, 317<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771359",
+    "attrs": {
+      "label": "<&lt;operators&gt;.assignmentAnd, 317<BR/>eflags_mask &amp;= 0xffff>"
+    }
+  },
+  {
+    "id": "68719476960",
+    "attrs": {
+      "label": "<IDENTIFIER, 317<BR/>eflags_mask<BR/>eflags_mask &amp;= 0xffff>"
+    }
+  },
+  {
+    "id": "90194313304",
+    "attrs": {
+      "label": "<LITERAL, 317<BR/>0xffff<BR/>eflags_mask &amp;= 0xffff>"
+    }
+  },
+  {
+    "id": "30064771360",
+    "attrs": {
+      "label": "<load_eflags, 319<BR/>load_eflags(new_eflags, eflags_mask)>"
+    }
+  },
+  {
+    "id": "68719476961",
+    "attrs": {
+      "label": "<IDENTIFIER, 319<BR/>new_eflags<BR/>load_eflags(new_eflags, eflags_mask)>"
+    }
+  },
+  {
+    "id": "68719476962",
+    "attrs": {
+      "label": "<IDENTIFIER, 319<BR/>eflags_mask<BR/>load_eflags(new_eflags, eflags_mask)>"
+    }
+  },
+  {
+    "id": "47244640286",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 321<BR/>FOR<BR/>for (i = 0;i &lt; 8;i++)>"
+    }
+  },
+  {
+    "id": "30064771361",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 321<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476963",
+    "attrs": {
+      "label": "<IDENTIFIER, 321<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313305",
+    "attrs": {
+      "label": "<LITERAL, 321<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771362",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 321<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "68719476964",
+    "attrs": {
+      "label": "<IDENTIFIER, 321<BR/>i<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "90194313306",
+    "attrs": {
+      "label": "<LITERAL, 321<BR/>8<BR/>i &lt; 8>"
+    }
+  },
+  {
+    "id": "30064771363",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 321<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476965",
+    "attrs": {
+      "label": "<IDENTIFIER, 321<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771364",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 323<BR/>env-&gt;regs[i] = new_regs[i]>"
+    }
+  },
+  {
+    "id": "30064771365",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 323<BR/>env-&gt;regs[i]>"
+    }
+  },
+  {
+    "id": "30064771366",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 323<BR/>env-&gt;regs>"
+    }
+  },
+  {
+    "id": "68719476966",
+    "attrs": {
+      "label": "<IDENTIFIER, 323<BR/>&lt;unknown&gt; env<BR/>env-&gt;regs[i] = new_regs[i]>"
+    }
+  },
+  {
+    "id": "55834574901",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 323<BR/>regs>"
+    }
+  },
+  {
+    "id": "68719476967",
+    "attrs": {
+      "label": "<IDENTIFIER, 323<BR/>i<BR/>env-&gt;regs[i] = new_regs[i]>"
+    }
+  },
+  {
+    "id": "30064771367",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 323<BR/>new_regs[i]>"
+    }
+  },
+  {
+    "id": "68719476968",
+    "attrs": {
+      "label": "<IDENTIFIER, 323<BR/>new_regs<BR/>env-&gt;regs[i] = new_regs[i]>"
+    }
+  },
+  {
+    "id": "68719476969",
+    "attrs": {
+      "label": "<IDENTIFIER, 323<BR/>i<BR/>env-&gt;regs[i] = new_regs[i]>"
+    }
+  },
+  {
+    "id": "47244640287",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 325<BR/>IF<BR/>if (new_eflags &amp; VM_MASK) { for(i = 0;...>"
+    }
+  },
+  {
+    "id": "30064771368",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 325<BR/>new_eflags &amp; VM_MASK>"
+    }
+  },
+  {
+    "id": "68719476970",
+    "attrs": {
+      "label": "<IDENTIFIER, 325<BR/>new_eflags<BR/>new_eflags &amp; VM_MASK>"
+    }
+  },
+  {
+    "id": "68719476971",
+    "attrs": {
+      "label": "<IDENTIFIER, 325<BR/>&lt;unknown&gt; VM_MASK<BR/>new_eflags &amp; VM_MASK>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK, 325<BR/>{ for(i = 0; i &lt; 6; i++) ...>"
+    }
+  },
+  {
+    "id": "47244640288",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 327<BR/>FOR<BR/>for (i = 0;i &lt; 6;i++)>"
+    }
+  },
+  {
+    "id": "30064771369",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 327<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476972",
+    "attrs": {
+      "label": "<IDENTIFIER, 327<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313307",
+    "attrs": {
+      "label": "<LITERAL, 327<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771370",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 327<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "68719476973",
+    "attrs": {
+      "label": "<IDENTIFIER, 327<BR/>i<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "90194313308",
+    "attrs": {
+      "label": "<LITERAL, 327<BR/>6<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "30064771371",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 327<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476974",
+    "attrs": {
+      "label": "<IDENTIFIER, 327<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771372",
+    "attrs": {
+      "label": "<load_seg_vm, 329<BR/>load_seg_vm(i, new_segs[i])>"
+    }
+  },
+  {
+    "id": "68719476975",
+    "attrs": {
+      "label": "<IDENTIFIER, 329<BR/>i<BR/>load_seg_vm(i, new_segs[i])>"
+    }
+  },
+  {
+    "id": "30064771373",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 329<BR/>new_segs[i]>"
+    }
+  },
+  {
+    "id": "68719476976",
+    "attrs": {
+      "label": "<IDENTIFIER, 329<BR/>new_segs<BR/>load_seg_vm(i, new_segs[i])>"
+    }
+  },
+  {
+    "id": "68719476977",
+    "attrs": {
+      "label": "<IDENTIFIER, 329<BR/>i<BR/>load_seg_vm(i, new_segs[i])>"
+    }
+  },
+  {
+    "id": "30064771374",
+    "attrs": {
+      "label": "<cpu_x86_set_cpl, 333<BR/>cpu_x86_set_cpl(env, 3)>"
+    }
+  },
+  {
+    "id": "68719476978",
+    "attrs": {
+      "label": "<IDENTIFIER, 333<BR/>&lt;unknown&gt; env<BR/>cpu_x86_set_cpl(env, 3)>"
+    }
+  },
+  {
+    "id": "90194313309",
+    "attrs": {
+      "label": "<LITERAL, 333<BR/>3<BR/>cpu_x86_set_cpl(env, 3)>"
+    }
+  },
+  {
+    "id": "47244640289",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 335<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK, 335<BR/>{ /* CPL is set the RPL of CS */ ...>"
+    }
+  },
+  {
+    "id": "30064771375",
+    "attrs": {
+      "label": "<cpu_x86_set_cpl, 339<BR/>cpu_x86_set_cpl(env, new_segs[R_CS] &amp; 3)>"
+    }
+  },
+  {
+    "id": "68719476979",
+    "attrs": {
+      "label": "<IDENTIFIER, 339<BR/>&lt;unknown&gt; env<BR/>cpu_x86_set_cpl(env, new_segs[R_CS] &amp; 3)>"
+    }
+  },
+  {
+    "id": "30064771376",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 339<BR/>new_segs[R_CS] &amp; 3>"
+    }
+  },
+  {
+    "id": "30064771377",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 339<BR/>new_segs[R_CS]>"
+    }
+  },
+  {
+    "id": "68719476980",
+    "attrs": {
+      "label": "<IDENTIFIER, 339<BR/>new_segs<BR/>new_segs[R_CS] &amp; 3>"
+    }
+  },
+  {
+    "id": "68719476981",
+    "attrs": {
+      "label": "<IDENTIFIER, 339<BR/>&lt;unknown&gt; R_CS<BR/>new_segs[R_CS] &amp; 3>"
+    }
+  },
+  {
+    "id": "90194313310",
+    "attrs": {
+      "label": "<LITERAL, 339<BR/>3<BR/>new_segs[R_CS] &amp; 3>"
+    }
+  },
+  {
+    "id": "47244640290",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 343<BR/>FOR<BR/>for (i = 0;i &lt; 6;i++)>"
+    }
+  },
+  {
+    "id": "30064771378",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 343<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "68719476982",
+    "attrs": {
+      "label": "<IDENTIFIER, 343<BR/>i<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "90194313311",
+    "attrs": {
+      "label": "<LITERAL, 343<BR/>0<BR/>i = 0>"
+    }
+  },
+  {
+    "id": "30064771379",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 343<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "68719476983",
+    "attrs": {
+      "label": "<IDENTIFIER, 343<BR/>i<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "90194313312",
+    "attrs": {
+      "label": "<LITERAL, 343<BR/>6<BR/>i &lt; 6>"
+    }
+  },
+  {
+    "id": "30064771380",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 343<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476984",
+    "attrs": {
+      "label": "<IDENTIFIER, 343<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "30064771381",
+    "attrs": {
+      "label": "<cpu_x86_load_seg_cache, 345<BR/>cpu_x86_load_seg_cache(env, i, new_segs[i], NUL...>"
+    }
+  },
+  {
+    "id": "68719476985",
+    "attrs": {
+      "label": "<IDENTIFIER, 345<BR/>&lt;unknown&gt; env<BR/>cpu_x86_load_seg_cache(env, i, new_segs[i], NUL...>"
+    }
+  },
+  {
+    "id": "68719476986",
+    "attrs": {
+      "label": "<IDENTIFIER, 345<BR/>i<BR/>cpu_x86_load_seg_cache(env, i, new_segs[i], NUL...>"
+    }
+  },
+  {
+    "id": "30064771382",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 345<BR/>new_segs[i]>"
+    }
+  },
+  {
+    "id": "68719476987",
+    "attrs": {
+      "label": "<IDENTIFIER, 345<BR/>new_segs<BR/>cpu_x86_load_seg_cache(env, i, new_segs[i], NUL...>"
+    }
+  },
+  {
+    "id": "68719476988",
+    "attrs": {
+      "label": "<IDENTIFIER, 345<BR/>i<BR/>cpu_x86_load_seg_cache(env, i, new_segs[i], NUL...>"
+    }
+  },
+  {
+    "id": "68719476989",
+    "attrs": {
+      "label": "<IDENTIFIER, 345<BR/>&lt;unknown&gt; NULL<BR/>cpu_x86_load_seg_cache(env, i, new_segs[i], NUL...>"
+    }
+  },
+  {
+    "id": "90194313313",
+    "attrs": {
+      "label": "<LITERAL, 345<BR/>0<BR/>cpu_x86_load_seg_cache(env, i, new_segs[i], NUL...>"
+    }
+  },
+  {
+    "id": "90194313314",
+    "attrs": {
+      "label": "<LITERAL, 345<BR/>0<BR/>cpu_x86_load_seg_cache(env, i, new_segs[i], NUL...>"
+    }
+  },
+  {
+    "id": "30064771383",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 351<BR/>env-&gt;ldt.selector = new_ldt &amp; ~4>"
+    }
+  },
+  {
+    "id": "30064771384",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 351<BR/>env-&gt;ldt.selector>"
+    }
+  },
+  {
+    "id": "30064771385",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 351<BR/>env-&gt;ldt>"
+    }
+  },
+  {
+    "id": "68719476990",
+    "attrs": {
+      "label": "<IDENTIFIER, 351<BR/>&lt;unknown&gt; env<BR/>env-&gt;ldt.selector = new_ldt &amp; ~4>"
+    }
+  },
+  {
+    "id": "55834574902",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 351<BR/>ldt>"
+    }
+  },
+  {
+    "id": "55834574903",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 351<BR/>selector>"
+    }
+  },
+  {
+    "id": "30064771386",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 351<BR/>new_ldt &amp; ~4>"
+    }
+  },
+  {
+    "id": "68719476991",
+    "attrs": {
+      "label": "<IDENTIFIER, 351<BR/>new_ldt<BR/>new_ldt &amp; ~4>"
+    }
+  },
+  {
+    "id": "30064771387",
+    "attrs": {
+      "label": "<&lt;operator&gt;.not, 351<BR/>~4>"
+    }
+  },
+  {
+    "id": "90194313315",
+    "attrs": {
+      "label": "<LITERAL, 351<BR/>4<BR/>~4>"
+    }
+  },
+  {
+    "id": "30064771388",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 353<BR/>env-&gt;ldt.base = NULL>"
+    }
+  },
+  {
+    "id": "30064771389",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 353<BR/>env-&gt;ldt.base>"
+    }
+  },
+  {
+    "id": "30064771390",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 353<BR/>env-&gt;ldt>"
+    }
+  },
+  {
+    "id": "68719476992",
+    "attrs": {
+      "label": "<IDENTIFIER, 353<BR/>&lt;unknown&gt; env<BR/>env-&gt;ldt.base = NULL>"
+    }
+  },
+  {
+    "id": "55834574904",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 353<BR/>ldt>"
+    }
+  },
+  {
+    "id": "55834574905",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 353<BR/>base>"
+    }
+  },
+  {
+    "id": "68719476993",
+    "attrs": {
+      "label": "<IDENTIFIER, 353<BR/>&lt;unknown&gt; NULL<BR/>env-&gt;ldt.base = NULL>"
+    }
+  },
+  {
+    "id": "30064771391",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 355<BR/>env-&gt;ldt.limit = 0>"
+    }
+  },
+  {
+    "id": "30064771392",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 355<BR/>env-&gt;ldt.limit>"
+    }
+  },
+  {
+    "id": "30064771393",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 355<BR/>env-&gt;ldt>"
+    }
+  },
+  {
+    "id": "68719476994",
+    "attrs": {
+      "label": "<IDENTIFIER, 355<BR/>&lt;unknown&gt; env<BR/>env-&gt;ldt.limit = 0>"
+    }
+  },
+  {
+    "id": "55834574906",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 355<BR/>ldt>"
+    }
+  },
+  {
+    "id": "55834574907",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 355<BR/>limit>"
+    }
+  },
+  {
+    "id": "90194313316",
+    "attrs": {
+      "label": "<LITERAL, 355<BR/>0<BR/>env-&gt;ldt.limit = 0>"
+    }
+  },
+  {
+    "id": "30064771394",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 357<BR/>env-&gt;ldt.flags = 0>"
+    }
+  },
+  {
+    "id": "30064771395",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 357<BR/>env-&gt;ldt.flags>"
+    }
+  },
+  {
+    "id": "30064771396",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 357<BR/>env-&gt;ldt>"
+    }
+  },
+  {
+    "id": "68719476995",
+    "attrs": {
+      "label": "<IDENTIFIER, 357<BR/>&lt;unknown&gt; env<BR/>env-&gt;ldt.flags = 0>"
+    }
+  },
+  {
+    "id": "55834574908",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 357<BR/>ldt>"
+    }
+  },
+  {
+    "id": "55834574909",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 357<BR/>flags>"
+    }
+  },
+  {
+    "id": "90194313317",
+    "attrs": {
+      "label": "<LITERAL, 357<BR/>0<BR/>env-&gt;ldt.flags = 0>"
+    }
+  },
+  {
+    "id": "47244640291",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 363<BR/>IF<BR/>if (new_ldt &amp; 4) raise_exception_err(E...>"
+    }
+  },
+  {
+    "id": "30064771397",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 363<BR/>new_ldt &amp; 4>"
+    }
+  },
+  {
+    "id": "68719476996",
+    "attrs": {
+      "label": "<IDENTIFIER, 363<BR/>new_ldt<BR/>new_ldt &amp; 4>"
+    }
+  },
+  {
+    "id": "90194313318",
+    "attrs": {
+      "label": "<LITERAL, 363<BR/>4<BR/>new_ldt &amp; 4>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK, 365<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771398",
+    "attrs": {
+      "label": "<raise_exception_err, 365<BR/>raise_exception_err(EXCP0A_TSS, new_ldt &amp; 0xfffc)>"
+    }
+  },
+  {
+    "id": "68719476997",
+    "attrs": {
+      "label": "<IDENTIFIER, 365<BR/>&lt;unknown&gt; EXCP0A_TSS<BR/>raise_exception_err(EXCP0A_TSS, new_ldt &amp; 0xfffc)>"
+    }
+  },
+  {
+    "id": "30064771399",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 365<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719476998",
+    "attrs": {
+      "label": "<IDENTIFIER, 365<BR/>new_ldt<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313319",
+    "attrs": {
+      "label": "<LITERAL, 365<BR/>0xfffc<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "47244640292",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 369<BR/>IF<BR/>if ((new_ldt &amp; 0xfffc) != 0) { dt = &amp;e...>"
+    }
+  },
+  {
+    "id": "30064771400",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 369<BR/>(new_ldt &amp; 0xfffc) != 0>"
+    }
+  },
+  {
+    "id": "30064771401",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 369<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719476999",
+    "attrs": {
+      "label": "<IDENTIFIER, 369<BR/>new_ldt<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313320",
+    "attrs": {
+      "label": "<LITERAL, 369<BR/>0xfffc<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313321",
+    "attrs": {
+      "label": "<LITERAL, 369<BR/>0<BR/>(new_ldt &amp; 0xfffc) != 0>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK, 369<BR/>{ dt = &amp;env-&gt;gdt; index = new...>"
+    }
+  },
+  {
+    "id": "30064771402",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 371<BR/>dt = &amp;env-&gt;gdt>"
+    }
+  },
+  {
+    "id": "68719477000",
+    "attrs": {
+      "label": "<IDENTIFIER, 371<BR/>dt<BR/>dt = &amp;env-&gt;gdt>"
+    }
+  },
+  {
+    "id": "30064771403",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 371<BR/>&amp;env-&gt;gdt>"
+    }
+  },
+  {
+    "id": "30064771404",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 371<BR/>env-&gt;gdt>"
+    }
+  },
+  {
+    "id": "68719477001",
+    "attrs": {
+      "label": "<IDENTIFIER, 371<BR/>&lt;unknown&gt; env<BR/>dt = &amp;env-&gt;gdt>"
+    }
+  },
+  {
+    "id": "55834574910",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 371<BR/>gdt>"
+    }
+  },
+  {
+    "id": "30064771405",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 373<BR/>index = new_ldt &amp; ~7>"
+    }
+  },
+  {
+    "id": "68719477002",
+    "attrs": {
+      "label": "<IDENTIFIER, 373<BR/>index<BR/>index = new_ldt &amp; ~7>"
+    }
+  },
+  {
+    "id": "30064771406",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 373<BR/>new_ldt &amp; ~7>"
+    }
+  },
+  {
+    "id": "68719477003",
+    "attrs": {
+      "label": "<IDENTIFIER, 373<BR/>new_ldt<BR/>new_ldt &amp; ~7>"
+    }
+  },
+  {
+    "id": "30064771407",
+    "attrs": {
+      "label": "<&lt;operator&gt;.not, 373<BR/>~7>"
+    }
+  },
+  {
+    "id": "90194313322",
+    "attrs": {
+      "label": "<LITERAL, 373<BR/>7<BR/>~7>"
+    }
+  },
+  {
+    "id": "47244640293",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 375<BR/>IF<BR/>if ((index + 7) &gt; dt-&gt;limit) raise...>"
+    }
+  },
+  {
+    "id": "30064771408",
+    "attrs": {
+      "label": "<&lt;operator&gt;.greaterThan, 375<BR/>(index + 7) &gt; dt-&gt;limit>"
+    }
+  },
+  {
+    "id": "30064771409",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 375<BR/>index + 7>"
+    }
+  },
+  {
+    "id": "68719477004",
+    "attrs": {
+      "label": "<IDENTIFIER, 375<BR/>index<BR/>index + 7>"
+    }
+  },
+  {
+    "id": "90194313323",
+    "attrs": {
+      "label": "<LITERAL, 375<BR/>7<BR/>index + 7>"
+    }
+  },
+  {
+    "id": "30064771410",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 375<BR/>dt-&gt;limit>"
+    }
+  },
+  {
+    "id": "68719477005",
+    "attrs": {
+      "label": "<IDENTIFIER, 375<BR/>dt<BR/>(index + 7) &gt; dt-&gt;limit>"
+    }
+  },
+  {
+    "id": "55834574911",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 375<BR/>limit>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK, 377<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771411",
+    "attrs": {
+      "label": "<raise_exception_err, 377<BR/>raise_exception_err(EXCP0A_TSS, new_ldt &amp; 0xfffc)>"
+    }
+  },
+  {
+    "id": "68719477006",
+    "attrs": {
+      "label": "<IDENTIFIER, 377<BR/>&lt;unknown&gt; EXCP0A_TSS<BR/>raise_exception_err(EXCP0A_TSS, new_ldt &amp; 0xfffc)>"
+    }
+  },
+  {
+    "id": "30064771412",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 377<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719477007",
+    "attrs": {
+      "label": "<IDENTIFIER, 377<BR/>new_ldt<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313324",
+    "attrs": {
+      "label": "<LITERAL, 377<BR/>0xfffc<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "30064771413",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 379<BR/>ptr = dt-&gt;base + index>"
+    }
+  },
+  {
+    "id": "68719477008",
+    "attrs": {
+      "label": "<IDENTIFIER, 379<BR/>ptr<BR/>ptr = dt-&gt;base + index>"
+    }
+  },
+  {
+    "id": "30064771414",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 379<BR/>dt-&gt;base + index>"
+    }
+  },
+  {
+    "id": "30064771415",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 379<BR/>dt-&gt;base>"
+    }
+  },
+  {
+    "id": "68719477009",
+    "attrs": {
+      "label": "<IDENTIFIER, 379<BR/>dt<BR/>dt-&gt;base + index>"
+    }
+  },
+  {
+    "id": "55834574912",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 379<BR/>base>"
+    }
+  },
+  {
+    "id": "68719477010",
+    "attrs": {
+      "label": "<IDENTIFIER, 379<BR/>index<BR/>dt-&gt;base + index>"
+    }
+  },
+  {
+    "id": "30064771416",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 381<BR/>e1 = ldl_kernel(ptr)>"
+    }
+  },
+  {
+    "id": "68719477011",
+    "attrs": {
+      "label": "<IDENTIFIER, 381<BR/>e1<BR/>e1 = ldl_kernel(ptr)>"
+    }
+  },
+  {
+    "id": "30064771417",
+    "attrs": {
+      "label": "<ldl_kernel, 381<BR/>ldl_kernel(ptr)>"
+    }
+  },
+  {
+    "id": "68719477012",
+    "attrs": {
+      "label": "<IDENTIFIER, 381<BR/>ptr<BR/>ldl_kernel(ptr)>"
+    }
+  },
+  {
+    "id": "30064771418",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 383<BR/>e2 = ldl_kernel(ptr + 4)>"
+    }
+  },
+  {
+    "id": "68719477013",
+    "attrs": {
+      "label": "<IDENTIFIER, 383<BR/>e2<BR/>e2 = ldl_kernel(ptr + 4)>"
+    }
+  },
+  {
+    "id": "30064771419",
+    "attrs": {
+      "label": "<ldl_kernel, 383<BR/>ldl_kernel(ptr + 4)>"
+    }
+  },
+  {
+    "id": "30064771420",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 383<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "68719477014",
+    "attrs": {
+      "label": "<IDENTIFIER, 383<BR/>ptr<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "90194313325",
+    "attrs": {
+      "label": "<LITERAL, 383<BR/>4<BR/>ptr + 4>"
+    }
+  },
+  {
+    "id": "47244640294",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 385<BR/>IF<BR/>if ((e2 &amp; DESC_S_MASK) || ((e2 &gt;&gt; DESC_TYPE_SHI...>"
+    }
+  },
+  {
+    "id": "30064771421",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalOr, 385<BR/>(e2 &amp; DESC_S_MASK) || ((e2 &gt;&gt; DESC_TYPE_SHIFT) ...>"
+    }
+  },
+  {
+    "id": "30064771422",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 385<BR/>e2 &amp; DESC_S_MASK>"
+    }
+  },
+  {
+    "id": "68719477015",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>e2<BR/>e2 &amp; DESC_S_MASK>"
+    }
+  },
+  {
+    "id": "68719477016",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>&lt;unknown&gt; DESC_S_MASK<BR/>e2 &amp; DESC_S_MASK>"
+    }
+  },
+  {
+    "id": "30064771423",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 385<BR/>((e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf) != 2>"
+    }
+  },
+  {
+    "id": "30064771424",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 385<BR/>(e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "30064771425",
+    "attrs": {
+      "label": "<&lt;operator&gt;.arithmeticShiftRight, 385<BR/>e2 &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "68719477017",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>e2<BR/>e2 &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "68719477018",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>&lt;unknown&gt; DESC_TYPE_SHIFT<BR/>e2 &gt;&gt; DESC_TYPE_SHIFT>"
+    }
+  },
+  {
+    "id": "90194313326",
+    "attrs": {
+      "label": "<LITERAL, 385<BR/>0xf<BR/>(e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf>"
+    }
+  },
+  {
+    "id": "90194313327",
+    "attrs": {
+      "label": "<LITERAL, 385<BR/>2<BR/>((e2 &gt;&gt; DESC_TYPE_SHIFT) &amp; 0xf) != 2>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK, 387<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771426",
+    "attrs": {
+      "label": "<raise_exception_err, 387<BR/>raise_exception_err(EXCP0A_TSS, new_ldt &amp; 0xfffc)>"
+    }
+  },
+  {
+    "id": "68719477019",
+    "attrs": {
+      "label": "<IDENTIFIER, 387<BR/>&lt;unknown&gt; EXCP0A_TSS<BR/>raise_exception_err(EXCP0A_TSS, new_ldt &amp; 0xfffc)>"
+    }
+  },
+  {
+    "id": "30064771427",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 387<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719477020",
+    "attrs": {
+      "label": "<IDENTIFIER, 387<BR/>new_ldt<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313328",
+    "attrs": {
+      "label": "<LITERAL, 387<BR/>0xfffc<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "47244640295",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 389<BR/>IF<BR/>if (!(e2 &amp; DESC_P_MASK)) raise_exc...>"
+    }
+  },
+  {
+    "id": "30064771428",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 389<BR/>!(e2 &amp; DESC_P_MASK)>"
+    }
+  },
+  {
+    "id": "30064771429",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 389<BR/>e2 &amp; DESC_P_MASK>"
+    }
+  },
+  {
+    "id": "68719477021",
+    "attrs": {
+      "label": "<IDENTIFIER, 389<BR/>e2<BR/>e2 &amp; DESC_P_MASK>"
+    }
+  },
+  {
+    "id": "68719477022",
+    "attrs": {
+      "label": "<IDENTIFIER, 389<BR/>&lt;unknown&gt; DESC_P_MASK<BR/>e2 &amp; DESC_P_MASK>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK, 391<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771430",
+    "attrs": {
+      "label": "<raise_exception_err, 391<BR/>raise_exception_err(EXCP0A_TSS, new_ldt &amp; 0xfffc)>"
+    }
+  },
+  {
+    "id": "68719477023",
+    "attrs": {
+      "label": "<IDENTIFIER, 391<BR/>&lt;unknown&gt; EXCP0A_TSS<BR/>raise_exception_err(EXCP0A_TSS, new_ldt &amp; 0xfffc)>"
+    }
+  },
+  {
+    "id": "30064771431",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 391<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "68719477024",
+    "attrs": {
+      "label": "<IDENTIFIER, 391<BR/>new_ldt<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "90194313329",
+    "attrs": {
+      "label": "<LITERAL, 391<BR/>0xfffc<BR/>new_ldt &amp; 0xfffc>"
+    }
+  },
+  {
+    "id": "30064771432",
+    "attrs": {
+      "label": "<load_seg_cache_raw_dt, 393<BR/>load_seg_cache_raw_dt(&amp;env-&gt;ldt, e1, e2)>"
+    }
+  },
+  {
+    "id": "30064771433",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 393<BR/>&amp;env-&gt;ldt>"
+    }
+  },
+  {
+    "id": "30064771434",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 393<BR/>env-&gt;ldt>"
+    }
+  },
+  {
+    "id": "68719477025",
+    "attrs": {
+      "label": "<IDENTIFIER, 393<BR/>&lt;unknown&gt; env<BR/>load_seg_cache_raw_dt(&amp;env-&gt;ldt, e1, e2)>"
+    }
+  },
+  {
+    "id": "55834574913",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 393<BR/>ldt>"
+    }
+  },
+  {
+    "id": "68719477026",
+    "attrs": {
+      "label": "<IDENTIFIER, 393<BR/>e1<BR/>load_seg_cache_raw_dt(&amp;env-&gt;ldt, e1, e2)>"
+    }
+  },
+  {
+    "id": "68719477027",
+    "attrs": {
+      "label": "<IDENTIFIER, 393<BR/>e2<BR/>load_seg_cache_raw_dt(&amp;env-&gt;ldt, e1, e2)>"
+    }
+  },
+  {
+    "id": "47244640296",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 401<BR/>IF<BR/>if (!(new_eflags &amp; VM_MASK)) { tss_loa...>"
+    }
+  },
+  {
+    "id": "30064771435",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 401<BR/>!(new_eflags &amp; VM_MASK)>"
+    }
+  },
+  {
+    "id": "30064771436",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 401<BR/>new_eflags &amp; VM_MASK>"
+    }
+  },
+  {
+    "id": "68719477028",
+    "attrs": {
+      "label": "<IDENTIFIER, 401<BR/>new_eflags<BR/>new_eflags &amp; VM_MASK>"
+    }
+  },
+  {
+    "id": "68719477029",
+    "attrs": {
+      "label": "<IDENTIFIER, 401<BR/>&lt;unknown&gt; VM_MASK<BR/>new_eflags &amp; VM_MASK>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK, 401<BR/>{ tss_load_seg(R_CS, new_segs[R_CS]); ...>"
+    }
+  },
+  {
+    "id": "30064771437",
+    "attrs": {
+      "label": "<tss_load_seg, 403<BR/>tss_load_seg(R_CS, new_segs[R_CS])>"
+    }
+  },
+  {
+    "id": "68719477030",
+    "attrs": {
+      "label": "<IDENTIFIER, 403<BR/>&lt;unknown&gt; R_CS<BR/>tss_load_seg(R_CS, new_segs[R_CS])>"
+    }
+  },
+  {
+    "id": "30064771438",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 403<BR/>new_segs[R_CS]>"
+    }
+  },
+  {
+    "id": "68719477031",
+    "attrs": {
+      "label": "<IDENTIFIER, 403<BR/>new_segs<BR/>tss_load_seg(R_CS, new_segs[R_CS])>"
+    }
+  },
+  {
+    "id": "68719477032",
+    "attrs": {
+      "label": "<IDENTIFIER, 403<BR/>&lt;unknown&gt; R_CS<BR/>tss_load_seg(R_CS, new_segs[R_CS])>"
+    }
+  },
+  {
+    "id": "30064771439",
+    "attrs": {
+      "label": "<tss_load_seg, 405<BR/>tss_load_seg(R_SS, new_segs[R_SS])>"
+    }
+  },
+  {
+    "id": "68719477033",
+    "attrs": {
+      "label": "<IDENTIFIER, 405<BR/>&lt;unknown&gt; R_SS<BR/>tss_load_seg(R_SS, new_segs[R_SS])>"
+    }
+  },
+  {
+    "id": "30064771440",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 405<BR/>new_segs[R_SS]>"
+    }
+  },
+  {
+    "id": "68719477034",
+    "attrs": {
+      "label": "<IDENTIFIER, 405<BR/>new_segs<BR/>tss_load_seg(R_SS, new_segs[R_SS])>"
+    }
+  },
+  {
+    "id": "68719477035",
+    "attrs": {
+      "label": "<IDENTIFIER, 405<BR/>&lt;unknown&gt; R_SS<BR/>tss_load_seg(R_SS, new_segs[R_SS])>"
+    }
+  },
+  {
+    "id": "30064771441",
+    "attrs": {
+      "label": "<tss_load_seg, 407<BR/>tss_load_seg(R_ES, new_segs[R_ES])>"
+    }
+  },
+  {
+    "id": "68719477036",
+    "attrs": {
+      "label": "<IDENTIFIER, 407<BR/>&lt;unknown&gt; R_ES<BR/>tss_load_seg(R_ES, new_segs[R_ES])>"
+    }
+  },
+  {
+    "id": "30064771442",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 407<BR/>new_segs[R_ES]>"
+    }
+  },
+  {
+    "id": "68719477037",
+    "attrs": {
+      "label": "<IDENTIFIER, 407<BR/>new_segs<BR/>tss_load_seg(R_ES, new_segs[R_ES])>"
+    }
+  },
+  {
+    "id": "68719477038",
+    "attrs": {
+      "label": "<IDENTIFIER, 407<BR/>&lt;unknown&gt; R_ES<BR/>tss_load_seg(R_ES, new_segs[R_ES])>"
+    }
+  },
+  {
+    "id": "30064771443",
+    "attrs": {
+      "label": "<tss_load_seg, 409<BR/>tss_load_seg(R_DS, new_segs[R_DS])>"
+    }
+  },
+  {
+    "id": "68719477039",
+    "attrs": {
+      "label": "<IDENTIFIER, 409<BR/>&lt;unknown&gt; R_DS<BR/>tss_load_seg(R_DS, new_segs[R_DS])>"
+    }
+  },
+  {
+    "id": "30064771444",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 409<BR/>new_segs[R_DS]>"
+    }
+  },
+  {
+    "id": "68719477040",
+    "attrs": {
+      "label": "<IDENTIFIER, 409<BR/>new_segs<BR/>tss_load_seg(R_DS, new_segs[R_DS])>"
+    }
+  },
+  {
+    "id": "68719477041",
+    "attrs": {
+      "label": "<IDENTIFIER, 409<BR/>&lt;unknown&gt; R_DS<BR/>tss_load_seg(R_DS, new_segs[R_DS])>"
+    }
+  },
+  {
+    "id": "30064771445",
+    "attrs": {
+      "label": "<tss_load_seg, 411<BR/>tss_load_seg(R_FS, new_segs[R_FS])>"
+    }
+  },
+  {
+    "id": "68719477042",
+    "attrs": {
+      "label": "<IDENTIFIER, 411<BR/>&lt;unknown&gt; R_FS<BR/>tss_load_seg(R_FS, new_segs[R_FS])>"
+    }
+  },
+  {
+    "id": "30064771446",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 411<BR/>new_segs[R_FS]>"
+    }
+  },
+  {
+    "id": "68719477043",
+    "attrs": {
+      "label": "<IDENTIFIER, 411<BR/>new_segs<BR/>tss_load_seg(R_FS, new_segs[R_FS])>"
+    }
+  },
+  {
+    "id": "68719477044",
+    "attrs": {
+      "label": "<IDENTIFIER, 411<BR/>&lt;unknown&gt; R_FS<BR/>tss_load_seg(R_FS, new_segs[R_FS])>"
+    }
+  },
+  {
+    "id": "30064771447",
+    "attrs": {
+      "label": "<tss_load_seg, 413<BR/>tss_load_seg(R_GS, new_segs[R_GS])>"
+    }
+  },
+  {
+    "id": "68719477045",
+    "attrs": {
+      "label": "<IDENTIFIER, 413<BR/>&lt;unknown&gt; R_GS<BR/>tss_load_seg(R_GS, new_segs[R_GS])>"
+    }
+  },
+  {
+    "id": "30064771448",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 413<BR/>new_segs[R_GS]>"
+    }
+  },
+  {
+    "id": "68719477046",
+    "attrs": {
+      "label": "<IDENTIFIER, 413<BR/>new_segs<BR/>tss_load_seg(R_GS, new_segs[R_GS])>"
+    }
+  },
+  {
+    "id": "68719477047",
+    "attrs": {
+      "label": "<IDENTIFIER, 413<BR/>&lt;unknown&gt; R_GS<BR/>tss_load_seg(R_GS, new_segs[R_GS])>"
+    }
+  },
+  {
+    "id": "47244640297",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 421<BR/>IF<BR/>if (new_eip &gt; env-&gt;segs[R_CS].limit) { ...>"
+    }
+  },
+  {
+    "id": "30064771449",
+    "attrs": {
+      "label": "<&lt;operator&gt;.greaterThan, 421<BR/>new_eip &gt; env-&gt;segs[R_CS].limit>"
+    }
+  },
+  {
+    "id": "68719477048",
+    "attrs": {
+      "label": "<IDENTIFIER, 421<BR/>new_eip<BR/>new_eip &gt; env-&gt;segs[R_CS].limit>"
+    }
+  },
+  {
+    "id": "30064771450",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 421<BR/>env-&gt;segs[R_CS].limit>"
+    }
+  },
+  {
+    "id": "30064771451",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 421<BR/>env-&gt;segs[R_CS]>"
+    }
+  },
+  {
+    "id": "30064771452",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 421<BR/>env-&gt;segs>"
+    }
+  },
+  {
+    "id": "68719477049",
+    "attrs": {
+      "label": "<IDENTIFIER, 421<BR/>&lt;unknown&gt; env<BR/>new_eip &gt; env-&gt;segs[R_CS].limit>"
+    }
+  },
+  {
+    "id": "55834574914",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 421<BR/>segs>"
+    }
+  },
+  {
+    "id": "68719477050",
+    "attrs": {
+      "label": "<IDENTIFIER, 421<BR/>&lt;unknown&gt; R_CS<BR/>new_eip &gt; env-&gt;segs[R_CS].limit>"
+    }
+  },
+  {
+    "id": "55834574915",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 421<BR/>limit>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK, 421<BR/>{ raise_exception_err(EXCP0D_GPF, 0); ...>"
+    }
+  },
+  {
+    "id": "30064771453",
+    "attrs": {
+      "label": "<raise_exception_err, 423<BR/>raise_exception_err(EXCP0D_GPF, 0)>"
+    }
+  },
+  {
+    "id": "68719477051",
+    "attrs": {
+      "label": "<IDENTIFIER, 423<BR/>&lt;unknown&gt; EXCP0D_GPF<BR/>raise_exception_err(EXCP0D_GPF, 0)>"
+    }
+  },
+  {
+    "id": "90194313330",
+    "attrs": {
+      "label": "<LITERAL, 423<BR/>0<BR/>raise_exception_err(EXCP0D_GPF, 0)>"
+    }
+  },
+  {
+    "id": "94489280535",
+    "attrs": {
+      "label": "<LOCAL, 53<BR/>&lt;unknown&gt; EXCP0D_GPF: ANY>"
+    }
+  },
+  {
+    "id": "94489280536",
+    "attrs": {
+      "label": "<LOCAL, 339<BR/>&lt;unknown&gt; R_CS: ANY>"
+    }
+  },
+  {
+    "id": "94489280537",
+    "attrs": {
+      "label": "<LOCAL, 93<BR/>&lt;unknown&gt; env: ANY>"
+    }
+  },
+  {
+    "id": "94489280538",
+    "attrs": {
+      "label": "<LOCAL, 151<BR/>&lt;unknown&gt; R_GS: ANY>"
+    }
+  },
+  {
+    "id": "94489280539",
+    "attrs": {
+      "label": "<LOCAL, 149<BR/>&lt;unknown&gt; R_FS: ANY>"
+    }
+  },
+  {
+    "id": "94489280540",
+    "attrs": {
+      "label": "<LOCAL, 409<BR/>&lt;unknown&gt; R_DS: ANY>"
+    }
+  },
+  {
+    "id": "94489280541",
+    "attrs": {
+      "label": "<LOCAL, 407<BR/>&lt;unknown&gt; R_ES: ANY>"
+    }
+  },
+  {
+    "id": "94489280542",
+    "attrs": {
+      "label": "<LOCAL, 405<BR/>&lt;unknown&gt; R_SS: ANY>"
+    }
+  },
+  {
+    "id": "94489280543",
+    "attrs": {
+      "label": "<LOCAL, 313<BR/>&lt;unknown&gt; VM_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280544",
+    "attrs": {
+      "label": "<LOCAL, 49<BR/>&lt;unknown&gt; EXCP0A_TSS: ANY>"
+    }
+  },
+  {
+    "id": "94489280545",
+    "attrs": {
+      "label": "<LOCAL, 41<BR/>&lt;unknown&gt; DESC_P_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280546",
+    "attrs": {
+      "label": "<LOCAL, 25<BR/>&lt;unknown&gt; DESC_TYPE_SHIFT: ANY>"
+    }
+  },
+  {
+    "id": "94489280547",
+    "attrs": {
+      "label": "<LOCAL, 55<BR/>&lt;unknown&gt; DESC_S_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280548",
+    "attrs": {
+      "label": "<LOCAL, 345<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "94489280549",
+    "attrs": {
+      "label": "<LOCAL, 201<BR/>&lt;unknown&gt; NT_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280550",
+    "attrs": {
+      "label": "<LOCAL, 313<BR/>&lt;unknown&gt; RF_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280551",
+    "attrs": {
+      "label": "<LOCAL, 313<BR/>&lt;unknown&gt; IOPL_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280552",
+    "attrs": {
+      "label": "<LOCAL, 313<BR/>&lt;unknown&gt; IF_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280553",
+    "attrs": {
+      "label": "<LOCAL, 311<BR/>&lt;unknown&gt; ID_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280554",
+    "attrs": {
+      "label": "<LOCAL, 311<BR/>&lt;unknown&gt; AC_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280555",
+    "attrs": {
+      "label": "<LOCAL, 311<BR/>&lt;unknown&gt; TF_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280556",
+    "attrs": {
+      "label": "<LOCAL, 295<BR/>&lt;unknown&gt; CR0_PG_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280557",
+    "attrs": {
+      "label": "<LOCAL, 191<BR/>&lt;unknown&gt; DESC_TSS_BUSY_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280558",
+    "attrs": {
+      "label": "<LOCAL, 283<BR/>&lt;unknown&gt; CR0_TS_MASK: ANY>"
+    }
+  },
+  {
+    "id": "94489280559",
+    "attrs": {
+      "label": "<LOCAL, 183<BR/>&lt;unknown&gt; uint8_t: ANY>"
+    }
+  },
+  {
+    "id": "94489280560",
+    "attrs": {
+      "label": "<LOCAL, 249<BR/>&lt;unknown&gt; SWITCH_TSS_CALL: ANY>"
+    }
+  },
+  {
+    "id": "94489280561",
+    "attrs": {
+      "label": "<LOCAL, 181<BR/>&lt;unknown&gt; SWITCH_TSS_JMP: ANY>"
+    }
+  },
+  {
+    "id": "94489280562",
+    "attrs": {
+      "label": "<LOCAL, 181<BR/>&lt;unknown&gt; SWITCH_TSS_IRET: ANY>"
+    }
+  },
+  {
+    "id": "94489280563",
+    "attrs": {
+      "label": "<LOCAL, 43<BR/>&lt;unknown&gt; EXCP0B_NOSEG: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>void>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>switch_tss<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>raise_exception_err>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803817",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>ldub_kernel>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803818",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.fieldAccess>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803819",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.multiplication>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803820",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>get_seg_base>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803821",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>get_seg_limit>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803822",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addition>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803823",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>stw_kernel>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803824",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalOr>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803825",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.arithmeticShiftRight>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803826",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>cpu_x86_load_seg_cache>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p6>"
+    }
+  },
+  {
+    "id": "25769803827",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.equals>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803828",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operators&gt;.assignmentAnd>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803829",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>stl_kernel>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803830",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operators&gt;.assignmentOr>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149744",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803831",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.postIncrement>"
+    }
+  },
+  {
+    "id": "111669149745",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803832",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.or>"
+    }
+  },
+  {
+    "id": "111669149746",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149747",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803833",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149748",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149749",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803834",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182428",
+    "attrs": {
+      "label": "<METHOD<BR/>load_seg_cache_raw_dt>"
+    }
+  },
+  {
+    "id": "111669149750",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149751",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149752",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803835",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051612",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182429",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalAnd>"
+    }
+  },
+  {
+    "id": "111669149753",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149754",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803836",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051613",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.and>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182430",
+    "attrs": {
+      "label": "<METHOD<BR/>tss_load_seg>"
+    }
+  },
+  {
+    "id": "111669149755",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149756",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803837",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051614",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182431",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.shiftLeft>"
+    }
+  },
+  {
+    "id": "111669149757",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149758",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803838",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051615",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182432",
+    "attrs": {
+      "label": "<METHOD<BR/>cpu_x86_update_cr3>"
+    }
+  },
+  {
+    "id": "111669149759",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803839",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051616",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182433",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.greaterThan>"
+    }
+  },
+  {
+    "id": "111669149760",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149761",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803840",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051617",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182434",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149762",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803841",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051618",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182435",
+    "attrs": {
+      "label": "<METHOD<BR/>stb_kernel>"
+    }
+  },
+  {
+    "id": "111669149763",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149764",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803842",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051619",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182436",
+    "attrs": {
+      "label": "<METHOD<BR/>ldl_kernel>"
+    }
+  },
+  {
+    "id": "111669149765",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803843",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051620",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182437",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectIndexAccess>"
+    }
+  },
+  {
+    "id": "111669149766",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149767",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803844",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051621",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182438",
+    "attrs": {
+      "label": "<METHOD<BR/>lduw_kernel>"
+    }
+  },
+  {
+    "id": "111669149768",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803845",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051622",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182439",
+    "attrs": {
+      "label": "<METHOD<BR/>load_eflags>"
+    }
+  },
+  {
+    "id": "111669149769",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149770",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803846",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051623",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>compute_eflags>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182440",
+    "attrs": {
+      "label": "<METHOD<BR/>cpu_x86_set_cpl>"
+    }
+  },
+  {
+    "id": "111669149771",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149772",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803847",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051624",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182441",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.notEquals>"
+    }
+  },
+  {
+    "id": "111669149773",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149774",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803848",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051625",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182442",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.alloc>"
+    }
+  },
+  {
+    "id": "111669149775",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149776",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803849",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051626",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182443",
+    "attrs": {
+      "label": "<METHOD<BR/>ldub>"
+    }
+  },
+  {
+    "id": "111669149777",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803850",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051627",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182444",
+    "attrs": {
+      "label": "<METHOD<BR/>load_seg_vm>"
+    }
+  },
+  {
+    "id": "111669149778",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149779",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803851",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051628",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>load_segment>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.not>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

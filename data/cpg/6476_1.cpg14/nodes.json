@@ -1,1 +1,1982 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>ccid_handle_bulk_out>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>USBCCIDState *s>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>USBPacket *p>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ CCID_Header *ccid_header; if (p-&gt;...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 5<BR/>CCID_Header *ccid_header: CCID_Header*>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 9<BR/>IF<BR/>if (p-&gt;len + s-&gt;bulk_out_pos &gt; BULK_OUT_DATA_SI...>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.greaterThan, 9<BR/>p-&gt;len + s-&gt;bulk_out_pos &gt; BULK_OUT_DATA_SIZE>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 9<BR/>p-&gt;len + s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 9<BR/>p-&gt;len>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 9<BR/>p<BR/>p-&gt;len + s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 9<BR/>len>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 9<BR/>s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 9<BR/>s<BR/>p-&gt;len + s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 9<BR/>bulk_out_pos>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 9<BR/>&lt;unknown&gt; BULK_OUT_DATA_SIZE<BR/>p-&gt;len + s-&gt;bulk_out_pos &gt; BULK_OUT_DATA_SIZE>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 9<BR/>{ return USB_RET_STALL; }>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 11<BR/>return USB_RET_STALL;>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>&lt;unknown&gt; USB_RET_STALL<BR/>return USB_RET_STALL;>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 15<BR/>ccid_header = (CCID_Header *)s-&gt;bulk_out_data>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>ccid_header<BR/>ccid_header = (CCID_Header *)s-&gt;bulk_out_data>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 15<BR/>(CCID_Header *)s-&gt;bulk_out_data>"
+    }
+  },
+  {
+    "id": "176093659136",
+    "attrs": {
+      "label": "<TYPE_REF, 15<BR/>CCID_Header *>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 15<BR/>s-&gt;bulk_out_data>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>s<BR/>(CCID_Header *)s-&gt;bulk_out_data>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 15<BR/>bulk_out_data>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<memcpy, 17<BR/>memcpy(s-&gt;bulk_out_data + s-&gt;bulk_out_pos, p-&gt;d...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 17<BR/>s-&gt;bulk_out_data + s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 17<BR/>s-&gt;bulk_out_data>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>s<BR/>s-&gt;bulk_out_data + s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 17<BR/>bulk_out_data>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 17<BR/>s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>s<BR/>s-&gt;bulk_out_data + s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 17<BR/>bulk_out_pos>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 17<BR/>p-&gt;data>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>p<BR/>memcpy(s-&gt;bulk_out_data + s-&gt;bulk_out_pos, p-&gt;d...>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 17<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 17<BR/>p-&gt;len>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>p<BR/>memcpy(s-&gt;bulk_out_data + s-&gt;bulk_out_pos, p-&gt;d...>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 17<BR/>len>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignmentPlus, 19<BR/>s-&gt;bulk_out_pos += p-&gt;len>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 19<BR/>s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>s<BR/>s-&gt;bulk_out_pos += p-&gt;len>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 19<BR/>bulk_out_pos>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 19<BR/>p-&gt;len>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>p<BR/>s-&gt;bulk_out_pos += p-&gt;len>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 19<BR/>len>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 21<BR/>IF<BR/>if (p-&gt;len == CCID_MAX_PACKET_SIZE) { ...>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 21<BR/>p-&gt;len == CCID_MAX_PACKET_SIZE>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 21<BR/>p-&gt;len>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>p<BR/>p-&gt;len == CCID_MAX_PACKET_SIZE>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 21<BR/>len>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>&lt;unknown&gt; CCID_MAX_PACKET_SIZE<BR/>p-&gt;len == CCID_MAX_PACKET_SIZE>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 21<BR/>{ DPRINTF(s, D_VERBOSE, &quot;...>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<DPRINTF, 23<BR/>DPRINTF(s, D_VERBOSE, &quot;usb-ccid: b...>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>s<BR/>DPRINTF(s, D_VERBOSE, &quot;usb-ccid: b...>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>&lt;unknown&gt; D_VERBOSE<BR/>DPRINTF(s, D_VERBOSE, &quot;usb-ccid: b...>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 25<BR/>&quot;usb-ccid: bulk_in: expecting more packets (%d/...<BR/>DPRINTF(s, D_VERBOSE, &quot;usb-ccid: b...>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 27<BR/>p-&gt;len>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>p<BR/>DPRINTF(s, D_VERBOSE, &quot;usb-ccid: b...>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 27<BR/>len>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 27<BR/>ccid_header-&gt;dwLength>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>ccid_header<BR/>DPRINTF(s, D_VERBOSE, &quot;usb-ccid: b...>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 27<BR/>dwLength>"
+    }
+  },
+  {
+    "id": "141733920769",
+    "attrs": {
+      "label": "<RETURN, 29<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 29<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 33<BR/>IF<BR/>if (s-&gt;bulk_out_pos &lt; 10) { DPRINTF(s,...>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 33<BR/>s-&gt;bulk_out_pos &lt; 10>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 33<BR/>s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>s<BR/>s-&gt;bulk_out_pos &lt; 10>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 33<BR/>bulk_out_pos>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 33<BR/>10<BR/>s-&gt;bulk_out_pos &lt; 10>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 33<BR/>{ DPRINTF(s, 1, &quot;%s: ...>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<DPRINTF, 35<BR/>DPRINTF(s, 1, &quot;%s: bad USB_TOK...>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>s<BR/>DPRINTF(s, 1, &quot;%s: bad USB_TOK...>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 35<BR/>1<BR/>DPRINTF(s, 1, &quot;%s: bad USB_TOK...>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 37<BR/>&quot;%s: bad USB_TOKEN_OUT length, should be at lea...<BR/>DPRINTF(s, 1, &quot;%s: bad USB_TOK...>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>&lt;global&gt; __func__<BR/>DPRINTF(s, 1, &quot;%s: bad USB_TOK...>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 41<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 41<BR/>{ DPRINTF(s, D_MORE_INFO, &quot;%s %x\\n&quot;, _...>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<DPRINTF, 43<BR/>DPRINTF(s, D_MORE_INFO, &quot;%s %x\\n&quot;, __func__, cc...>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>s<BR/>DPRINTF(s, D_MORE_INFO, &quot;%s %x\\n&quot;, __func__, cc...>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>&lt;unknown&gt; D_MORE_INFO<BR/>DPRINTF(s, D_MORE_INFO, &quot;%s %x\\n&quot;, __func__, cc...>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 43<BR/>&quot;%s %x\\n&quot;<BR/>DPRINTF(s, D_MORE_INFO, &quot;%s %x\\n&quot;, __func__, cc...>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>&lt;global&gt; __func__<BR/>DPRINTF(s, D_MORE_INFO, &quot;%s %x\\n&quot;, __func__, cc...>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 43<BR/>ccid_header-&gt;bMessageType>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>ccid_header<BR/>DPRINTF(s, D_MORE_INFO, &quot;%s %x\\n&quot;, __func__, cc...>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 43<BR/>bMessageType>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 45<BR/>SWITCH<BR/>switch (ccid_header-&gt;bMessageType) { c...>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 45<BR/>ccid_header-&gt;bMessageType>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 45<BR/>ccid_header<BR/>switch (ccid_header-&gt;bMessageType) { c...>"
+    }
+  },
+  {
+    "id": "55834574862",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 45<BR/>bMessageType>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 45<BR/>{ case CCID_MESSAGE_TYPE_PC_to_RDR_Get...>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 47<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_GetSlotSt...<BR/>{ case CCID_MESSAGE_TYPE_PC_to_RDR_Get...>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<ccid_write_slot_status, 49<BR/>ccid_write_slot_status(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>s<BR/>ccid_write_slot_status(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>ccid_header<BR/>ccid_write_slot_status(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 51<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378625",
+    "attrs": {
+      "label": "<JUMP_TARGET, 53<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_IccPowerOn<BR/>{ case CCID_MESSAGE_TYPE_PC_to_RDR_Get...>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<DPRINTF, 55<BR/>DPRINTF(s, 1, &quot;PowerOn: %d\\n&quot;, ...>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 55<BR/>s<BR/>DPRINTF(s, 1, &quot;PowerOn: %d\\n&quot;, ...>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 55<BR/>1<BR/>DPRINTF(s, 1, &quot;PowerOn: %d\\n&quot;, ...>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 55<BR/>&quot;PowerOn: %d\\n&quot;<BR/>DPRINTF(s, 1, &quot;PowerOn: %d\\n&quot;, ...>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 57<BR/>((CCID_IccPowerOn *)(ccid_header))-&gt;bPowerSelect>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 57<BR/>(CCID_IccPowerOn *)(ccid_header)>"
+    }
+  },
+  {
+    "id": "176093659137",
+    "attrs": {
+      "label": "<TYPE_REF, 57<BR/>CCID_IccPowerOn *>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>ccid_header<BR/>(CCID_IccPowerOn *)(ccid_header)>"
+    }
+  },
+  {
+    "id": "55834574863",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 57<BR/>bPowerSelect>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 59<BR/>s-&gt;powered = true>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 59<BR/>s-&gt;powered>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>s<BR/>s-&gt;powered = true>"
+    }
+  },
+  {
+    "id": "55834574864",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 59<BR/>powered>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>&lt;unknown&gt; true<BR/>s-&gt;powered = true>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 61<BR/>IF<BR/>if (!ccid_card_inserted(s)) { ...>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 61<BR/>!ccid_card_inserted(s)>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<ccid_card_inserted, 61<BR/>ccid_card_inserted(s)>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>s<BR/>ccid_card_inserted(s)>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 61<BR/>{ ccid_report_error_failed(s, ...>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<ccid_report_error_failed, 63<BR/>ccid_report_error_failed(s, ERROR_ICC_MUTE)>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 63<BR/>s<BR/>ccid_report_error_failed(s, ERROR_ICC_MUTE)>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 63<BR/>&lt;unknown&gt; ERROR_ICC_MUTE<BR/>ccid_report_error_failed(s, ERROR_ICC_MUTE)>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<ccid_write_data_block_atr, 69<BR/>ccid_write_data_block_atr(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>s<BR/>ccid_write_data_block_atr(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>ccid_header<BR/>ccid_write_data_block_atr(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 71<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378626",
+    "attrs": {
+      "label": "<JUMP_TARGET, 73<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 73<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_IccPowerOff<BR/>{ case CCID_MESSAGE_TYPE_PC_to_RDR_Get...>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<DPRINTF, 75<BR/>DPRINTF(s, 1, &quot;PowerOff\\n&quot;)>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>s<BR/>DPRINTF(s, 1, &quot;PowerOff\\n&quot;)>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 75<BR/>1<BR/>DPRINTF(s, 1, &quot;PowerOff\\n&quot;)>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 75<BR/>&quot;PowerOff\\n&quot;<BR/>DPRINTF(s, 1, &quot;PowerOff\\n&quot;)>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<ccid_reset_error_status, 77<BR/>ccid_reset_error_status(s)>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>s<BR/>ccid_reset_error_status(s)>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 79<BR/>s-&gt;powered = false>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 79<BR/>s-&gt;powered>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>s<BR/>s-&gt;powered = false>"
+    }
+  },
+  {
+    "id": "55834574865",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 79<BR/>powered>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>&lt;unknown&gt; false<BR/>s-&gt;powered = false>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<ccid_write_slot_status, 81<BR/>ccid_write_slot_status(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>s<BR/>ccid_write_slot_status(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>ccid_header<BR/>ccid_write_slot_status(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 83<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378627",
+    "attrs": {
+      "label": "<JUMP_TARGET, 85<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_XfrBlock<BR/>{ case CCID_MESSAGE_TYPE_PC_to_RDR_Get...>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<ccid_on_apdu_from_guest, 87<BR/>ccid_on_apdu_from_guest(s, (CCID_XferBlock *)s-...>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>s<BR/>ccid_on_apdu_from_guest(s, (CCID_XferBlock *)s-...>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 87<BR/>(CCID_XferBlock *)s-&gt;bulk_out_data>"
+    }
+  },
+  {
+    "id": "176093659138",
+    "attrs": {
+      "label": "<TYPE_REF, 87<BR/>CCID_XferBlock *>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 87<BR/>s-&gt;bulk_out_data>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>s<BR/>(CCID_XferBlock *)s-&gt;bulk_out_data>"
+    }
+  },
+  {
+    "id": "55834574866",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 87<BR/>bulk_out_data>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 89<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378628",
+    "attrs": {
+      "label": "<JUMP_TARGET, 91<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_SetParame...<BR/>{ case CCID_MESSAGE_TYPE_PC_to_RDR_Get...>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<ccid_reset_error_status, 93<BR/>ccid_reset_error_status(s)>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>s<BR/>ccid_reset_error_status(s)>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<ccid_set_parameters, 95<BR/>ccid_set_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>s<BR/>ccid_set_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>ccid_header<BR/>ccid_set_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<ccid_write_parameters, 97<BR/>ccid_write_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>s<BR/>ccid_write_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>ccid_header<BR/>ccid_write_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 99<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378629",
+    "attrs": {
+      "label": "<JUMP_TARGET, 101<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_ResetPara...<BR/>{ case CCID_MESSAGE_TYPE_PC_to_RDR_Get...>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<ccid_reset_error_status, 103<BR/>ccid_reset_error_status(s)>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 103<BR/>s<BR/>ccid_reset_error_status(s)>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<ccid_reset_parameters, 105<BR/>ccid_reset_parameters(s)>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>s<BR/>ccid_reset_parameters(s)>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<ccid_write_parameters, 107<BR/>ccid_write_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>s<BR/>ccid_write_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>ccid_header<BR/>ccid_write_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 109<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378630",
+    "attrs": {
+      "label": "<JUMP_TARGET, 111<BR/>case>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_GetParame...<BR/>{ case CCID_MESSAGE_TYPE_PC_to_RDR_Get...>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<ccid_reset_error_status, 113<BR/>ccid_reset_error_status(s)>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>s<BR/>ccid_reset_error_status(s)>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<ccid_write_parameters, 115<BR/>ccid_write_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 115<BR/>s<BR/>ccid_write_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 115<BR/>ccid_header<BR/>ccid_write_parameters(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 117<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "81604378631",
+    "attrs": {
+      "label": "<JUMP_TARGET, 119<BR/>default>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<DPRINTF, 121<BR/>DPRINTF(s, 1, &quot;handle_data: ER...>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>s<BR/>DPRINTF(s, 1, &quot;handle_data: ER...>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 121<BR/>1<BR/>DPRINTF(s, 1, &quot;handle_data: ER...>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 123<BR/>&quot;handle_data: ERROR: unhandled message type %Xh\\n&quot;<BR/>DPRINTF(s, 1, &quot;handle_data: ER...>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 125<BR/>ccid_header-&gt;bMessageType>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>ccid_header<BR/>DPRINTF(s, 1, &quot;handle_data: ER...>"
+    }
+  },
+  {
+    "id": "55834574867",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 125<BR/>bMessageType>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<ccid_report_error_failed, 135<BR/>ccid_report_error_failed(s, ERROR_CMD_NOT_SUPPO...>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 135<BR/>s<BR/>ccid_report_error_failed(s, ERROR_CMD_NOT_SUPPO...>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 135<BR/>&lt;unknown&gt; ERROR_CMD_NOT_SUPPORTED<BR/>ccid_report_error_failed(s, ERROR_CMD_NOT_SUPPO...>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<ccid_write_slot_status, 137<BR/>ccid_write_slot_status(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 137<BR/>s<BR/>ccid_write_slot_status(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 137<BR/>ccid_header<BR/>ccid_write_slot_status(s, ccid_header)>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 139<BR/>BREAK<BR/>break;>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 145<BR/>s-&gt;bulk_out_pos = 0>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 145<BR/>s-&gt;bulk_out_pos>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 145<BR/>s<BR/>s-&gt;bulk_out_pos = 0>"
+    }
+  },
+  {
+    "id": "55834574868",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 145<BR/>bulk_out_pos>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 145<BR/>0<BR/>s-&gt;bulk_out_pos = 0>"
+    }
+  },
+  {
+    "id": "141733920770",
+    "attrs": {
+      "label": "<RETURN, 147<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 147<BR/>0<BR/>return 0;>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 135<BR/>&lt;unknown&gt; ERROR_CMD_NOT_SUPPORTED: ANY>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 111<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_GetParame...: ANY>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 101<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_ResetPara...: ANY>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 91<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_SetParame...: ANY>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 85<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_XfrBlock: ANY>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 79<BR/>&lt;unknown&gt; false: ANY>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 73<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_IccPowerOff: ANY>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 63<BR/>&lt;unknown&gt; ERROR_ICC_MUTE: ANY>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 59<BR/>&lt;unknown&gt; true: ANY>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 53<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_IccPowerOn: ANY>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 47<BR/>&lt;unknown&gt; CCID_MESSAGE_TYPE_PC_to_RDR_GetSlotSt...: ANY>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 39<BR/>&lt;global&gt; __func__: char[]>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 43<BR/>&lt;unknown&gt; D_MORE_INFO: ANY>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 23<BR/>&lt;unknown&gt; D_VERBOSE: ANY>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 21<BR/>&lt;unknown&gt; CCID_MAX_PACKET_SIZE: ANY>"
+    }
+  },
+  {
+    "id": "94489280528",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>&lt;unknown&gt; USB_RET_STALL: ANY>"
+    }
+  },
+  {
+    "id": "94489280529",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>&lt;unknown&gt; BULK_OUT_DATA_SIZE: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>int>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>ccid_handle_bulk_out<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>ccid_on_apdu_from_guest>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>ccid_reset_error_status>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>ccid_write_data_block_atr>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>DPRINTF>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>ccid_reset_parameters>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addition>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>ccid_write_slot_status>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignmentPlus>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>memcpy>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.cast>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.equals>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>ccid_set_parameters>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.greaterThan>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>ccid_write_parameters>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>ccid_card_inserted>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>ccid_report_error_failed>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

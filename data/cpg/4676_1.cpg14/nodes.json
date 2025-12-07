@@ -1,1 +1,2342 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>virtio_serial_init>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>DeviceState *dev>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>virtio_serial_conf *conf>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ VirtIOSerial *vser; VirtIODevice *v...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 5<BR/>VirtIOSerial *vser: VirtIOSerial*>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>VirtIODevice *vdev: VirtIODevice*>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>uint32_t i: uint32_t>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>uint32_t max_supported_ports: uint32_t>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 13<BR/>IF<BR/>if (!conf-&gt;max_virtserial_ports) retur...>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 13<BR/>!conf-&gt;max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 13<BR/>conf-&gt;max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>conf<BR/>!conf-&gt;max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 13<BR/>max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 15<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 15<BR/>return NULL;>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>&lt;unknown&gt; NULL<BR/>return NULL;>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 21<BR/>max_supported_ports = VIRTIO_PCI_QUEUE_MAX / 2 - 1>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>max_supported_ports<BR/>max_supported_ports = VIRTIO_PCI_QUEUE_MAX / 2 - 1>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 21<BR/>VIRTIO_PCI_QUEUE_MAX / 2 - 1>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.division, 21<BR/>VIRTIO_PCI_QUEUE_MAX / 2>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>&lt;unknown&gt; VIRTIO_PCI_QUEUE_MAX<BR/>VIRTIO_PCI_QUEUE_MAX / 2>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 21<BR/>2<BR/>VIRTIO_PCI_QUEUE_MAX / 2>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 21<BR/>1<BR/>VIRTIO_PCI_QUEUE_MAX / 2 - 1>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 25<BR/>IF<BR/>if (conf-&gt;max_virtserial_ports &gt; max_supported_...>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.greaterThan, 25<BR/>conf-&gt;max_virtserial_ports &gt; max_supported_ports>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 25<BR/>conf-&gt;max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>conf<BR/>conf-&gt;max_virtserial_ports &gt; max_supported_ports>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 25<BR/>max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>max_supported_ports<BR/>conf-&gt;max_virtserial_ports &gt; max_supported_ports>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 25<BR/>{ error_report(&quot;maximum ports supporte...>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<error_report, 27<BR/>error_report(&quot;maximum ports supported: %u&quot;, max...>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 27<BR/>&quot;maximum ports supported: %u&quot;<BR/>error_report(&quot;maximum ports supported: %u&quot;, max...>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>max_supported_ports<BR/>error_report(&quot;maximum ports supported: %u&quot;, max...>"
+    }
+  },
+  {
+    "id": "141733920769",
+    "attrs": {
+      "label": "<RETURN, 29<BR/>return NULL;>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 29<BR/>&lt;unknown&gt; NULL<BR/>return NULL;>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 35<BR/>vdev = virtio_common_init(&quot;virtio-serial&quot;, VIRT...>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>vdev<BR/>vdev = virtio_common_init(&quot;virtio-serial&quot;, VIRT...>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<virtio_common_init, 35<BR/>virtio_common_init(&quot;virtio-serial&quot;, VIRTIO_ID_C...>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 35<BR/>&quot;virtio-serial&quot;<BR/>virtio_common_init(&quot;virtio-serial&quot;, VIRTIO_ID_C...>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>&lt;unknown&gt; VIRTIO_ID_CONSOLE<BR/>virtio_common_init(&quot;virtio-serial&quot;, VIRTIO_ID_C...>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.sizeOf, 37<BR/>sizeof(struct virtio_console_config)>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 37<BR/>struct virtio_console_config<BR/>sizeof(struct virtio_console_config)>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.sizeOf, 39<BR/>sizeof(VirtIOSerial)>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>VirtIOSerial<BR/>sizeof(VirtIOSerial)>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 43<BR/>vser = DO_UPCAST(VirtIOSerial, vdev, vdev)>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>vser<BR/>vser = DO_UPCAST(VirtIOSerial, vdev, vdev)>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<DO_UPCAST, 43<BR/>DO_UPCAST(VirtIOSerial, vdev, vdev)>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>&lt;unknown&gt; VirtIOSerial<BR/>DO_UPCAST(VirtIOSerial, vdev, vdev)>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>vdev<BR/>DO_UPCAST(VirtIOSerial, vdev, vdev)>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>vdev<BR/>DO_UPCAST(VirtIOSerial, vdev, vdev)>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 49<BR/>vser-&gt;bus = virtser_bus_new(dev)>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 49<BR/>vser-&gt;bus>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>vser<BR/>vser-&gt;bus = virtser_bus_new(dev)>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 49<BR/>bus>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<virtser_bus_new, 49<BR/>virtser_bus_new(dev)>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>dev<BR/>virtser_bus_new(dev)>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 51<BR/>vser-&gt;bus-&gt;vser = vser>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 51<BR/>vser-&gt;bus-&gt;vser>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 51<BR/>vser-&gt;bus>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>vser<BR/>vser-&gt;bus-&gt;vser = vser>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 51<BR/>bus>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 51<BR/>vser>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>vser<BR/>vser-&gt;bus-&gt;vser = vser>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<QTAILQ_INIT, 53<BR/>QTAILQ_INIT(&amp;vser-&gt;ports)>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 53<BR/>&amp;vser-&gt;ports>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 53<BR/>vser-&gt;ports>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>vser<BR/>QTAILQ_INIT(&amp;vser-&gt;ports)>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 53<BR/>ports>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 57<BR/>vser-&gt;bus-&gt;max_nr_ports = conf-&gt;max_virtserial_...>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 57<BR/>vser-&gt;bus-&gt;max_nr_ports>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 57<BR/>vser-&gt;bus>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>vser<BR/>vser-&gt;bus-&gt;max_nr_ports = conf-&gt;max_virtserial_...>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 57<BR/>bus>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 57<BR/>max_nr_ports>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 57<BR/>conf-&gt;max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>conf<BR/>vser-&gt;bus-&gt;max_nr_ports = conf-&gt;max_virtserial_...>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 57<BR/>max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 59<BR/>vser-&gt;ivqs = qemu_malloc(conf-&gt;max_virtserial_p...>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 59<BR/>vser-&gt;ivqs>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>vser<BR/>vser-&gt;ivqs = qemu_malloc(conf-&gt;max_virtserial_p...>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 59<BR/>ivqs>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<qemu_malloc, 59<BR/>qemu_malloc(conf-&gt;max_virtserial_ports * sizeof...>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 59<BR/>conf-&gt;max_virtserial_ports * sizeof(VirtQueue *)>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 59<BR/>conf-&gt;max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>conf<BR/>conf-&gt;max_virtserial_ports * sizeof(VirtQueue *)>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 59<BR/>max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.sizeOf, 59<BR/>sizeof(VirtQueue *)>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>VirtQueue<BR/>sizeof(VirtQueue *)>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 61<BR/>vser-&gt;ovqs = qemu_malloc(conf-&gt;max_virtserial_p...>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 61<BR/>vser-&gt;ovqs>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>vser<BR/>vser-&gt;ovqs = qemu_malloc(conf-&gt;max_virtserial_p...>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 61<BR/>ovqs>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<qemu_malloc, 61<BR/>qemu_malloc(conf-&gt;max_virtserial_ports * sizeof...>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 61<BR/>conf-&gt;max_virtserial_ports * sizeof(VirtQueue *)>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 61<BR/>conf-&gt;max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>conf<BR/>conf-&gt;max_virtserial_ports * sizeof(VirtQueue *)>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 61<BR/>max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<&lt;operator&gt;.sizeOf, 61<BR/>sizeof(VirtQueue *)>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>VirtQueue<BR/>sizeof(VirtQueue *)>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 67<BR/>vser-&gt;ivqs[0] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 67<BR/>vser-&gt;ivqs[0]>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 67<BR/>vser-&gt;ivqs>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>vser<BR/>vser-&gt;ivqs[0] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 67<BR/>ivqs>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 67<BR/>0<BR/>vser-&gt;ivqs[0] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<virtio_add_queue, 67<BR/>virtio_add_queue(vdev, 128, handle_input)>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>vdev<BR/>virtio_add_queue(vdev, 128, handle_input)>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 67<BR/>128<BR/>virtio_add_queue(vdev, 128, handle_input)>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>&lt;unknown&gt; handle_input<BR/>virtio_add_queue(vdev, 128, handle_input)>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 71<BR/>vser-&gt;ovqs[0] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 71<BR/>vser-&gt;ovqs[0]>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 71<BR/>vser-&gt;ovqs>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>vser<BR/>vser-&gt;ovqs[0] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "55834574862",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 71<BR/>ovqs>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 71<BR/>0<BR/>vser-&gt;ovqs[0] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<virtio_add_queue, 71<BR/>virtio_add_queue(vdev, 128, handle_output)>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>vdev<BR/>virtio_add_queue(vdev, 128, handle_output)>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 71<BR/>128<BR/>virtio_add_queue(vdev, 128, handle_output)>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>&lt;unknown&gt; handle_output<BR/>virtio_add_queue(vdev, 128, handle_output)>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 89<BR/>vser-&gt;c_ivq = virtio_add_queue(vdev, 32, contro...>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 89<BR/>vser-&gt;c_ivq>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>vser<BR/>vser-&gt;c_ivq = virtio_add_queue(vdev, 32, contro...>"
+    }
+  },
+  {
+    "id": "55834574863",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 89<BR/>c_ivq>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<virtio_add_queue, 89<BR/>virtio_add_queue(vdev, 32, control_in)>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>vdev<BR/>virtio_add_queue(vdev, 32, control_in)>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 89<BR/>32<BR/>virtio_add_queue(vdev, 32, control_in)>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 89<BR/>&lt;unknown&gt; control_in<BR/>virtio_add_queue(vdev, 32, control_in)>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 93<BR/>vser-&gt;c_ovq = virtio_add_queue(vdev, 32, contro...>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 93<BR/>vser-&gt;c_ovq>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>vser<BR/>vser-&gt;c_ovq = virtio_add_queue(vdev, 32, contro...>"
+    }
+  },
+  {
+    "id": "55834574864",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 93<BR/>c_ovq>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<virtio_add_queue, 93<BR/>virtio_add_queue(vdev, 32, control_out)>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>vdev<BR/>virtio_add_queue(vdev, 32, control_out)>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 93<BR/>32<BR/>virtio_add_queue(vdev, 32, control_out)>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>&lt;unknown&gt; control_out<BR/>virtio_add_queue(vdev, 32, control_out)>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 97<BR/>FOR<BR/>for (i = 1;i &lt; vser-&gt;bus-&gt;max_nr_ports;i++)>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 97<BR/>i = 1>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>i<BR/>i = 1>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 97<BR/>1<BR/>i = 1>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 97<BR/>i &lt; vser-&gt;bus-&gt;max_nr_ports>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>i<BR/>i &lt; vser-&gt;bus-&gt;max_nr_ports>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 97<BR/>vser-&gt;bus-&gt;max_nr_ports>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 97<BR/>vser-&gt;bus>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>vser<BR/>i &lt; vser-&gt;bus-&gt;max_nr_ports>"
+    }
+  },
+  {
+    "id": "55834574865",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 97<BR/>bus>"
+    }
+  },
+  {
+    "id": "55834574866",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 97<BR/>max_nr_ports>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 97<BR/>i++>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>i<BR/>i++>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 97<BR/>{ /* Add a per-port queue for host to ...>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 101<BR/>vser-&gt;ivqs[i] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 101<BR/>vser-&gt;ivqs[i]>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 101<BR/>vser-&gt;ivqs>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>vser<BR/>vser-&gt;ivqs[i] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "55834574867",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 101<BR/>ivqs>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>i<BR/>vser-&gt;ivqs[i] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<virtio_add_queue, 101<BR/>virtio_add_queue(vdev, 128, handle_input)>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>vdev<BR/>virtio_add_queue(vdev, 128, handle_input)>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 101<BR/>128<BR/>virtio_add_queue(vdev, 128, handle_input)>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>&lt;unknown&gt; handle_input<BR/>virtio_add_queue(vdev, 128, handle_input)>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 105<BR/>vser-&gt;ovqs[i] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 105<BR/>vser-&gt;ovqs[i]>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 105<BR/>vser-&gt;ovqs>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>vser<BR/>vser-&gt;ovqs[i] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "55834574868",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 105<BR/>ovqs>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>i<BR/>vser-&gt;ovqs[i] = virtio_add_queue(vdev, 128, han...>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<virtio_add_queue, 105<BR/>virtio_add_queue(vdev, 128, handle_output)>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>vdev<BR/>virtio_add_queue(vdev, 128, handle_output)>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 105<BR/>128<BR/>virtio_add_queue(vdev, 128, handle_output)>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>&lt;unknown&gt; handle_output<BR/>virtio_add_queue(vdev, 128, handle_output)>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 111<BR/>vser-&gt;config.max_nr_ports = tswap32(conf-&gt;max_v...>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 111<BR/>vser-&gt;config.max_nr_ports>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 111<BR/>vser-&gt;config>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>vser<BR/>vser-&gt;config.max_nr_ports = tswap32(conf-&gt;max_v...>"
+    }
+  },
+  {
+    "id": "55834574869",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 111<BR/>config>"
+    }
+  },
+  {
+    "id": "55834574870",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 111<BR/>max_nr_ports>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<tswap32, 111<BR/>tswap32(conf-&gt;max_virtserial_ports)>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 111<BR/>conf-&gt;max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 111<BR/>conf<BR/>tswap32(conf-&gt;max_virtserial_ports)>"
+    }
+  },
+  {
+    "id": "55834574871",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 111<BR/>max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 113<BR/>vser-&gt;ports_map = qemu_mallocz(((conf-&gt;max_virt...>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 113<BR/>vser-&gt;ports_map>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>vser<BR/>vser-&gt;ports_map = qemu_mallocz(((conf-&gt;max_virt...>"
+    }
+  },
+  {
+    "id": "55834574872",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 113<BR/>ports_map>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<qemu_mallocz, 113<BR/>qemu_mallocz(((conf-&gt;max_virtserial_ports + 31)...>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<&lt;operator&gt;.multiplication, 113<BR/>((conf-&gt;max_virtserial_ports + 31) / 32) ...>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<&lt;operator&gt;.division, 113<BR/>(conf-&gt;max_virtserial_ports + 31) / 32>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 113<BR/>conf-&gt;max_virtserial_ports + 31>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 113<BR/>conf-&gt;max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 113<BR/>conf<BR/>conf-&gt;max_virtserial_ports + 31>"
+    }
+  },
+  {
+    "id": "55834574873",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 113<BR/>max_virtserial_ports>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 113<BR/>31<BR/>conf-&gt;max_virtserial_ports + 31>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 113<BR/>32<BR/>(conf-&gt;max_virtserial_ports + 31) / 32>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<&lt;operator&gt;.sizeOf, 115<BR/>sizeof(vser-&gt;ports_map[0])>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectIndexAccess, 115<BR/>vser-&gt;ports_map[0]>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 115<BR/>vser-&gt;ports_map>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 115<BR/>vser<BR/>sizeof(vser-&gt;ports_map[0])>"
+    }
+  },
+  {
+    "id": "55834574874",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 115<BR/>ports_map>"
+    }
+  },
+  {
+    "id": "90194313231",
+    "attrs": {
+      "label": "<LITERAL, 115<BR/>0<BR/>sizeof(vser-&gt;ports_map[0])>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<mark_port_added, 125<BR/>mark_port_added(vser, 0)>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>vser<BR/>mark_port_added(vser, 0)>"
+    }
+  },
+  {
+    "id": "90194313232",
+    "attrs": {
+      "label": "<LITERAL, 125<BR/>0<BR/>mark_port_added(vser, 0)>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 129<BR/>vser-&gt;vdev.get_features = get_features>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 129<BR/>vser-&gt;vdev.get_features>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 129<BR/>vser-&gt;vdev>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>vser<BR/>vser-&gt;vdev.get_features = get_features>"
+    }
+  },
+  {
+    "id": "55834574875",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 129<BR/>vdev>"
+    }
+  },
+  {
+    "id": "55834574876",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 129<BR/>get_features>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>&lt;unknown&gt; get_features<BR/>vser-&gt;vdev.get_features = get_features>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 131<BR/>vser-&gt;vdev.get_config = get_config>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 131<BR/>vser-&gt;vdev.get_config>"
+    }
+  },
+  {
+    "id": "30064771159",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 131<BR/>vser-&gt;vdev>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 131<BR/>vser<BR/>vser-&gt;vdev.get_config = get_config>"
+    }
+  },
+  {
+    "id": "55834574877",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 131<BR/>vdev>"
+    }
+  },
+  {
+    "id": "55834574878",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 131<BR/>get_config>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 131<BR/>&lt;unknown&gt; get_config<BR/>vser-&gt;vdev.get_config = get_config>"
+    }
+  },
+  {
+    "id": "30064771160",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 133<BR/>vser-&gt;vdev.set_config = set_config>"
+    }
+  },
+  {
+    "id": "30064771161",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 133<BR/>vser-&gt;vdev.set_config>"
+    }
+  },
+  {
+    "id": "30064771162",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 133<BR/>vser-&gt;vdev>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>vser<BR/>vser-&gt;vdev.set_config = set_config>"
+    }
+  },
+  {
+    "id": "55834574879",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 133<BR/>vdev>"
+    }
+  },
+  {
+    "id": "55834574880",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 133<BR/>set_config>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>&lt;unknown&gt; set_config<BR/>vser-&gt;vdev.set_config = set_config>"
+    }
+  },
+  {
+    "id": "30064771163",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 137<BR/>vser-&gt;qdev = dev>"
+    }
+  },
+  {
+    "id": "30064771164",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 137<BR/>vser-&gt;qdev>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 137<BR/>vser<BR/>vser-&gt;qdev = dev>"
+    }
+  },
+  {
+    "id": "55834574881",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 137<BR/>qdev>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 137<BR/>dev<BR/>vser-&gt;qdev = dev>"
+    }
+  },
+  {
+    "id": "30064771165",
+    "attrs": {
+      "label": "<register_savevm, 149<BR/>register_savevm(dev, &quot;virtio-console&quot;, -1, 3, v...>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 149<BR/>dev<BR/>register_savevm(dev, &quot;virtio-console&quot;, -1, 3, v...>"
+    }
+  },
+  {
+    "id": "90194313233",
+    "attrs": {
+      "label": "<LITERAL, 149<BR/>&quot;virtio-console&quot;<BR/>register_savevm(dev, &quot;virtio-console&quot;, -1, 3, v...>"
+    }
+  },
+  {
+    "id": "30064771166",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 149<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313234",
+    "attrs": {
+      "label": "<LITERAL, 149<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313235",
+    "attrs": {
+      "label": "<LITERAL, 149<BR/>3<BR/>register_savevm(dev, &quot;virtio-console&quot;, -1, 3, v...>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 149<BR/>&lt;unknown&gt; virtio_serial_save<BR/>register_savevm(dev, &quot;virtio-console&quot;, -1, 3, v...>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 151<BR/>&lt;unknown&gt; virtio_serial_load<BR/>register_savevm(dev, &quot;virtio-console&quot;, -1, 3, v...>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 151<BR/>vser<BR/>register_savevm(dev, &quot;virtio-console&quot;, -1, 3, v...>"
+    }
+  },
+  {
+    "id": "141733920770",
+    "attrs": {
+      "label": "<RETURN, 155<BR/>return vdev;>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 155<BR/>vdev<BR/>return vdev;>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 151<BR/>&lt;unknown&gt; virtio_serial_load: ANY>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 149<BR/>&lt;unknown&gt; virtio_serial_save: ANY>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 133<BR/>&lt;unknown&gt; set_config: ANY>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 131<BR/>&lt;unknown&gt; get_config: ANY>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 129<BR/>&lt;unknown&gt; get_features: ANY>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 71<BR/>&lt;unknown&gt; handle_output: ANY>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 67<BR/>&lt;unknown&gt; handle_input: ANY>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 93<BR/>&lt;unknown&gt; control_out: ANY>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 89<BR/>&lt;unknown&gt; control_in: ANY>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 59<BR/>VirtQueue: VirtQueue>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 39<BR/>&lt;unknown&gt; VirtIOSerial: ANY>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 37<BR/>struct virtio_console_config: virtio_console_config>"
+    }
+  },
+  {
+    "id": "94489280528",
+    "attrs": {
+      "label": "<LOCAL, 35<BR/>&lt;unknown&gt; VIRTIO_ID_CONSOLE: ANY>"
+    }
+  },
+  {
+    "id": "94489280529",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "94489280530",
+    "attrs": {
+      "label": "<LOCAL, 21<BR/>&lt;unknown&gt; VIRTIO_PCI_QUEUE_MAX: ANY>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>VirtIODevice>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>virtio_serial_init<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.multiplication>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>virtio_add_queue>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.subtraction>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addition>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>virtser_bus_new>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>error_report>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.postIncrement>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.minus>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>register_savevm>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p6>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p7>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.division>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>DO_UPCAST>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.greaterThan>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>QTAILQ_INIT>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectIndexAccess>"
+    }
+  },
+  {
+    "id": "111669149744",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149745",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>tswap32>"
+    }
+  },
+  {
+    "id": "111669149746",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_malloc>"
+    }
+  },
+  {
+    "id": "111669149747",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182428",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_mallocz>"
+    }
+  },
+  {
+    "id": "111669149748",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051612",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>virtio_common_init>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>mark_port_added>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.sizeOf>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.fieldAccess>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

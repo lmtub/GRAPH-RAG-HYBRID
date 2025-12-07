@@ -1,1 +1,2726 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>postcopy_start>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>MigrationState *ms>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>bool *old_vm_running>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ int ret; QIOChannelBuffer *bioc; ...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 5<BR/>int ret: int>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>QIOChannelBuffer *bioc: QIOChannelBuffer*>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>QEMUFile *fb: QEMUFile*>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>int64_t time_at_stop: int64_t>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 11<BR/>time_at_stop = qemu_clock_get_ms(QEMU_CLOCK_REA...>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>time_at_stop<BR/>time_at_stop = qemu_clock_get_ms(QEMU_CLOCK_REA...>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<qemu_clock_get_ms, 11<BR/>qemu_clock_get_ms(QEMU_CLOCK_REALTIME)>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>&lt;unknown&gt; QEMU_CLOCK_REALTIME<BR/>qemu_clock_get_ms(QEMU_CLOCK_REALTIME)>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>bool restart_block: bool>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 13<BR/>restart_block = false>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>restart_block<BR/>restart_block = false>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>&lt;unknown&gt; false<BR/>restart_block = false>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>int cur_state: int>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 15<BR/>cur_state = MIGRATION_STATUS_ACTIVE>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>cur_state<BR/>cur_state = MIGRATION_STATUS_ACTIVE>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>&lt;unknown&gt; MIGRATION_STATUS_ACTIVE<BR/>cur_state = MIGRATION_STATUS_ACTIVE>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 17<BR/>IF<BR/>if (!migrate_pause_before_switchover()) { ...>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 17<BR/>!migrate_pause_before_switchover()>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<migrate_pause_before_switchover, 17<BR/>migrate_pause_before_switchover()>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 17<BR/>{ migrate_set_state(&amp;ms-&gt;state, MIGRAT...>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<migrate_set_state, 19<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 19<BR/>&amp;ms-&gt;state>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 19<BR/>ms-&gt;state>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>ms<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 19<BR/>state>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 19<BR/>&lt;unknown&gt; MIGRATION_STATUS_ACTIVE<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>&lt;unknown&gt; MIGRATION_STATUS_POSTCOPY_ACTIVE<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<trace_postcopy_start, 27<BR/>trace_postcopy_start()>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<qemu_mutex_lock_iothread, 29<BR/>qemu_mutex_lock_iothread()>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<trace_postcopy_start_set_run, 31<BR/>trace_postcopy_start_set_run()>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<qemu_system_wakeup_request, 35<BR/>qemu_system_wakeup_request(QEMU_WAKEUP_REASON_O...>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>&lt;unknown&gt; QEMU_WAKEUP_REASON_OTHER<BR/>qemu_system_wakeup_request(QEMU_WAKEUP_REASON_O...>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 37<BR/>*old_vm_running = runstate_is_running()>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 37<BR/>*old_vm_running>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 37<BR/>old_vm_running<BR/>*old_vm_running = runstate_is_running()>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<runstate_is_running, 37<BR/>runstate_is_running()>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<global_state_store, 39<BR/>global_state_store()>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 41<BR/>ret = vm_stop_force_state(RUN_STATE_FINISH_MIGR...>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>ret<BR/>ret = vm_stop_force_state(RUN_STATE_FINISH_MIGR...>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<vm_stop_force_state, 41<BR/>vm_stop_force_state(RUN_STATE_FINISH_MIGRATE)>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>&lt;unknown&gt; RUN_STATE_FINISH_MIGRATE<BR/>vm_stop_force_state(RUN_STATE_FINISH_MIGRATE)>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 43<BR/>IF<BR/>if (ret &lt; 0) { goto fail; }>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 43<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 43<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 43<BR/>{ goto fail; }>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 45<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 51<BR/>ret = migration_maybe_pause(ms, &amp;cur_state, ...>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>ret<BR/>ret = migration_maybe_pause(ms, &amp;cur_state, ...>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<migration_maybe_pause, 51<BR/>migration_maybe_pause(ms, &amp;cur_state, ...>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>ms<BR/>migration_maybe_pause(ms, &amp;cur_state, ...>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 51<BR/>&amp;cur_state>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>cur_state<BR/>migration_maybe_pause(ms, &amp;cur_state, ...>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>&lt;unknown&gt; MIGRATION_STATUS_POSTCOPY_ACTIVE<BR/>migration_maybe_pause(ms, &amp;cur_state, ...>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 55<BR/>IF<BR/>if (ret &lt; 0) { goto fail; }>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 55<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 55<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 55<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 55<BR/>{ goto fail; }>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 57<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 63<BR/>ret = bdrv_inactivate_all()>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 63<BR/>ret<BR/>ret = bdrv_inactivate_all()>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<bdrv_inactivate_all, 63<BR/>bdrv_inactivate_all()>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 65<BR/>IF<BR/>if (ret &lt; 0) { goto fail; }>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 65<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 65<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 65<BR/>{ goto fail; }>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 67<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 71<BR/>restart_block = true>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>restart_block<BR/>restart_block = true>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>&lt;unknown&gt; true<BR/>restart_block = true>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<qemu_savevm_state_complete_precopy, 83<BR/>qemu_savevm_state_complete_precopy(ms-&gt;to_dst_f...>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 83<BR/>ms-&gt;to_dst_file>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>ms<BR/>qemu_savevm_state_complete_precopy(ms-&gt;to_dst_f...>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 83<BR/>to_dst_file>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>&lt;unknown&gt; true<BR/>qemu_savevm_state_complete_precopy(ms-&gt;to_dst_f...>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>&lt;unknown&gt; false<BR/>qemu_savevm_state_complete_precopy(ms-&gt;to_dst_f...>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 99<BR/>IF<BR/>if (migrate_postcopy_ram()) { if (ram_...>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<migrate_postcopy_ram, 99<BR/>migrate_postcopy_ram()>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 99<BR/>{ if (ram_postcopy_send_discard_bitmap...>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 101<BR/>IF<BR/>if (ram_postcopy_send_discard_bitmap(ms)) { ...>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<ram_postcopy_send_discard_bitmap, 101<BR/>ram_postcopy_send_discard_bitmap(ms)>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>ms<BR/>ram_postcopy_send_discard_bitmap(ms)>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 101<BR/>{ error_report(&quot;postcopy send disc...>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<error_report, 103<BR/>error_report(&quot;postcopy send discard bitmap fail...>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 103<BR/>&quot;postcopy send discard bitmap failed&quot;<BR/>error_report(&quot;postcopy send discard bitmap fail...>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 105<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<qemu_file_set_rate_limit, 123<BR/>qemu_file_set_rate_limit(ms-&gt;to_dst_file, INT64...>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 123<BR/>ms-&gt;to_dst_file>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>ms<BR/>qemu_file_set_rate_limit(ms-&gt;to_dst_file, INT64...>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 123<BR/>to_dst_file>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>&lt;unknown&gt; INT64_MAX<BR/>qemu_file_set_rate_limit(ms-&gt;to_dst_file, INT64...>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 125<BR/>IF<BR/>if (migrate_postcopy_ram()) { /* Ping ...>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<migrate_postcopy_ram, 125<BR/>migrate_postcopy_ram()>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 125<BR/>{ /* Ping just for debugging, helps li...>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<qemu_savevm_send_ping, 129<BR/>qemu_savevm_send_ping(ms-&gt;to_dst_file, 2)>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 129<BR/>ms-&gt;to_dst_file>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>ms<BR/>qemu_savevm_send_ping(ms-&gt;to_dst_file, 2)>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 129<BR/>to_dst_file>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 129<BR/>2<BR/>qemu_savevm_send_ping(ms-&gt;to_dst_file, 2)>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 157<BR/>bioc = qio_channel_buffer_new(4096)>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 157<BR/>bioc<BR/>bioc = qio_channel_buffer_new(4096)>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<qio_channel_buffer_new, 157<BR/>qio_channel_buffer_new(4096)>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 157<BR/>4096<BR/>qio_channel_buffer_new(4096)>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<qio_channel_set_name, 159<BR/>qio_channel_set_name(QIO_CHANNEL(bioc), &quot;migrat...>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<QIO_CHANNEL, 159<BR/>QIO_CHANNEL(bioc)>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 159<BR/>bioc<BR/>QIO_CHANNEL(bioc)>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 159<BR/>&quot;migration-postcopy-buffer&quot;<BR/>qio_channel_set_name(QIO_CHANNEL(bioc), &quot;migrat...>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 161<BR/>fb = qemu_fopen_channel_output(QIO_CHANNEL(bioc))>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 161<BR/>fb<BR/>fb = qemu_fopen_channel_output(QIO_CHANNEL(bioc))>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<qemu_fopen_channel_output, 161<BR/>qemu_fopen_channel_output(QIO_CHANNEL(bioc))>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<QIO_CHANNEL, 161<BR/>QIO_CHANNEL(bioc)>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 161<BR/>bioc<BR/>QIO_CHANNEL(bioc)>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<object_unref, 163<BR/>object_unref(OBJECT(bioc))>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<OBJECT, 163<BR/>OBJECT(bioc)>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 163<BR/>bioc<BR/>OBJECT(bioc)>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<qemu_savevm_send_postcopy_listen, 175<BR/>qemu_savevm_send_postcopy_listen(fb)>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>fb<BR/>qemu_savevm_send_postcopy_listen(fb)>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<qemu_savevm_state_complete_precopy, 179<BR/>qemu_savevm_state_complete_precopy(fb, false, f...>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 179<BR/>fb<BR/>qemu_savevm_state_complete_precopy(fb, false, f...>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 179<BR/>&lt;unknown&gt; false<BR/>qemu_savevm_state_complete_precopy(fb, false, f...>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 179<BR/>&lt;unknown&gt; false<BR/>qemu_savevm_state_complete_precopy(fb, false, f...>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 181<BR/>IF<BR/>if (migrate_postcopy_ram()) { qemu_sav...>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<migrate_postcopy_ram, 181<BR/>migrate_postcopy_ram()>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 181<BR/>{ qemu_savevm_send_ping(fb, 3); }>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<qemu_savevm_send_ping, 183<BR/>qemu_savevm_send_ping(fb, 3)>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 183<BR/>fb<BR/>qemu_savevm_send_ping(fb, 3)>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 183<BR/>3<BR/>qemu_savevm_send_ping(fb, 3)>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<qemu_savevm_send_postcopy_run, 189<BR/>qemu_savevm_send_postcopy_run(fb)>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 189<BR/>fb<BR/>qemu_savevm_send_postcopy_run(fb)>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 205<BR/>ret = qemu_file_get_error(ms-&gt;to_dst_file)>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 205<BR/>ret<BR/>ret = qemu_file_get_error(ms-&gt;to_dst_file)>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<qemu_file_get_error, 205<BR/>qemu_file_get_error(ms-&gt;to_dst_file)>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 205<BR/>ms-&gt;to_dst_file>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 205<BR/>ms<BR/>qemu_file_get_error(ms-&gt;to_dst_file)>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 205<BR/>to_dst_file>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 207<BR/>IF<BR/>if (ret) { error_report(&quot;postcopy_star...>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 207<BR/>ret<BR/>if (ret) { error_report(&quot;postcopy_star...>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 207<BR/>{ error_report(&quot;postcopy_start: Migrat...>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<error_report, 209<BR/>error_report(&quot;postcopy_start: Migration stream ...>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 209<BR/>&quot;postcopy_start: Migration stream errored (pre ...<BR/>error_report(&quot;postcopy_start: Migration stream ...>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 211<BR/>GOTO<BR/>goto fail_closefb;>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 217<BR/>restart_block = false>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>restart_block<BR/>restart_block = false>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>&lt;unknown&gt; false<BR/>restart_block = false>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 223<BR/>IF<BR/>if (qemu_savevm_send_packaged(ms-&gt;to_dst_file, ...>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<qemu_savevm_send_packaged, 223<BR/>qemu_savevm_send_packaged(ms-&gt;to_dst_file, bioc...>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 223<BR/>ms-&gt;to_dst_file>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 223<BR/>ms<BR/>qemu_savevm_send_packaged(ms-&gt;to_dst_file, bioc...>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 223<BR/>to_dst_file>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 223<BR/>bioc-&gt;data>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 223<BR/>bioc<BR/>qemu_savevm_send_packaged(ms-&gt;to_dst_file, bioc...>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 223<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 223<BR/>bioc-&gt;usage>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 223<BR/>bioc<BR/>qemu_savevm_send_packaged(ms-&gt;to_dst_file, bioc...>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 223<BR/>usage>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 223<BR/>{ goto fail_closefb; }>"
+    }
+  },
+  {
+    "id": "47244640271",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 225<BR/>GOTO<BR/>goto fail_closefb;>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<qemu_fclose, 229<BR/>qemu_fclose(fb)>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 229<BR/>fb<BR/>qemu_fclose(fb)>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 241<BR/>ms-&gt;postcopy_after_devices = true>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 241<BR/>ms-&gt;postcopy_after_devices>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 241<BR/>ms<BR/>ms-&gt;postcopy_after_devices = true>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 241<BR/>postcopy_after_devices>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 241<BR/>&lt;unknown&gt; true<BR/>ms-&gt;postcopy_after_devices = true>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<notifier_list_notify, 243<BR/>notifier_list_notify(&amp;migration_state_notifiers...>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 243<BR/>&amp;migration_state_notifiers>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 243<BR/>&lt;unknown&gt; migration_state_notifiers<BR/>notifier_list_notify(&amp;migration_state_notifiers...>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 243<BR/>ms<BR/>notifier_list_notify(&amp;migration_state_notifiers...>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 247<BR/>ms-&gt;downtime = qemu_clock_get_ms(QEMU_CLOCK_RE...>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 247<BR/>ms-&gt;downtime>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 247<BR/>ms<BR/>ms-&gt;downtime = qemu_clock_get_ms(QEMU_CLOCK_RE...>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 247<BR/>downtime>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 247<BR/>qemu_clock_get_ms(QEMU_CLOCK_REALTIME) - time_a...>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<qemu_clock_get_ms, 247<BR/>qemu_clock_get_ms(QEMU_CLOCK_REALTIME)>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 247<BR/>&lt;unknown&gt; QEMU_CLOCK_REALTIME<BR/>qemu_clock_get_ms(QEMU_CLOCK_REALTIME)>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 247<BR/>time_at_stop<BR/>qemu_clock_get_ms(QEMU_CLOCK_REALTIME) - time_a...>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<qemu_mutex_unlock_iothread, 251<BR/>qemu_mutex_unlock_iothread()>"
+    }
+  },
+  {
+    "id": "47244640272",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 255<BR/>IF<BR/>if (migrate_postcopy_ram()) { /* ...>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<migrate_postcopy_ram, 255<BR/>migrate_postcopy_ram()>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 255<BR/>{ /* * Although this ping is...>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<qemu_savevm_send_ping, 265<BR/>qemu_savevm_send_ping(ms-&gt;to_dst_file, 4)>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 265<BR/>ms-&gt;to_dst_file>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 265<BR/>ms<BR/>qemu_savevm_send_ping(ms-&gt;to_dst_file, 4)>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 265<BR/>to_dst_file>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 265<BR/>4<BR/>qemu_savevm_send_ping(ms-&gt;to_dst_file, 4)>"
+    }
+  },
+  {
+    "id": "47244640273",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 271<BR/>IF<BR/>if (migrate_release_ram()) { ram_postc...>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<migrate_release_ram, 271<BR/>migrate_release_ram()>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 271<BR/>{ ram_postcopy_migrated_memory_release...>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<ram_postcopy_migrated_memory_release, 273<BR/>ram_postcopy_migrated_memory_release(ms)>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 273<BR/>ms<BR/>ram_postcopy_migrated_memory_release(ms)>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 279<BR/>ret = qemu_file_get_error(ms-&gt;to_dst_file)>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 279<BR/>ret<BR/>ret = qemu_file_get_error(ms-&gt;to_dst_file)>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<qemu_file_get_error, 279<BR/>qemu_file_get_error(ms-&gt;to_dst_file)>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 279<BR/>ms-&gt;to_dst_file>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 279<BR/>ms<BR/>qemu_file_get_error(ms-&gt;to_dst_file)>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 279<BR/>to_dst_file>"
+    }
+  },
+  {
+    "id": "47244640274",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 281<BR/>IF<BR/>if (ret) { error_report(&quot;postcopy_star...>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 281<BR/>ret<BR/>if (ret) { error_report(&quot;postcopy_star...>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 281<BR/>{ error_report(&quot;postcopy_start: Migrat...>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<error_report, 283<BR/>error_report(&quot;postcopy_start: Migration stream ...>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 283<BR/>&quot;postcopy_start: Migration stream errored&quot;<BR/>error_report(&quot;postcopy_start: Migration stream ...>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<migrate_set_state, 285<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 285<BR/>&amp;ms-&gt;state>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 285<BR/>ms-&gt;state>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 285<BR/>ms<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 285<BR/>state>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 285<BR/>&lt;unknown&gt; MIGRATION_STATUS_POSTCOPY_ACTIVE<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 287<BR/>&lt;unknown&gt; MIGRATION_STATUS_FAILED<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 293<BR/>return ret;>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 293<BR/>ret<BR/>return ret;>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 297<BR/>fail_closefb>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<qemu_fclose, 299<BR/>qemu_fclose(fb)>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 299<BR/>fb<BR/>qemu_fclose(fb)>"
+    }
+  },
+  {
+    "id": "81604378625",
+    "attrs": {
+      "label": "<JUMP_TARGET, 301<BR/>fail>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<migrate_set_state, 303<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 303<BR/>&amp;ms-&gt;state>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 303<BR/>ms-&gt;state>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 303<BR/>ms<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 303<BR/>state>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 303<BR/>&lt;unknown&gt; MIGRATION_STATUS_POSTCOPY_ACTIVE<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 305<BR/>&lt;unknown&gt; MIGRATION_STATUS_FAILED<BR/>migrate_set_state(&amp;ms-&gt;state, MIGRATION_STATUS_...>"
+    }
+  },
+  {
+    "id": "47244640275",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 307<BR/>IF<BR/>if (restart_block) { /* A failure happ...>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 307<BR/>restart_block<BR/>if (restart_block) { /* A failure happ...>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 307<BR/>{ /* A failure happened early enough t...>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 315<BR/>Error *local_err: Error*>"
+    }
+  },
+  {
+    "id": "30064771159",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 315<BR/>*local_err = NULL>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 315<BR/>local_err<BR/>*local_err = NULL>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 315<BR/>&lt;unknown&gt; NULL<BR/>*local_err = NULL>"
+    }
+  },
+  {
+    "id": "30064771160",
+    "attrs": {
+      "label": "<bdrv_invalidate_cache_all, 319<BR/>bdrv_invalidate_cache_all(&amp;local_err)>"
+    }
+  },
+  {
+    "id": "30064771161",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 319<BR/>&amp;local_err>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 319<BR/>local_err<BR/>bdrv_invalidate_cache_all(&amp;local_err)>"
+    }
+  },
+  {
+    "id": "47244640276",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 321<BR/>IF<BR/>if (local_err) { error_report_err(...>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 321<BR/>local_err<BR/>if (local_err) { error_report_err(...>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 321<BR/>{ error_report_err(local_err); ...>"
+    }
+  },
+  {
+    "id": "30064771162",
+    "attrs": {
+      "label": "<error_report_err, 323<BR/>error_report_err(local_err)>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 323<BR/>local_err<BR/>error_report_err(local_err)>"
+    }
+  },
+  {
+    "id": "30064771163",
+    "attrs": {
+      "label": "<qemu_mutex_unlock_iothread, 329<BR/>qemu_mutex_unlock_iothread()>"
+    }
+  },
+  {
+    "id": "141733920769",
+    "attrs": {
+      "label": "<RETURN, 331<BR/>return -1;>"
+    }
+  },
+  {
+    "id": "30064771164",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 331<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 331<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 315<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 287<BR/>&lt;unknown&gt; MIGRATION_STATUS_FAILED: ANY>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 21<BR/>&lt;unknown&gt; MIGRATION_STATUS_POSTCOPY_ACTIVE: ANY>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>&lt;unknown&gt; QEMU_CLOCK_REALTIME: ANY>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 243<BR/>&lt;unknown&gt; migration_state_notifiers: ANY>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 71<BR/>&lt;unknown&gt; true: ANY>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>&lt;unknown&gt; false: ANY>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 123<BR/>&lt;unknown&gt; INT64_MAX: ANY>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 41<BR/>&lt;unknown&gt; RUN_STATE_FINISH_MIGRATE: ANY>"
+    }
+  },
+  {
+    "id": "94489280528",
+    "attrs": {
+      "label": "<LOCAL, 35<BR/>&lt;unknown&gt; QEMU_WAKEUP_REASON_OTHER: ANY>"
+    }
+  },
+  {
+    "id": "94489280529",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>&lt;unknown&gt; MIGRATION_STATUS_ACTIVE: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>int>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>postcopy_start<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>migration_maybe_pause>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>trace_postcopy_start>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>QIO_CHANNEL>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.subtraction>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirection>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_file_set_rate_limit>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>migrate_pause_before_switchover>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_mutex_unlock_iothread>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_savevm_send_postcopy_listen>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_fopen_channel_output>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>qio_channel_buffer_new>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>runstate_is_running>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_savevm_state_complete_precopy>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>global_state_store>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>error_report>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.minus>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803817",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>notifier_list_notify>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803818",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182428",
+    "attrs": {
+      "label": "<METHOD<BR/>ram_postcopy_migrated_memory_release>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803819",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051612",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182429",
+    "attrs": {
+      "label": "<METHOD<BR/>bdrv_invalidate_cache_all>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803820",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051613",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>migrate_set_state>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182430",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803821",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051614",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182431",
+    "attrs": {
+      "label": "<METHOD<BR/>qio_channel_set_name>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803822",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051615",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182432",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_clock_get_ms>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803823",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051616",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182433",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_fclose>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803824",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051617",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182434",
+    "attrs": {
+      "label": "<METHOD<BR/>ram_postcopy_send_discard_bitmap>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803825",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051618",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182435",
+    "attrs": {
+      "label": "<METHOD<BR/>OBJECT>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803826",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051619",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182436",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_savevm_send_ping>"
+    }
+  },
+  {
+    "id": "111669149744",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149745",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803827",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051620",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182437",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_mutex_lock_iothread>"
+    }
+  },
+  {
+    "id": "111669149746",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803828",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051621",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182438",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_system_wakeup_request>"
+    }
+  },
+  {
+    "id": "111669149747",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803829",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051622",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182439",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_savevm_send_packaged>"
+    }
+  },
+  {
+    "id": "111669149748",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149749",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149750",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803830",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051623",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>error_report_err>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182440",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_file_get_error>"
+    }
+  },
+  {
+    "id": "111669149751",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803831",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051624",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182441",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_savevm_send_postcopy_run>"
+    }
+  },
+  {
+    "id": "111669149752",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803832",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051625",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182442",
+    "attrs": {
+      "label": "<METHOD<BR/>migrate_postcopy_ram>"
+    }
+  },
+  {
+    "id": "111669149753",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803833",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051626",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182443",
+    "attrs": {
+      "label": "<METHOD<BR/>object_unref>"
+    }
+  },
+  {
+    "id": "111669149754",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803834",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051627",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182444",
+    "attrs": {
+      "label": "<METHOD<BR/>migrate_release_ram>"
+    }
+  },
+  {
+    "id": "111669149755",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803835",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051628",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182445",
+    "attrs": {
+      "label": "<METHOD<BR/>trace_postcopy_start_set_run>"
+    }
+  },
+  {
+    "id": "111669149756",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803836",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051629",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>vm_stop_force_state>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>bdrv_inactivate_all>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

@@ -1,1 +1,2306 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>get_physical_address>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>CPUMIPSState *env>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>hwaddr *physical>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>int *prot>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>target_ulong real_address>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM, 5<BR/>int rw>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM, 5<BR/>int access_type>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM, 5<BR/>int mmu_idx>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 7<BR/>{ /* User mode can only access useg/xuseg ...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>int user_mode: int>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 11<BR/>user_mode = mmu_idx == MIPS_HFLAG_UM>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>user_mode<BR/>user_mode = mmu_idx == MIPS_HFLAG_UM>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 11<BR/>mmu_idx == MIPS_HFLAG_UM>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>mmu_idx<BR/>mmu_idx == MIPS_HFLAG_UM>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>&lt;unknown&gt; MIPS_HFLAG_UM<BR/>mmu_idx == MIPS_HFLAG_UM>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>int supervisor_mode: int>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 13<BR/>supervisor_mode = mmu_idx == MIPS_HFLAG_SM>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>supervisor_mode<BR/>supervisor_mode = mmu_idx == MIPS_HFLAG_SM>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 13<BR/>mmu_idx == MIPS_HFLAG_SM>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>mmu_idx<BR/>mmu_idx == MIPS_HFLAG_SM>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>&lt;unknown&gt; MIPS_HFLAG_SM<BR/>mmu_idx == MIPS_HFLAG_SM>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>int kernel_mode: int>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 15<BR/>kernel_mode = !user_mode &amp;&amp; !supervisor_mode>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>kernel_mode<BR/>kernel_mode = !user_mode &amp;&amp; !supervisor_mode>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalAnd, 15<BR/>!user_mode &amp;&amp; !supervisor_mode>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 15<BR/>!user_mode>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>user_mode<BR/>!user_mode>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 15<BR/>!supervisor_mode>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>supervisor_mode<BR/>!supervisor_mode>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 27<BR/>int ret: int>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 27<BR/>ret = TLBRET_MATCH>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>ret<BR/>ret = TLBRET_MATCH>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>&lt;unknown&gt; TLBRET_MATCH<BR/>ret = TLBRET_MATCH>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 31<BR/>target_ulong address: target_ulong>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 31<BR/>address = real_address>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>address<BR/>address = real_address>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>real_address<BR/>address = real_address>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 53<BR/>IF<BR/>if (kvm_enabled()) { /* KVM T&amp;E adds g...>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<kvm_enabled, 53<BR/>kvm_enabled()>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 53<BR/>{ /* KVM T&amp;E adds guest kernel segment...>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 57<BR/>IF<BR/>if (real_address &gt;= KVM_KSEG0_BASE) { ...>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.greaterEqualsThan, 57<BR/>real_address &gt;= KVM_KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>real_address<BR/>real_address &gt;= KVM_KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<KVM_KSEG0_BASE, 57<BR/>KVM_KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 57<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 57<BR/>0x40000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 57<BR/>{ if (real_address &lt; KVM_KSEG2_BAS...>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 59<BR/>IF<BR/>if (real_address &lt; KVM_KSEG2_BASE) { ...>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 59<BR/>real_address &lt; KVM_KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>real_address<BR/>real_address &lt; KVM_KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<KVM_KSEG2_BASE, 59<BR/>KVM_KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 59<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 59<BR/>0x60000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 59<BR/>{ /* kseg0 */ ...>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignmentPlus, 63<BR/>address += KSEG0_BASE - KVM_KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 63<BR/>address<BR/>address += KSEG0_BASE - KVM_KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 63<BR/>KSEG0_BASE - KVM_KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<KSEG0_BASE, 63<BR/>KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 63<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 63<BR/>0x80000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<KVM_KSEG0_BASE, 63<BR/>KVM_KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 63<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 63<BR/>0x40000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 65<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 65<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 65<BR/>IF<BR/>if (real_address &lt;= USEG_LIMIT) { ...>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessEqualsThan, 65<BR/>real_address &lt;= USEG_LIMIT>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>real_address<BR/>real_address &lt;= USEG_LIMIT>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<USEG_LIMIT, 65<BR/>USEG_LIMIT>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 65<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 65<BR/>0x7FFFFFFFUL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 65<BR/>{ /* kseg2/3 */ ...>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignmentPlus, 69<BR/>address += KSEG2_BASE - KVM_KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>address<BR/>address += KSEG2_BASE - KVM_KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 69<BR/>KSEG2_BASE - KVM_KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<KSEG2_BASE, 69<BR/>KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 69<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 69<BR/>0xC0000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<KVM_KSEG2_BASE, 69<BR/>KVM_KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 69<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 69<BR/>0x60000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 79<BR/>IF<BR/>if (address &lt;= USEG_LIMIT) { /* useg *...>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessEqualsThan, 79<BR/>address &lt;= USEG_LIMIT>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>address<BR/>address &lt;= USEG_LIMIT>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<USEG_LIMIT, 79<BR/>USEG_LIMIT>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 79<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 79<BR/>0x7FFFFFFFUL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 79<BR/>{ /* useg */ if (env-&gt;CP0_Sta...>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 83<BR/>IF<BR/>if (env-&gt;CP0_Status &amp; (1 &lt;&lt; CP0St_ERL)) { ...>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 83<BR/>env-&gt;CP0_Status &amp; (1 &lt;&lt; CP0St_ERL)>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 83<BR/>env-&gt;CP0_Status>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>env<BR/>env-&gt;CP0_Status &amp; (1 &lt;&lt; CP0St_ERL)>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 83<BR/>CP0_Status>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.shiftLeft, 83<BR/>1 &lt;&lt; CP0St_ERL>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 83<BR/>1<BR/>1 &lt;&lt; CP0St_ERL>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>&lt;unknown&gt; CP0St_ERL<BR/>1 &lt;&lt; CP0St_ERL>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 83<BR/>{ *physical = address &amp; 0xFFFFFFFF...>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 85<BR/>*physical = address &amp; 0xFFFFFFFF>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 85<BR/>*physical>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>physical<BR/>*physical = address &amp; 0xFFFFFFFF>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.and, 85<BR/>address &amp; 0xFFFFFFFF>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>address<BR/>address &amp; 0xFFFFFFFF>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 85<BR/>0xFFFFFFFF<BR/>address &amp; 0xFFFFFFFF>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 87<BR/>*prot = PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 87<BR/>*prot>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>prot<BR/>*prot = PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 87<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>&lt;unknown&gt; PAGE_READ<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>&lt;unknown&gt; PAGE_WRITE<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 89<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 89<BR/>{ ret = env-&gt;tlb-&gt;map_address(env,...>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 91<BR/>ret = env-&gt;tlb-&gt;map_address(env, physical, prot...>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>ret<BR/>ret = env-&gt;tlb-&gt;map_address(env, physical, prot...>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.pointerCall, 91<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 91<BR/>env-&gt;tlb-&gt;map_address>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 91<BR/>env-&gt;tlb>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>env<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 91<BR/>tlb>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 91<BR/>map_address>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>env<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>physical<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>prot<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>real_address<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>rw<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>access_type<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 163<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK, 163<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 163<BR/>IF<BR/>if (address &lt; (int32_t)KSEG1_BASE) { /...>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 163<BR/>address &lt; (int32_t)KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 163<BR/>address<BR/>address &lt; (int32_t)KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 163<BR/>(int32_t)KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "176093659136",
+    "attrs": {
+      "label": "<TYPE_REF, 163<BR/>int32_t>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<KSEG1_BASE, 163<BR/>KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK, 163<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 163<BR/>0xA0000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK, 163<BR/>{ /* kseg0 */ if (kernel_mode...>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 167<BR/>IF<BR/>if (kernel_mode) { *physical = add...>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 167<BR/>kernel_mode<BR/>if (kernel_mode) { *physical = add...>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK, 167<BR/>{ *physical = address - (int32_t)K...>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 169<BR/>*physical = address - (int32_t)KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 169<BR/>*physical>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>physical<BR/>*physical = address - (int32_t)KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 169<BR/>address - (int32_t)KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>address<BR/>address - (int32_t)KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 169<BR/>(int32_t)KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "176093659137",
+    "attrs": {
+      "label": "<TYPE_REF, 169<BR/>int32_t>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<KSEG0_BASE, 169<BR/>KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK, 169<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 169<BR/>0x80000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 171<BR/>*prot = PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 171<BR/>*prot>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>prot<BR/>*prot = PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 171<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>&lt;unknown&gt; PAGE_READ<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>&lt;unknown&gt; PAGE_WRITE<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 173<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK, 173<BR/>{ ret = TLBRET_BADADDR; }>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 175<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>ret<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>&lt;unknown&gt; TLBRET_BADADDR<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 179<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK, 179<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 179<BR/>IF<BR/>if (address &lt; (int32_t)KSEG2_BASE) { /...>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 179<BR/>address &lt; (int32_t)KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 179<BR/>address<BR/>address &lt; (int32_t)KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 179<BR/>(int32_t)KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "176093659138",
+    "attrs": {
+      "label": "<TYPE_REF, 179<BR/>int32_t>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<KSEG2_BASE, 179<BR/>KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK, 179<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 179<BR/>0xC0000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK, 179<BR/>{ /* kseg1 */ if (kernel_mode...>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 183<BR/>IF<BR/>if (kernel_mode) { *physical = add...>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 183<BR/>kernel_mode<BR/>if (kernel_mode) { *physical = add...>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK, 183<BR/>{ *physical = address - (int32_t)K...>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 185<BR/>*physical = address - (int32_t)KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 185<BR/>*physical>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 185<BR/>physical<BR/>*physical = address - (int32_t)KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 185<BR/>address - (int32_t)KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 185<BR/>address<BR/>address - (int32_t)KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 185<BR/>(int32_t)KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "176093659139",
+    "attrs": {
+      "label": "<TYPE_REF, 185<BR/>int32_t>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<KSEG1_BASE, 185<BR/>KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK, 185<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 185<BR/>0xA0000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 187<BR/>*prot = PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirection, 187<BR/>*prot>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>prot<BR/>*prot = PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.or, 187<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>&lt;unknown&gt; PAGE_READ<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 187<BR/>&lt;unknown&gt; PAGE_WRITE<BR/>PAGE_READ | PAGE_WRITE>"
+    }
+  },
+  {
+    "id": "47244640271",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 189<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK, 189<BR/>{ ret = TLBRET_BADADDR; }>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 191<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>ret<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>&lt;unknown&gt; TLBRET_BADADDR<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "47244640272",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 195<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK, 195<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640273",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 195<BR/>IF<BR/>if (address &lt; (int32_t)KSEG3_BASE) { /...>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 195<BR/>address &lt; (int32_t)KSEG3_BASE>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 195<BR/>address<BR/>address &lt; (int32_t)KSEG3_BASE>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<&lt;operator&gt;.cast, 195<BR/>(int32_t)KSEG3_BASE>"
+    }
+  },
+  {
+    "id": "176093659140",
+    "attrs": {
+      "label": "<TYPE_REF, 195<BR/>int32_t>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<KSEG3_BASE, 195<BR/>KSEG3_BASE>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK, 195<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 195<BR/>0xE0000000UL<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK, 195<BR/>{ /* sseg (kseg2) */ if (supe...>"
+    }
+  },
+  {
+    "id": "47244640274",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 199<BR/>IF<BR/>if (supervisor_mode || kernel_mode) { ...>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalOr, 199<BR/>supervisor_mode || kernel_mode>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 199<BR/>supervisor_mode<BR/>supervisor_mode || kernel_mode>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 199<BR/>kernel_mode<BR/>supervisor_mode || kernel_mode>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK, 199<BR/>{ ret = env-&gt;tlb-&gt;map_address(env,...>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 201<BR/>ret = env-&gt;tlb-&gt;map_address(env, physical, prot...>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>ret<BR/>ret = env-&gt;tlb-&gt;map_address(env, physical, prot...>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<&lt;operator&gt;.pointerCall, 201<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 201<BR/>env-&gt;tlb-&gt;map_address>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 201<BR/>env-&gt;tlb>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>env<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 201<BR/>tlb>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 201<BR/>map_address>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>env<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>physical<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>prot<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>real_address<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>rw<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 201<BR/>access_type<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "47244640275",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 203<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK, 203<BR/>{ ret = TLBRET_BADADDR; }>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 205<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 205<BR/>ret<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 205<BR/>&lt;unknown&gt; TLBRET_BADADDR<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "47244640276",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 209<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK, 209<BR/>{ /* kseg3 */ /* XXX: debug s...>"
+    }
+  },
+  {
+    "id": "47244640277",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 215<BR/>IF<BR/>if (kernel_mode) { ret = env-&gt;tlb-...>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 215<BR/>kernel_mode<BR/>if (kernel_mode) { ret = env-&gt;tlb-...>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK, 215<BR/>{ ret = env-&gt;tlb-&gt;map_address(env,...>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 217<BR/>ret = env-&gt;tlb-&gt;map_address(env, physical, prot...>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>ret<BR/>ret = env-&gt;tlb-&gt;map_address(env, physical, prot...>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<&lt;operator&gt;.pointerCall, 217<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 217<BR/>env-&gt;tlb-&gt;map_address>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 217<BR/>env-&gt;tlb>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>env<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 217<BR/>tlb>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 217<BR/>map_address>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>env<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>physical<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>prot<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>real_address<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>rw<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 217<BR/>access_type<BR/>env-&gt;tlb-&gt;map_address(env, physical, prot, real...>"
+    }
+  },
+  {
+    "id": "47244640278",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 219<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK, 219<BR/>{ ret = TLBRET_BADADDR; }>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 221<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>ret<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>&lt;unknown&gt; TLBRET_BADADDR<BR/>ret = TLBRET_BADADDR>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 227<BR/>return ret;>"
+    }
+  },
+  {
+    "id": "68719476812",
+    "attrs": {
+      "label": "<IDENTIFIER, 227<BR/>ret<BR/>return ret;>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 175<BR/>&lt;unknown&gt; TLBRET_BADADDR: ANY>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 87<BR/>&lt;unknown&gt; PAGE_WRITE: ANY>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 87<BR/>&lt;unknown&gt; PAGE_READ: ANY>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 83<BR/>&lt;unknown&gt; CP0St_ERL: ANY>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 27<BR/>&lt;unknown&gt; TLBRET_MATCH: ANY>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>&lt;unknown&gt; MIPS_HFLAG_SM: ANY>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>&lt;unknown&gt; MIPS_HFLAG_UM: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>int>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>get_physical_address<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalAnd>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803822",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.shiftLeft>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803823",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.and>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803824",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803825",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803826",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803827",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.subtraction>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803828",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirection>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803829",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessEqualsThan>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803830",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignmentPlus>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803831",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalOr>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803832",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.cast>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803833",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.equals>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803834",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.greaterEqualsThan>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803835",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>kvm_enabled>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803836",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.or>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803837",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803838",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.pointerCall>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p6>"
+    }
+  },
+  {
+    "id": "25769803839",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD, 43<BR/>KSEG3_BASE>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN, 43<BR/>unsigned longint>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD, 39<BR/>KSEG1_BASE>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN, 39<BR/>unsigned longint>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD, 49<BR/>KVM_KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "25769803817",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN, 49<BR/>unsigned longint>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD, 37<BR/>KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "25769803818",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN, 37<BR/>unsigned longint>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD, 35<BR/>USEG_LIMIT>"
+    }
+  },
+  {
+    "id": "25769803819",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN, 35<BR/>unsigned longint>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD, 41<BR/>KSEG2_BASE>"
+    }
+  },
+  {
+    "id": "25769803820",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN, 41<BR/>unsigned longint>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD, 47<BR/>KVM_KSEG0_BASE>"
+    }
+  },
+  {
+    "id": "25769803821",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN, 47<BR/>unsigned longint>"
+    }
+  }
+]

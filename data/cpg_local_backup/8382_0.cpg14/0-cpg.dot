@@ -1,0 +1,18 @@
+digraph "qemu_service_io" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>qemu_service_io> ]
+"111669149696" [label = <PARAM, 1<BR/>void> ]
+"25769803776" [label = <BLOCK, 3<BR/>{ qemu_notify_event(); }> ]
+"30064771072" [label = <qemu_notify_event, 5<BR/>qemu_notify_event()> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>void> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "25769803776" -> "30064771072"  [ label = "AST: "] 
+  "30064771072" -> "124554051584"  [ label = "CFG: "] 
+  "107374182400" -> "30064771072"  [ label = "CFG: "] 
+  "111669149696" -> "124554051584"  [ label = "DDG: "] 
+  "30064771072" -> "124554051584"  [ label = "DDG: qemu_notify_event()"] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "107374182400" -> "30064771072"  [ label = "DDG: "] 
+}

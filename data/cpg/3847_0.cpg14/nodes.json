@@ -1,1 +1,2936 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>spapr_build_fdt>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>sPAPRMachineState *spapr>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 3<BR/>hwaddr rtas_addr>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM, 5<BR/>hwaddr rtas_size>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 7<BR/>{ MachineState *machine = MACHINE(qdev_get...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>MachineState *machine: MachineState*>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 9<BR/>*machine = MACHINE(qdev_get_machine())>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 9<BR/>machine<BR/>*machine = MACHINE(qdev_get_machine())>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<MACHINE, 9<BR/>MACHINE(qdev_get_machine())>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<qdev_get_machine, 9<BR/>qdev_get_machine()>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>MachineClass *mc: MachineClass*>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 11<BR/>*mc = MACHINE_GET_CLASS(machine)>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>mc<BR/>*mc = MACHINE_GET_CLASS(machine)>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<MACHINE_GET_CLASS, 11<BR/>MACHINE_GET_CLASS(machine)>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 11<BR/>machine<BR/>MACHINE_GET_CLASS(machine)>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>sPAPRMachineClass *smc: sPAPRMachineClass*>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 13<BR/>*smc = SPAPR_MACHINE_GET_CLASS(machine)>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>smc<BR/>*smc = SPAPR_MACHINE_GET_CLASS(machine)>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<SPAPR_MACHINE_GET_CLASS, 13<BR/>SPAPR_MACHINE_GET_CLASS(machine)>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>machine<BR/>SPAPR_MACHINE_GET_CLASS(machine)>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>int ret: int>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>void *fdt: void*>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 19<BR/>sPAPRPHBState *phb: sPAPRPHBState*>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 21<BR/>char *buf: char*>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 25<BR/>fdt = g_malloc0(FDT_MAX_SIZE)>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>fdt<BR/>fdt = g_malloc0(FDT_MAX_SIZE)>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<g_malloc0, 25<BR/>g_malloc0(FDT_MAX_SIZE)>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>&lt;unknown&gt; FDT_MAX_SIZE<BR/>g_malloc0(FDT_MAX_SIZE)>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<_FDT, 27<BR/>_FDT((fdt_create_empty_tree(fdt, FDT_MAX_SIZE)))>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<fdt_create_empty_tree, 27<BR/>fdt_create_empty_tree(fdt, FDT_MAX_SIZE)>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>fdt<BR/>fdt_create_empty_tree(fdt, FDT_MAX_SIZE)>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>&lt;unknown&gt; FDT_MAX_SIZE<BR/>fdt_create_empty_tree(fdt, FDT_MAX_SIZE)>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<_FDT, 33<BR/>_FDT(fdt_setprop_string(fdt, 0, &quot;device_type&quot;, ...>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<fdt_setprop_string, 33<BR/>fdt_setprop_string(fdt, 0, &quot;device_type&quot;, &quot;chrp&quot;)>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 33<BR/>fdt<BR/>fdt_setprop_string(fdt, 0, &quot;device_type&quot;, &quot;chrp&quot;)>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 33<BR/>0<BR/>fdt_setprop_string(fdt, 0, &quot;device_type&quot;, &quot;chrp&quot;)>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 33<BR/>&quot;device_type&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;device_type&quot;, &quot;chrp&quot;)>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 33<BR/>&quot;chrp&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;device_type&quot;, &quot;chrp&quot;)>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<_FDT, 35<BR/>_FDT(fdt_setprop_string(fdt, 0, &quot;model&quot;, &quot;IBM p...>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<fdt_setprop_string, 35<BR/>fdt_setprop_string(fdt, 0, &quot;model&quot;, &quot;IBM pSerie...>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>fdt<BR/>fdt_setprop_string(fdt, 0, &quot;model&quot;, &quot;IBM pSerie...>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 35<BR/>0<BR/>fdt_setprop_string(fdt, 0, &quot;model&quot;, &quot;IBM pSerie...>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 35<BR/>&quot;model&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;model&quot;, &quot;IBM pSerie...>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 35<BR/>&quot;IBM pSeries (emulated by qemu)&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;model&quot;, &quot;IBM pSerie...>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<_FDT, 37<BR/>_FDT(fdt_setprop_string(fdt, 0, &quot;compatible&quot;, &quot;...>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<fdt_setprop_string, 37<BR/>fdt_setprop_string(fdt, 0, &quot;compatible&quot;, &quot;qemu,...>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 37<BR/>fdt<BR/>fdt_setprop_string(fdt, 0, &quot;compatible&quot;, &quot;qemu,...>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 37<BR/>0<BR/>fdt_setprop_string(fdt, 0, &quot;compatible&quot;, &quot;qemu,...>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 37<BR/>&quot;compatible&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;compatible&quot;, &quot;qemu,...>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 37<BR/>&quot;qemu,pseries&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;compatible&quot;, &quot;qemu,...>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 49<BR/>IF<BR/>if (kvmppc_get_host_model(&amp;buf)) { _FD...>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<kvmppc_get_host_model, 49<BR/>kvmppc_get_host_model(&amp;buf)>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 49<BR/>&amp;buf>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>buf<BR/>kvmppc_get_host_model(&amp;buf)>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 49<BR/>{ _FDT(fdt_setprop_string(fdt, 0, &quot;hos...>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<_FDT, 51<BR/>_FDT(fdt_setprop_string(fdt, 0, &quot;host-model&quot;, b...>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<fdt_setprop_string, 51<BR/>fdt_setprop_string(fdt, 0, &quot;host-model&quot;, buf)>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>fdt<BR/>fdt_setprop_string(fdt, 0, &quot;host-model&quot;, buf)>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 51<BR/>0<BR/>fdt_setprop_string(fdt, 0, &quot;host-model&quot;, buf)>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 51<BR/>&quot;host-model&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;host-model&quot;, buf)>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>buf<BR/>fdt_setprop_string(fdt, 0, &quot;host-model&quot;, buf)>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<g_free, 53<BR/>g_free(buf)>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>buf<BR/>g_free(buf)>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 57<BR/>IF<BR/>if (kvmppc_get_host_serial(&amp;buf)) { _F...>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<kvmppc_get_host_serial, 57<BR/>kvmppc_get_host_serial(&amp;buf)>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 57<BR/>&amp;buf>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>buf<BR/>kvmppc_get_host_serial(&amp;buf)>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 57<BR/>{ _FDT(fdt_setprop_string(fdt, 0, &quot;hos...>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<_FDT, 59<BR/>_FDT(fdt_setprop_string(fdt, 0, &quot;host-serial&quot;, ...>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<fdt_setprop_string, 59<BR/>fdt_setprop_string(fdt, 0, &quot;host-serial&quot;, buf)>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>fdt<BR/>fdt_setprop_string(fdt, 0, &quot;host-serial&quot;, buf)>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 59<BR/>0<BR/>fdt_setprop_string(fdt, 0, &quot;host-serial&quot;, buf)>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 59<BR/>&quot;host-serial&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;host-serial&quot;, buf)>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>buf<BR/>fdt_setprop_string(fdt, 0, &quot;host-serial&quot;, buf)>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<g_free, 61<BR/>g_free(buf)>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>buf<BR/>g_free(buf)>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 67<BR/>buf = qemu_uuid_unparse_strdup(&amp;qemu_uuid)>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>buf<BR/>buf = qemu_uuid_unparse_strdup(&amp;qemu_uuid)>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<qemu_uuid_unparse_strdup, 67<BR/>qemu_uuid_unparse_strdup(&amp;qemu_uuid)>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 67<BR/>&amp;qemu_uuid>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>&lt;unknown&gt; qemu_uuid<BR/>qemu_uuid_unparse_strdup(&amp;qemu_uuid)>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<_FDT, 71<BR/>_FDT(fdt_setprop_string(fdt, 0, &quot;vm,uuid&quot;, buf))>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<fdt_setprop_string, 71<BR/>fdt_setprop_string(fdt, 0, &quot;vm,uuid&quot;, buf)>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>fdt<BR/>fdt_setprop_string(fdt, 0, &quot;vm,uuid&quot;, buf)>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 71<BR/>0<BR/>fdt_setprop_string(fdt, 0, &quot;vm,uuid&quot;, buf)>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 71<BR/>&quot;vm,uuid&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;vm,uuid&quot;, buf)>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 71<BR/>buf<BR/>fdt_setprop_string(fdt, 0, &quot;vm,uuid&quot;, buf)>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 73<BR/>IF<BR/>if (qemu_uuid_set) { _FDT(fdt_setprop_...>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 73<BR/>&lt;unknown&gt; qemu_uuid_set<BR/>if (qemu_uuid_set) { _FDT(fdt_setprop_...>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 73<BR/>{ _FDT(fdt_setprop_string(fdt, 0, &quot;sys...>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<_FDT, 75<BR/>_FDT(fdt_setprop_string(fdt, 0, &quot;system-id&quot;, buf))>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<fdt_setprop_string, 75<BR/>fdt_setprop_string(fdt, 0, &quot;system-id&quot;, buf)>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>fdt<BR/>fdt_setprop_string(fdt, 0, &quot;system-id&quot;, buf)>"
+    }
+  },
+  {
+    "id": "90194313231",
+    "attrs": {
+      "label": "<LITERAL, 75<BR/>0<BR/>fdt_setprop_string(fdt, 0, &quot;system-id&quot;, buf)>"
+    }
+  },
+  {
+    "id": "90194313232",
+    "attrs": {
+      "label": "<LITERAL, 75<BR/>&quot;system-id&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;system-id&quot;, buf)>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>buf<BR/>fdt_setprop_string(fdt, 0, &quot;system-id&quot;, buf)>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<g_free, 79<BR/>g_free(buf)>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 79<BR/>buf<BR/>g_free(buf)>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 83<BR/>IF<BR/>if (qemu_get_vm_name()) { _FDT(fdt_set...>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<qemu_get_vm_name, 83<BR/>qemu_get_vm_name()>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 83<BR/>{ _FDT(fdt_setprop_string(fdt, 0, &quot;ibm...>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<_FDT, 85<BR/>_FDT(fdt_setprop_string(fdt, 0, &quot;ibm,partition-...>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<fdt_setprop_string, 85<BR/>fdt_setprop_string(fdt, 0, &quot;ibm,partition-name&quot;...>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>fdt<BR/>fdt_setprop_string(fdt, 0, &quot;ibm,partition-name&quot;...>"
+    }
+  },
+  {
+    "id": "90194313233",
+    "attrs": {
+      "label": "<LITERAL, 85<BR/>0<BR/>fdt_setprop_string(fdt, 0, &quot;ibm,partition-name&quot;...>"
+    }
+  },
+  {
+    "id": "90194313234",
+    "attrs": {
+      "label": "<LITERAL, 85<BR/>&quot;ibm,partition-name&quot;<BR/>fdt_setprop_string(fdt, 0, &quot;ibm,partition-name&quot;...>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<qemu_get_vm_name, 87<BR/>qemu_get_vm_name()>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<_FDT, 93<BR/>_FDT(fdt_setprop_cell(fdt, 0, &quot;#address-cells&quot;,...>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<fdt_setprop_cell, 93<BR/>fdt_setprop_cell(fdt, 0, &quot;#address-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>fdt<BR/>fdt_setprop_cell(fdt, 0, &quot;#address-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "90194313235",
+    "attrs": {
+      "label": "<LITERAL, 93<BR/>0<BR/>fdt_setprop_cell(fdt, 0, &quot;#address-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "90194313236",
+    "attrs": {
+      "label": "<LITERAL, 93<BR/>&quot;#address-cells&quot;<BR/>fdt_setprop_cell(fdt, 0, &quot;#address-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "90194313237",
+    "attrs": {
+      "label": "<LITERAL, 93<BR/>2<BR/>fdt_setprop_cell(fdt, 0, &quot;#address-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<_FDT, 95<BR/>_FDT(fdt_setprop_cell(fdt, 0, &quot;#size-cells&quot;, 2))>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<fdt_setprop_cell, 95<BR/>fdt_setprop_cell(fdt, 0, &quot;#size-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>fdt<BR/>fdt_setprop_cell(fdt, 0, &quot;#size-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "90194313238",
+    "attrs": {
+      "label": "<LITERAL, 95<BR/>0<BR/>fdt_setprop_cell(fdt, 0, &quot;#size-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "90194313239",
+    "attrs": {
+      "label": "<LITERAL, 95<BR/>&quot;#size-cells&quot;<BR/>fdt_setprop_cell(fdt, 0, &quot;#size-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "90194313240",
+    "attrs": {
+      "label": "<LITERAL, 95<BR/>2<BR/>fdt_setprop_cell(fdt, 0, &quot;#size-cells&quot;, 2)>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<spapr_dt_xics, 101<BR/>spapr_dt_xics(spapr-&gt;xics, fdt, PHANDLE_XICP)>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 101<BR/>spapr-&gt;xics>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>spapr<BR/>spapr_dt_xics(spapr-&gt;xics, fdt, PHANDLE_XICP)>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 101<BR/>xics>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>fdt<BR/>spapr_dt_xics(spapr-&gt;xics, fdt, PHANDLE_XICP)>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>&lt;unknown&gt; PHANDLE_XICP<BR/>spapr_dt_xics(spapr-&gt;xics, fdt, PHANDLE_XICP)>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 105<BR/>ret = spapr_populate_memory(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>ret<BR/>ret = spapr_populate_memory(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<spapr_populate_memory, 105<BR/>spapr_populate_memory(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>spapr<BR/>spapr_populate_memory(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 105<BR/>fdt<BR/>spapr_populate_memory(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 107<BR/>IF<BR/>if (ret &lt; 0) { error_report(&quot;couldn't ...>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 107<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313241",
+    "attrs": {
+      "label": "<LITERAL, 107<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 107<BR/>{ error_report(&quot;couldn't setup memory ...>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<error_report, 109<BR/>error_report(&quot;couldn't setup memory nodes in fdt&quot;)>"
+    }
+  },
+  {
+    "id": "90194313242",
+    "attrs": {
+      "label": "<LITERAL, 109<BR/>&quot;couldn't setup memory nodes in fdt&quot;<BR/>error_report(&quot;couldn't setup memory nodes in fdt&quot;)>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<exit, 111<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "90194313243",
+    "attrs": {
+      "label": "<LITERAL, 111<BR/>1<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<spapr_dt_vdevice, 119<BR/>spapr_dt_vdevice(spapr-&gt;vio_bus, fdt)>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 119<BR/>spapr-&gt;vio_bus>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>spapr<BR/>spapr_dt_vdevice(spapr-&gt;vio_bus, fdt)>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 119<BR/>vio_bus>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>fdt<BR/>spapr_dt_vdevice(spapr-&gt;vio_bus, fdt)>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 123<BR/>IF<BR/>if (object_resolve_path_type(&quot;&quot;, TYPE_SPAPR_RNG...>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<object_resolve_path_type, 123<BR/>object_resolve_path_type(&quot;&quot;, TYPE_SPAPR_RNG, NULL)>"
+    }
+  },
+  {
+    "id": "90194313244",
+    "attrs": {
+      "label": "<LITERAL, 123<BR/>&quot;&quot;<BR/>object_resolve_path_type(&quot;&quot;, TYPE_SPAPR_RNG, NULL)>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>&lt;unknown&gt; TYPE_SPAPR_RNG<BR/>object_resolve_path_type(&quot;&quot;, TYPE_SPAPR_RNG, NULL)>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>&lt;unknown&gt; NULL<BR/>object_resolve_path_type(&quot;&quot;, TYPE_SPAPR_RNG, NULL)>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 123<BR/>{ ret = spapr_rng_populate_dt(fdt); ...>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 125<BR/>ret = spapr_rng_populate_dt(fdt)>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>ret<BR/>ret = spapr_rng_populate_dt(fdt)>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<spapr_rng_populate_dt, 125<BR/>spapr_rng_populate_dt(fdt)>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>fdt<BR/>spapr_rng_populate_dt(fdt)>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 127<BR/>IF<BR/>if (ret &lt; 0) { error_report(&quot;could...>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 127<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 127<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313245",
+    "attrs": {
+      "label": "<LITERAL, 127<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 127<BR/>{ error_report(&quot;could not set up r...>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<error_report, 129<BR/>error_report(&quot;could not set up rng device in th...>"
+    }
+  },
+  {
+    "id": "90194313246",
+    "attrs": {
+      "label": "<LITERAL, 129<BR/>&quot;could not set up rng device in the fdt&quot;<BR/>error_report(&quot;could not set up rng device in th...>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<exit, 131<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "90194313247",
+    "attrs": {
+      "label": "<LITERAL, 131<BR/>1<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<QLIST_FOREACH, 139<BR/>QLIST_FOREACH(phb, &amp;spapr-&gt;phbs, list)>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>phb<BR/>QLIST_FOREACH(phb, &amp;spapr-&gt;phbs, list)>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 139<BR/>&amp;spapr-&gt;phbs>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 139<BR/>spapr-&gt;phbs>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>spapr<BR/>QLIST_FOREACH(phb, &amp;spapr-&gt;phbs, list)>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 139<BR/>phbs>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>&lt;unknown&gt; list<BR/>QLIST_FOREACH(phb, &amp;spapr-&gt;phbs, list)>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 139<BR/>{ ret = spapr_populate_pci_dt(phb, PHA...>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 141<BR/>ret = spapr_populate_pci_dt(phb, PHANDLE_XICP, ...>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>ret<BR/>ret = spapr_populate_pci_dt(phb, PHANDLE_XICP, ...>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<spapr_populate_pci_dt, 141<BR/>spapr_populate_pci_dt(phb, PHANDLE_XICP, fdt)>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>phb<BR/>spapr_populate_pci_dt(phb, PHANDLE_XICP, fdt)>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>&lt;unknown&gt; PHANDLE_XICP<BR/>spapr_populate_pci_dt(phb, PHANDLE_XICP, fdt)>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>fdt<BR/>spapr_populate_pci_dt(phb, PHANDLE_XICP, fdt)>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 143<BR/>IF<BR/>if (ret &lt; 0) { error_report(&quot;could...>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 143<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 143<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313248",
+    "attrs": {
+      "label": "<LITERAL, 143<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 143<BR/>{ error_report(&quot;couldn't setup PCI...>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<error_report, 145<BR/>error_report(&quot;couldn't setup PCI devices in fdt&quot;)>"
+    }
+  },
+  {
+    "id": "90194313249",
+    "attrs": {
+      "label": "<LITERAL, 145<BR/>&quot;couldn't setup PCI devices in fdt&quot;<BR/>error_report(&quot;couldn't setup PCI devices in fdt&quot;)>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<exit, 147<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "90194313250",
+    "attrs": {
+      "label": "<LITERAL, 147<BR/>1<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<spapr_populate_cpus_dt_node, 157<BR/>spapr_populate_cpus_dt_node(fdt, spapr)>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 157<BR/>fdt<BR/>spapr_populate_cpus_dt_node(fdt, spapr)>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 157<BR/>spapr<BR/>spapr_populate_cpus_dt_node(fdt, spapr)>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 161<BR/>IF<BR/>if (smc-&gt;dr_lmb_enabled) { _FDT(spapr_...>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 161<BR/>smc-&gt;dr_lmb_enabled>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 161<BR/>smc<BR/>if (smc-&gt;dr_lmb_enabled) { _FDT(spapr_...>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 161<BR/>dr_lmb_enabled>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 161<BR/>{ _FDT(spapr_drc_populate_dt(fdt, 0, N...>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<_FDT, 163<BR/>_FDT(spapr_drc_populate_dt(fdt, 0, NULL, SPAPR_...>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<spapr_drc_populate_dt, 163<BR/>spapr_drc_populate_dt(fdt, 0, NULL, SPAPR_DR_CO...>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 163<BR/>fdt<BR/>spapr_drc_populate_dt(fdt, 0, NULL, SPAPR_DR_CO...>"
+    }
+  },
+  {
+    "id": "90194313251",
+    "attrs": {
+      "label": "<LITERAL, 163<BR/>0<BR/>spapr_drc_populate_dt(fdt, 0, NULL, SPAPR_DR_CO...>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 163<BR/>&lt;unknown&gt; NULL<BR/>spapr_drc_populate_dt(fdt, 0, NULL, SPAPR_DR_CO...>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 163<BR/>&lt;unknown&gt; SPAPR_DR_CONNECTOR_TYPE_LMB<BR/>spapr_drc_populate_dt(fdt, 0, NULL, SPAPR_DR_CO...>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 169<BR/>IF<BR/>if (mc-&gt;query_hotpluggable_cpus) { int...>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 169<BR/>mc-&gt;query_hotpluggable_cpus>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>mc<BR/>if (mc-&gt;query_hotpluggable_cpus) { int...>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 169<BR/>query_hotpluggable_cpus>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 169<BR/>{ int offset = fdt_path_offset(fdt, &quot;/...>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 171<BR/>int offset: int>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 171<BR/>offset = fdt_path_offset(fdt, &quot;/cpus&quot;)>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>offset<BR/>offset = fdt_path_offset(fdt, &quot;/cpus&quot;)>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<fdt_path_offset, 171<BR/>fdt_path_offset(fdt, &quot;/cpus&quot;)>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 171<BR/>fdt<BR/>fdt_path_offset(fdt, &quot;/cpus&quot;)>"
+    }
+  },
+  {
+    "id": "90194313252",
+    "attrs": {
+      "label": "<LITERAL, 171<BR/>&quot;/cpus&quot;<BR/>fdt_path_offset(fdt, &quot;/cpus&quot;)>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 173<BR/>ret = spapr_drc_populate_dt(fdt, offset, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>ret<BR/>ret = spapr_drc_populate_dt(fdt, offset, NULL, ...>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<spapr_drc_populate_dt, 173<BR/>spapr_drc_populate_dt(fdt, offset, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>fdt<BR/>spapr_drc_populate_dt(fdt, offset, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>offset<BR/>spapr_drc_populate_dt(fdt, offset, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>&lt;unknown&gt; NULL<BR/>spapr_drc_populate_dt(fdt, offset, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>&lt;unknown&gt; SPAPR_DR_CONNECTOR_TYPE_CPU<BR/>spapr_drc_populate_dt(fdt, offset, NULL, ...>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 177<BR/>IF<BR/>if (ret &lt; 0) { error_report(&quot;Could...>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 177<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 177<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313253",
+    "attrs": {
+      "label": "<LITERAL, 177<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 177<BR/>{ error_report(&quot;Couldn't set up CP...>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<error_report, 179<BR/>error_report(&quot;Couldn't set up CPU DR device tre...>"
+    }
+  },
+  {
+    "id": "90194313254",
+    "attrs": {
+      "label": "<LITERAL, 179<BR/>&quot;Couldn't set up CPU DR device tree properties&quot;<BR/>error_report(&quot;Couldn't set up CPU DR device tre...>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<exit, 181<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "90194313255",
+    "attrs": {
+      "label": "<LITERAL, 181<BR/>1<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<spapr_dt_events, 191<BR/>spapr_dt_events(fdt, spapr-&gt;check_exception_irq)>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>fdt<BR/>spapr_dt_events(fdt, spapr-&gt;check_exception_irq)>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 191<BR/>spapr-&gt;check_exception_irq>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 191<BR/>spapr<BR/>spapr_dt_events(fdt, spapr-&gt;check_exception_irq)>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 191<BR/>check_exception_irq>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<spapr_dt_rtas, 197<BR/>spapr_dt_rtas(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 197<BR/>spapr<BR/>spapr_dt_rtas(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 197<BR/>fdt<BR/>spapr_dt_rtas(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<spapr_dt_chosen, 203<BR/>spapr_dt_chosen(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 203<BR/>spapr<BR/>spapr_dt_chosen(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 203<BR/>fdt<BR/>spapr_dt_chosen(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 209<BR/>IF<BR/>if (kvm_enabled()) { spapr_dt_hypervis...>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<kvm_enabled, 209<BR/>kvm_enabled()>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 209<BR/>{ spapr_dt_hypervisor(spapr, fdt); }>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<spapr_dt_hypervisor, 211<BR/>spapr_dt_hypervisor(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 211<BR/>spapr<BR/>spapr_dt_hypervisor(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 211<BR/>fdt<BR/>spapr_dt_hypervisor(spapr, fdt)>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 219<BR/>IF<BR/>if (spapr-&gt;kernel_size) { _FDT((fdt_ad...>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 219<BR/>spapr-&gt;kernel_size>"
+    }
+  },
+  {
+    "id": "68719476812",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>spapr<BR/>if (spapr-&gt;kernel_size) { _FDT((fdt_ad...>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 219<BR/>kernel_size>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 219<BR/>{ _FDT((fdt_add_mem_rsv(fdt, KERNEL_LO...>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<_FDT, 221<BR/>_FDT((fdt_add_mem_rsv(fdt, KERNEL_LOAD_ADDR, sp...>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<fdt_add_mem_rsv, 221<BR/>fdt_add_mem_rsv(fdt, KERNEL_LOAD_ADDR, spapr-&gt;k...>"
+    }
+  },
+  {
+    "id": "68719476813",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>fdt<BR/>fdt_add_mem_rsv(fdt, KERNEL_LOAD_ADDR, spapr-&gt;k...>"
+    }
+  },
+  {
+    "id": "68719476814",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>&lt;unknown&gt; KERNEL_LOAD_ADDR<BR/>fdt_add_mem_rsv(fdt, KERNEL_LOAD_ADDR, spapr-&gt;k...>"
+    }
+  },
+  {
+    "id": "30064771159",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 221<BR/>spapr-&gt;kernel_size>"
+    }
+  },
+  {
+    "id": "68719476815",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>spapr<BR/>fdt_add_mem_rsv(fdt, KERNEL_LOAD_ADDR, spapr-&gt;k...>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 221<BR/>kernel_size>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 225<BR/>IF<BR/>if (spapr-&gt;initrd_size) { _FDT((fdt_ad...>"
+    }
+  },
+  {
+    "id": "30064771160",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 225<BR/>spapr-&gt;initrd_size>"
+    }
+  },
+  {
+    "id": "68719476816",
+    "attrs": {
+      "label": "<IDENTIFIER, 225<BR/>spapr<BR/>if (spapr-&gt;initrd_size) { _FDT((fdt_ad...>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 225<BR/>initrd_size>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 225<BR/>{ _FDT((fdt_add_mem_rsv(fdt, spapr-&gt;in...>"
+    }
+  },
+  {
+    "id": "30064771161",
+    "attrs": {
+      "label": "<_FDT, 227<BR/>_FDT((fdt_add_mem_rsv(fdt, spapr-&gt;initrd_base, ...>"
+    }
+  },
+  {
+    "id": "30064771162",
+    "attrs": {
+      "label": "<fdt_add_mem_rsv, 227<BR/>fdt_add_mem_rsv(fdt, spapr-&gt;initrd_base, spapr-...>"
+    }
+  },
+  {
+    "id": "68719476817",
+    "attrs": {
+      "label": "<IDENTIFIER, 227<BR/>fdt<BR/>fdt_add_mem_rsv(fdt, spapr-&gt;initrd_base, spapr-...>"
+    }
+  },
+  {
+    "id": "30064771163",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 227<BR/>spapr-&gt;initrd_base>"
+    }
+  },
+  {
+    "id": "68719476818",
+    "attrs": {
+      "label": "<IDENTIFIER, 227<BR/>spapr<BR/>fdt_add_mem_rsv(fdt, spapr-&gt;initrd_base, spapr-...>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 227<BR/>initrd_base>"
+    }
+  },
+  {
+    "id": "30064771164",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 227<BR/>spapr-&gt;initrd_size>"
+    }
+  },
+  {
+    "id": "68719476819",
+    "attrs": {
+      "label": "<IDENTIFIER, 227<BR/>spapr<BR/>fdt_add_mem_rsv(fdt, spapr-&gt;initrd_base, spapr-...>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 227<BR/>initrd_size>"
+    }
+  },
+  {
+    "id": "30064771165",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 235<BR/>ret = spapr_dt_cas_updates(spapr, fdt, spapr-&gt;o...>"
+    }
+  },
+  {
+    "id": "68719476820",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>ret<BR/>ret = spapr_dt_cas_updates(spapr, fdt, spapr-&gt;o...>"
+    }
+  },
+  {
+    "id": "30064771166",
+    "attrs": {
+      "label": "<spapr_dt_cas_updates, 235<BR/>spapr_dt_cas_updates(spapr, fdt, spapr-&gt;ov5_cas)>"
+    }
+  },
+  {
+    "id": "68719476821",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>spapr<BR/>spapr_dt_cas_updates(spapr, fdt, spapr-&gt;ov5_cas)>"
+    }
+  },
+  {
+    "id": "68719476822",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>fdt<BR/>spapr_dt_cas_updates(spapr, fdt, spapr-&gt;ov5_cas)>"
+    }
+  },
+  {
+    "id": "30064771167",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 235<BR/>spapr-&gt;ov5_cas>"
+    }
+  },
+  {
+    "id": "68719476823",
+    "attrs": {
+      "label": "<IDENTIFIER, 235<BR/>spapr<BR/>spapr_dt_cas_updates(spapr, fdt, spapr-&gt;ov5_cas)>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 235<BR/>ov5_cas>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 237<BR/>IF<BR/>if (ret &lt; 0) { error_report(&quot;couldn't ...>"
+    }
+  },
+  {
+    "id": "30064771168",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 237<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476824",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>ret<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313256",
+    "attrs": {
+      "label": "<LITERAL, 237<BR/>0<BR/>ret &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 237<BR/>{ error_report(&quot;couldn't setup CAS pro...>"
+    }
+  },
+  {
+    "id": "30064771169",
+    "attrs": {
+      "label": "<error_report, 239<BR/>error_report(&quot;couldn't setup CAS properties fdt&quot;)>"
+    }
+  },
+  {
+    "id": "90194313257",
+    "attrs": {
+      "label": "<LITERAL, 239<BR/>&quot;couldn't setup CAS properties fdt&quot;<BR/>error_report(&quot;couldn't setup CAS properties fdt&quot;)>"
+    }
+  },
+  {
+    "id": "30064771170",
+    "attrs": {
+      "label": "<exit, 241<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "90194313258",
+    "attrs": {
+      "label": "<LITERAL, 241<BR/>1<BR/>exit(1)>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 247<BR/>return fdt;>"
+    }
+  },
+  {
+    "id": "68719476825",
+    "attrs": {
+      "label": "<IDENTIFIER, 247<BR/>fdt<BR/>return fdt;>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 221<BR/>&lt;unknown&gt; KERNEL_LOAD_ADDR: ANY>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 175<BR/>&lt;unknown&gt; SPAPR_DR_CONNECTOR_TYPE_CPU: ANY>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 123<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 163<BR/>&lt;unknown&gt; SPAPR_DR_CONNECTOR_TYPE_LMB: ANY>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 101<BR/>&lt;unknown&gt; PHANDLE_XICP: ANY>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 139<BR/>&lt;unknown&gt; list: ANY>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 123<BR/>&lt;unknown&gt; TYPE_SPAPR_RNG: ANY>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 73<BR/>&lt;unknown&gt; qemu_uuid_set: ANY>"
+    }
+  },
+  {
+    "id": "94489280528",
+    "attrs": {
+      "label": "<LOCAL, 67<BR/>&lt;unknown&gt; qemu_uuid: ANY>"
+    }
+  },
+  {
+    "id": "94489280529",
+    "attrs": {
+      "label": "<LOCAL, 25<BR/>&lt;unknown&gt; FDT_MAX_SIZE: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>void*>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>spapr_build_fdt<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_dt_chosen>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>SPAPR_MACHINE_GET_CLASS>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_uuid_unparse_strdup>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>kvmppc_get_host_serial>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>fdt_add_mem_rsv>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>MACHINE_GET_CLASS>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_populate_cpus_dt_node>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>fdt_setprop_cell>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_dt_rtas>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_rng_populate_dt>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_dt_cas_updates>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_dt_hypervisor>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>kvm_enabled>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>fdt_create_empty_tree>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>error_report>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>MACHINE>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803817",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803818",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>object_resolve_path_type>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149744",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803819",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182428",
+    "attrs": {
+      "label": "<METHOD<BR/>g_free>"
+    }
+  },
+  {
+    "id": "111669149745",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803820",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051612",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182429",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_get_vm_name>"
+    }
+  },
+  {
+    "id": "111669149746",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803821",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051613",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182430",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_dt_xics>"
+    }
+  },
+  {
+    "id": "111669149747",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149748",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149749",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803822",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051614",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182431",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_populate_memory>"
+    }
+  },
+  {
+    "id": "111669149750",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149751",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803823",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051615",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182432",
+    "attrs": {
+      "label": "<METHOD<BR/>exit>"
+    }
+  },
+  {
+    "id": "111669149752",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803824",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051616",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182433",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_dt_vdevice>"
+    }
+  },
+  {
+    "id": "111669149753",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149754",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803825",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051617",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182434",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_drc_populate_dt>"
+    }
+  },
+  {
+    "id": "111669149755",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149756",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149757",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149758",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803826",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051618",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182435",
+    "attrs": {
+      "label": "<METHOD<BR/>QLIST_FOREACH>"
+    }
+  },
+  {
+    "id": "111669149759",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149760",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149761",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803827",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051619",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182436",
+    "attrs": {
+      "label": "<METHOD<BR/>kvmppc_get_host_model>"
+    }
+  },
+  {
+    "id": "111669149762",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803828",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051620",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182437",
+    "attrs": {
+      "label": "<METHOD<BR/>g_malloc0>"
+    }
+  },
+  {
+    "id": "111669149763",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803829",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051621",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182438",
+    "attrs": {
+      "label": "<METHOD<BR/>_FDT>"
+    }
+  },
+  {
+    "id": "111669149764",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803830",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051622",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182439",
+    "attrs": {
+      "label": "<METHOD<BR/>fdt_setprop_string>"
+    }
+  },
+  {
+    "id": "111669149765",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149766",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149767",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149768",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803831",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051623",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>fdt_path_offset>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_dt_events>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>spapr_populate_pci_dt>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>qdev_get_machine>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

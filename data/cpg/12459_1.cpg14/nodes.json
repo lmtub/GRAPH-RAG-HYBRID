@@ -1,1 +1,4808 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>vnc_display_open>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>const char *id>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>Error **errp>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ VncDisplay *vs = vnc_display_find(id); ...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 5<BR/>VncDisplay *vs: VncDisplay*>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 5<BR/>*vs = vnc_display_find(id)>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 5<BR/>vs<BR/>*vs = vnc_display_find(id)>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<vnc_display_find, 5<BR/>vnc_display_find(id)>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 5<BR/>id<BR/>vnc_display_find(id)>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>QemuOpts *opts: QemuOpts*>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 7<BR/>*opts = qemu_opts_find(&amp;qemu_vnc_opts, id)>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 7<BR/>opts<BR/>*opts = qemu_opts_find(&amp;qemu_vnc_opts, id)>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<qemu_opts_find, 7<BR/>qemu_opts_find(&amp;qemu_vnc_opts, id)>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 7<BR/>&amp;qemu_vnc_opts>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 7<BR/>&lt;unknown&gt; qemu_vnc_opts<BR/>qemu_opts_find(&amp;qemu_vnc_opts, id)>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 7<BR/>id<BR/>qemu_opts_find(&amp;qemu_vnc_opts, id)>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>QemuOpts *sopts: QemuOpts*>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>QemuOpts *wsopts: QemuOpts*>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>const char *share: char*>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 11<BR/>const char *device_id: char*>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 13<BR/>QemuConsole *con: QemuConsole*>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>bool password: bool>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 15<BR/>password = false>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>password<BR/>password = false>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 15<BR/>&lt;unknown&gt; false<BR/>password = false>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 17<BR/>bool reverse: bool>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 17<BR/>reverse = false>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>reverse<BR/>reverse = false>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>&lt;unknown&gt; false<BR/>reverse = false>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 19<BR/>const char *vnc: char*>"
+    }
+  },
+  {
+    "id": "94489280522",
+    "attrs": {
+      "label": "<LOCAL, 21<BR/>const char *has_to: char*>"
+    }
+  },
+  {
+    "id": "94489280523",
+    "attrs": {
+      "label": "<LOCAL, 23<BR/>char *h: char*>"
+    }
+  },
+  {
+    "id": "94489280524",
+    "attrs": {
+      "label": "<LOCAL, 25<BR/>bool has_ipv4: bool>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 25<BR/>has_ipv4 = false>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>has_ipv4<BR/>has_ipv4 = false>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 25<BR/>&lt;unknown&gt; false<BR/>has_ipv4 = false>"
+    }
+  },
+  {
+    "id": "94489280525",
+    "attrs": {
+      "label": "<LOCAL, 27<BR/>bool has_ipv6: bool>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 27<BR/>has_ipv6 = false>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>has_ipv6<BR/>has_ipv6 = false>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 27<BR/>&lt;unknown&gt; false<BR/>has_ipv6 = false>"
+    }
+  },
+  {
+    "id": "94489280526",
+    "attrs": {
+      "label": "<LOCAL, 29<BR/>const char *websocket: char*>"
+    }
+  },
+  {
+    "id": "94489280527",
+    "attrs": {
+      "label": "<LOCAL, 31<BR/>bool tls: bool>"
+    }
+  },
+  {
+    "id": "94489280528",
+    "attrs": {
+      "label": "<LOCAL, 31<BR/>bool x509: bool>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 31<BR/>tls = false>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>tls<BR/>tls = false>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>&lt;unknown&gt; false<BR/>tls = false>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 31<BR/>x509 = false>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>x509<BR/>x509 = false>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>&lt;unknown&gt; false<BR/>x509 = false>"
+    }
+  },
+  {
+    "id": "94489280529",
+    "attrs": {
+      "label": "<LOCAL, 39<BR/>bool sasl: bool>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 39<BR/>sasl = false>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>sasl<BR/>sasl = false>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>&lt;unknown&gt; false<BR/>sasl = false>"
+    }
+  },
+  {
+    "id": "94489280530",
+    "attrs": {
+      "label": "<LOCAL, 53<BR/>int lock_key_sync: int>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 53<BR/>lock_key_sync = 1>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>lock_key_sync<BR/>lock_key_sync = 1>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 53<BR/>1<BR/>lock_key_sync = 1>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 57<BR/>IF<BR/>if (!vs) { error_setg(errp, &quot;VNC displ...>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 57<BR/>!vs>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>vs<BR/>!vs>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 57<BR/>{ error_setg(errp, &quot;VNC display not ac...>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<error_setg, 59<BR/>error_setg(errp, &quot;VNC display not active&quot;)>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 59<BR/>errp<BR/>error_setg(errp, &quot;VNC display not active&quot;)>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 59<BR/>&quot;VNC display not active&quot;<BR/>error_setg(errp, &quot;VNC display not active&quot;)>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 61<BR/>return;>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<vnc_display_close, 65<BR/>vnc_display_close(vs)>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>vs<BR/>vnc_display_close(vs)>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 69<BR/>IF<BR/>if (!opts) { return; }>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 69<BR/>!opts>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 69<BR/>opts<BR/>!opts>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 69<BR/>{ return; }>"
+    }
+  },
+  {
+    "id": "141733920769",
+    "attrs": {
+      "label": "<RETURN, 71<BR/>return;>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 75<BR/>vnc = qemu_opt_get(opts, &quot;vnc&quot;)>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>vnc<BR/>vnc = qemu_opt_get(opts, &quot;vnc&quot;)>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<qemu_opt_get, 75<BR/>qemu_opt_get(opts, &quot;vnc&quot;)>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>opts<BR/>qemu_opt_get(opts, &quot;vnc&quot;)>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 75<BR/>&quot;vnc&quot;<BR/>qemu_opt_get(opts, &quot;vnc&quot;)>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 77<BR/>IF<BR/>if (!vnc || strcmp(vnc, &quot;none&quot;) == 0) { ...>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalOr, 77<BR/>!vnc || strcmp(vnc, &quot;none&quot;) == 0>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 77<BR/>!vnc>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>vnc<BR/>!vnc>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 77<BR/>strcmp(vnc, &quot;none&quot;) == 0>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<strcmp, 77<BR/>strcmp(vnc, &quot;none&quot;)>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>vnc<BR/>strcmp(vnc, &quot;none&quot;)>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 77<BR/>&quot;none&quot;<BR/>strcmp(vnc, &quot;none&quot;)>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 77<BR/>0<BR/>strcmp(vnc, &quot;none&quot;) == 0>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 77<BR/>{ return; }>"
+    }
+  },
+  {
+    "id": "141733920770",
+    "attrs": {
+      "label": "<RETURN, 79<BR/>return;>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 85<BR/>sopts = qemu_opts_create(&amp;socket_optslist, NULL...>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>sopts<BR/>sopts = qemu_opts_create(&amp;socket_optslist, NULL...>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<qemu_opts_create, 85<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 85<BR/>&amp;socket_optslist>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>&lt;unknown&gt; socket_optslist<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>&lt;unknown&gt; NULL<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 85<BR/>0<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 85<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 87<BR/>wsopts = qemu_opts_create(&amp;socket_optslist, NUL...>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>wsopts<BR/>wsopts = qemu_opts_create(&amp;socket_optslist, NUL...>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<qemu_opts_create, 87<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 87<BR/>&amp;socket_optslist>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>&lt;unknown&gt; socket_optslist<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>&lt;unknown&gt; NULL<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 87<BR/>0<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 87<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 87<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opts_create(&amp;socket_optslist, NULL, 0, &amp;er...>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 91<BR/>h = strrchr(vnc, ':')>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>h<BR/>h = strrchr(vnc, ':')>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<strrchr, 91<BR/>strrchr(vnc, ':')>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 91<BR/>vnc<BR/>strrchr(vnc, ':')>"
+    }
+  },
+  {
+    "id": "90194313223",
+    "attrs": {
+      "label": "<LITERAL, 91<BR/>':'<BR/>strrchr(vnc, ':')>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 93<BR/>IF<BR/>if (h) { char *host = g_strndup(vnc, h...>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 93<BR/>h<BR/>if (h) { char *host = g_strndup(vnc, h...>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 93<BR/>{ char *host = g_strndup(vnc, h - vnc)...>"
+    }
+  },
+  {
+    "id": "94489280531",
+    "attrs": {
+      "label": "<LOCAL, 95<BR/>char *host: char*>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 95<BR/>*host = g_strndup(vnc, h - vnc)>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>host<BR/>*host = g_strndup(vnc, h - vnc)>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<g_strndup, 95<BR/>g_strndup(vnc, h - vnc)>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>vnc<BR/>g_strndup(vnc, h - vnc)>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 95<BR/>h - vnc>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>h<BR/>h - vnc>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 95<BR/>vnc<BR/>h - vnc>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<qemu_opt_set, 97<BR/>qemu_opt_set(sopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>sopts<BR/>qemu_opt_set(sopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313224",
+    "attrs": {
+      "label": "<LITERAL, 97<BR/>&quot;host&quot;<BR/>qemu_opt_set(sopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>host<BR/>qemu_opt_set(sopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 97<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 97<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opt_set(sopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<qemu_opt_set, 99<BR/>qemu_opt_set(wsopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>wsopts<BR/>qemu_opt_set(wsopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313225",
+    "attrs": {
+      "label": "<LITERAL, 99<BR/>&quot;host&quot;<BR/>qemu_opt_set(wsopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>host<BR/>qemu_opt_set(wsopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 99<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opt_set(wsopts, &quot;host&quot;, host, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<qemu_opt_set, 101<BR/>qemu_opt_set(sopts, &quot;port&quot;, h+1, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>sopts<BR/>qemu_opt_set(sopts, &quot;port&quot;, h+1, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313226",
+    "attrs": {
+      "label": "<LITERAL, 101<BR/>&quot;port&quot;<BR/>qemu_opt_set(sopts, &quot;port&quot;, h+1, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 101<BR/>h+1>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>h<BR/>h+1>"
+    }
+  },
+  {
+    "id": "90194313227",
+    "attrs": {
+      "label": "<LITERAL, 101<BR/>1<BR/>h+1>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 101<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opt_set(sopts, &quot;port&quot;, h+1, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<g_free, 103<BR/>g_free(host)>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 103<BR/>host<BR/>g_free(host)>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 105<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 105<BR/>{ error_setg(errp, &quot;no vnc port specif...>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<error_setg, 107<BR/>error_setg(errp, &quot;no vnc port specified&quot;)>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 107<BR/>errp<BR/>error_setg(errp, &quot;no vnc port specified&quot;)>"
+    }
+  },
+  {
+    "id": "90194313228",
+    "attrs": {
+      "label": "<LITERAL, 107<BR/>&quot;no vnc port specified&quot;<BR/>error_setg(errp, &quot;no vnc port specified&quot;)>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 109<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 115<BR/>has_to = qemu_opt_get(opts, &quot;to&quot;)>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 115<BR/>has_to<BR/>has_to = qemu_opt_get(opts, &quot;to&quot;)>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<qemu_opt_get, 115<BR/>qemu_opt_get(opts, &quot;to&quot;)>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 115<BR/>opts<BR/>qemu_opt_get(opts, &quot;to&quot;)>"
+    }
+  },
+  {
+    "id": "90194313229",
+    "attrs": {
+      "label": "<LITERAL, 115<BR/>&quot;to&quot;<BR/>qemu_opt_get(opts, &quot;to&quot;)>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 117<BR/>has_ipv4 = qemu_opt_get_bool(opts, &quot;ipv4&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>has_ipv4<BR/>has_ipv4 = qemu_opt_get_bool(opts, &quot;ipv4&quot;, false)>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<qemu_opt_get_bool, 117<BR/>qemu_opt_get_bool(opts, &quot;ipv4&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>opts<BR/>qemu_opt_get_bool(opts, &quot;ipv4&quot;, false)>"
+    }
+  },
+  {
+    "id": "90194313230",
+    "attrs": {
+      "label": "<LITERAL, 117<BR/>&quot;ipv4&quot;<BR/>qemu_opt_get_bool(opts, &quot;ipv4&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>&lt;unknown&gt; false<BR/>qemu_opt_get_bool(opts, &quot;ipv4&quot;, false)>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 119<BR/>has_ipv6 = qemu_opt_get_bool(opts, &quot;ipv6&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>has_ipv6<BR/>has_ipv6 = qemu_opt_get_bool(opts, &quot;ipv6&quot;, false)>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<qemu_opt_get_bool, 119<BR/>qemu_opt_get_bool(opts, &quot;ipv6&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>opts<BR/>qemu_opt_get_bool(opts, &quot;ipv6&quot;, false)>"
+    }
+  },
+  {
+    "id": "90194313231",
+    "attrs": {
+      "label": "<LITERAL, 119<BR/>&quot;ipv6&quot;<BR/>qemu_opt_get_bool(opts, &quot;ipv6&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 119<BR/>&lt;unknown&gt; false<BR/>qemu_opt_get_bool(opts, &quot;ipv6&quot;, false)>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 121<BR/>IF<BR/>if (has_to) { qemu_opt_set(sopts, &quot;to&quot;...>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>has_to<BR/>if (has_to) { qemu_opt_set(sopts, &quot;to&quot;...>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 121<BR/>{ qemu_opt_set(sopts, &quot;to&quot;, has_to, &amp;e...>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<qemu_opt_set, 123<BR/>qemu_opt_set(sopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>sopts<BR/>qemu_opt_set(sopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313232",
+    "attrs": {
+      "label": "<LITERAL, 123<BR/>&quot;to&quot;<BR/>qemu_opt_set(sopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>has_to<BR/>qemu_opt_set(sopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 123<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opt_set(sopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<qemu_opt_set, 125<BR/>qemu_opt_set(wsopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>wsopts<BR/>qemu_opt_set(wsopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313233",
+    "attrs": {
+      "label": "<LITERAL, 125<BR/>&quot;to&quot;<BR/>qemu_opt_set(wsopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>has_to<BR/>qemu_opt_set(wsopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 125<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 125<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opt_set(wsopts, &quot;to&quot;, has_to, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 129<BR/>IF<BR/>if (has_ipv4) { qemu_opt_set(sopts, &quot;i...>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>has_ipv4<BR/>if (has_ipv4) { qemu_opt_set(sopts, &quot;i...>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 129<BR/>{ qemu_opt_set(sopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;e...>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<qemu_opt_set, 131<BR/>qemu_opt_set(sopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476806",
+    "attrs": {
+      "label": "<IDENTIFIER, 131<BR/>sopts<BR/>qemu_opt_set(sopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313234",
+    "attrs": {
+      "label": "<LITERAL, 131<BR/>&quot;ipv4&quot;<BR/>qemu_opt_set(sopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313235",
+    "attrs": {
+      "label": "<LITERAL, 131<BR/>&quot;on&quot;<BR/>qemu_opt_set(sopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 131<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476807",
+    "attrs": {
+      "label": "<IDENTIFIER, 131<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opt_set(sopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<qemu_opt_set, 133<BR/>qemu_opt_set(wsopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476808",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>wsopts<BR/>qemu_opt_set(wsopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313236",
+    "attrs": {
+      "label": "<LITERAL, 133<BR/>&quot;ipv4&quot;<BR/>qemu_opt_set(wsopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313237",
+    "attrs": {
+      "label": "<LITERAL, 133<BR/>&quot;on&quot;<BR/>qemu_opt_set(wsopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 133<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476809",
+    "attrs": {
+      "label": "<IDENTIFIER, 133<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opt_set(wsopts, &quot;ipv4&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 137<BR/>IF<BR/>if (has_ipv6) { qemu_opt_set(sopts, &quot;i...>"
+    }
+  },
+  {
+    "id": "68719476810",
+    "attrs": {
+      "label": "<IDENTIFIER, 137<BR/>has_ipv6<BR/>if (has_ipv6) { qemu_opt_set(sopts, &quot;i...>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 137<BR/>{ qemu_opt_set(sopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;e...>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<qemu_opt_set, 139<BR/>qemu_opt_set(sopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476811",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>sopts<BR/>qemu_opt_set(sopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313238",
+    "attrs": {
+      "label": "<LITERAL, 139<BR/>&quot;ipv6&quot;<BR/>qemu_opt_set(sopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313239",
+    "attrs": {
+      "label": "<LITERAL, 139<BR/>&quot;on&quot;<BR/>qemu_opt_set(sopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 139<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476812",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opt_set(sopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<qemu_opt_set, 141<BR/>qemu_opt_set(wsopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "68719476813",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>wsopts<BR/>qemu_opt_set(wsopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313240",
+    "attrs": {
+      "label": "<LITERAL, 141<BR/>&quot;ipv6&quot;<BR/>qemu_opt_set(wsopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "90194313241",
+    "attrs": {
+      "label": "<LITERAL, 141<BR/>&quot;on&quot;<BR/>qemu_opt_set(wsopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 141<BR/>&amp;error_abort>"
+    }
+  },
+  {
+    "id": "68719476814",
+    "attrs": {
+      "label": "<IDENTIFIER, 141<BR/>&lt;unknown&gt; error_abort<BR/>qemu_opt_set(wsopts, &quot;ipv6&quot;, &quot;on&quot;, &amp;error_abort)>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 147<BR/>password = qemu_opt_get_bool(opts, &quot;password&quot;, ...>"
+    }
+  },
+  {
+    "id": "68719476815",
+    "attrs": {
+      "label": "<IDENTIFIER, 147<BR/>password<BR/>password = qemu_opt_get_bool(opts, &quot;password&quot;, ...>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<qemu_opt_get_bool, 147<BR/>qemu_opt_get_bool(opts, &quot;password&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476816",
+    "attrs": {
+      "label": "<IDENTIFIER, 147<BR/>opts<BR/>qemu_opt_get_bool(opts, &quot;password&quot;, false)>"
+    }
+  },
+  {
+    "id": "90194313242",
+    "attrs": {
+      "label": "<LITERAL, 147<BR/>&quot;password&quot;<BR/>qemu_opt_get_bool(opts, &quot;password&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476817",
+    "attrs": {
+      "label": "<IDENTIFIER, 147<BR/>&lt;unknown&gt; false<BR/>qemu_opt_get_bool(opts, &quot;password&quot;, false)>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 149<BR/>IF<BR/>if (password &amp;&amp; fips_get_state()) { er...>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalAnd, 149<BR/>password &amp;&amp; fips_get_state()>"
+    }
+  },
+  {
+    "id": "68719476818",
+    "attrs": {
+      "label": "<IDENTIFIER, 149<BR/>password<BR/>password &amp;&amp; fips_get_state()>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<fips_get_state, 149<BR/>fips_get_state()>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 149<BR/>{ error_setg(errp, ...>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<error_setg, 151<BR/>error_setg(errp, &quot;VNC passw...>"
+    }
+  },
+  {
+    "id": "68719476819",
+    "attrs": {
+      "label": "<IDENTIFIER, 151<BR/>errp<BR/>error_setg(errp, &quot;VNC passw...>"
+    }
+  },
+  {
+    "id": "90194313243",
+    "attrs": {
+      "label": "<LITERAL, 153<BR/>&quot;VNC password auth disabled due to FIPS mode, &quot;...<BR/>error_setg(errp, &quot;VNC passw...>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 159<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 165<BR/>reverse = qemu_opt_get_bool(opts, &quot;reverse&quot;, fa...>"
+    }
+  },
+  {
+    "id": "68719476820",
+    "attrs": {
+      "label": "<IDENTIFIER, 165<BR/>reverse<BR/>reverse = qemu_opt_get_bool(opts, &quot;reverse&quot;, fa...>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<qemu_opt_get_bool, 165<BR/>qemu_opt_get_bool(opts, &quot;reverse&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476821",
+    "attrs": {
+      "label": "<IDENTIFIER, 165<BR/>opts<BR/>qemu_opt_get_bool(opts, &quot;reverse&quot;, false)>"
+    }
+  },
+  {
+    "id": "90194313244",
+    "attrs": {
+      "label": "<LITERAL, 165<BR/>&quot;reverse&quot;<BR/>qemu_opt_get_bool(opts, &quot;reverse&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476822",
+    "attrs": {
+      "label": "<IDENTIFIER, 165<BR/>&lt;unknown&gt; false<BR/>qemu_opt_get_bool(opts, &quot;reverse&quot;, false)>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 167<BR/>lock_key_sync = qemu_opt_get_bool(opts, &quot;lock-k...>"
+    }
+  },
+  {
+    "id": "68719476823",
+    "attrs": {
+      "label": "<IDENTIFIER, 167<BR/>lock_key_sync<BR/>lock_key_sync = qemu_opt_get_bool(opts, &quot;lock-k...>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<qemu_opt_get_bool, 167<BR/>qemu_opt_get_bool(opts, &quot;lock-key-sync&quot;, true)>"
+    }
+  },
+  {
+    "id": "68719476824",
+    "attrs": {
+      "label": "<IDENTIFIER, 167<BR/>opts<BR/>qemu_opt_get_bool(opts, &quot;lock-key-sync&quot;, true)>"
+    }
+  },
+  {
+    "id": "90194313245",
+    "attrs": {
+      "label": "<LITERAL, 167<BR/>&quot;lock-key-sync&quot;<BR/>qemu_opt_get_bool(opts, &quot;lock-key-sync&quot;, true)>"
+    }
+  },
+  {
+    "id": "68719476825",
+    "attrs": {
+      "label": "<IDENTIFIER, 167<BR/>&lt;unknown&gt; true<BR/>qemu_opt_get_bool(opts, &quot;lock-key-sync&quot;, true)>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 169<BR/>sasl = qemu_opt_get_bool(opts, &quot;sasl&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476826",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>sasl<BR/>sasl = qemu_opt_get_bool(opts, &quot;sasl&quot;, false)>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<qemu_opt_get_bool, 169<BR/>qemu_opt_get_bool(opts, &quot;sasl&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476827",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>opts<BR/>qemu_opt_get_bool(opts, &quot;sasl&quot;, false)>"
+    }
+  },
+  {
+    "id": "90194313246",
+    "attrs": {
+      "label": "<LITERAL, 169<BR/>&quot;sasl&quot;<BR/>qemu_opt_get_bool(opts, &quot;sasl&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476828",
+    "attrs": {
+      "label": "<IDENTIFIER, 169<BR/>&lt;unknown&gt; false<BR/>qemu_opt_get_bool(opts, &quot;sasl&quot;, false)>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 173<BR/>IF<BR/>if (sasl) { error_setg(errp, &quot;VNC SASL...>"
+    }
+  },
+  {
+    "id": "68719476829",
+    "attrs": {
+      "label": "<IDENTIFIER, 173<BR/>sasl<BR/>if (sasl) { error_setg(errp, &quot;VNC SASL...>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 173<BR/>{ error_setg(errp, &quot;VNC SASL auth requ...>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<error_setg, 175<BR/>error_setg(errp, &quot;VNC SASL auth requires cyrus-...>"
+    }
+  },
+  {
+    "id": "68719476830",
+    "attrs": {
+      "label": "<IDENTIFIER, 175<BR/>errp<BR/>error_setg(errp, &quot;VNC SASL auth requires cyrus-...>"
+    }
+  },
+  {
+    "id": "90194313247",
+    "attrs": {
+      "label": "<LITERAL, 175<BR/>&quot;VNC SASL auth requires cyrus-sasl support&quot;<BR/>error_setg(errp, &quot;VNC SASL auth requires cyrus-...>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 177<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 183<BR/>tls = qemu_opt_get_bool(opts, &quot;tls&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476831",
+    "attrs": {
+      "label": "<IDENTIFIER, 183<BR/>tls<BR/>tls = qemu_opt_get_bool(opts, &quot;tls&quot;, false)>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<qemu_opt_get_bool, 183<BR/>qemu_opt_get_bool(opts, &quot;tls&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476832",
+    "attrs": {
+      "label": "<IDENTIFIER, 183<BR/>opts<BR/>qemu_opt_get_bool(opts, &quot;tls&quot;, false)>"
+    }
+  },
+  {
+    "id": "90194313248",
+    "attrs": {
+      "label": "<LITERAL, 183<BR/>&quot;tls&quot;<BR/>qemu_opt_get_bool(opts, &quot;tls&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476833",
+    "attrs": {
+      "label": "<IDENTIFIER, 183<BR/>&lt;unknown&gt; false<BR/>qemu_opt_get_bool(opts, &quot;tls&quot;, false)>"
+    }
+  },
+  {
+    "id": "47244640269",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 219<BR/>IF<BR/>if (tls) { error_setg(errp, &quot;VNC TLS a...>"
+    }
+  },
+  {
+    "id": "68719476834",
+    "attrs": {
+      "label": "<IDENTIFIER, 219<BR/>tls<BR/>if (tls) { error_setg(errp, &quot;VNC TLS a...>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 219<BR/>{ error_setg(errp, &quot;VNC TLS auth requi...>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<error_setg, 221<BR/>error_setg(errp, &quot;VNC TLS auth requires gnutls ...>"
+    }
+  },
+  {
+    "id": "68719476835",
+    "attrs": {
+      "label": "<IDENTIFIER, 221<BR/>errp<BR/>error_setg(errp, &quot;VNC TLS auth requires gnutls ...>"
+    }
+  },
+  {
+    "id": "90194313249",
+    "attrs": {
+      "label": "<LITERAL, 221<BR/>&quot;VNC TLS auth requires gnutls support&quot;<BR/>error_setg(errp, &quot;VNC TLS auth requires gnutls ...>"
+    }
+  },
+  {
+    "id": "47244640270",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 223<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 237<BR/>share = qemu_opt_get(opts, &quot;share&quot;)>"
+    }
+  },
+  {
+    "id": "68719476836",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>share<BR/>share = qemu_opt_get(opts, &quot;share&quot;)>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<qemu_opt_get, 237<BR/>qemu_opt_get(opts, &quot;share&quot;)>"
+    }
+  },
+  {
+    "id": "68719476837",
+    "attrs": {
+      "label": "<IDENTIFIER, 237<BR/>opts<BR/>qemu_opt_get(opts, &quot;share&quot;)>"
+    }
+  },
+  {
+    "id": "90194313250",
+    "attrs": {
+      "label": "<LITERAL, 237<BR/>&quot;share&quot;<BR/>qemu_opt_get(opts, &quot;share&quot;)>"
+    }
+  },
+  {
+    "id": "47244640271",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 239<BR/>IF<BR/>if (share) { if (strcmp(share, &quot;ignore...>"
+    }
+  },
+  {
+    "id": "68719476838",
+    "attrs": {
+      "label": "<IDENTIFIER, 239<BR/>share<BR/>if (share) { if (strcmp(share, &quot;ignore...>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 239<BR/>{ if (strcmp(share, &quot;ignore&quot;) == 0) { ...>"
+    }
+  },
+  {
+    "id": "47244640272",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 241<BR/>IF<BR/>if (strcmp(share, &quot;ignore&quot;) == 0) { ...>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 241<BR/>strcmp(share, &quot;ignore&quot;) == 0>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<strcmp, 241<BR/>strcmp(share, &quot;ignore&quot;)>"
+    }
+  },
+  {
+    "id": "68719476839",
+    "attrs": {
+      "label": "<IDENTIFIER, 241<BR/>share<BR/>strcmp(share, &quot;ignore&quot;)>"
+    }
+  },
+  {
+    "id": "90194313251",
+    "attrs": {
+      "label": "<LITERAL, 241<BR/>&quot;ignore&quot;<BR/>strcmp(share, &quot;ignore&quot;)>"
+    }
+  },
+  {
+    "id": "90194313252",
+    "attrs": {
+      "label": "<LITERAL, 241<BR/>0<BR/>strcmp(share, &quot;ignore&quot;) == 0>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK, 241<BR/>{ vs-&gt;share_policy = VNC_SHARE_POL...>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 243<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_IGNORE>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 243<BR/>vs-&gt;share_policy>"
+    }
+  },
+  {
+    "id": "68719476840",
+    "attrs": {
+      "label": "<IDENTIFIER, 243<BR/>vs<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_IGNORE>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 243<BR/>share_policy>"
+    }
+  },
+  {
+    "id": "68719476841",
+    "attrs": {
+      "label": "<IDENTIFIER, 243<BR/>&lt;unknown&gt; VNC_SHARE_POLICY_IGNORE<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_IGNORE>"
+    }
+  },
+  {
+    "id": "47244640273",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 245<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK, 245<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640274",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 245<BR/>IF<BR/>if (strcmp(share, &quot;allow-exclusive&quot;) == 0) { ...>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 245<BR/>strcmp(share, &quot;allow-exclusive&quot;) == 0>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<strcmp, 245<BR/>strcmp(share, &quot;allow-exclusive&quot;)>"
+    }
+  },
+  {
+    "id": "68719476842",
+    "attrs": {
+      "label": "<IDENTIFIER, 245<BR/>share<BR/>strcmp(share, &quot;allow-exclusive&quot;)>"
+    }
+  },
+  {
+    "id": "90194313253",
+    "attrs": {
+      "label": "<LITERAL, 245<BR/>&quot;allow-exclusive&quot;<BR/>strcmp(share, &quot;allow-exclusive&quot;)>"
+    }
+  },
+  {
+    "id": "90194313254",
+    "attrs": {
+      "label": "<LITERAL, 245<BR/>0<BR/>strcmp(share, &quot;allow-exclusive&quot;) == 0>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK, 245<BR/>{ vs-&gt;share_policy = VNC_SHARE_POL...>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 247<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_ALLOW_EXCLU...>"
+    }
+  },
+  {
+    "id": "30064771159",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 247<BR/>vs-&gt;share_policy>"
+    }
+  },
+  {
+    "id": "68719476843",
+    "attrs": {
+      "label": "<IDENTIFIER, 247<BR/>vs<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_ALLOW_EXCLU...>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 247<BR/>share_policy>"
+    }
+  },
+  {
+    "id": "68719476844",
+    "attrs": {
+      "label": "<IDENTIFIER, 247<BR/>&lt;unknown&gt; VNC_SHARE_POLICY_ALLOW_EXCLUSIVE<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_ALLOW_EXCLU...>"
+    }
+  },
+  {
+    "id": "47244640275",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 249<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK, 249<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "47244640276",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 249<BR/>IF<BR/>if (strcmp(share, &quot;force-shared&quot;) == 0) { ...>"
+    }
+  },
+  {
+    "id": "30064771160",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 249<BR/>strcmp(share, &quot;force-shared&quot;) == 0>"
+    }
+  },
+  {
+    "id": "30064771161",
+    "attrs": {
+      "label": "<strcmp, 249<BR/>strcmp(share, &quot;force-shared&quot;)>"
+    }
+  },
+  {
+    "id": "68719476845",
+    "attrs": {
+      "label": "<IDENTIFIER, 249<BR/>share<BR/>strcmp(share, &quot;force-shared&quot;)>"
+    }
+  },
+  {
+    "id": "90194313255",
+    "attrs": {
+      "label": "<LITERAL, 249<BR/>&quot;force-shared&quot;<BR/>strcmp(share, &quot;force-shared&quot;)>"
+    }
+  },
+  {
+    "id": "90194313256",
+    "attrs": {
+      "label": "<LITERAL, 249<BR/>0<BR/>strcmp(share, &quot;force-shared&quot;) == 0>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK, 249<BR/>{ vs-&gt;share_policy = VNC_SHARE_POL...>"
+    }
+  },
+  {
+    "id": "30064771162",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 251<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_FORCE_SHARED>"
+    }
+  },
+  {
+    "id": "30064771163",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 251<BR/>vs-&gt;share_policy>"
+    }
+  },
+  {
+    "id": "68719476846",
+    "attrs": {
+      "label": "<IDENTIFIER, 251<BR/>vs<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_FORCE_SHARED>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 251<BR/>share_policy>"
+    }
+  },
+  {
+    "id": "68719476847",
+    "attrs": {
+      "label": "<IDENTIFIER, 251<BR/>&lt;unknown&gt; VNC_SHARE_POLICY_FORCE_SHARED<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_FORCE_SHARED>"
+    }
+  },
+  {
+    "id": "47244640277",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 253<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK, 253<BR/>{ error_setg(errp, &quot;unknown vnc sh...>"
+    }
+  },
+  {
+    "id": "30064771164",
+    "attrs": {
+      "label": "<error_setg, 255<BR/>error_setg(errp, &quot;unknown vnc share= option&quot;)>"
+    }
+  },
+  {
+    "id": "68719476848",
+    "attrs": {
+      "label": "<IDENTIFIER, 255<BR/>errp<BR/>error_setg(errp, &quot;unknown vnc share= option&quot;)>"
+    }
+  },
+  {
+    "id": "90194313257",
+    "attrs": {
+      "label": "<LITERAL, 255<BR/>&quot;unknown vnc share= option&quot;<BR/>error_setg(errp, &quot;unknown vnc share= option&quot;)>"
+    }
+  },
+  {
+    "id": "47244640278",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 257<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "47244640279",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 261<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK, 261<BR/>{ vs-&gt;share_policy = VNC_SHARE_POLICY_...>"
+    }
+  },
+  {
+    "id": "30064771165",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 263<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_ALLOW_EXCLU...>"
+    }
+  },
+  {
+    "id": "30064771166",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 263<BR/>vs-&gt;share_policy>"
+    }
+  },
+  {
+    "id": "68719476849",
+    "attrs": {
+      "label": "<IDENTIFIER, 263<BR/>vs<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_ALLOW_EXCLU...>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 263<BR/>share_policy>"
+    }
+  },
+  {
+    "id": "68719476850",
+    "attrs": {
+      "label": "<IDENTIFIER, 263<BR/>&lt;unknown&gt; VNC_SHARE_POLICY_ALLOW_EXCLUSIVE<BR/>vs-&gt;share_policy = VNC_SHARE_POLICY_ALLOW_EXCLU...>"
+    }
+  },
+  {
+    "id": "30064771167",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 267<BR/>vs-&gt;connections_limit = qemu_opt_get_number(opt...>"
+    }
+  },
+  {
+    "id": "30064771168",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 267<BR/>vs-&gt;connections_limit>"
+    }
+  },
+  {
+    "id": "68719476851",
+    "attrs": {
+      "label": "<IDENTIFIER, 267<BR/>vs<BR/>vs-&gt;connections_limit = qemu_opt_get_number(opt...>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 267<BR/>connections_limit>"
+    }
+  },
+  {
+    "id": "30064771169",
+    "attrs": {
+      "label": "<qemu_opt_get_number, 267<BR/>qemu_opt_get_number(opts, &quot;connections&quot;, 32)>"
+    }
+  },
+  {
+    "id": "68719476852",
+    "attrs": {
+      "label": "<IDENTIFIER, 267<BR/>opts<BR/>qemu_opt_get_number(opts, &quot;connections&quot;, 32)>"
+    }
+  },
+  {
+    "id": "90194313258",
+    "attrs": {
+      "label": "<LITERAL, 267<BR/>&quot;connections&quot;<BR/>qemu_opt_get_number(opts, &quot;connections&quot;, 32)>"
+    }
+  },
+  {
+    "id": "90194313259",
+    "attrs": {
+      "label": "<LITERAL, 267<BR/>32<BR/>qemu_opt_get_number(opts, &quot;connections&quot;, 32)>"
+    }
+  },
+  {
+    "id": "30064771170",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 271<BR/>websocket = qemu_opt_get(opts, &quot;websocket&quot;)>"
+    }
+  },
+  {
+    "id": "68719476853",
+    "attrs": {
+      "label": "<IDENTIFIER, 271<BR/>websocket<BR/>websocket = qemu_opt_get(opts, &quot;websocket&quot;)>"
+    }
+  },
+  {
+    "id": "30064771171",
+    "attrs": {
+      "label": "<qemu_opt_get, 271<BR/>qemu_opt_get(opts, &quot;websocket&quot;)>"
+    }
+  },
+  {
+    "id": "68719476854",
+    "attrs": {
+      "label": "<IDENTIFIER, 271<BR/>opts<BR/>qemu_opt_get(opts, &quot;websocket&quot;)>"
+    }
+  },
+  {
+    "id": "90194313260",
+    "attrs": {
+      "label": "<LITERAL, 271<BR/>&quot;websocket&quot;<BR/>qemu_opt_get(opts, &quot;websocket&quot;)>"
+    }
+  },
+  {
+    "id": "47244640280",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 273<BR/>IF<BR/>if (websocket) { #ifdef CONFIG_VNC_WS ...>"
+    }
+  },
+  {
+    "id": "68719476855",
+    "attrs": {
+      "label": "<IDENTIFIER, 273<BR/>websocket<BR/>if (websocket) { #ifdef CONFIG_VNC_WS ...>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK, 273<BR/>{ #ifdef CONFIG_VNC_WS vs-&gt;ws_enabled...>"
+    }
+  },
+  {
+    "id": "30064771172",
+    "attrs": {
+      "label": "<error_setg, 283<BR/>error_setg(errp, &quot;Websockets protocol requires ...>"
+    }
+  },
+  {
+    "id": "68719476856",
+    "attrs": {
+      "label": "<IDENTIFIER, 283<BR/>errp<BR/>error_setg(errp, &quot;Websockets protocol requires ...>"
+    }
+  },
+  {
+    "id": "90194313261",
+    "attrs": {
+      "label": "<LITERAL, 283<BR/>&quot;Websockets protocol requires gnutls support&quot;<BR/>error_setg(errp, &quot;Websockets protocol requires ...>"
+    }
+  },
+  {
+    "id": "47244640281",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 285<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771173",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 299<BR/>vs-&gt;non_adaptive = qemu_opt_get_bool(opts, &quot;non...>"
+    }
+  },
+  {
+    "id": "30064771174",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 299<BR/>vs-&gt;non_adaptive>"
+    }
+  },
+  {
+    "id": "68719476857",
+    "attrs": {
+      "label": "<IDENTIFIER, 299<BR/>vs<BR/>vs-&gt;non_adaptive = qemu_opt_get_bool(opts, &quot;non...>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 299<BR/>non_adaptive>"
+    }
+  },
+  {
+    "id": "30064771175",
+    "attrs": {
+      "label": "<qemu_opt_get_bool, 299<BR/>qemu_opt_get_bool(opts, &quot;non-adaptive&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476858",
+    "attrs": {
+      "label": "<IDENTIFIER, 299<BR/>opts<BR/>qemu_opt_get_bool(opts, &quot;non-adaptive&quot;, false)>"
+    }
+  },
+  {
+    "id": "90194313262",
+    "attrs": {
+      "label": "<LITERAL, 299<BR/>&quot;non-adaptive&quot;<BR/>qemu_opt_get_bool(opts, &quot;non-adaptive&quot;, false)>"
+    }
+  },
+  {
+    "id": "68719476859",
+    "attrs": {
+      "label": "<IDENTIFIER, 299<BR/>&lt;unknown&gt; false<BR/>qemu_opt_get_bool(opts, &quot;non-adaptive&quot;, false)>"
+    }
+  },
+  {
+    "id": "47244640282",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 307<BR/>IF<BR/>if (!vs-&gt;lossy) { vs-&gt;non_adaptive = t...>"
+    }
+  },
+  {
+    "id": "30064771176",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 307<BR/>!vs-&gt;lossy>"
+    }
+  },
+  {
+    "id": "30064771177",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 307<BR/>vs-&gt;lossy>"
+    }
+  },
+  {
+    "id": "68719476860",
+    "attrs": {
+      "label": "<IDENTIFIER, 307<BR/>vs<BR/>!vs-&gt;lossy>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 307<BR/>lossy>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK, 307<BR/>{ vs-&gt;non_adaptive = true; }>"
+    }
+  },
+  {
+    "id": "30064771178",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 309<BR/>vs-&gt;non_adaptive = true>"
+    }
+  },
+  {
+    "id": "30064771179",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 309<BR/>vs-&gt;non_adaptive>"
+    }
+  },
+  {
+    "id": "68719476861",
+    "attrs": {
+      "label": "<IDENTIFIER, 309<BR/>vs<BR/>vs-&gt;non_adaptive = true>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 309<BR/>non_adaptive>"
+    }
+  },
+  {
+    "id": "68719476862",
+    "attrs": {
+      "label": "<IDENTIFIER, 309<BR/>&lt;unknown&gt; true<BR/>vs-&gt;non_adaptive = true>"
+    }
+  },
+  {
+    "id": "30064771180",
+    "attrs": {
+      "label": "<vnc_display_setup_auth, 385<BR/>vnc_display_setup_auth(vs, password, sasl, tls,...>"
+    }
+  },
+  {
+    "id": "68719476863",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>vs<BR/>vnc_display_setup_auth(vs, password, sasl, tls,...>"
+    }
+  },
+  {
+    "id": "68719476864",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>password<BR/>vnc_display_setup_auth(vs, password, sasl, tls,...>"
+    }
+  },
+  {
+    "id": "68719476865",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>sasl<BR/>vnc_display_setup_auth(vs, password, sasl, tls,...>"
+    }
+  },
+  {
+    "id": "68719476866",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>tls<BR/>vnc_display_setup_auth(vs, password, sasl, tls,...>"
+    }
+  },
+  {
+    "id": "68719476867",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>x509<BR/>vnc_display_setup_auth(vs, password, sasl, tls,...>"
+    }
+  },
+  {
+    "id": "68719476868",
+    "attrs": {
+      "label": "<IDENTIFIER, 385<BR/>websocket<BR/>vnc_display_setup_auth(vs, password, sasl, tls,...>"
+    }
+  },
+  {
+    "id": "30064771181",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 403<BR/>vs-&gt;lock_key_sync = lock_key_sync>"
+    }
+  },
+  {
+    "id": "30064771182",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 403<BR/>vs-&gt;lock_key_sync>"
+    }
+  },
+  {
+    "id": "68719476869",
+    "attrs": {
+      "label": "<IDENTIFIER, 403<BR/>vs<BR/>vs-&gt;lock_key_sync = lock_key_sync>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 403<BR/>lock_key_sync>"
+    }
+  },
+  {
+    "id": "68719476870",
+    "attrs": {
+      "label": "<IDENTIFIER, 403<BR/>lock_key_sync<BR/>vs-&gt;lock_key_sync = lock_key_sync>"
+    }
+  },
+  {
+    "id": "30064771183",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 407<BR/>device_id = qemu_opt_get(opts, &quot;display&quot;)>"
+    }
+  },
+  {
+    "id": "68719476871",
+    "attrs": {
+      "label": "<IDENTIFIER, 407<BR/>device_id<BR/>device_id = qemu_opt_get(opts, &quot;display&quot;)>"
+    }
+  },
+  {
+    "id": "30064771184",
+    "attrs": {
+      "label": "<qemu_opt_get, 407<BR/>qemu_opt_get(opts, &quot;display&quot;)>"
+    }
+  },
+  {
+    "id": "68719476872",
+    "attrs": {
+      "label": "<IDENTIFIER, 407<BR/>opts<BR/>qemu_opt_get(opts, &quot;display&quot;)>"
+    }
+  },
+  {
+    "id": "90194313263",
+    "attrs": {
+      "label": "<LITERAL, 407<BR/>&quot;display&quot;<BR/>qemu_opt_get(opts, &quot;display&quot;)>"
+    }
+  },
+  {
+    "id": "47244640283",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 409<BR/>IF<BR/>if (device_id) { DeviceState *dev; ...>"
+    }
+  },
+  {
+    "id": "68719476873",
+    "attrs": {
+      "label": "<IDENTIFIER, 409<BR/>device_id<BR/>if (device_id) { DeviceState *dev; ...>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK, 409<BR/>{ DeviceState *dev; int head ...>"
+    }
+  },
+  {
+    "id": "94489280532",
+    "attrs": {
+      "label": "<LOCAL, 411<BR/>DeviceState *dev: DeviceState*>"
+    }
+  },
+  {
+    "id": "94489280533",
+    "attrs": {
+      "label": "<LOCAL, 413<BR/>int head: int>"
+    }
+  },
+  {
+    "id": "30064771185",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 413<BR/>head = qemu_opt_get_number(opts, &quot;head&quot;, 0)>"
+    }
+  },
+  {
+    "id": "68719476874",
+    "attrs": {
+      "label": "<IDENTIFIER, 413<BR/>head<BR/>head = qemu_opt_get_number(opts, &quot;head&quot;, 0)>"
+    }
+  },
+  {
+    "id": "30064771186",
+    "attrs": {
+      "label": "<qemu_opt_get_number, 413<BR/>qemu_opt_get_number(opts, &quot;head&quot;, 0)>"
+    }
+  },
+  {
+    "id": "68719476875",
+    "attrs": {
+      "label": "<IDENTIFIER, 413<BR/>opts<BR/>qemu_opt_get_number(opts, &quot;head&quot;, 0)>"
+    }
+  },
+  {
+    "id": "90194313264",
+    "attrs": {
+      "label": "<LITERAL, 413<BR/>&quot;head&quot;<BR/>qemu_opt_get_number(opts, &quot;head&quot;, 0)>"
+    }
+  },
+  {
+    "id": "90194313265",
+    "attrs": {
+      "label": "<LITERAL, 413<BR/>0<BR/>qemu_opt_get_number(opts, &quot;head&quot;, 0)>"
+    }
+  },
+  {
+    "id": "30064771187",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 417<BR/>dev = qdev_find_recursive(sysbus_get_default(),...>"
+    }
+  },
+  {
+    "id": "68719476876",
+    "attrs": {
+      "label": "<IDENTIFIER, 417<BR/>dev<BR/>dev = qdev_find_recursive(sysbus_get_default(),...>"
+    }
+  },
+  {
+    "id": "30064771188",
+    "attrs": {
+      "label": "<qdev_find_recursive, 417<BR/>qdev_find_recursive(sysbus_get_default(), devic...>"
+    }
+  },
+  {
+    "id": "30064771189",
+    "attrs": {
+      "label": "<sysbus_get_default, 417<BR/>sysbus_get_default()>"
+    }
+  },
+  {
+    "id": "68719476877",
+    "attrs": {
+      "label": "<IDENTIFIER, 417<BR/>device_id<BR/>qdev_find_recursive(sysbus_get_default(), devic...>"
+    }
+  },
+  {
+    "id": "47244640284",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 419<BR/>IF<BR/>if (dev == NULL) { error_setg(errp...>"
+    }
+  },
+  {
+    "id": "30064771190",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 419<BR/>dev == NULL>"
+    }
+  },
+  {
+    "id": "68719476878",
+    "attrs": {
+      "label": "<IDENTIFIER, 419<BR/>dev<BR/>dev == NULL>"
+    }
+  },
+  {
+    "id": "68719476879",
+    "attrs": {
+      "label": "<IDENTIFIER, 419<BR/>&lt;unknown&gt; NULL<BR/>dev == NULL>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK, 419<BR/>{ error_setg(errp, &quot;Device '%s' no...>"
+    }
+  },
+  {
+    "id": "30064771191",
+    "attrs": {
+      "label": "<error_setg, 421<BR/>error_setg(errp, &quot;Device '%s' not found&quot;, devic...>"
+    }
+  },
+  {
+    "id": "68719476880",
+    "attrs": {
+      "label": "<IDENTIFIER, 421<BR/>errp<BR/>error_setg(errp, &quot;Device '%s' not found&quot;, devic...>"
+    }
+  },
+  {
+    "id": "90194313266",
+    "attrs": {
+      "label": "<LITERAL, 421<BR/>&quot;Device '%s' not found&quot;<BR/>error_setg(errp, &quot;Device '%s' not found&quot;, devic...>"
+    }
+  },
+  {
+    "id": "68719476881",
+    "attrs": {
+      "label": "<IDENTIFIER, 421<BR/>device_id<BR/>error_setg(errp, &quot;Device '%s' not found&quot;, devic...>"
+    }
+  },
+  {
+    "id": "47244640285",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 423<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771192",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 429<BR/>con = qemu_console_lookup_by_device(dev, head)>"
+    }
+  },
+  {
+    "id": "68719476882",
+    "attrs": {
+      "label": "<IDENTIFIER, 429<BR/>con<BR/>con = qemu_console_lookup_by_device(dev, head)>"
+    }
+  },
+  {
+    "id": "30064771193",
+    "attrs": {
+      "label": "<qemu_console_lookup_by_device, 429<BR/>qemu_console_lookup_by_device(dev, head)>"
+    }
+  },
+  {
+    "id": "68719476883",
+    "attrs": {
+      "label": "<IDENTIFIER, 429<BR/>dev<BR/>qemu_console_lookup_by_device(dev, head)>"
+    }
+  },
+  {
+    "id": "68719476884",
+    "attrs": {
+      "label": "<IDENTIFIER, 429<BR/>head<BR/>qemu_console_lookup_by_device(dev, head)>"
+    }
+  },
+  {
+    "id": "47244640286",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 431<BR/>IF<BR/>if (con == NULL) { error_setg(errp...>"
+    }
+  },
+  {
+    "id": "30064771194",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 431<BR/>con == NULL>"
+    }
+  },
+  {
+    "id": "68719476885",
+    "attrs": {
+      "label": "<IDENTIFIER, 431<BR/>con<BR/>con == NULL>"
+    }
+  },
+  {
+    "id": "68719476886",
+    "attrs": {
+      "label": "<IDENTIFIER, 431<BR/>&lt;unknown&gt; NULL<BR/>con == NULL>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK, 431<BR/>{ error_setg(errp, &quot;Device %s is n...>"
+    }
+  },
+  {
+    "id": "30064771195",
+    "attrs": {
+      "label": "<error_setg, 433<BR/>error_setg(errp, &quot;Device %s is not bound to a Q...>"
+    }
+  },
+  {
+    "id": "68719476887",
+    "attrs": {
+      "label": "<IDENTIFIER, 433<BR/>errp<BR/>error_setg(errp, &quot;Device %s is not bound to a Q...>"
+    }
+  },
+  {
+    "id": "90194313267",
+    "attrs": {
+      "label": "<LITERAL, 433<BR/>&quot;Device %s is not bound to a QemuConsole&quot;<BR/>error_setg(errp, &quot;Device %s is not bound to a Q...>"
+    }
+  },
+  {
+    "id": "68719476888",
+    "attrs": {
+      "label": "<IDENTIFIER, 435<BR/>device_id<BR/>error_setg(errp, &quot;Device %s is not bound to a Q...>"
+    }
+  },
+  {
+    "id": "47244640287",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 437<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "47244640288",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 441<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK, 441<BR/>{ con = NULL; }>"
+    }
+  },
+  {
+    "id": "30064771196",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 443<BR/>con = NULL>"
+    }
+  },
+  {
+    "id": "68719476889",
+    "attrs": {
+      "label": "<IDENTIFIER, 443<BR/>con<BR/>con = NULL>"
+    }
+  },
+  {
+    "id": "68719476890",
+    "attrs": {
+      "label": "<IDENTIFIER, 443<BR/>&lt;unknown&gt; NULL<BR/>con = NULL>"
+    }
+  },
+  {
+    "id": "47244640289",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 449<BR/>IF<BR/>if (con != vs-&gt;dcl.con) { unregister_d...>"
+    }
+  },
+  {
+    "id": "30064771197",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 449<BR/>con != vs-&gt;dcl.con>"
+    }
+  },
+  {
+    "id": "68719476891",
+    "attrs": {
+      "label": "<IDENTIFIER, 449<BR/>con<BR/>con != vs-&gt;dcl.con>"
+    }
+  },
+  {
+    "id": "30064771198",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 449<BR/>vs-&gt;dcl.con>"
+    }
+  },
+  {
+    "id": "30064771199",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 449<BR/>vs-&gt;dcl>"
+    }
+  },
+  {
+    "id": "68719476892",
+    "attrs": {
+      "label": "<IDENTIFIER, 449<BR/>vs<BR/>con != vs-&gt;dcl.con>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 449<BR/>dcl>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 449<BR/>con>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK, 449<BR/>{ unregister_displaychangelistener(&amp;vs...>"
+    }
+  },
+  {
+    "id": "30064771200",
+    "attrs": {
+      "label": "<unregister_displaychangelistener, 451<BR/>unregister_displaychangelistener(&amp;vs-&gt;dcl)>"
+    }
+  },
+  {
+    "id": "30064771201",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 451<BR/>&amp;vs-&gt;dcl>"
+    }
+  },
+  {
+    "id": "30064771202",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 451<BR/>vs-&gt;dcl>"
+    }
+  },
+  {
+    "id": "68719476893",
+    "attrs": {
+      "label": "<IDENTIFIER, 451<BR/>vs<BR/>unregister_displaychangelistener(&amp;vs-&gt;dcl)>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 451<BR/>dcl>"
+    }
+  },
+  {
+    "id": "30064771203",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 453<BR/>vs-&gt;dcl.con = con>"
+    }
+  },
+  {
+    "id": "30064771204",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 453<BR/>vs-&gt;dcl.con>"
+    }
+  },
+  {
+    "id": "30064771205",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 453<BR/>vs-&gt;dcl>"
+    }
+  },
+  {
+    "id": "68719476894",
+    "attrs": {
+      "label": "<IDENTIFIER, 453<BR/>vs<BR/>vs-&gt;dcl.con = con>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 453<BR/>dcl>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 453<BR/>con>"
+    }
+  },
+  {
+    "id": "68719476895",
+    "attrs": {
+      "label": "<IDENTIFIER, 453<BR/>con<BR/>vs-&gt;dcl.con = con>"
+    }
+  },
+  {
+    "id": "30064771206",
+    "attrs": {
+      "label": "<register_displaychangelistener, 455<BR/>register_displaychangelistener(&amp;vs-&gt;dcl)>"
+    }
+  },
+  {
+    "id": "30064771207",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 455<BR/>&amp;vs-&gt;dcl>"
+    }
+  },
+  {
+    "id": "30064771208",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 455<BR/>vs-&gt;dcl>"
+    }
+  },
+  {
+    "id": "68719476896",
+    "attrs": {
+      "label": "<IDENTIFIER, 455<BR/>vs<BR/>register_displaychangelistener(&amp;vs-&gt;dcl)>"
+    }
+  },
+  {
+    "id": "55834574862",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 455<BR/>dcl>"
+    }
+  },
+  {
+    "id": "47244640290",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 461<BR/>IF<BR/>if (reverse) { /* connect to viewer */...>"
+    }
+  },
+  {
+    "id": "68719476897",
+    "attrs": {
+      "label": "<IDENTIFIER, 461<BR/>reverse<BR/>if (reverse) { /* connect to viewer */...>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK, 461<BR/>{ /* connect to viewer */ int...>"
+    }
+  },
+  {
+    "id": "94489280534",
+    "attrs": {
+      "label": "<LOCAL, 465<BR/>int csock: int>"
+    }
+  },
+  {
+    "id": "30064771209",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 467<BR/>vs-&gt;lsock = -1>"
+    }
+  },
+  {
+    "id": "30064771210",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 467<BR/>vs-&gt;lsock>"
+    }
+  },
+  {
+    "id": "68719476898",
+    "attrs": {
+      "label": "<IDENTIFIER, 467<BR/>vs<BR/>vs-&gt;lsock = -1>"
+    }
+  },
+  {
+    "id": "55834574863",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 467<BR/>lsock>"
+    }
+  },
+  {
+    "id": "30064771211",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 467<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313268",
+    "attrs": {
+      "label": "<LITERAL, 467<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "47244640291",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 475<BR/>IF<BR/>if (strncmp(vnc, &quot;unix:&quot;, 5) == 0) { ...>"
+    }
+  },
+  {
+    "id": "30064771212",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 475<BR/>strncmp(vnc, &quot;unix:&quot;, 5) == 0>"
+    }
+  },
+  {
+    "id": "30064771213",
+    "attrs": {
+      "label": "<strncmp, 475<BR/>strncmp(vnc, &quot;unix:&quot;, 5)>"
+    }
+  },
+  {
+    "id": "68719476899",
+    "attrs": {
+      "label": "<IDENTIFIER, 475<BR/>vnc<BR/>strncmp(vnc, &quot;unix:&quot;, 5)>"
+    }
+  },
+  {
+    "id": "90194313269",
+    "attrs": {
+      "label": "<LITERAL, 475<BR/>&quot;unix:&quot;<BR/>strncmp(vnc, &quot;unix:&quot;, 5)>"
+    }
+  },
+  {
+    "id": "90194313270",
+    "attrs": {
+      "label": "<LITERAL, 475<BR/>5<BR/>strncmp(vnc, &quot;unix:&quot;, 5)>"
+    }
+  },
+  {
+    "id": "90194313271",
+    "attrs": {
+      "label": "<LITERAL, 475<BR/>0<BR/>strncmp(vnc, &quot;unix:&quot;, 5) == 0>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK, 475<BR/>{ csock = unix_connect(vnc+5, errp...>"
+    }
+  },
+  {
+    "id": "30064771214",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 477<BR/>csock = unix_connect(vnc+5, errp)>"
+    }
+  },
+  {
+    "id": "68719476900",
+    "attrs": {
+      "label": "<IDENTIFIER, 477<BR/>csock<BR/>csock = unix_connect(vnc+5, errp)>"
+    }
+  },
+  {
+    "id": "30064771215",
+    "attrs": {
+      "label": "<unix_connect, 477<BR/>unix_connect(vnc+5, errp)>"
+    }
+  },
+  {
+    "id": "30064771216",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 477<BR/>vnc+5>"
+    }
+  },
+  {
+    "id": "68719476901",
+    "attrs": {
+      "label": "<IDENTIFIER, 477<BR/>vnc<BR/>vnc+5>"
+    }
+  },
+  {
+    "id": "90194313272",
+    "attrs": {
+      "label": "<LITERAL, 477<BR/>5<BR/>vnc+5>"
+    }
+  },
+  {
+    "id": "68719476902",
+    "attrs": {
+      "label": "<IDENTIFIER, 477<BR/>errp<BR/>unix_connect(vnc+5, errp)>"
+    }
+  },
+  {
+    "id": "47244640292",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 479<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK, 479<BR/>{ csock = inet_connect(vnc, errp);...>"
+    }
+  },
+  {
+    "id": "30064771217",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 481<BR/>csock = inet_connect(vnc, errp)>"
+    }
+  },
+  {
+    "id": "68719476903",
+    "attrs": {
+      "label": "<IDENTIFIER, 481<BR/>csock<BR/>csock = inet_connect(vnc, errp)>"
+    }
+  },
+  {
+    "id": "30064771218",
+    "attrs": {
+      "label": "<inet_connect, 481<BR/>inet_connect(vnc, errp)>"
+    }
+  },
+  {
+    "id": "68719476904",
+    "attrs": {
+      "label": "<IDENTIFIER, 481<BR/>vnc<BR/>inet_connect(vnc, errp)>"
+    }
+  },
+  {
+    "id": "68719476905",
+    "attrs": {
+      "label": "<IDENTIFIER, 481<BR/>errp<BR/>inet_connect(vnc, errp)>"
+    }
+  },
+  {
+    "id": "47244640293",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 485<BR/>IF<BR/>if (csock &lt; 0) { goto fail; ...>"
+    }
+  },
+  {
+    "id": "30064771219",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 485<BR/>csock &lt; 0>"
+    }
+  },
+  {
+    "id": "68719476906",
+    "attrs": {
+      "label": "<IDENTIFIER, 485<BR/>csock<BR/>csock &lt; 0>"
+    }
+  },
+  {
+    "id": "90194313273",
+    "attrs": {
+      "label": "<LITERAL, 485<BR/>0<BR/>csock &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK, 485<BR/>{ goto fail; }>"
+    }
+  },
+  {
+    "id": "47244640294",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 487<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771220",
+    "attrs": {
+      "label": "<vnc_connect, 491<BR/>vnc_connect(vs, csock, false, false)>"
+    }
+  },
+  {
+    "id": "68719476907",
+    "attrs": {
+      "label": "<IDENTIFIER, 491<BR/>vs<BR/>vnc_connect(vs, csock, false, false)>"
+    }
+  },
+  {
+    "id": "68719476908",
+    "attrs": {
+      "label": "<IDENTIFIER, 491<BR/>csock<BR/>vnc_connect(vs, csock, false, false)>"
+    }
+  },
+  {
+    "id": "68719476909",
+    "attrs": {
+      "label": "<IDENTIFIER, 491<BR/>&lt;unknown&gt; false<BR/>vnc_connect(vs, csock, false, false)>"
+    }
+  },
+  {
+    "id": "68719476910",
+    "attrs": {
+      "label": "<IDENTIFIER, 491<BR/>&lt;unknown&gt; false<BR/>vnc_connect(vs, csock, false, false)>"
+    }
+  },
+  {
+    "id": "47244640295",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 493<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK, 493<BR/>{ /* listen for connects */ i...>"
+    }
+  },
+  {
+    "id": "47244640296",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 497<BR/>IF<BR/>if (strncmp(vnc, &quot;unix:&quot;, 5) == 0) { ...>"
+    }
+  },
+  {
+    "id": "30064771221",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 497<BR/>strncmp(vnc, &quot;unix:&quot;, 5) == 0>"
+    }
+  },
+  {
+    "id": "30064771222",
+    "attrs": {
+      "label": "<strncmp, 497<BR/>strncmp(vnc, &quot;unix:&quot;, 5)>"
+    }
+  },
+  {
+    "id": "68719476911",
+    "attrs": {
+      "label": "<IDENTIFIER, 497<BR/>vnc<BR/>strncmp(vnc, &quot;unix:&quot;, 5)>"
+    }
+  },
+  {
+    "id": "90194313274",
+    "attrs": {
+      "label": "<LITERAL, 497<BR/>&quot;unix:&quot;<BR/>strncmp(vnc, &quot;unix:&quot;, 5)>"
+    }
+  },
+  {
+    "id": "90194313275",
+    "attrs": {
+      "label": "<LITERAL, 497<BR/>5<BR/>strncmp(vnc, &quot;unix:&quot;, 5)>"
+    }
+  },
+  {
+    "id": "90194313276",
+    "attrs": {
+      "label": "<LITERAL, 497<BR/>0<BR/>strncmp(vnc, &quot;unix:&quot;, 5) == 0>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK, 497<BR/>{ vs-&gt;lsock = unix_listen(vnc+5, N...>"
+    }
+  },
+  {
+    "id": "30064771223",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 499<BR/>vs-&gt;lsock = unix_listen(vnc+5, NULL, 0, errp)>"
+    }
+  },
+  {
+    "id": "30064771224",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 499<BR/>vs-&gt;lsock>"
+    }
+  },
+  {
+    "id": "68719476912",
+    "attrs": {
+      "label": "<IDENTIFIER, 499<BR/>vs<BR/>vs-&gt;lsock = unix_listen(vnc+5, NULL, 0, errp)>"
+    }
+  },
+  {
+    "id": "55834574864",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 499<BR/>lsock>"
+    }
+  },
+  {
+    "id": "30064771225",
+    "attrs": {
+      "label": "<unix_listen, 499<BR/>unix_listen(vnc+5, NULL, 0, errp)>"
+    }
+  },
+  {
+    "id": "30064771226",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 499<BR/>vnc+5>"
+    }
+  },
+  {
+    "id": "68719476913",
+    "attrs": {
+      "label": "<IDENTIFIER, 499<BR/>vnc<BR/>vnc+5>"
+    }
+  },
+  {
+    "id": "90194313277",
+    "attrs": {
+      "label": "<LITERAL, 499<BR/>5<BR/>vnc+5>"
+    }
+  },
+  {
+    "id": "68719476914",
+    "attrs": {
+      "label": "<IDENTIFIER, 499<BR/>&lt;unknown&gt; NULL<BR/>unix_listen(vnc+5, NULL, 0, errp)>"
+    }
+  },
+  {
+    "id": "90194313278",
+    "attrs": {
+      "label": "<LITERAL, 499<BR/>0<BR/>unix_listen(vnc+5, NULL, 0, errp)>"
+    }
+  },
+  {
+    "id": "68719476915",
+    "attrs": {
+      "label": "<IDENTIFIER, 499<BR/>errp<BR/>unix_listen(vnc+5, NULL, 0, errp)>"
+    }
+  },
+  {
+    "id": "30064771227",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 501<BR/>vs-&gt;is_unix = true>"
+    }
+  },
+  {
+    "id": "30064771228",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 501<BR/>vs-&gt;is_unix>"
+    }
+  },
+  {
+    "id": "68719476916",
+    "attrs": {
+      "label": "<IDENTIFIER, 501<BR/>vs<BR/>vs-&gt;is_unix = true>"
+    }
+  },
+  {
+    "id": "55834574865",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 501<BR/>is_unix>"
+    }
+  },
+  {
+    "id": "68719476917",
+    "attrs": {
+      "label": "<IDENTIFIER, 501<BR/>&lt;unknown&gt; true<BR/>vs-&gt;is_unix = true>"
+    }
+  },
+  {
+    "id": "47244640297",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 503<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK, 503<BR/>{ vs-&gt;lsock = inet_listen_opts(sop...>"
+    }
+  },
+  {
+    "id": "30064771229",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 505<BR/>vs-&gt;lsock = inet_listen_opts(sopts, 5900, errp)>"
+    }
+  },
+  {
+    "id": "30064771230",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 505<BR/>vs-&gt;lsock>"
+    }
+  },
+  {
+    "id": "68719476918",
+    "attrs": {
+      "label": "<IDENTIFIER, 505<BR/>vs<BR/>vs-&gt;lsock = inet_listen_opts(sopts, 5900, errp)>"
+    }
+  },
+  {
+    "id": "55834574866",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 505<BR/>lsock>"
+    }
+  },
+  {
+    "id": "30064771231",
+    "attrs": {
+      "label": "<inet_listen_opts, 505<BR/>inet_listen_opts(sopts, 5900, errp)>"
+    }
+  },
+  {
+    "id": "68719476919",
+    "attrs": {
+      "label": "<IDENTIFIER, 505<BR/>sopts<BR/>inet_listen_opts(sopts, 5900, errp)>"
+    }
+  },
+  {
+    "id": "90194313279",
+    "attrs": {
+      "label": "<LITERAL, 505<BR/>5900<BR/>inet_listen_opts(sopts, 5900, errp)>"
+    }
+  },
+  {
+    "id": "68719476920",
+    "attrs": {
+      "label": "<IDENTIFIER, 505<BR/>errp<BR/>inet_listen_opts(sopts, 5900, errp)>"
+    }
+  },
+  {
+    "id": "47244640298",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 507<BR/>IF<BR/>if (vs-&gt;lsock &lt; 0) { goto fail...>"
+    }
+  },
+  {
+    "id": "30064771232",
+    "attrs": {
+      "label": "<&lt;operator&gt;.lessThan, 507<BR/>vs-&gt;lsock &lt; 0>"
+    }
+  },
+  {
+    "id": "30064771233",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 507<BR/>vs-&gt;lsock>"
+    }
+  },
+  {
+    "id": "68719476921",
+    "attrs": {
+      "label": "<IDENTIFIER, 507<BR/>vs<BR/>vs-&gt;lsock &lt; 0>"
+    }
+  },
+  {
+    "id": "55834574867",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 507<BR/>lsock>"
+    }
+  },
+  {
+    "id": "90194313280",
+    "attrs": {
+      "label": "<LITERAL, 507<BR/>0<BR/>vs-&gt;lsock &lt; 0>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK, 507<BR/>{ goto fail; }>"
+    }
+  },
+  {
+    "id": "47244640299",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 509<BR/>GOTO<BR/>goto fail;>"
+    }
+  },
+  {
+    "id": "30064771234",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 539<BR/>vs-&gt;enabled = true>"
+    }
+  },
+  {
+    "id": "30064771235",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 539<BR/>vs-&gt;enabled>"
+    }
+  },
+  {
+    "id": "68719476922",
+    "attrs": {
+      "label": "<IDENTIFIER, 539<BR/>vs<BR/>vs-&gt;enabled = true>"
+    }
+  },
+  {
+    "id": "55834574868",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 539<BR/>enabled>"
+    }
+  },
+  {
+    "id": "68719476923",
+    "attrs": {
+      "label": "<IDENTIFIER, 539<BR/>&lt;unknown&gt; true<BR/>vs-&gt;enabled = true>"
+    }
+  },
+  {
+    "id": "30064771236",
+    "attrs": {
+      "label": "<qemu_set_fd_handler2, 541<BR/>qemu_set_fd_handler2(vs-&gt;lsock, NULL, ...>"
+    }
+  },
+  {
+    "id": "30064771237",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 541<BR/>vs-&gt;lsock>"
+    }
+  },
+  {
+    "id": "68719476924",
+    "attrs": {
+      "label": "<IDENTIFIER, 541<BR/>vs<BR/>qemu_set_fd_handler2(vs-&gt;lsock, NULL, ...>"
+    }
+  },
+  {
+    "id": "55834574869",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 541<BR/>lsock>"
+    }
+  },
+  {
+    "id": "68719476925",
+    "attrs": {
+      "label": "<IDENTIFIER, 541<BR/>&lt;unknown&gt; NULL<BR/>qemu_set_fd_handler2(vs-&gt;lsock, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476926",
+    "attrs": {
+      "label": "<IDENTIFIER, 543<BR/>&lt;unknown&gt; vnc_listen_regular_read<BR/>qemu_set_fd_handler2(vs-&gt;lsock, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476927",
+    "attrs": {
+      "label": "<IDENTIFIER, 543<BR/>&lt;unknown&gt; NULL<BR/>qemu_set_fd_handler2(vs-&gt;lsock, NULL, ...>"
+    }
+  },
+  {
+    "id": "68719476928",
+    "attrs": {
+      "label": "<IDENTIFIER, 543<BR/>vs<BR/>qemu_set_fd_handler2(vs-&gt;lsock, NULL, ...>"
+    }
+  },
+  {
+    "id": "30064771238",
+    "attrs": {
+      "label": "<qemu_opts_del, 559<BR/>qemu_opts_del(sopts)>"
+    }
+  },
+  {
+    "id": "68719476929",
+    "attrs": {
+      "label": "<IDENTIFIER, 559<BR/>sopts<BR/>qemu_opts_del(sopts)>"
+    }
+  },
+  {
+    "id": "30064771239",
+    "attrs": {
+      "label": "<qemu_opts_del, 561<BR/>qemu_opts_del(wsopts)>"
+    }
+  },
+  {
+    "id": "68719476930",
+    "attrs": {
+      "label": "<IDENTIFIER, 561<BR/>wsopts<BR/>qemu_opts_del(wsopts)>"
+    }
+  },
+  {
+    "id": "141733920771",
+    "attrs": {
+      "label": "<RETURN, 563<BR/>return;>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 567<BR/>fail>"
+    }
+  },
+  {
+    "id": "30064771240",
+    "attrs": {
+      "label": "<qemu_opts_del, 569<BR/>qemu_opts_del(sopts)>"
+    }
+  },
+  {
+    "id": "68719476931",
+    "attrs": {
+      "label": "<IDENTIFIER, 569<BR/>sopts<BR/>qemu_opts_del(sopts)>"
+    }
+  },
+  {
+    "id": "30064771241",
+    "attrs": {
+      "label": "<qemu_opts_del, 571<BR/>qemu_opts_del(wsopts)>"
+    }
+  },
+  {
+    "id": "68719476932",
+    "attrs": {
+      "label": "<IDENTIFIER, 571<BR/>wsopts<BR/>qemu_opts_del(wsopts)>"
+    }
+  },
+  {
+    "id": "30064771242",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 573<BR/>vs-&gt;enabled = false>"
+    }
+  },
+  {
+    "id": "30064771243",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 573<BR/>vs-&gt;enabled>"
+    }
+  },
+  {
+    "id": "68719476933",
+    "attrs": {
+      "label": "<IDENTIFIER, 573<BR/>vs<BR/>vs-&gt;enabled = false>"
+    }
+  },
+  {
+    "id": "55834574870",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 573<BR/>enabled>"
+    }
+  },
+  {
+    "id": "68719476934",
+    "attrs": {
+      "label": "<IDENTIFIER, 573<BR/>&lt;unknown&gt; false<BR/>vs-&gt;enabled = false>"
+    }
+  },
+  {
+    "id": "94489280535",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>&lt;unknown&gt; false: ANY>"
+    }
+  },
+  {
+    "id": "94489280536",
+    "attrs": {
+      "label": "<LOCAL, 85<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "94489280537",
+    "attrs": {
+      "label": "<LOCAL, 543<BR/>&lt;unknown&gt; vnc_listen_regular_read: ANY>"
+    }
+  },
+  {
+    "id": "94489280538",
+    "attrs": {
+      "label": "<LOCAL, 167<BR/>&lt;unknown&gt; true: ANY>"
+    }
+  },
+  {
+    "id": "94489280539",
+    "attrs": {
+      "label": "<LOCAL, 247<BR/>&lt;unknown&gt; VNC_SHARE_POLICY_ALLOW_EXCLUSIVE: ANY>"
+    }
+  },
+  {
+    "id": "94489280540",
+    "attrs": {
+      "label": "<LOCAL, 251<BR/>&lt;unknown&gt; VNC_SHARE_POLICY_FORCE_SHARED: ANY>"
+    }
+  },
+  {
+    "id": "94489280541",
+    "attrs": {
+      "label": "<LOCAL, 243<BR/>&lt;unknown&gt; VNC_SHARE_POLICY_IGNORE: ANY>"
+    }
+  },
+  {
+    "id": "94489280542",
+    "attrs": {
+      "label": "<LOCAL, 85<BR/>&lt;unknown&gt; error_abort: ANY>"
+    }
+  },
+  {
+    "id": "94489280543",
+    "attrs": {
+      "label": "<LOCAL, 85<BR/>&lt;unknown&gt; socket_optslist: ANY>"
+    }
+  },
+  {
+    "id": "94489280544",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>&lt;unknown&gt; qemu_vnc_opts: ANY>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>void>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>vnc_display_open<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.lessThan>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803820",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.fieldAccess>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803821",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>sysbus_get_default>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803822",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.subtraction>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803823",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addition>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803824",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>unregister_displaychangelistener>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803825",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>strncmp>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803826",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_opt_set>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803827",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalOr>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803828",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>register_displaychangelistener>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803829",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_set_fd_handler2>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "25769803830",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.equals>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803831",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_opt_get_bool>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803832",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_opts_find>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803833",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>error_setg>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149744",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149745",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803834",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>g_strndup>"
+    }
+  },
+  {
+    "id": "111669149746",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149747",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803835",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.minus>"
+    }
+  },
+  {
+    "id": "111669149748",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803836",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149749",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149750",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803837",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182428",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_opts_del>"
+    }
+  },
+  {
+    "id": "111669149751",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803838",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051612",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182429",
+    "attrs": {
+      "label": "<METHOD<BR/>inet_connect>"
+    }
+  },
+  {
+    "id": "111669149752",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149753",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803839",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051613",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_opts_create>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182430",
+    "attrs": {
+      "label": "<METHOD<BR/>unix_connect>"
+    }
+  },
+  {
+    "id": "111669149754",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149755",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803840",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051614",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182431",
+    "attrs": {
+      "label": "<METHOD<BR/>strcmp>"
+    }
+  },
+  {
+    "id": "111669149756",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149757",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803841",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051615",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182432",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalAnd>"
+    }
+  },
+  {
+    "id": "111669149758",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149759",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803842",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051616",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182433",
+    "attrs": {
+      "label": "<METHOD<BR/>vnc_connect>"
+    }
+  },
+  {
+    "id": "111669149760",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149761",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149762",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149763",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803843",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051617",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182434",
+    "attrs": {
+      "label": "<METHOD<BR/>qdev_find_recursive>"
+    }
+  },
+  {
+    "id": "111669149764",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149765",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803844",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051618",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182435",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149766",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803845",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051619",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182436",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_opt_get_number>"
+    }
+  },
+  {
+    "id": "111669149767",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149768",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149769",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803846",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051620",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182437",
+    "attrs": {
+      "label": "<METHOD<BR/>vnc_display_close>"
+    }
+  },
+  {
+    "id": "111669149770",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803847",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051621",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182438",
+    "attrs": {
+      "label": "<METHOD<BR/>g_free>"
+    }
+  },
+  {
+    "id": "111669149771",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803848",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051622",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182439",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.notEquals>"
+    }
+  },
+  {
+    "id": "111669149772",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149773",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803849",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051623",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>vnc_display_find>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182440",
+    "attrs": {
+      "label": "<METHOD<BR/>inet_listen_opts>"
+    }
+  },
+  {
+    "id": "111669149774",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149775",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149776",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803850",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051624",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182441",
+    "attrs": {
+      "label": "<METHOD<BR/>unix_listen>"
+    }
+  },
+  {
+    "id": "111669149777",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149778",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149779",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149780",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "25769803851",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051625",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182442",
+    "attrs": {
+      "label": "<METHOD<BR/>strrchr>"
+    }
+  },
+  {
+    "id": "111669149781",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149782",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803852",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051626",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182443",
+    "attrs": {
+      "label": "<METHOD<BR/>vnc_display_setup_auth>"
+    }
+  },
+  {
+    "id": "111669149783",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149784",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149785",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "111669149786",
+    "attrs": {
+      "label": "<PARAM<BR/>p4>"
+    }
+  },
+  {
+    "id": "111669149787",
+    "attrs": {
+      "label": "<PARAM<BR/>p5>"
+    }
+  },
+  {
+    "id": "111669149788",
+    "attrs": {
+      "label": "<PARAM<BR/>p6>"
+    }
+  },
+  {
+    "id": "25769803853",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051627",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803816",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>fips_get_state>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p0>"
+    }
+  },
+  {
+    "id": "25769803817",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_console_lookup_by_device>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803818",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_opt_get>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803819",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

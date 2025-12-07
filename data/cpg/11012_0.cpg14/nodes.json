@@ -1,1 +1,2510 @@
-[{"id": "node", "attrs": {"shape": "rect"}}]
+[
+  {
+    "id": "107374182400",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>v9fs_complete_rename>"
+    }
+  },
+  {
+    "id": "111669149696",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>V9fsState *s>"
+    }
+  },
+  {
+    "id": "111669149697",
+    "attrs": {
+      "label": "<PARAM, 1<BR/>V9fsRenameState *vs>"
+    }
+  },
+  {
+    "id": "25769803776",
+    "attrs": {
+      "label": "<BLOCK, 3<BR/>{ int err = 0; char *old_name, *new_n...>"
+    }
+  },
+  {
+    "id": "94489280512",
+    "attrs": {
+      "label": "<LOCAL, 5<BR/>int err: int>"
+    }
+  },
+  {
+    "id": "30064771072",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 5<BR/>err = 0>"
+    }
+  },
+  {
+    "id": "68719476736",
+    "attrs": {
+      "label": "<IDENTIFIER, 5<BR/>err<BR/>err = 0>"
+    }
+  },
+  {
+    "id": "90194313216",
+    "attrs": {
+      "label": "<LITERAL, 5<BR/>0<BR/>err = 0>"
+    }
+  },
+  {
+    "id": "94489280513",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>char *old_name: char*>"
+    }
+  },
+  {
+    "id": "94489280514",
+    "attrs": {
+      "label": "<LOCAL, 7<BR/>char *new_name: char*>"
+    }
+  },
+  {
+    "id": "94489280515",
+    "attrs": {
+      "label": "<LOCAL, 9<BR/>char *end: char*>"
+    }
+  },
+  {
+    "id": "47244640256",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 13<BR/>IF<BR/>if (vs-&gt;newdirfid != -1) { V9fsFidStat...>"
+    }
+  },
+  {
+    "id": "30064771073",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 13<BR/>vs-&gt;newdirfid != -1>"
+    }
+  },
+  {
+    "id": "30064771074",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 13<BR/>vs-&gt;newdirfid>"
+    }
+  },
+  {
+    "id": "68719476737",
+    "attrs": {
+      "label": "<IDENTIFIER, 13<BR/>vs<BR/>vs-&gt;newdirfid != -1>"
+    }
+  },
+  {
+    "id": "55834574848",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 13<BR/>newdirfid>"
+    }
+  },
+  {
+    "id": "30064771075",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 13<BR/>-1>"
+    }
+  },
+  {
+    "id": "90194313217",
+    "attrs": {
+      "label": "<LITERAL, 13<BR/>1<BR/>-1>"
+    }
+  },
+  {
+    "id": "25769803777",
+    "attrs": {
+      "label": "<BLOCK, 13<BR/>{ V9fsFidState *dirfidp; dirf...>"
+    }
+  },
+  {
+    "id": "94489280516",
+    "attrs": {
+      "label": "<LOCAL, 15<BR/>V9fsFidState *dirfidp: V9fsFidState*>"
+    }
+  },
+  {
+    "id": "30064771076",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 17<BR/>dirfidp = lookup_fid(s, vs-&gt;newdirfid)>"
+    }
+  },
+  {
+    "id": "68719476738",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>dirfidp<BR/>dirfidp = lookup_fid(s, vs-&gt;newdirfid)>"
+    }
+  },
+  {
+    "id": "30064771077",
+    "attrs": {
+      "label": "<lookup_fid, 17<BR/>lookup_fid(s, vs-&gt;newdirfid)>"
+    }
+  },
+  {
+    "id": "68719476739",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>s<BR/>lookup_fid(s, vs-&gt;newdirfid)>"
+    }
+  },
+  {
+    "id": "30064771078",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 17<BR/>vs-&gt;newdirfid>"
+    }
+  },
+  {
+    "id": "68719476740",
+    "attrs": {
+      "label": "<IDENTIFIER, 17<BR/>vs<BR/>lookup_fid(s, vs-&gt;newdirfid)>"
+    }
+  },
+  {
+    "id": "55834574849",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 17<BR/>newdirfid>"
+    }
+  },
+  {
+    "id": "47244640257",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 21<BR/>IF<BR/>if (dirfidp == NULL) { err = -ENOE...>"
+    }
+  },
+  {
+    "id": "30064771079",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 21<BR/>dirfidp == NULL>"
+    }
+  },
+  {
+    "id": "68719476741",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>dirfidp<BR/>dirfidp == NULL>"
+    }
+  },
+  {
+    "id": "68719476742",
+    "attrs": {
+      "label": "<IDENTIFIER, 21<BR/>&lt;unknown&gt; NULL<BR/>dirfidp == NULL>"
+    }
+  },
+  {
+    "id": "25769803778",
+    "attrs": {
+      "label": "<BLOCK, 21<BR/>{ err = -ENOENT; goto...>"
+    }
+  },
+  {
+    "id": "30064771080",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 23<BR/>err = -ENOENT>"
+    }
+  },
+  {
+    "id": "68719476743",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>err<BR/>err = -ENOENT>"
+    }
+  },
+  {
+    "id": "30064771081",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 23<BR/>-ENOENT>"
+    }
+  },
+  {
+    "id": "68719476744",
+    "attrs": {
+      "label": "<IDENTIFIER, 23<BR/>&lt;unknown&gt; ENOENT<BR/>-ENOENT>"
+    }
+  },
+  {
+    "id": "47244640258",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 25<BR/>GOTO<BR/>goto out;>"
+    }
+  },
+  {
+    "id": "30064771082",
+    "attrs": {
+      "label": "<BUG_ON, 31<BR/>BUG_ON(dirfidp-&gt;fid_type != P9_FID_NONE)>"
+    }
+  },
+  {
+    "id": "30064771083",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 31<BR/>dirfidp-&gt;fid_type != P9_FID_NONE>"
+    }
+  },
+  {
+    "id": "30064771084",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 31<BR/>dirfidp-&gt;fid_type>"
+    }
+  },
+  {
+    "id": "68719476745",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>dirfidp<BR/>dirfidp-&gt;fid_type != P9_FID_NONE>"
+    }
+  },
+  {
+    "id": "55834574850",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 31<BR/>fid_type>"
+    }
+  },
+  {
+    "id": "68719476746",
+    "attrs": {
+      "label": "<IDENTIFIER, 31<BR/>&lt;unknown&gt; P9_FID_NONE<BR/>dirfidp-&gt;fid_type != P9_FID_NONE>"
+    }
+  },
+  {
+    "id": "30064771085",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 35<BR/>new_name = qemu_mallocz(dirfidp-&gt;path.size + vs...>"
+    }
+  },
+  {
+    "id": "68719476747",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>new_name<BR/>new_name = qemu_mallocz(dirfidp-&gt;path.size + vs...>"
+    }
+  },
+  {
+    "id": "30064771086",
+    "attrs": {
+      "label": "<qemu_mallocz, 35<BR/>qemu_mallocz(dirfidp-&gt;path.size + vs-&gt;name.size...>"
+    }
+  },
+  {
+    "id": "30064771087",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 35<BR/>dirfidp-&gt;path.size + vs-&gt;name.size + 2>"
+    }
+  },
+  {
+    "id": "30064771088",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 35<BR/>dirfidp-&gt;path.size + vs-&gt;name.size>"
+    }
+  },
+  {
+    "id": "30064771089",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 35<BR/>dirfidp-&gt;path.size>"
+    }
+  },
+  {
+    "id": "30064771090",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 35<BR/>dirfidp-&gt;path>"
+    }
+  },
+  {
+    "id": "68719476748",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>dirfidp<BR/>dirfidp-&gt;path.size + vs-&gt;name.size>"
+    }
+  },
+  {
+    "id": "55834574851",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 35<BR/>path>"
+    }
+  },
+  {
+    "id": "55834574852",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 35<BR/>size>"
+    }
+  },
+  {
+    "id": "30064771091",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 35<BR/>vs-&gt;name.size>"
+    }
+  },
+  {
+    "id": "30064771092",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 35<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476749",
+    "attrs": {
+      "label": "<IDENTIFIER, 35<BR/>vs<BR/>dirfidp-&gt;path.size + vs-&gt;name.size>"
+    }
+  },
+  {
+    "id": "55834574853",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 35<BR/>name>"
+    }
+  },
+  {
+    "id": "55834574854",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 35<BR/>size>"
+    }
+  },
+  {
+    "id": "90194313218",
+    "attrs": {
+      "label": "<LITERAL, 35<BR/>2<BR/>dirfidp-&gt;path.size + vs-&gt;name.size + 2>"
+    }
+  },
+  {
+    "id": "30064771093",
+    "attrs": {
+      "label": "<strcpy, 39<BR/>strcpy(new_name, dirfidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "68719476750",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>new_name<BR/>strcpy(new_name, dirfidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "30064771094",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 39<BR/>dirfidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "30064771095",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 39<BR/>dirfidp-&gt;path>"
+    }
+  },
+  {
+    "id": "68719476751",
+    "attrs": {
+      "label": "<IDENTIFIER, 39<BR/>dirfidp<BR/>strcpy(new_name, dirfidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "55834574855",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 39<BR/>path>"
+    }
+  },
+  {
+    "id": "55834574856",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 39<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771096",
+    "attrs": {
+      "label": "<strcat, 41<BR/>strcat(new_name, &quot;/&quot;)>"
+    }
+  },
+  {
+    "id": "68719476752",
+    "attrs": {
+      "label": "<IDENTIFIER, 41<BR/>new_name<BR/>strcat(new_name, &quot;/&quot;)>"
+    }
+  },
+  {
+    "id": "90194313219",
+    "attrs": {
+      "label": "<LITERAL, 41<BR/>&quot;/&quot;<BR/>strcat(new_name, &quot;/&quot;)>"
+    }
+  },
+  {
+    "id": "30064771097",
+    "attrs": {
+      "label": "<strcat, 43<BR/>strcat(new_name + dirfidp-&gt;path.size, vs-&gt;name....>"
+    }
+  },
+  {
+    "id": "30064771098",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 43<BR/>new_name + dirfidp-&gt;path.size>"
+    }
+  },
+  {
+    "id": "68719476753",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>new_name<BR/>new_name + dirfidp-&gt;path.size>"
+    }
+  },
+  {
+    "id": "30064771099",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 43<BR/>dirfidp-&gt;path.size>"
+    }
+  },
+  {
+    "id": "30064771100",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 43<BR/>dirfidp-&gt;path>"
+    }
+  },
+  {
+    "id": "68719476754",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>dirfidp<BR/>new_name + dirfidp-&gt;path.size>"
+    }
+  },
+  {
+    "id": "55834574857",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 43<BR/>path>"
+    }
+  },
+  {
+    "id": "55834574858",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 43<BR/>size>"
+    }
+  },
+  {
+    "id": "30064771101",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 43<BR/>vs-&gt;name.data>"
+    }
+  },
+  {
+    "id": "30064771102",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 43<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476755",
+    "attrs": {
+      "label": "<IDENTIFIER, 43<BR/>vs<BR/>strcat(new_name + dirfidp-&gt;path.size, vs-&gt;name....>"
+    }
+  },
+  {
+    "id": "55834574859",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 43<BR/>name>"
+    }
+  },
+  {
+    "id": "55834574860",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 43<BR/>data>"
+    }
+  },
+  {
+    "id": "47244640259",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 45<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803779",
+    "attrs": {
+      "label": "<BLOCK, 45<BR/>{ old_name = vs-&gt;fidp-&gt;path.data; ...>"
+    }
+  },
+  {
+    "id": "30064771103",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 47<BR/>old_name = vs-&gt;fidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "68719476756",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>old_name<BR/>old_name = vs-&gt;fidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "30064771104",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 47<BR/>vs-&gt;fidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "30064771105",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 47<BR/>vs-&gt;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771106",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 47<BR/>vs-&gt;fidp>"
+    }
+  },
+  {
+    "id": "68719476757",
+    "attrs": {
+      "label": "<IDENTIFIER, 47<BR/>vs<BR/>old_name = vs-&gt;fidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "55834574861",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 47<BR/>fidp>"
+    }
+  },
+  {
+    "id": "55834574862",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 47<BR/>path>"
+    }
+  },
+  {
+    "id": "55834574863",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 47<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771107",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 49<BR/>end = strrchr(old_name, '/')>"
+    }
+  },
+  {
+    "id": "68719476758",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>end<BR/>end = strrchr(old_name, '/')>"
+    }
+  },
+  {
+    "id": "30064771108",
+    "attrs": {
+      "label": "<strrchr, 49<BR/>strrchr(old_name, '/')>"
+    }
+  },
+  {
+    "id": "68719476759",
+    "attrs": {
+      "label": "<IDENTIFIER, 49<BR/>old_name<BR/>strrchr(old_name, '/')>"
+    }
+  },
+  {
+    "id": "90194313220",
+    "attrs": {
+      "label": "<LITERAL, 49<BR/>'/'<BR/>strrchr(old_name, '/')>"
+    }
+  },
+  {
+    "id": "47244640260",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 51<BR/>IF<BR/>if (end) { end++; } else ...>"
+    }
+  },
+  {
+    "id": "68719476760",
+    "attrs": {
+      "label": "<IDENTIFIER, 51<BR/>end<BR/>if (end) { end++; } else ...>"
+    }
+  },
+  {
+    "id": "25769803780",
+    "attrs": {
+      "label": "<BLOCK, 51<BR/>{ end++; }>"
+    }
+  },
+  {
+    "id": "30064771109",
+    "attrs": {
+      "label": "<&lt;operator&gt;.postIncrement, 53<BR/>end++>"
+    }
+  },
+  {
+    "id": "68719476761",
+    "attrs": {
+      "label": "<IDENTIFIER, 53<BR/>end<BR/>end++>"
+    }
+  },
+  {
+    "id": "47244640261",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 55<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803781",
+    "attrs": {
+      "label": "<BLOCK, 55<BR/>{ end = old_name; }>"
+    }
+  },
+  {
+    "id": "30064771110",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 57<BR/>end = old_name>"
+    }
+  },
+  {
+    "id": "68719476762",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>end<BR/>end = old_name>"
+    }
+  },
+  {
+    "id": "68719476763",
+    "attrs": {
+      "label": "<IDENTIFIER, 57<BR/>old_name<BR/>end = old_name>"
+    }
+  },
+  {
+    "id": "30064771111",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 61<BR/>new_name = qemu_mallocz(end - old_name + vs-&gt;na...>"
+    }
+  },
+  {
+    "id": "68719476764",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>new_name<BR/>new_name = qemu_mallocz(end - old_name + vs-&gt;na...>"
+    }
+  },
+  {
+    "id": "30064771112",
+    "attrs": {
+      "label": "<qemu_mallocz, 61<BR/>qemu_mallocz(end - old_name + vs-&gt;name.size + 1)>"
+    }
+  },
+  {
+    "id": "30064771113",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 61<BR/>end - old_name + vs-&gt;name.size + 1>"
+    }
+  },
+  {
+    "id": "30064771114",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 61<BR/>end - old_name + vs-&gt;name.size>"
+    }
+  },
+  {
+    "id": "30064771115",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 61<BR/>end - old_name>"
+    }
+  },
+  {
+    "id": "68719476765",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>end<BR/>end - old_name>"
+    }
+  },
+  {
+    "id": "68719476766",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>old_name<BR/>end - old_name>"
+    }
+  },
+  {
+    "id": "30064771116",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 61<BR/>vs-&gt;name.size>"
+    }
+  },
+  {
+    "id": "30064771117",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 61<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476767",
+    "attrs": {
+      "label": "<IDENTIFIER, 61<BR/>vs<BR/>end - old_name + vs-&gt;name.size>"
+    }
+  },
+  {
+    "id": "55834574864",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 61<BR/>name>"
+    }
+  },
+  {
+    "id": "55834574865",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 61<BR/>size>"
+    }
+  },
+  {
+    "id": "90194313221",
+    "attrs": {
+      "label": "<LITERAL, 61<BR/>1<BR/>end - old_name + vs-&gt;name.size + 1>"
+    }
+  },
+  {
+    "id": "30064771118",
+    "attrs": {
+      "label": "<strncat, 65<BR/>strncat(new_name, old_name, end - old_name)>"
+    }
+  },
+  {
+    "id": "68719476768",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>new_name<BR/>strncat(new_name, old_name, end - old_name)>"
+    }
+  },
+  {
+    "id": "68719476769",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>old_name<BR/>strncat(new_name, old_name, end - old_name)>"
+    }
+  },
+  {
+    "id": "30064771119",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 65<BR/>end - old_name>"
+    }
+  },
+  {
+    "id": "68719476770",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>end<BR/>end - old_name>"
+    }
+  },
+  {
+    "id": "68719476771",
+    "attrs": {
+      "label": "<IDENTIFIER, 65<BR/>old_name<BR/>end - old_name>"
+    }
+  },
+  {
+    "id": "30064771120",
+    "attrs": {
+      "label": "<strncat, 67<BR/>strncat(new_name + (end - old_name), vs-&gt;name.d...>"
+    }
+  },
+  {
+    "id": "30064771121",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addition, 67<BR/>new_name + (end - old_name)>"
+    }
+  },
+  {
+    "id": "68719476772",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>new_name<BR/>new_name + (end - old_name)>"
+    }
+  },
+  {
+    "id": "30064771122",
+    "attrs": {
+      "label": "<&lt;operator&gt;.subtraction, 67<BR/>end - old_name>"
+    }
+  },
+  {
+    "id": "68719476773",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>end<BR/>end - old_name>"
+    }
+  },
+  {
+    "id": "68719476774",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>old_name<BR/>end - old_name>"
+    }
+  },
+  {
+    "id": "30064771123",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 67<BR/>vs-&gt;name.data>"
+    }
+  },
+  {
+    "id": "30064771124",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 67<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476775",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>vs<BR/>strncat(new_name + (end - old_name), vs-&gt;name.d...>"
+    }
+  },
+  {
+    "id": "55834574866",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 67<BR/>name>"
+    }
+  },
+  {
+    "id": "55834574867",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 67<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771125",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 67<BR/>vs-&gt;name.size>"
+    }
+  },
+  {
+    "id": "30064771126",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 67<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476776",
+    "attrs": {
+      "label": "<IDENTIFIER, 67<BR/>vs<BR/>strncat(new_name + (end - old_name), vs-&gt;name.d...>"
+    }
+  },
+  {
+    "id": "55834574868",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 67<BR/>name>"
+    }
+  },
+  {
+    "id": "55834574869",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 67<BR/>size>"
+    }
+  },
+  {
+    "id": "30064771127",
+    "attrs": {
+      "label": "<v9fs_string_free, 73<BR/>v9fs_string_free(&amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "30064771128",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 73<BR/>&amp;vs-&gt;name>"
+    }
+  },
+  {
+    "id": "30064771129",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 73<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476777",
+    "attrs": {
+      "label": "<IDENTIFIER, 73<BR/>vs<BR/>v9fs_string_free(&amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "55834574870",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 73<BR/>name>"
+    }
+  },
+  {
+    "id": "30064771130",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 75<BR/>vs-&gt;name.data = qemu_strdup(new_name)>"
+    }
+  },
+  {
+    "id": "30064771131",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 75<BR/>vs-&gt;name.data>"
+    }
+  },
+  {
+    "id": "30064771132",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 75<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476778",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>vs<BR/>vs-&gt;name.data = qemu_strdup(new_name)>"
+    }
+  },
+  {
+    "id": "55834574871",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 75<BR/>name>"
+    }
+  },
+  {
+    "id": "55834574872",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 75<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771133",
+    "attrs": {
+      "label": "<qemu_strdup, 75<BR/>qemu_strdup(new_name)>"
+    }
+  },
+  {
+    "id": "68719476779",
+    "attrs": {
+      "label": "<IDENTIFIER, 75<BR/>new_name<BR/>qemu_strdup(new_name)>"
+    }
+  },
+  {
+    "id": "30064771134",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 77<BR/>vs-&gt;name.size = strlen(new_name)>"
+    }
+  },
+  {
+    "id": "30064771135",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 77<BR/>vs-&gt;name.size>"
+    }
+  },
+  {
+    "id": "30064771136",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 77<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476780",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>vs<BR/>vs-&gt;name.size = strlen(new_name)>"
+    }
+  },
+  {
+    "id": "55834574873",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 77<BR/>name>"
+    }
+  },
+  {
+    "id": "55834574874",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 77<BR/>size>"
+    }
+  },
+  {
+    "id": "30064771137",
+    "attrs": {
+      "label": "<strlen, 77<BR/>strlen(new_name)>"
+    }
+  },
+  {
+    "id": "68719476781",
+    "attrs": {
+      "label": "<IDENTIFIER, 77<BR/>new_name<BR/>strlen(new_name)>"
+    }
+  },
+  {
+    "id": "47244640262",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 81<BR/>IF<BR/>if (strcmp(new_name, vs-&gt;fidp-&gt;path.data) != 0)...>"
+    }
+  },
+  {
+    "id": "30064771138",
+    "attrs": {
+      "label": "<&lt;operator&gt;.notEquals, 81<BR/>strcmp(new_name, vs-&gt;fidp-&gt;path.data) != 0>"
+    }
+  },
+  {
+    "id": "30064771139",
+    "attrs": {
+      "label": "<strcmp, 81<BR/>strcmp(new_name, vs-&gt;fidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "68719476782",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>new_name<BR/>strcmp(new_name, vs-&gt;fidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "30064771140",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 81<BR/>vs-&gt;fidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "30064771141",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 81<BR/>vs-&gt;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771142",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 81<BR/>vs-&gt;fidp>"
+    }
+  },
+  {
+    "id": "68719476783",
+    "attrs": {
+      "label": "<IDENTIFIER, 81<BR/>vs<BR/>strcmp(new_name, vs-&gt;fidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "55834574875",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 81<BR/>fidp>"
+    }
+  },
+  {
+    "id": "55834574876",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 81<BR/>path>"
+    }
+  },
+  {
+    "id": "55834574877",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 81<BR/>data>"
+    }
+  },
+  {
+    "id": "90194313222",
+    "attrs": {
+      "label": "<LITERAL, 81<BR/>0<BR/>strcmp(new_name, vs-&gt;fidp-&gt;path.data) != 0>"
+    }
+  },
+  {
+    "id": "25769803782",
+    "attrs": {
+      "label": "<BLOCK, 81<BR/>{ if (v9fs_do_rename(s, &amp;vs-&gt;fidp-&gt;pat...>"
+    }
+  },
+  {
+    "id": "47244640263",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 83<BR/>IF<BR/>if (v9fs_do_rename(s, &amp;vs-&gt;fidp-&gt;path, &amp;vs-&gt;nam...>"
+    }
+  },
+  {
+    "id": "30064771143",
+    "attrs": {
+      "label": "<v9fs_do_rename, 83<BR/>v9fs_do_rename(s, &amp;vs-&gt;fidp-&gt;path, &amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "68719476784",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>s<BR/>v9fs_do_rename(s, &amp;vs-&gt;fidp-&gt;path, &amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "30064771144",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 83<BR/>&amp;vs-&gt;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771145",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 83<BR/>vs-&gt;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771146",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 83<BR/>vs-&gt;fidp>"
+    }
+  },
+  {
+    "id": "68719476785",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>vs<BR/>v9fs_do_rename(s, &amp;vs-&gt;fidp-&gt;path, &amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "55834574878",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 83<BR/>fidp>"
+    }
+  },
+  {
+    "id": "55834574879",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 83<BR/>path>"
+    }
+  },
+  {
+    "id": "30064771147",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 83<BR/>&amp;vs-&gt;name>"
+    }
+  },
+  {
+    "id": "30064771148",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 83<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476786",
+    "attrs": {
+      "label": "<IDENTIFIER, 83<BR/>vs<BR/>v9fs_do_rename(s, &amp;vs-&gt;fidp-&gt;path, &amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "55834574880",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 83<BR/>name>"
+    }
+  },
+  {
+    "id": "25769803783",
+    "attrs": {
+      "label": "<BLOCK, 83<BR/>{ err = -errno; }>"
+    }
+  },
+  {
+    "id": "30064771149",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 85<BR/>err = -errno>"
+    }
+  },
+  {
+    "id": "68719476787",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>err<BR/>err = -errno>"
+    }
+  },
+  {
+    "id": "30064771150",
+    "attrs": {
+      "label": "<&lt;operator&gt;.minus, 85<BR/>-errno>"
+    }
+  },
+  {
+    "id": "68719476788",
+    "attrs": {
+      "label": "<IDENTIFIER, 85<BR/>&lt;unknown&gt; errno<BR/>-errno>"
+    }
+  },
+  {
+    "id": "47244640264",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 87<BR/>ELSE<BR/>else>"
+    }
+  },
+  {
+    "id": "25769803784",
+    "attrs": {
+      "label": "<BLOCK, 87<BR/>{ V9fsFidState *fidp; ...>"
+    }
+  },
+  {
+    "id": "94489280517",
+    "attrs": {
+      "label": "<LOCAL, 89<BR/>V9fsFidState *fidp: V9fsFidState*>"
+    }
+  },
+  {
+    "id": "47244640265",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 99<BR/>FOR<BR/>for (fidp = s-&gt;fid_list;fidp;fidp = fidp-&gt;next)>"
+    }
+  },
+  {
+    "id": "30064771151",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 99<BR/>fidp = s-&gt;fid_list>"
+    }
+  },
+  {
+    "id": "68719476789",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>fidp<BR/>fidp = s-&gt;fid_list>"
+    }
+  },
+  {
+    "id": "30064771152",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 99<BR/>s-&gt;fid_list>"
+    }
+  },
+  {
+    "id": "68719476790",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>s<BR/>fidp = s-&gt;fid_list>"
+    }
+  },
+  {
+    "id": "55834574881",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 99<BR/>fid_list>"
+    }
+  },
+  {
+    "id": "68719476791",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>fidp<BR/>for (fidp = s-&gt;fid_list;fidp;fidp = fidp-&gt;next)>"
+    }
+  },
+  {
+    "id": "30064771153",
+    "attrs": {
+      "label": "<&lt;operator&gt;.assignment, 99<BR/>fidp = fidp-&gt;next>"
+    }
+  },
+  {
+    "id": "68719476792",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>fidp<BR/>fidp = fidp-&gt;next>"
+    }
+  },
+  {
+    "id": "30064771154",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 99<BR/>fidp-&gt;next>"
+    }
+  },
+  {
+    "id": "68719476793",
+    "attrs": {
+      "label": "<IDENTIFIER, 99<BR/>fidp<BR/>fidp = fidp-&gt;next>"
+    }
+  },
+  {
+    "id": "55834574882",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 99<BR/>next>"
+    }
+  },
+  {
+    "id": "25769803785",
+    "attrs": {
+      "label": "<BLOCK, 99<BR/>{ if (vs-&gt;fidp == fidp) { ...>"
+    }
+  },
+  {
+    "id": "47244640266",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 101<BR/>IF<BR/>if (vs-&gt;fidp == fidp) { /*...>"
+    }
+  },
+  {
+    "id": "30064771155",
+    "attrs": {
+      "label": "<&lt;operator&gt;.equals, 101<BR/>vs-&gt;fidp == fidp>"
+    }
+  },
+  {
+    "id": "30064771156",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 101<BR/>vs-&gt;fidp>"
+    }
+  },
+  {
+    "id": "68719476794",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>vs<BR/>vs-&gt;fidp == fidp>"
+    }
+  },
+  {
+    "id": "55834574883",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 101<BR/>fidp>"
+    }
+  },
+  {
+    "id": "68719476795",
+    "attrs": {
+      "label": "<IDENTIFIER, 101<BR/>fidp<BR/>vs-&gt;fidp == fidp>"
+    }
+  },
+  {
+    "id": "25769803786",
+    "attrs": {
+      "label": "<BLOCK, 101<BR/>{ /* ...>"
+    }
+  },
+  {
+    "id": "47244640267",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 111<BR/>CONTINUE<BR/>continue;>"
+    }
+  },
+  {
+    "id": "47244640268",
+    "attrs": {
+      "label": "<CONTROL_STRUCTURE, 115<BR/>IF<BR/>if (!strncmp(vs-&gt;fidp-&gt;path.data, fidp-&gt;path.da...>"
+    }
+  },
+  {
+    "id": "30064771157",
+    "attrs": {
+      "label": "<&lt;operator&gt;.logicalNot, 115<BR/>!strncmp(vs-&gt;fidp-&gt;path.data, fidp-&gt;path.data, ...>"
+    }
+  },
+  {
+    "id": "30064771158",
+    "attrs": {
+      "label": "<strncmp, 115<BR/>strncmp(vs-&gt;fidp-&gt;path.data, fidp-&gt;path.data, ...>"
+    }
+  },
+  {
+    "id": "30064771159",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 115<BR/>vs-&gt;fidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "30064771160",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 115<BR/>vs-&gt;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771161",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 115<BR/>vs-&gt;fidp>"
+    }
+  },
+  {
+    "id": "68719476796",
+    "attrs": {
+      "label": "<IDENTIFIER, 115<BR/>vs<BR/>strncmp(vs-&gt;fidp-&gt;path.data, fidp-&gt;path.data, ...>"
+    }
+  },
+  {
+    "id": "55834574884",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 115<BR/>fidp>"
+    }
+  },
+  {
+    "id": "55834574885",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 115<BR/>path>"
+    }
+  },
+  {
+    "id": "55834574886",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 115<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771162",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 115<BR/>fidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "30064771163",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 115<BR/>fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "68719476797",
+    "attrs": {
+      "label": "<IDENTIFIER, 115<BR/>fidp<BR/>strncmp(vs-&gt;fidp-&gt;path.data, fidp-&gt;path.data, ...>"
+    }
+  },
+  {
+    "id": "55834574887",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 115<BR/>path>"
+    }
+  },
+  {
+    "id": "55834574888",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 115<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771164",
+    "attrs": {
+      "label": "<strlen, 117<BR/>strlen(vs-&gt;fidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "30064771165",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 117<BR/>vs-&gt;fidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "30064771166",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 117<BR/>vs-&gt;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771167",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 117<BR/>vs-&gt;fidp>"
+    }
+  },
+  {
+    "id": "68719476798",
+    "attrs": {
+      "label": "<IDENTIFIER, 117<BR/>vs<BR/>strlen(vs-&gt;fidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "55834574889",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 117<BR/>fidp>"
+    }
+  },
+  {
+    "id": "55834574890",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 117<BR/>path>"
+    }
+  },
+  {
+    "id": "55834574891",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 117<BR/>data>"
+    }
+  },
+  {
+    "id": "25769803787",
+    "attrs": {
+      "label": "<BLOCK, 117<BR/>{ /* replace the name */ ...>"
+    }
+  },
+  {
+    "id": "30064771168",
+    "attrs": {
+      "label": "<v9fs_fix_path, 121<BR/>v9fs_fix_path(&amp;fidp-&gt;path, &amp;vs-&gt;name, ...>"
+    }
+  },
+  {
+    "id": "30064771169",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 121<BR/>&amp;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771170",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 121<BR/>fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "68719476799",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>fidp<BR/>v9fs_fix_path(&amp;fidp-&gt;path, &amp;vs-&gt;name, ...>"
+    }
+  },
+  {
+    "id": "55834574892",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 121<BR/>path>"
+    }
+  },
+  {
+    "id": "30064771171",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 121<BR/>&amp;vs-&gt;name>"
+    }
+  },
+  {
+    "id": "30064771172",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 121<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476800",
+    "attrs": {
+      "label": "<IDENTIFIER, 121<BR/>vs<BR/>v9fs_fix_path(&amp;fidp-&gt;path, &amp;vs-&gt;name, ...>"
+    }
+  },
+  {
+    "id": "55834574893",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 121<BR/>name>"
+    }
+  },
+  {
+    "id": "30064771173",
+    "attrs": {
+      "label": "<strlen, 123<BR/>strlen(vs-&gt;fidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "30064771174",
+    "attrs": {
+      "label": "<&lt;operator&gt;.fieldAccess, 123<BR/>vs-&gt;fidp-&gt;path.data>"
+    }
+  },
+  {
+    "id": "30064771175",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 123<BR/>vs-&gt;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771176",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 123<BR/>vs-&gt;fidp>"
+    }
+  },
+  {
+    "id": "68719476801",
+    "attrs": {
+      "label": "<IDENTIFIER, 123<BR/>vs<BR/>strlen(vs-&gt;fidp-&gt;path.data)>"
+    }
+  },
+  {
+    "id": "55834574894",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 123<BR/>fidp>"
+    }
+  },
+  {
+    "id": "55834574895",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 123<BR/>path>"
+    }
+  },
+  {
+    "id": "55834574896",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 123<BR/>data>"
+    }
+  },
+  {
+    "id": "30064771177",
+    "attrs": {
+      "label": "<v9fs_string_copy, 129<BR/>v9fs_string_copy(&amp;vs-&gt;fidp-&gt;path, &amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "30064771178",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 129<BR/>&amp;vs-&gt;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771179",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 129<BR/>vs-&gt;fidp-&gt;path>"
+    }
+  },
+  {
+    "id": "30064771180",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 129<BR/>vs-&gt;fidp>"
+    }
+  },
+  {
+    "id": "68719476802",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>vs<BR/>v9fs_string_copy(&amp;vs-&gt;fidp-&gt;path, &amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "55834574897",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 129<BR/>fidp>"
+    }
+  },
+  {
+    "id": "55834574898",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 129<BR/>path>"
+    }
+  },
+  {
+    "id": "30064771181",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 129<BR/>&amp;vs-&gt;name>"
+    }
+  },
+  {
+    "id": "30064771182",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 129<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476803",
+    "attrs": {
+      "label": "<IDENTIFIER, 129<BR/>vs<BR/>v9fs_string_copy(&amp;vs-&gt;fidp-&gt;path, &amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "55834574899",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 129<BR/>name>"
+    }
+  },
+  {
+    "id": "81604378624",
+    "attrs": {
+      "label": "<JUMP_TARGET, 135<BR/>out>"
+    }
+  },
+  {
+    "id": "30064771183",
+    "attrs": {
+      "label": "<v9fs_string_free, 137<BR/>v9fs_string_free(&amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "30064771184",
+    "attrs": {
+      "label": "<&lt;operator&gt;.addressOf, 137<BR/>&amp;vs-&gt;name>"
+    }
+  },
+  {
+    "id": "30064771185",
+    "attrs": {
+      "label": "<&lt;operator&gt;.indirectFieldAccess, 137<BR/>vs-&gt;name>"
+    }
+  },
+  {
+    "id": "68719476804",
+    "attrs": {
+      "label": "<IDENTIFIER, 137<BR/>vs<BR/>v9fs_string_free(&amp;vs-&gt;name)>"
+    }
+  },
+  {
+    "id": "55834574900",
+    "attrs": {
+      "label": "<FIELD_IDENTIFIER, 137<BR/>name>"
+    }
+  },
+  {
+    "id": "141733920768",
+    "attrs": {
+      "label": "<RETURN, 139<BR/>return err;>"
+    }
+  },
+  {
+    "id": "68719476805",
+    "attrs": {
+      "label": "<IDENTIFIER, 139<BR/>err<BR/>return err;>"
+    }
+  },
+  {
+    "id": "94489280518",
+    "attrs": {
+      "label": "<LOCAL, 85<BR/>&lt;unknown&gt; errno: ANY>"
+    }
+  },
+  {
+    "id": "94489280519",
+    "attrs": {
+      "label": "<LOCAL, 31<BR/>&lt;unknown&gt; P9_FID_NONE: ANY>"
+    }
+  },
+  {
+    "id": "94489280520",
+    "attrs": {
+      "label": "<LOCAL, 23<BR/>&lt;unknown&gt; ENOENT: ANY>"
+    }
+  },
+  {
+    "id": "94489280521",
+    "attrs": {
+      "label": "<LOCAL, 21<BR/>&lt;unknown&gt; NULL: ANY>"
+    }
+  },
+  {
+    "id": "128849018880",
+    "attrs": {
+      "label": "<MODIFIER, 1<BR/>STATIC>"
+    }
+  },
+  {
+    "id": "124554051584",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>int>"
+    }
+  },
+  {
+    "id": "107374182401",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803788",
+    "attrs": {
+      "label": "<BLOCK, 1<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "120259084288",
+    "attrs": {
+      "label": "<METHOD_REF, 1<BR/>v9fs_complete_rename<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051585",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182410",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addition>"
+    }
+  },
+  {
+    "id": "111669149712",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149713",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803797",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051594",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182411",
+    "attrs": {
+      "label": "<METHOD<BR/>strcpy>"
+    }
+  },
+  {
+    "id": "111669149714",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149715",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803798",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051595",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182412",
+    "attrs": {
+      "label": "<METHOD<BR/>strcat>"
+    }
+  },
+  {
+    "id": "111669149716",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149717",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803799",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051596",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182413",
+    "attrs": {
+      "label": "<METHOD<BR/>strncmp>"
+    }
+  },
+  {
+    "id": "111669149718",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149719",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149720",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803800",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051597",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182414",
+    "attrs": {
+      "label": "<METHOD<BR/>v9fs_fix_path>"
+    }
+  },
+  {
+    "id": "111669149721",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149722",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149723",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803801",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051598",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182415",
+    "attrs": {
+      "label": "<METHOD<BR/>strlen>"
+    }
+  },
+  {
+    "id": "111669149724",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803802",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051599",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182416",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.equals>"
+    }
+  },
+  {
+    "id": "111669149725",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149726",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803803",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051600",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182417",
+    "attrs": {
+      "label": "<METHOD<BR/>v9fs_string_free>"
+    }
+  },
+  {
+    "id": "111669149727",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803804",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051601",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182418",
+    "attrs": {
+      "label": "<METHOD<BR/>v9fs_string_copy>"
+    }
+  },
+  {
+    "id": "111669149728",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149729",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803805",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051602",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182419",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.postIncrement>"
+    }
+  },
+  {
+    "id": "111669149730",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803806",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051603",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182402",
+    "attrs": {
+      "label": "<METHOD, 1<BR/>&lt;global&gt;>"
+    }
+  },
+  {
+    "id": "25769803789",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051586",
+    "attrs": {
+      "label": "<METHOD_RETURN, 1<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182420",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.minus>"
+    }
+  },
+  {
+    "id": "111669149731",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803807",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051604",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182421",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.assignment>"
+    }
+  },
+  {
+    "id": "111669149732",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149733",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803808",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051605",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182422",
+    "attrs": {
+      "label": "<METHOD<BR/>strcmp>"
+    }
+  },
+  {
+    "id": "111669149734",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149735",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803809",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051606",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182423",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.logicalNot>"
+    }
+  },
+  {
+    "id": "111669149736",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803810",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051607",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182424",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.notEquals>"
+    }
+  },
+  {
+    "id": "111669149737",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149738",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803811",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051608",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182425",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_strdup>"
+    }
+  },
+  {
+    "id": "111669149739",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803812",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051609",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182426",
+    "attrs": {
+      "label": "<METHOD<BR/>strrchr>"
+    }
+  },
+  {
+    "id": "111669149740",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149741",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803813",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051610",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182427",
+    "attrs": {
+      "label": "<METHOD<BR/>qemu_mallocz>"
+    }
+  },
+  {
+    "id": "111669149742",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803814",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051611",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182428",
+    "attrs": {
+      "label": "<METHOD<BR/>lookup_fid>"
+    }
+  },
+  {
+    "id": "111669149743",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149744",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803815",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051612",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182403",
+    "attrs": {
+      "label": "<METHOD<BR/>strncat>"
+    }
+  },
+  {
+    "id": "111669149698",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149699",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149700",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803790",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051587",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182404",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.addressOf>"
+    }
+  },
+  {
+    "id": "111669149701",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803791",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051588",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182405",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.indirectFieldAccess>"
+    }
+  },
+  {
+    "id": "111669149702",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149703",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803792",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051589",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182406",
+    "attrs": {
+      "label": "<METHOD<BR/>BUG_ON>"
+    }
+  },
+  {
+    "id": "111669149704",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "25769803793",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051590",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182407",
+    "attrs": {
+      "label": "<METHOD<BR/>v9fs_do_rename>"
+    }
+  },
+  {
+    "id": "111669149705",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149706",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "111669149707",
+    "attrs": {
+      "label": "<PARAM<BR/>p3>"
+    }
+  },
+  {
+    "id": "25769803794",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051591",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182408",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.fieldAccess>"
+    }
+  },
+  {
+    "id": "111669149708",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149709",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803795",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051592",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  },
+  {
+    "id": "107374182409",
+    "attrs": {
+      "label": "<METHOD<BR/>&lt;operator&gt;.subtraction>"
+    }
+  },
+  {
+    "id": "111669149710",
+    "attrs": {
+      "label": "<PARAM<BR/>p1>"
+    }
+  },
+  {
+    "id": "111669149711",
+    "attrs": {
+      "label": "<PARAM<BR/>p2>"
+    }
+  },
+  {
+    "id": "25769803796",
+    "attrs": {
+      "label": "<BLOCK<BR/>&lt;empty&gt;>"
+    }
+  },
+  {
+    "id": "124554051593",
+    "attrs": {
+      "label": "<METHOD_RETURN<BR/>ANY>"
+    }
+  }
+]

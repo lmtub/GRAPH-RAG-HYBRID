@@ -1,0 +1,46 @@
+digraph "open_help" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>open_help> ]
+"111669149696" [label = <PARAM, 1<BR/>void> ]
+"25769803776" [label = <BLOCK, 3<BR/>{ printf( &quot;\n&quot; &quot; opens a new file in the...> ]
+"30064771072" [label = <printf, 5<BR/>printf( &quot;\n&quot; &quot; opens a new file in the reques...> ]
+"90194313216" [label = <LITERAL, 7<BR/>&quot;\n&quot; &quot; opens a new file in the requested mode\...<BR/>printf( &quot;\n&quot; &quot; opens a new file in the reques...> ]
+"128849018880" [label = <MODIFIER, 1<BR/>STATIC> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>void> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "128849018880"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "25769803776" -> "30064771072"  [ label = "AST: "] 
+  "30064771072" -> "90194313216"  [ label = "AST: "] 
+  "30064771072" -> "124554051584"  [ label = "CFG: "] 
+  "107374182400" -> "30064771072"  [ label = "CFG: "] 
+  "111669149696" -> "124554051584"  [ label = "DDG: "] 
+  "30064771072" -> "124554051584"  [ label = "DDG: printf(
+
+&quot;\n&quot;
+
+&quot; opens a new file in the requested mode\n&quot;
+
+&quot;\n&quot;
+
+&quot; Example:\n&quot;
+
+&quot; 'open -Cn /tmp/data' - creates/opens data file read-write and uncached\n&quot;
+
+&quot;\n&quot;
+
+&quot; Opens a file for subsequent use by all of the other qemu-io commands.\n&quot;
+
+&quot; -r, -- open file read-only\n&quot;
+
+&quot; -s, -- use snapshot file\n&quot;
+
+&quot; -n, -- disable host cache\n&quot;
+
+&quot; -o, -- options to be given to the block driver&quot;
+
+&quot;\n&quot;)"] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "107374182400" -> "30064771072"  [ label = "DDG: "] 
+}

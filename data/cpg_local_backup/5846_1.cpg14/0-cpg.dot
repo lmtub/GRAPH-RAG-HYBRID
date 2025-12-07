@@ -1,0 +1,36 @@
+digraph "help" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>help> ]
+"111669149696" [label = <PARAM, 1<BR/>void> ]
+"25769803776" [label = <BLOCK, 3<BR/>{ printf(&quot;dct-test [-i] [&lt;test-number&gt;]\n&quot;...> ]
+"30064771072" [label = <printf, 5<BR/>printf(&quot;dct-test [-i] [&lt;test-number&gt;]\n&quot; ...> ]
+"90194313216" [label = <LITERAL, 5<BR/>&quot;dct-test [-i] [&lt;test-number&gt;]\n&quot; &quot;...<BR/>printf(&quot;dct-test [-i] [&lt;test-number&gt;]\n&quot; ...> ]
+"30064771073" [label = <exit, 17<BR/>exit(1)> ]
+"90194313217" [label = <LITERAL, 17<BR/>1<BR/>exit(1)> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>void> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "25769803776" -> "30064771072"  [ label = "AST: "] 
+  "25769803776" -> "30064771073"  [ label = "AST: "] 
+  "30064771072" -> "90194313216"  [ label = "AST: "] 
+  "30064771073" -> "90194313217"  [ label = "AST: "] 
+  "30064771072" -> "30064771073"  [ label = "CFG: "] 
+  "30064771073" -> "124554051584"  [ label = "CFG: "] 
+  "107374182400" -> "30064771072"  [ label = "CFG: "] 
+  "111669149696" -> "124554051584"  [ label = "DDG: "] 
+  "30064771072" -> "124554051584"  [ label = "DDG: printf(&quot;dct-test [-i] [&lt;test-number&gt;]\n&quot;
+
+           &quot;test-number 0 -&gt; test with random matrixes\n&quot;
+
+           &quot;            1 -&gt; test with random sparse matrixes\n&quot;
+
+           &quot;            2 -&gt; do 3. test from mpeg4 std\n&quot;
+
+           &quot;-i          test IDCT implementations\n&quot;
+
+           &quot;-4          test IDCT248 implementations\n&quot;)"] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "107374182400" -> "30064771072"  [ label = "DDG: "] 
+  "107374182400" -> "30064771073"  [ label = "DDG: "] 
+}

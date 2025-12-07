@@ -1,0 +1,82 @@
+digraph "usage" {  
+node [shape="rect"];  
+"107374182400" [label = <METHOD, 1<BR/>usage> ]
+"111669149696" [label = <PARAM, 1<BR/>const char *cmd> ]
+"25769803776" [label = <BLOCK, 3<BR/>{ printf( &quot;Usage: %s [-m &lt;method&gt; -p &lt;pat...> ]
+"30064771072" [label = <printf, 5<BR/>printf( &quot;Usage: %s [-m &lt;method&gt; -p &lt;path&gt;] [&lt;o...> ]
+"90194313216" [label = <LITERAL, 7<BR/>&quot;Usage: %s [-m &lt;method&gt; -p &lt;path&gt;] [&lt;options&gt;]\...<BR/>printf( &quot;Usage: %s [-m &lt;method&gt; -p &lt;path&gt;] [&lt;o...> ]
+"68719476736" [label = <IDENTIFIER, 47<BR/>cmd<BR/>printf( &quot;Usage: %s [-m &lt;method&gt; -p &lt;path&gt;] [&lt;o...> ]
+"68719476737" [label = <IDENTIFIER, 47<BR/>&lt;unknown&gt; QGA_VERSION<BR/>printf( &quot;Usage: %s [-m &lt;method&gt; -p &lt;path&gt;] [&lt;o...> ]
+"68719476738" [label = <IDENTIFIER, 47<BR/>&lt;unknown&gt; QGA_VIRTIO_PATH_DEFAULT<BR/>printf( &quot;Usage: %s [-m &lt;method&gt; -p &lt;path&gt;] [&lt;o...> ]
+"68719476739" [label = <IDENTIFIER, 47<BR/>&lt;unknown&gt; QGA_PIDFILE_DEFAULT<BR/>printf( &quot;Usage: %s [-m &lt;method&gt; -p &lt;path&gt;] [&lt;o...> ]
+"94489280512" [label = <LOCAL, 47<BR/>&lt;unknown&gt; QGA_PIDFILE_DEFAULT: ANY> ]
+"94489280513" [label = <LOCAL, 47<BR/>&lt;unknown&gt; QGA_VIRTIO_PATH_DEFAULT: ANY> ]
+"94489280514" [label = <LOCAL, 47<BR/>&lt;unknown&gt; QGA_VERSION: ANY> ]
+"128849018880" [label = <MODIFIER, 1<BR/>STATIC> ]
+"124554051584" [label = <METHOD_RETURN, 1<BR/>void> ]
+  "107374182400" -> "111669149696"  [ label = "AST: "] 
+  "107374182400" -> "25769803776"  [ label = "AST: "] 
+  "107374182400" -> "128849018880"  [ label = "AST: "] 
+  "107374182400" -> "124554051584"  [ label = "AST: "] 
+  "25769803776" -> "94489280512"  [ label = "AST: "] 
+  "25769803776" -> "94489280513"  [ label = "AST: "] 
+  "25769803776" -> "94489280514"  [ label = "AST: "] 
+  "25769803776" -> "30064771072"  [ label = "AST: "] 
+  "30064771072" -> "90194313216"  [ label = "AST: "] 
+  "30064771072" -> "68719476736"  [ label = "AST: "] 
+  "30064771072" -> "68719476737"  [ label = "AST: "] 
+  "30064771072" -> "68719476738"  [ label = "AST: "] 
+  "30064771072" -> "68719476739"  [ label = "AST: "] 
+  "30064771072" -> "124554051584"  [ label = "CFG: "] 
+  "107374182400" -> "30064771072"  [ label = "CFG: "] 
+  "30064771072" -> "124554051584"  [ label = "DDG: cmd"] 
+  "30064771072" -> "124554051584"  [ label = "DDG: &lt;unknown&gt; QGA_VERSION"] 
+  "30064771072" -> "124554051584"  [ label = "DDG: &lt;unknown&gt; QGA_VIRTIO_PATH_DEFAULT"] 
+  "30064771072" -> "124554051584"  [ label = "DDG: &lt;unknown&gt; QGA_PIDFILE_DEFAULT"] 
+  "30064771072" -> "124554051584"  [ label = "DDG: printf(
+
+&quot;Usage: %s [-m &lt;method&gt; -p &lt;path&gt;] [&lt;options&gt;]\n&quot;
+
+&quot;QEMU Guest Agent %s\n&quot;
+
+&quot;\n&quot;
+
+&quot;  -m, --method      transport method: one of unix-listen, virtio-serial, or\n&quot;
+
+&quot;                    isa-serial (virtio-serial is the default)\n&quot;
+
+&quot;  -p, --path        device/socket path (the default for virtio-serial is:\n&quot;
+
+&quot;                    %s)\n&quot;
+
+&quot;  -l, --logfile     set logfile path, logs to stderr by default\n&quot;
+
+&quot;  -f, --pidfile     specify pidfile (default is %s)\n&quot;
+
+&quot;  -v, --verbose     log extra debugging information\n&quot;
+
+&quot;  -V, --version     print version information and exit\n&quot;
+
+&quot;  -d, --daemonize   become a daemon\n&quot;
+
+#ifdef _WIN32
+
+&quot;  -s, --service     service commands: install, uninstall\n&quot;
+
+#endif
+
+&quot;  -b, --blacklist   comma-separated list of RPCs to disable (no spaces, \&quot;?\&quot;\n&quot;
+
+&quot;                    to list available RPCs)\n&quot;
+
+&quot;  -h, --help        display this help and exit\n&quot;
+
+&quot;\n&quot;
+
+&quot;Report bugs to &lt;mdroth@linux.vnet.ibm.com&gt;\n&quot;
+
+    , cmd, QGA_VERSION, QGA_VIRTIO_PATH_DEF..."] 
+  "107374182400" -> "111669149696"  [ label = "DDG: "] 
+  "107374182400" -> "30064771072"  [ label = "DDG: "] 
+  "111669149696" -> "30064771072"  [ label = "DDG: cmd"] 
+}
