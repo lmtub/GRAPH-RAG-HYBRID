@@ -19,32 +19,32 @@ from src.train.model import DevignModel
 # =========================
 # 1. Build & fit node encoder
 # =========================
-def build_type_encoder(root: str, labels_file: str) -> TypeOnlyEncoder:
+def build_type_encoder(root: str, labels_file: str, max_graphs: int = 500):
     """
-    Đọc toàn bộ nodes.json theo labels_file,
-    gom list nodes lại và fit TypeOnlyEncoder.
+    Fit TypeOnlyEncoder trên 1 subset graph
+    để tránh vocab quá lớn gây OOM.
     """
     root_path = Path(root)
-    labels_path = Path(labels_file)
-
-    with open(labels_path, "r", encoding="utf-8") as f:
-        labels = json.load(f)
+    labels = json.load(open(labels_file, "r", encoding="utf-8"))
 
     all_nodes_lists = []
+    cnt = 0
 
     for name in labels.keys():
-        graph_dir = root_path / name
-        nodes_path = graph_dir / "nodes.json"
-        if nodes_path.is_file():
-            with open(nodes_path, "r", encoding="utf-8") as nf:
-                nodes = json.load(nf)  # list node dict
-                all_nodes_lists.append(nodes)
+        if cnt >= max_graphs:
+            break
+
+        nodes_path = root_path / name / "nodes.json"
+        if nodes_path.exists():
+            nodes = json.load(open(nodes_path, "r", encoding="utf-8"))
+            all_nodes_lists.append(nodes)
+            cnt += 1
 
     encoder = TypeOnlyEncoder()
-    encoder.fit(all_nodes_lists)  # build type_vocab
+    encoder.fit(all_nodes_lists)
 
+    print(f"[Info] Encoder fitted on {cnt} graphs")
     return encoder
-
 
 # =========================
 # 2. Train / Eval loops
@@ -186,46 +186,59 @@ def main():
     root = "data/cpg"
     labels_file = "dataset/labels.json"
     num_edge_types = 5
-    batch_size = 32
-    hidden_dim = 128
-    max_epochs = 20
+
+    # 🔽 GIẢM MẠNH ĐỂ TRÁNH OOM
+    batch_size = 8
+    hidden_dim = 64
+    ggnn_step = 4
+    max_epochs = 10
+
     lr = 1e-4
     weight_decay = 1e-5
-    patience = 5        # early stopping patience
+    patience = 3
+
+    # 🔽 CHỈ TRAIN SUBSET (RẤT QUAN TRỌNG)
+    #max_train_graphs = 2000
 
     os.makedirs("checkpoints", exist_ok=True)
 
     # ----- Build & fit node encoder -----
-    node_encoder = build_type_encoder(root, labels_file)
+    node_encoder = build_type_encoder(root, labels_file, max_graphs=500)
 
     # ----- Dataset -----
-    dataset = CPGPyGDataset(
+    full_dataset = CPGPyGDataset(
         root=root,
         labels_file=labels_file,
         node_encoder=node_encoder,
         make_undirected=True,
+        max_nodes=500,
     )
-    print("Total graphs:", len(dataset))
+    print("Total graphs:", len(full_dataset))
 
-    # Lấy input_dim từ 1 sample
-    sample = dataset[0]
+    # 🔽 LẤY SUBSET DATASET
+    #indices = torch.randperm(len(full_dataset))[:max_train_graphs]
+    #dataset = Subset(full_dataset, indices)
+    #print(f"[Info] Training on subset: {len(dataset)} graphs")
+
+    # Lấy input_dim
+    sample = full_dataset[0]
     input_dim = sample.x.size(1)
     print("Node feature dim:", input_dim)
 
-    # ----- Dataloaders (train/val/test) -----
+    # ----- Dataloaders -----
     train_loader, val_loader, test_loader = create_dataloaders(
-        dataset,
+        full_dataset,
         batch_size=batch_size,
         num_edge_types=num_edge_types,
         train_ratio=0.8,
         val_ratio=0.1,
     )
 
-    # ----- Model, loss, optimizer -----
+    # ----- Model -----
     model = DevignModel(
         input_dim=input_dim,
         hidden_dim=hidden_dim,
-        step=8,
+        step=ggnn_step,
         num_edge_types=num_edge_types,
     ).to(device)
 
@@ -236,15 +249,13 @@ def main():
         weight_decay=weight_decay
     )
 
-    # ----- TensorBoard writer -----
     writer = SummaryWriter(log_dir="runs/devign_experiment")
 
-    # ----- Training loop with early stopping -----
     best_val_acc = 0.0
-    best_epoch = 0
     epochs_no_improve = 0
-    best_encoder_path = os.path.join("checkpoints", "best_encoder.pt")
+    best_encoder_path = "checkpoints/best_encoder.pt"
 
+    # ----- Training loop -----
     for epoch in range(1, max_epochs + 1):
         train_loss, train_acc = train_one_epoch(
             model, train_loader, optimizer, criterion, device, epoch, writer
@@ -259,25 +270,18 @@ def main():
             f"Val loss={val_loss:.4f}, acc={val_acc:.4f}"
         )
 
-        # Early stopping + save best
         if val_acc > best_val_acc:
             best_val_acc = val_acc
-            best_epoch = epoch
             epochs_no_improve = 0
-
             torch.save(model.encoder.state_dict(), best_encoder_path)
-            print(f"  -> Saved best encoder to {best_encoder_path}")
+            print("  -> Saved best encoder")
         else:
             epochs_no_improve += 1
             if epochs_no_improve >= patience:
-                print(
-                    f"Early stopping activated at epoch {epoch} "
-                    f"(best val acc={best_val_acc:.4f} at epoch {best_epoch})"
-                )
+                print("Early stopping triggered")
                 break
 
-    # ----- Load best encoder & evaluate on test set -----
-    print("\nLoading best encoder and evaluating on TEST set...")
+    print("\nEvaluating on TEST set...")
     model.encoder.load_state_dict(torch.load(best_encoder_path, map_location=device))
     test_loss, test_acc = evaluate(
         model, test_loader, criterion, device, epoch=0, phase="Test", writer=writer
@@ -285,7 +289,5 @@ def main():
     print(f"[TEST] loss={test_loss:.4f}, acc={test_acc:.4f}")
 
     writer.close()
-
-
 if __name__ == "__main__":
     main()
