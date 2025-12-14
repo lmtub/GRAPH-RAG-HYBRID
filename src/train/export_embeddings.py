@@ -43,9 +43,9 @@ def main():
     root = "data/cpg"
     labels_file = "dataset/labels.json"
     num_edge_types = 5
-    hidden_dim = 128
+    hidden_dim = 64
     step = 8
-    batch_size = 64
+    batch_size = 8
     ckpt_path = "checkpoints/best_encoder.pt"
     out_path = "data/embeddings/devign_embeddings.pt"
 
@@ -54,10 +54,19 @@ def main():
     if not os.path.exists(ckpt_path):
         raise FileNotFoundError(f"Checkpoint not found: {ckpt_path}")
 
-    # ---- build encoder cho node TYPE ----
-    node_encoder = build_type_encoder(root, labels_file)
+# ---- load encoder vocab (KHÔNG fit lại) ----
+    vocab_path = "checkpoints/type_vocab.pt"
+    if not os.path.exists(vocab_path):
+        raise FileNotFoundError(
+        f"Missing {vocab_path}. Hãy chạy train_devign trước để tạo type_vocab.pt"
+        )
 
-    # ---- dataset full (không split train/val/test nữa) ----
+    node_encoder = TypeOnlyEncoder()
+    node_encoder.type_vocab = torch.load("checkpoints/type_vocab.pt", map_location="cpu")
+    node_encoder.fitted = True
+    print(f"[Encoder] loaded vocab with {len(node_encoder.type_vocab)} node types.")
+
+# ---- dataset full (không split train/val/test nữa) ----
     dataset = CPGPyGDataset(
         root=root,
         labels_file=labels_file,
@@ -101,11 +110,11 @@ def main():
             node_feat = node_feat.to(device)
             adj = adj.to(device)
 
-            graph_emb, _, _ = model.encoder(node_feat, adj)  # (B, hidden_dim)
+        graph_emb, _, _ = model.encoder(node_feat, adj)  # (B, hidden_dim)
 
-            all_embeddings.append(graph_emb.cpu())
-            all_labels.append(labels.clone())
-            all_ids.extend(list(graph_ids))
+        all_embeddings.append(graph_emb.cpu())
+        all_labels.append(labels.clone())
+        all_ids.extend(list(graph_ids))
 
     embeddings = torch.cat(all_embeddings, dim=0)  # (N_graphs, hidden_dim)
     labels = torch.cat(all_labels, dim=0)          # (N_graphs,)

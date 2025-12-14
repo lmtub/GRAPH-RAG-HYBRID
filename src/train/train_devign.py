@@ -204,6 +204,10 @@ def main():
 
     # ----- Build & fit node encoder -----
     node_encoder = build_type_encoder(root, labels_file, max_graphs=500)
+    # Save encoder vocab to reuse in export_embeddings
+    os.makedirs("checkpoints", exist_ok=True)
+    torch.save(node_encoder.type_vocab, "checkpoints/type_vocab.pt")
+    print("[Info] Saved type_vocab -> checkpoints/type_vocab.pt")
 
     # ----- Dataset -----
     full_dataset = CPGPyGDataset(
