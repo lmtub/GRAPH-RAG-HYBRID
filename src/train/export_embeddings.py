@@ -110,11 +110,11 @@ def main():
             node_feat = node_feat.to(device)
             adj = adj.to(device)
 
-        graph_emb, _, _ = model.encoder(node_feat, adj)  # (B, hidden_dim)
+            graph_emb, _, _ = model.encoder(node_feat, adj)  # (B, hidden_dim)
 
-        all_embeddings.append(graph_emb.cpu())
-        all_labels.append(labels.clone())
-        all_ids.extend(list(graph_ids))
+            all_embeddings.append(graph_emb.cpu())
+            all_labels.append(labels.clone())
+            all_ids.extend(list(graph_ids))
 
     embeddings = torch.cat(all_embeddings, dim=0)  # (N_graphs, hidden_dim)
     labels = torch.cat(all_labels, dim=0)          # (N_graphs,)
