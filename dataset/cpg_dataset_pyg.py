@@ -73,4 +73,5 @@ class CPGPyGDataset(Dataset):
             self.node_encoder,
             make_undirected=self.make_undirected
         )
+        data.graph_id = graph_dir.name
         return data

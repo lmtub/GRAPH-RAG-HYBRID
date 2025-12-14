@@ -1,4 +1,5 @@
 import torch
+import os
 from src.vector_db.search_faiss import GraphVectorDB
 from src.train.model import DevignModel
 from dataset.node_encoder import TypeOnlyEncoder
@@ -25,21 +26,28 @@ class HybridFusion:
         # ===== Load FAISS DB =====
         self.db = GraphVectorDB()
 
-        # ===== Load encoder =====
-        # Rebuild node encoder
-        self.node_encoder = self._build_type_encoder(root, labels_file)
+    # ------ Load encoder vocab (KHÔNG fit lại) ------
+        vocab_path = "checkpoints/type_vocab.pt"
+        if not os.path.exists(vocab_path):
+            raise FileNotFoundError(f"Missing {vocab_path}. Hãy chạy train_devign để tạo.")
 
-        # load 1 sample to get dim
-        sample_ds = CPGPyGDataset(root, labels_file, self.node_encoder)
-        input_dim = sample_ds[0].x.size(1)
+        self.node_encoder = TypeOnlyEncoder()
+        self.node_encoder.type_vocab = torch.load(vocab_path, map_location="cpu")
+        self.node_encoder.fitted = True
+        input_dim = len(self.node_encoder.type_vocab)  # = 47 (khớp checkpoint)
+        print(f"[Encoder] loaded vocab with {input_dim} node types.")
 
-        # build model
+        # ------ Build model (PHẢI khớp hidden_dim lúc train) ------
+        hidden_dim = 64          # checkpoint bạn đang lưu là 64
+        step = 8                 # khớp train_devign
+        num_edge_types = 5       # khớp train_devign
+
         self.model = DevignModel(
             input_dim=input_dim,
             hidden_dim=hidden_dim,
-            step=8,
+            step=step,
             num_edge_types=num_edge_types,
-        ).to(self.device)
+            ).to(self.device)
 
         self.model.encoder.load_state_dict(torch.load(encoder_ckpt, map_location=self.device))
         self.model.eval()

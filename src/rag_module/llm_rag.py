@@ -50,8 +50,23 @@ class LLMGraphRAGEngine:
         if not retrieved:
             raise ValueError(f"No graph retrieved for id={graph_id}")
 
-        target_graph = retrieved[0]
-        similar_graphs = retrieved[1:]
+        # --- FIX: target_graph phải đúng graph_id input, không phải top-1 sau fusion ---
+        def _get_id(g):
+            return g.get("id") or g.get("graph_id") or ""
+
+        target_graph = None
+        for g in retrieved:
+            if _get_id(g) == graph_id:
+                target_graph = g
+                break
+
+        # fallback nếu retrieve() không trả về chính graph_id (hiếm)
+        if target_graph is None:
+            target_graph = retrieved[0]
+            # đảm bảo prompt hiển thị đúng id
+            target_graph["id"] = graph_id
+
+        similar_graphs = [g for g in retrieved if _get_id(g) != graph_id]
 
         prompt = build_graph_vuln_prompt(
             target_graph=target_graph,
