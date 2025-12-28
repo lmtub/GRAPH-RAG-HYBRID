@@ -21,6 +21,9 @@ class GGNNEncoder(nn.Module):
         self.conv_l2 = nn.Conv1d(output_dim, output_dim, kernel_size=1)
 
     def forward(self, node_features, adj_matrices):
+        mask = (node_features.sum(dim=-1) != 0).float() # (Batch, Nodes)
+        mask = mask.unsqueeze(1) # Chuyển thành (Batch, 1, Nodes) để nhân ma trận
+        
         batch_size = node_features.size(0)
         max_nodes = node_features.size(1)
 
@@ -43,8 +46,8 @@ class GGNNEncoder(nn.Module):
 
         check_input = node_states.permute(0, 2, 1)
         
-        attn_logits = self.conv_l1(check_input)
-        attn_weights = torch.sigmoid(attn_logits)
+        attn_weights = torch.sigmoid(self.conv_l1(check_input))
+        attn_weights = attn_weights * mask
         
         features_transformed = torch.tanh(self.conv_l2(check_input))
 

@@ -63,7 +63,7 @@ def main():
         num_edge_types=num_edge_types,
     ).to(device)
 
-    model.encoder.load_state_dict(torch.load(ckpt_path, map_location=device))
+    model.load_state_dict(torch.load(ckpt_path, map_location=device))
     model.eval()
 
     all_labels = []

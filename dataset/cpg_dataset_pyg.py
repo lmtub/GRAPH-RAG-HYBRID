@@ -6,7 +6,7 @@ from .data_builder import build_data_from_cpg
 
 class CPGPyGDataset(Dataset):
     def __init__(self, root, labels_file, node_encoder,
-                 make_undirected=True, max_nodes=500, verbose=True):
+                 make_undirected=True, max_nodes=600, verbose=True):
         self.root = Path(root)
         self.labels_file = Path(labels_file)
         self.node_encoder = node_encoder

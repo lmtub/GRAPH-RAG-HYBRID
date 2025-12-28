@@ -1,7 +1,7 @@
 import torch
 
 
-def pyg_to_batch_tensors(batch, num_edge_types: int = 5):
+def pyg_to_batch_tensors(batch, num_edge_types: int = 4):
     """
     Chuyển list[PyG Data] -> 
       - node_features: (B, N, F)

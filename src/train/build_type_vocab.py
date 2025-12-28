@@ -24,7 +24,7 @@ def build_type_encoder(root: str, labels_file: str, max_graphs: int = 500):
 def main():
     root = "data/cpg"
     labels_file = "dataset/labels.json"
-    max_graphs = 500   # để giống train_devign của bạn
+    max_graphs = 10000   # để giống train_devign của bạn
 
     enc = build_type_encoder(root, labels_file, max_graphs=max_graphs)
 
