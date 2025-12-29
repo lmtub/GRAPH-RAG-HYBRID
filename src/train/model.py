@@ -8,8 +8,8 @@ class GraphTransformerEncoder(nn.Module):
         super().__init__()
         self.lin_input = nn.Linear(input_dim, hidden_dim)
         self.layers = nn.ModuleList()
-        self.norms = nn.ModuleList()
-        
+        self.norms = nn.ModuleList()     
+
         for _ in range(num_layers):
             self.layers.append(TransformerConv(hidden_dim, hidden_dim // num_heads, heads=num_heads, concat=True))
             self.norms.append(nn.LayerNorm(hidden_dim)) # Quay về LayerNorm ổn định
@@ -19,7 +19,7 @@ class GraphTransformerEncoder(nn.Module):
         for conv, norm in zip(self.layers, self.norms):
             h = conv(x, edge_index)
             h = norm(h)
-            x = x + F.gelu(h) 
+            x = x + F.gelu(h)
         return x
 
 class DevignModel(nn.Module):
@@ -32,12 +32,15 @@ class DevignModel(nn.Module):
             nn.Linear(hidden_dim, hidden_dim // 2),
             nn.GELU(),
             # Giảm Dropout xuống 0.4 như bản 60%
-            nn.Dropout(p=0.4), 
+            nn.Dropout(p=0.4),
             nn.Linear(hidden_dim // 2, 1)
         )
-
     def forward(self, x, edge_index, batch):
+
         node_embeddings = self.encoder(x, edge_index)
+
         graph_embedding = self.pool(node_embeddings, batch)
+
         logits = self.classifier(graph_embedding)
+
         return logits.squeeze(-1), None

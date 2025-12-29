@@ -2,7 +2,7 @@ import torch
 import os
 from src.vector_db.search_faiss import GraphVectorDB
 from src.train.model import DevignModel
-from dataset.node_encoder import TypeOnlyEncoder
+from dataset.node_encoder import CombinedW2VEncoder
 from dataset.cpg_dataset_pyg import CPGPyGDataset
 from src.train.collate_fn import pyg_to_batch_tensors
 
@@ -31,22 +31,26 @@ class HybridFusion:
         if not os.path.exists(vocab_path):
             raise FileNotFoundError(f"Missing {vocab_path}. Hãy chạy train_devign để tạo.")
 
-        self.node_encoder = TypeOnlyEncoder()
+        self.node_encoder = CombinedW2VEncoder(w2v_model_path="/app/word2vec_cpg.model")
         self.node_encoder.type_vocab = torch.load(vocab_path, map_location="cpu")
         self.node_encoder.fitted = True
-        input_dim = len(self.node_encoder.type_vocab)  # = 47 (khớp checkpoint)
+        #input_dim = len(self.node_encoder.type_vocab)  # = 47 (khớp checkpoint)
+        input_dim = self.node_encoder.feat_dim
         print(f"[Encoder] loaded vocab with {input_dim} node types.")
 
         # ------ Build model (PHẢI khớp hidden_dim lúc train) ------
+        input_dim = self.node_encoder.feat_dim
         hidden_dim = 64          # checkpoint bạn đang lưu là 64
-        step = 8                 # khớp train_devign
-        num_edge_types = 5       # khớp train_devign
+        num_heads = 4          # khớp train_devign
+        #steps = 8                 # khớp train_devign
+        #num_edge_types = 5       # khớp train_devign
 
         self.model = DevignModel(
             input_dim=input_dim,
             hidden_dim=hidden_dim,
-            step=step,
-            num_edge_types=num_edge_types,
+            #steps=steps,
+            num_heads=num_heads
+            #num_edge_types=num_edge_types,
             ).to(self.device)
 
         self.model.encoder.load_state_dict(torch.load(encoder_ckpt, map_location=self.device))
@@ -59,7 +63,7 @@ class HybridFusion:
     # -------------------------------------------------
 
     def _build_type_encoder(self, root, labels_file):
-        from dataset.node_encoder import TypeOnlyEncoder
+        from dataset.node_encoder import CombinedW2VEncoder
 
         root = Path(root)
         with open(labels_file, "r") as f:
@@ -72,7 +76,7 @@ class HybridFusion:
                 with open(p) as nf:
                     all_nodes.append(json.load(nf))
 
-        enc = TypeOnlyEncoder()
+        enc = CombinedW2VEncoder()
         enc.fit(all_nodes)
         return enc
 
@@ -93,17 +97,28 @@ class HybridFusion:
             node_encoder=self.node_encoder,
             make_undirected=True
         )
-        data.graph_id = graph_id
+        x = data.x.to(self.device)
+        edge_index = data.edge_index.to(self.device)
+    
+        with torch.no_grad():
+        # Truyền đúng 3 tham số cho forward của Transformer
+        # batch=None vì chúng ta chỉ chạy trên 1 graph duy nhất
+            logits, _ = self.model(x, edge_index, batch=None)
+            score = torch.sigmoid(logits).item() # Lấy giá trị scalar
+        return score
+        #data.graph_id = graph_id
 
         # collate 1 sample
-        node_f, adj, label, _ = pyg_to_batch_tensors([data], num_edge_types=5)
-        node_f = node_f.to(self.device)
-        adj = adj.to(self.device)
+        #node_f, adj, label, _ = pyg_to_batch_tensors([data], num_edge_types=5)
+        #node_f, edge_index, label, _ = pyg_to_batch_tensors([data], num_edge_types=5)
+        #node_f = node_f.to(self.device)
+        #adj = adj.to(self.device)
+        #edge_index = edge_index.to(self.device)
 
-        with torch.no_grad():
-            logits, _, _ = self.model(node_f, adj)
-            score = torch.sigmoid(logits)[0].item()
-        return score
+        #with torch.no_grad():
+        #    logits, _ = self.model(node_f, edge_index, batch=None)
+        #    score = torch.sigmoid(logits)[0].item()
+        #return score
 
     # -------------------------------------------------
 
@@ -112,7 +127,7 @@ class HybridFusion:
         Search FAISS => kết hợp Devign Score => trả về danh sách sorted.
         """
         faiss_results = self.db.search_by_id(graph_id, k=k)
-
+        threshold = 0.3
         enriched = []
         for r in faiss_results:
             gid = r["graph_id"]

@@ -1,5 +1,7 @@
 import argparse
 import random
+import os
+from src.llm.ollama_client import OllamaClient
 from pathlib import Path
 
 from src.vector_db.search_faiss import GraphVectorDB
@@ -29,6 +31,13 @@ def parse_args():
         default=None,
         help="Đường dẫn file để lưu prompt (VD: runs/demo_prompt.txt). Nếu bỏ trống thì không lưu.",
     )
+    p.add_argument("--llm", action="store_true", help="Bật gọi LLM (Ollama) để trả lời prompt.")
+    p.add_argument("--ollama-url", type=str, default=None, help="VD: http://<WSL_IP>:11434 (override env OLLAMA_BASE_URL)")
+    p.add_argument("--ollama-model", type=str, default=None, help="VD: llama3.1:8b (override env OLLAMA_MODEL)")
+    p.add_argument("--max-tokens", type=int, default=512, help="Giới hạn output tokens (num_predict).")
+    p.add_argument("--temp", type=float, default=0.2, help="temperature cho LLM.")
+    p.add_argument("--save-answer", type=str, default=None, help="Lưu câu trả lời LLM ra file.")
+    
     return p.parse_args()
 
 
@@ -79,6 +88,32 @@ def main():
         )
 
     print("\n===== PROMPT (preview 800 chars) =====")
+    # ====== OPTIONAL: Call LLM (Ollama) ======
+    if args.llm:
+        base_url = args.ollama_url or os.getenv("OLLAMA_BASE_URL", "http://172.25.35.205:11434")
+        model = args.ollama_model or os.getenv("OLLAMA_MODEL", "llama3.1:8b")
+
+        print("\n==> Calling Ollama LLM ...")
+        client = OllamaClient(base_url=base_url, model=model, timeout=300)
+
+        if not client.ping():
+            raise RuntimeError(f"Không ping được Ollama tại {base_url}. Kiểm tra ollama đang chạy + port 11434 mở.")
+
+        answer = client.generate(
+            prompt=prompt,
+            temperature=args.temp,
+            num_predict=args.max_tokens,
+            stream=False,
+        )
+
+        print("\n===== LLM ANSWER =====")
+        print(answer)
+
+        if args.save_answer:
+            ans_path = Path(args.save_answer)
+            ans_path.parent.mkdir(parents=True, exist_ok=True)
+            ans_path.write_text(answer, encoding="utf-8")
+            print(f"\n[Saved] Answer đã được lưu vào: {ans_path}")
     print(prompt[:800])
     if len(prompt) > 800:
         print("... [truncated] ...")
